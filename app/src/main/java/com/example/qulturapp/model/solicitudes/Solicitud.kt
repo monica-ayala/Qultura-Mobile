@@ -1,4 +1,4 @@
-package com.example.qulturapp.solicitudes
+package com.example.qulturapp.model.solicitudes
 
 import com.google.gson.annotations.SerializedName
 

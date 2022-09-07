@@ -1,11 +1,12 @@
-package com.example.qulturapp
+package com.example.qulturapp.viewmodel.solicitudes
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.qulturapp.solicitudes.Solicitud
+import com.example.qulturapp.R
+import com.example.qulturapp.model.solicitudes.Solicitud
 
 class SolicitudesListAdapter (private val data:List<Solicitud>): RecyclerView.Adapter<ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

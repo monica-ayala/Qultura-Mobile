@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/rl_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/top_bar_background"
+        android:backgroundTint="@color/top_blue">
+
+        <ImageView
+            android:layout_width="190dp"
+            android:layout_height="190dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-25dp"
+            android:src="@drawable/logo_secretaria"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_signin_box"
+        android:layout_width="300dp"
+        android:layout_height="480dp"
+        android:layout_marginTop="-70dp"
+        android:layout_below="@id/rl_top_bar"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/center_box_bg"
+        android:elevation="8dp">
+
+        <TextView
+            android:id="@+id/tv_signin_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Sign up"
+            android:textColor="@color/top_blue"
+            android:textSize="40sp" />
+
+        <View
+            android:layout_width="120dp"
+            android:layout_height="2dp"
+            android:layout_alignBottom="@id/tv_signin_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="-4dp"
+            android:background="@color/line_yellow" />
+
+        <EditText
+            android:id="@+id/edit_text_name"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_marginTop="40dp"
+            android:layout_below="@id/tv_signin_text"
+            android:layout_centerHorizontal="true"
+            android:ems="12"
+            android:inputType="textPersonName"
+            style="@style/inputSignin"
+            android:hint="Nombre" />
+
+        <EditText
+            android:id="@+id/edit_text_email"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_marginTop="25dp"
+            android:layout_below="@id/edit_text_name"
+            android:layout_centerHorizontal="true"
+            android:ems="12"
+            android:inputType="textEmailAddress"
+            style="@style/inputSignin"
+            android:hint="Email"/>
+
+        <EditText
+            android:id="@+id/edit_text_pass"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_marginTop="25dp"
+            android:layout_below="@id/edit_text_email"
+            android:layout_centerHorizontal="true"
+            android:ems="12"
+            style="@style/inputSignin"
+            android:inputType="textPassword"
+            android:hint="Contraseña"/>
+
+        <EditText
+            android:id="@+id/edit_text_passconfirm"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_marginTop="25dp"
+            android:layout_below="@id/edit_text_pass"
+            android:layout_centerHorizontal="true"
+            android:ems="12"
+            style="@style/inputSignin"
+            android:inputType="textPassword"
+            android:hint="Confirmar contraseña"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_signup"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/button_gradient_bg"
+            android:layout_below="@id/edit_text_passconfirm"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:text="Sign Up" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -25,6 +25,9 @@
         <activity
             android:name=".view.solicitudes.ActivitySolicitudes">
         </activity>
+        <activity
+            android:name=".view.sesion.ActivitySignUp">
+        </activity>
     </application>
 
 </manifest>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="inputSignin" parent="@android:style/Widget.EditText">
+        <item name="android:textColor">@color/gray_text</item>
+        <item name="android:textColorHint">@color/gray_text</item>
+        <item name="android:background">@color/gray_edit_box</item>
+        <item name="android:paddingLeft">20dp</item>
+    </style>
+</resources>

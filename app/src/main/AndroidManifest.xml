@@ -28,6 +28,9 @@
         <activity
             android:name=".view.sesion.ActivitySignUp">
         </activity>
+        <activity
+            android:name=".view.sesion.ActivitySignIn">
+        </activity>
     </application>
 
 </manifest>

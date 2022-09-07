@@ -22,9 +22,9 @@
     </RelativeLayout>
 
     <RelativeLayout
-        android:id="@+id/rl_signup_box"
+        android:id="@+id/rl_signin_box"
         android:layout_width="300dp"
-        android:layout_height="480dp"
+        android:layout_height="370dp"
         android:layout_marginTop="-70dp"
         android:layout_below="@id/rl_top_bar"
         android:layout_centerHorizontal="true"
@@ -32,20 +32,20 @@
         android:elevation="8dp">
 
         <TextView
-            android:id="@+id/tv_signup_text"
+            android:id="@+id/tv_signin_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
             android:fontFamily="sans-serif-black"
-            android:text="Sign up"
+            android:text="Sign In"
             android:textColor="@color/top_blue"
             android:textSize="40sp" />
 
         <View
             android:layout_width="120dp"
             android:layout_height="2dp"
-            android:layout_alignBottom="@id/tv_signup_text"
+            android:layout_alignBottom="@id/tv_signin_text"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="-4dp"
             android:background="@color/line_yellow" />
@@ -55,7 +55,7 @@
             android:layout_width="wrap_content"
             android:layout_height="38dp"
             android:layout_marginTop="40dp"
-            android:layout_below="@id/tv_signup_text"
+            android:layout_below="@id/tv_signin_text"
             android:layout_centerHorizontal="true"
             android:ems="12"
             android:inputType="textPersonName"
@@ -74,41 +74,27 @@
             style="@style/inputSignin"
             android:hint="Email"/>
 
-        <EditText
-            android:id="@+id/edit_text_pass"
-            android:layout_width="wrap_content"
-            android:layout_height="38dp"
-            android:layout_marginTop="25dp"
-            android:layout_below="@id/edit_text_email"
-            android:layout_centerHorizontal="true"
-            android:ems="12"
-            style="@style/inputSignin"
-            android:inputType="textPassword"
-            android:hint="Contraseña"/>
-
-        <EditText
-            android:id="@+id/edit_text_passconfirm"
-            android:layout_width="wrap_content"
-            android:layout_height="38dp"
-            android:layout_marginTop="25dp"
-            android:layout_below="@id/edit_text_pass"
-            android:layout_centerHorizontal="true"
-            android:ems="12"
-            style="@style/inputSignin"
-            android:inputType="textPassword"
-            android:hint="Confirmar contraseña"/>
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button_signup"
+            android:id="@+id/button_signin"
             android:layout_width="220dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="30dp"
             android:layout_centerHorizontal="true"
             android:background="@drawable/button_gradient_bg"
-            android:layout_below="@id/edit_text_passconfirm"
+            android:layout_below="@id/edit_text_email"
             android:textColor="@color/white"
             android:textSize="18sp"
-            android:text="Sign Up" />
+            android:text="Sign In" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/button_signin"
+            android:layout_marginTop="25dp"
+            android:textColor="@color/top_blue"
+            android:text="¿Olvidaste tu contraseña?"/>
 
     </RelativeLayout>
 

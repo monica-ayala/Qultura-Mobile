@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_marginBottom="16dp"
+    >
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="270dp"
+        app:cardCornerRadius="25dp"
+        app:strokeColor="@color/card_box_border"
+        app:strokeWidth="2dp"
+        app:cardBackgroundColor="@color/white"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/ll_info_museo"
+            android:padding="30dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@mipmap/ic_launcher"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Museo de Arte de Querétaro"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="24dp"
+                    android:id="@+id/tv_museum"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="12 de Marzo"
+                    android:textSize="22dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/tv_horario"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="140dp"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Estatus: "
+                android:layout_weight="0.5"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:id="@+id/tv_estado"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Personas: "
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:id="@+id/tv_personas"
+                />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="90dp"
+            android:background="@drawable/cancel_button"
+            android:padding="1dp"
+            android:text="Cancelar"
+            android:textColor="@color/white" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

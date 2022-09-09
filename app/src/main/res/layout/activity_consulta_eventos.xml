@@ -75,6 +75,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/ll_categorias_first"
+        android:id="@+id/ll_filtros"
         >
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="80dp"
@@ -113,6 +114,14 @@
 
     </LinearLayout>
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_filtros"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+    />
 
 
 </RelativeLayout>

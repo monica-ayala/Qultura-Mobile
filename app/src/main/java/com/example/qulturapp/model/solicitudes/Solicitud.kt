@@ -6,5 +6,6 @@ data class Solicitud(
     @SerializedName("museo") val museo: String,
     @SerializedName("fecha") val fecha: String,
     @SerializedName("asistentes") val asistentes: Int,
-    @SerializedName("estado") val estado: Int
+    @SerializedName("estado") val estado: Int,
+    @SerializedName("necesidades") val necesidades: List<String>
 )

@@ -7,11 +7,11 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="top_blue">#F70C1A30</color>
-    <color name="line_yellow">#FFDC3B</color>
+    <color name="primary_color">#F70C1A30</color>
+    <color name="secondary_color">#FFDC3B</color>
     <color name="button_red">#FF6666</color>
     <color name="card_box_bg">#00FFFFFF</color>
     <color name="card_box_border">#838383</color>
-    <color name="gray_text">#B9B9B9</color>
+    <color name="tertiary_color">#B9B9B9</color>
     <color name="gray_edit_box">#EFEFEF</color>
 </resources>

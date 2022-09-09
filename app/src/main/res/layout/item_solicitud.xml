@@ -94,7 +94,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="90dp"
-            android:background="@drawable/cancel_button"
+            android:background="@drawable/cancel_button_bg"
             android:padding="1dp"
             android:text="Cancelar"
             android:textColor="@color/white" />

@@ -16,6 +16,8 @@ class SesionViewModel: ViewModel() {
         TODO()
     }
 
+    //Aún no tengo idea de como sirve esto solo no lo vean luego checo esta onda
+    /*
     private fun generaLlave(): SecretKey {
         val keystore = KeyStore.getInstance("AndroidKeyStore")
         keystore.load(null)
@@ -45,5 +47,5 @@ class SesionViewModel: ViewModel() {
 
         cipher.init(Cipher.DECRYPT_MODE, generaLlave(), spec)
         return cipher.doFinal(data).toString(Charsets.UTF_8).trim()
-    }
+    }*/
 }

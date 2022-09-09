@@ -28,7 +28,7 @@ class ActivitySignUp: AppCompatActivity() {
 
     private fun validaInfo(): Boolean {
         var completo = false
-
+        TODO()
         return completo
     }
 

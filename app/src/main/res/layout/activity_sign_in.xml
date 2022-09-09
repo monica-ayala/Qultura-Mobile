@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:background="@drawable/top_bar_background"
-        android:backgroundTint="@color/top_blue">
+        android:backgroundTint="@color/primary_color">
 
         <ImageView
             android:layout_width="190dp"
@@ -39,7 +39,7 @@
             android:layout_marginTop="20dp"
             android:fontFamily="sans-serif-black"
             android:text="Sign In"
-            android:textColor="@color/top_blue"
+            android:textColor="@color/primary_color"
             android:textSize="40sp" />
 
         <View
@@ -48,7 +48,7 @@
             android:layout_alignBottom="@id/tv_signin_text"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="-4dp"
-            android:background="@color/line_yellow" />
+            android:background="@color/secondary_color" />
 
         <EditText
             android:id="@+id/edit_text_email"
@@ -93,7 +93,7 @@
             android:layout_centerHorizontal="true"
             android:layout_below="@id/button_signin"
             android:layout_marginTop="25dp"
-            android:textColor="@color/top_blue"
+            android:textColor="@color/primary_color"
             android:text="¿Olvidaste tu contraseña?"/>
 
     </RelativeLayout>

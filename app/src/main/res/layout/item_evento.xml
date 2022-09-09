@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginBottom="16dp"
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/iv_event_icon"
+        android:src="@drawable/prueba_evento"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/iv_event_icon"
+        android:background="@color/primary_color"
+
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>

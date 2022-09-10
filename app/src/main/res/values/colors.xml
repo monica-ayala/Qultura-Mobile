@@ -14,4 +14,5 @@
     <color name="card_box_border">#838383</color>
     <color name="tertiary_color">#B9B9B9</color>
     <color name="gray_edit_box">#EFEFEF</color>
+    <color name="trans_black">#85000000</color>
 </resources>

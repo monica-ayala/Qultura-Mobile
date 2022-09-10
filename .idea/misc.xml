@@ -3,16 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/emili/Documents/Tec/Laboratorio/TC2007B/Qultura-Mobile/app/src/main/res/drawable/button_gradient_bg.xml" value="0.203" />
-        <entry key="..\:/Users/emili/Documents/Tec/Laboratorio/TC2007B/Qultura-Mobile/app/src/main/res/drawable/cancel_button.xml" value="0.2985" />
-        <entry key="..\:/Users/emili/Documents/Tec/Laboratorio/TC2007B/Qultura-Mobile/app/src/main/res/drawable/center_box_bg.xml" value="0.203" />
-        <entry key="..\:/Users/emili/Documents/Tec/Laboratorio/TC2007B/Qultura-Mobile/app/src/main/res/drawable/solicitud_card_box.xml" value="0.2985" />
-        <entry key="..\:/Users/emili/Documents/Tec/Laboratorio/TC2007B/Qultura-Mobile/app/src/main/res/drawable/top_bar_background.xml" value="0.2985" />
-        <entry key="..\:/Users/emili/Documents/Tec/Laboratorio/TC2007B/Qultura-Mobile/app/src/main/res/layout/activity_main.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/emili/Documents/Tec/Laboratorio/TC2007B/Qultura-Mobile/app/src/main/res/layout/activity_mis_solicitudes.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/emili/Documents/Tec/Laboratorio/TC2007B/Qultura-Mobile/app/src/main/res/layout/activity_sign_in.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/emili/Documents/Tec/Laboratorio/TC2007B/Qultura-Mobile/app/src/main/res/layout/activity_sign_up.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/emili/Documents/Tec/Laboratorio/TC2007B/Qultura-Mobile/app/src/main/res/layout/item_solicitud.xml" value="0.33" />
+        <entry key="..\:/Qultura-Mobile/app/src/main/res/layout/activity_main.xml" value="0.1852355072463768" />
+        <entry key="..\:/Qultura-Mobile/app/src/main/res/layout/activity_map.xml" value="0.1" />
+        <entry key="..\:/Qultura-Mobile/app/src/main/res/layout/activity_mis_solicitudes.xml" value="0.1852355072463768" />
       </map>
     </option>
   </component>

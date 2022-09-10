@@ -97,7 +97,8 @@
             android:background="@drawable/cancel_button_bg"
             android:padding="1dp"
             android:text="Cancelar"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            android:id="@+id/cancel_button"/>
 
     </com.google.android.material.card.MaterialCardView>
 

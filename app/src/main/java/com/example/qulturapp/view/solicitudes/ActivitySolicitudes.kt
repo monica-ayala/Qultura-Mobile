@@ -14,7 +14,7 @@ class ActivitySolicitudes: AppCompatActivity() {
     private lateinit var adapter: SolicitudesListAdapter
 
     private fun initializeList(list:List<Solicitud>) {
-        adapter = SolicitudesListAdapter(list)
+        adapter = SolicitudesListAdapter(list, this)
 
         val layoutManager = LinearLayoutManager(this)
         val rvSolicitudes = findViewById<RecyclerView>(R.id.rv_list_solicitudes)

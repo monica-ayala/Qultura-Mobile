@@ -22,7 +22,7 @@
 
     <View
         android:layout_width="140dp"
-        android:layout_height="2dp"
+        android:layout_height="3dp"
         android:background="@color/secondary_color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -45,7 +45,7 @@
             android:id="@+id/tv_mi_perfil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="75dp"
+            android:layout_marginStart="80dp"
             android:layout_marginTop="30dp"
             android:fontFamily="sans-serif-black"
             android:text="@string/mi_perfil"
@@ -69,7 +69,7 @@
             android:id="@+id/tv_localizacion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="75dp"
+            android:layout_marginStart="80dp"
             android:layout_marginTop="20dp"
             android:fontFamily="sans-serif-black"
             android:text="@string/localizacion"
@@ -82,7 +82,7 @@
             android:id="@+id/tv_llamadas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="75dp"
+            android:layout_marginStart="80dp"
             android:layout_marginTop="20dp"
             android:fontFamily="sans-serif-black"
             android:text="@string/llamadas"
@@ -95,7 +95,7 @@
             android:id="@+id/tv_modo_oscuro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="75dp"
+            android:layout_marginStart="80dp"
             android:layout_marginTop="20dp"
             android:fontFamily="sans-serif-black"
             android:text="@string/modo_oscuro"
@@ -163,7 +163,7 @@
             android:id="@+id/tv_boton_sos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="72dp"
+            android:layout_marginStart="80dp"
             android:layout_marginTop="20dp"
             android:fontFamily="sans-serif-black"
             android:text="@string/boton_sos"
@@ -176,7 +176,7 @@
             android:id="@+id/tv_notificaciones"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="72dp"
+            android:layout_marginStart="80dp"
             android:layout_marginTop="20dp"
             android:fontFamily="sans-serif-black"
             android:text="@string/notificaciones"
@@ -189,7 +189,7 @@
             android:id="@+id/tv_contraste"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="72dp"
+            android:layout_marginStart="80dp"
             android:layout_marginTop="20dp"
             android:fontFamily="sans-serif-black"
             android:text="@string/contraste"
@@ -207,7 +207,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <Switch
-            android:id="@+id/switch2"
+            android:id="@+id/switch_conf_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="30dp"
@@ -217,7 +217,7 @@
             app:layout_constraintEnd_toEndOf="parent" />
 
         <Switch
-            android:id="@+id/switch6"
+            android:id="@+id/switch_conf_4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="30dp"
@@ -227,7 +227,7 @@
             app:layout_constraintEnd_toEndOf="parent" />
 
         <Switch
-            android:id="@+id/switch3"
+            android:id="@+id/switch_conf_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="30dp"
@@ -237,7 +237,7 @@
             app:layout_constraintEnd_toEndOf="parent" />
 
         <Switch
-            android:id="@+id/switch5"
+            android:id="@+id/switch_conf_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="30dp"
@@ -245,6 +245,87 @@
             android:minHeight="48dp"
             app:layout_constraintBottom_toTopOf="@+id/view"
             app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/view3"
+            app:layout_constraintEnd_toStartOf="@+id/tv_mi_perfil"
+            app:srcCompat="@drawable/profile_icon" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/view"
+            app:layout_constraintEnd_toStartOf="@+id/tv_llamadas"
+            app:srcCompat="@drawable/phone_icon" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/view2"
+            app:layout_constraintEnd_toStartOf="@+id/tv_modo_oscuro"
+            app:srcCompat="@drawable/dm_icon" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/view6"
+            app:layout_constraintEnd_toStartOf="@+id/tv_notificaciones"
+            app:srcCompat="@drawable/notification_icon" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/view5"
+            app:layout_constraintEnd_toStartOf="@+id/tv_boton_sos"
+            app:srcCompat="@drawable/emergency_icon" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/tv_contraste"
+            app:layout_constraintTop_toBottomOf="@+id/view5"
+            app:srcCompat="@drawable/eye_icon" />
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/view4"
+            app:layout_constraintEnd_toStartOf="@+id/tv_localizacion"
+            app:srcCompat="@drawable/location_icon" />
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="250dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="18dp"
+            android:progressTint="#3F51B5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_contraste"
+            android:thumbTint="@color/primary_color"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

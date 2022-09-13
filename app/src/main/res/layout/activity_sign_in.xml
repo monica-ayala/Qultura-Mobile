@@ -17,7 +17,7 @@
             android:layout_height="190dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="-25dp"
-            android:src="@drawable/logo_secretaria"/>
+            android:src="@drawable/logo_secretaria" />
 
     </RelativeLayout>
 

@@ -4,18 +4,21 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.example.qulturapp.R
 import com.smarteist.autoimageslider.SliderViewAdapter
 
 // on below line we are creating a class for slider
 // adapter and passing our array list to it.
-class SliderAdapter(imageUrl: ArrayList<String>) :
+class SliderAdapter(imageUrl: ArrayList<String>, /*textStr: ArrayList<String>*/) :
     SliderViewAdapter<SliderAdapter.SliderViewHolder>() {
 
     // on below line we are creating a
     // new array list and initializing it.
     var sliderList: ArrayList<String> = imageUrl
+    //var sliderListText: ArrayList<String> = textStr
+
 
     // on below line we are calling get method
     override fun getCount(): Int {
@@ -44,6 +47,8 @@ class SliderAdapter(imageUrl: ArrayList<String>) :
             // loading the image inside our image view using glide library
             Glide.with(viewHolder.itemView).load(sliderList.get(position)).fitCenter()
                 .into(viewHolder.imageView)
+            /*Glide.with(viewHolder.itemView).load(sliderList.get(position)).fitCenter()
+                .into(viewHolder.textView)*/
         }
     }
 
@@ -53,5 +58,6 @@ class SliderAdapter(imageUrl: ArrayList<String>) :
         // on below line we are creating a variable for our
         // image view and initializing it with image id.
         var imageView: ImageView = itemView!!.findViewById(R.id.myimage)
+        //var textView: TextView = itemView!!.findViewById(R.id.mytextimage)
     }
 }

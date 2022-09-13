@@ -10,6 +10,7 @@ class ListMuseum : AppCompatActivity() {
     // on below line we are creating a variable
     // for our array list for storing our images.
     lateinit var imageUrl: ArrayList<String>
+    //lateinit var textStr: ArrayList<String>
 
     // on below line we are creating
     // a variable for our slider view.
@@ -29,10 +30,11 @@ class ListMuseum : AppCompatActivity() {
         // on below line we are initializing
         // our image url array list.
         imageUrl = ArrayList()
+        //textStr = ArrayList()
 
         // on below line we are adding data to our image url array list.
         imageUrl =
-            (imageUrl + "https://colombiaestudia.com/wp-content/uploads/2022/01/Logo_CEART.png") as ArrayList<String>
+            (imageUrl + "https://media-exp1.licdn.com/dms/image/C4D03AQE9bWyXBKnrFA/profile-displayphoto-shrink_800_800/0/1517557830238?e=2147483647&v=beta&t=3Aab3u38BaMG8mjIPOjbK0614w3eY2zMziigQWhGQRk") as ArrayList<String>
         imageUrl =
             (imageUrl + "https://www.101museos.com/cms101/assets/recintos/-0088-.jpg") as ArrayList<String>
         imageUrl =

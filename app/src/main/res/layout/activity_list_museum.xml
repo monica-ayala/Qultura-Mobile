@@ -75,6 +75,16 @@
         android:layout_centerHorizontal="true"
         android:background="@color/trans_black"
         />
+    <TextView
+        android:id="@+id/over_text"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="250dp"
+        android:text="xd"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="60dp"/>
 
 
 </RelativeLayout>

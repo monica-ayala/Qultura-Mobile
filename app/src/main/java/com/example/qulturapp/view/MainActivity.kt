@@ -8,7 +8,7 @@ import com.example.qulturapp.R
 import com.example.qulturapp.model.MuseumListAdapter
 import com.example.qulturapp.model.MuseumResults
 import com.example.qulturapp.view.sesion.ActivitySignIn
-import com.example.qulturapp.viewmodel.MusesViewModel
+import com.example.qulturapp.viewmodel.MuseumsViewModel
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var adapter: MuseumListAdapter
 
-    private val viewmodel: MusesViewModel by viewModels()
+    private val viewmodel: MuseumsViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -1,4 +1,4 @@
 package com.example.qulturapp
 
-class Contants {
+class Constants {
 }

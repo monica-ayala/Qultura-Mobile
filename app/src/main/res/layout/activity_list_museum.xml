@@ -67,24 +67,33 @@
         app:sliderIndicatorSelectedColor="@color/black"
         app:sliderIndicatorUnselectedColor="@color/white"
         app:sliderScrollTimeInSec="1" />
+    <ImageView
+        android:id="@+id/myimage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:contentDescription="@string/app_name"
+        android:layout_marginTop="530dp"
+        android:src="@drawable/colorevent"
+        android:scaleType="fitXY"
+        android:visibility="visible"/>
+
     <View
         android:id="@+id/overlay_image"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:layout_marginTop="100dp"
-        android:layout_centerHorizontal="true"
-        android:background="@color/trans_black"
-        />
+        android:layout_height="200dp"
+        android:layout_marginTop="530dp"
+        android:background="@color/trans_black" />
+
     <TextView
-        android:id="@+id/over_text"
+        android:id="@+id/mytextimage"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="250dp"
-        android:text="xd"
-        android:textColor="@color/white"
+        android:layout_height="200dp"
         android:textAlignment="center"
-        android:textSize="60dp"/>
+        android:text="EVENTOS"
+        android:layout_marginTop="585dp"
+        android:textColor="@color/white"
+        android:textSize="60dp" />
+
 
 
 </RelativeLayout>

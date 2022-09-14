@@ -15,6 +15,7 @@ import com.example.qulturapp.R
 
 import org.osmdroid.config.Configuration.*
 import org.osmdroid.tileprovider.tilesource.TileSourceFactory
+import org.osmdroid.util.GeoPoint
 import org.osmdroid.views.MapView
 
 import java.util.ArrayList
@@ -31,6 +32,12 @@ class ActivityMap: AppCompatActivity (){
 
         map = findViewById<MapView>(R.id.map)
         map.setTileSource(TileSourceFactory.MAPNIK)
+
+        // Start on Queretaro
+        val mapController = map.controller
+        mapController.setZoom(12)
+        val startPoint = GeoPoint(20.5880, -100.3880)
+        mapController.setCenter(startPoint)
     }
     override fun onResume() {
         super.onResume()

@@ -10,9 +10,9 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.qulturapp.R
-import com.example.qulturapp.model.solicitudes.Solicitud
+import com.example.qulturapp.model.solicitudes.SolicitudLista
 
-class SolicitudesListAdapter (private val data:List<Solicitud>): RecyclerView.Adapter<ViewHolder>() {
+class SolicitudesListAdapter (private val data:List<SolicitudLista>): RecyclerView.Adapter<ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
@@ -39,7 +39,7 @@ class ViewHolder (view: View): RecyclerView.ViewHolder(view) {
 
     val context = view.context
 
-    fun bind(item: Solicitud, position:Int) {
+    fun bind(item: SolicitudLista, position:Int) {
         textMuseo.text = item.museo
         horario.text = item.fecha
         asistentes.text = "Personas: " + item.asistentes.toString()

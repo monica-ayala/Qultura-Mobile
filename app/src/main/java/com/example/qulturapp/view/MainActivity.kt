@@ -5,13 +5,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.qulturapp.R
 import com.example.qulturapp.view.sesion.ActivitySignIn
+import com.example.qulturapp.view.solicitudes.ActivityHorario
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val intentSignIn = Intent(this, ActivitySignIn::class.java)
-        startActivity(intentSignIn)
+        val intentRegistrar_Horario = Intent(this, ActivityHorario::class.java)
+        startActivity(intentRegistrar_Horario)
     }
 }

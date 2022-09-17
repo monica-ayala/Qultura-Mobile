@@ -13,6 +13,16 @@
         <entry key="..\:/Users/emili/Documents/Tec/Laboratorio/TC2007B/Qultura-Mobile/app/src/main/res/layout/activity_sign_in.xml" value="0.358695652173913" />
         <entry key="..\:/Users/emili/Documents/Tec/Laboratorio/TC2007B/Qultura-Mobile/app/src/main/res/layout/activity_sign_up.xml" value="0.358695652173913" />
         <entry key="..\:/Users/emili/Documents/Tec/Laboratorio/TC2007B/Qultura-Mobile/app/src/main/res/layout/item_solicitud.xml" value="0.33" />
+        <entry key="app/src/main/res/drawable/button_gradient_bg.xml" value="0.1275" />
+        <entry key="app/src/main/res/drawable/button_solicitud_siguiente.xml" value="0.1275" />
+        <entry key="app/src/main/res/drawable/calendar_background.xml" value="0.1275" />
+        <entry key="app/src/main/res/drawable/cancel_button_bg.xml" value="0.1275" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.15520833333333334" />
+        <entry key="app/src/main/res/layout/activity_mis_solicitudes.xml" value="0.17266187050359713" />
+        <entry key="app/src/main/res/layout/activity_registra_solicitud.xml" value="0.13956146240234374" />
+        <entry key="app/src/main/res/layout/item_calendarcell.xml" value="0.75" />
+        <entry key="app/src/main/res/layout/item_horario_solicitud.xml" value="0.4948453608247423" />
+        <entry key="app/src/main/res/layout/item_solicitud.xml" value="0.15894039735099338" />
       </map>
     </option>
   </component>

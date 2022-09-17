@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Qulturapp</string>
+    <string name="back"><![CDATA[<-]]></string>
+    <string name="next"><![CDATA[->]]></string>
+    <string name="CalendarioFecha">Septiembre 2022</string>
+    <string name="buton_siguiente">Siguiente</string>
 </resources>

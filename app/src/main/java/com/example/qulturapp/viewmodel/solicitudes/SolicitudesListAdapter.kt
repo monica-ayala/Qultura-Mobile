@@ -14,6 +14,7 @@ class SolicitudesListAdapter (private val data:List<Solicitud>): RecyclerView.Ad
         return ViewHolder(layoutInflater.inflate(R.layout.item_solicitud, parent, false))
     }
 
+
     override fun getItemCount(): Int = data.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {

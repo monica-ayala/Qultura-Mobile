@@ -31,6 +31,9 @@
         <activity
             android:name=".view.sesion.ActivitySignIn">
         </activity>
+        <activity
+            android:name=".view.Info.ActivityInfo">
+        </activity>
     </application>
 
 </manifest>

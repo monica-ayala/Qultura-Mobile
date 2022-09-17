@@ -1,7 +1,7 @@
 package com.example.qulturapp.viewmodel.Informacion
 
 import androidx.lifecycle.ViewModel
-import com.example.qulturapp.model.infoLinks.Link
+import com.example.qulturapp.model.Info.Link
 
 class LinksViewModel: ViewModel() {
     var listaLinks = mutableListOf<Link>()

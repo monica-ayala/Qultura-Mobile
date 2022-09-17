@@ -1,4 +1,4 @@
-package com.example.qulturapp.model.infoLinks
+package com.example.qulturapp.model.Info
 
 import com.google.gson.annotations.SerializedName
 

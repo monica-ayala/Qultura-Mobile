@@ -8,8 +8,13 @@ import javax.crypto.spec.IvParameterSpec
 
 
 class SesionViewModel: ViewModel() {
-    fun guardarUsuario(nombre: String, correo: String, contrasenia: String) {
+    fun guardarUsuario(nombre: String, correo: String, contrasenia: String): Boolean {
         TODO()
+    }
+
+    fun validaUsuario(correo: String, contrasenia: String): Boolean{
+        //TODO
+        return true
     }
 
     fun comparaContrasenia(contrasenia: String) {

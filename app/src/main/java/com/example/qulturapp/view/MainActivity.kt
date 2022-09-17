@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.qulturapp.R
 import com.example.qulturapp.view.sesion.ActivitySignIn
+import com.example.qulturapp.view.sesion.ActivitySignUp
 
 class MainActivity : AppCompatActivity() {
 

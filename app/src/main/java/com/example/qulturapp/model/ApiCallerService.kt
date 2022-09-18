@@ -15,10 +15,8 @@ class ApiCallerService {
 
 
     suspend fun searchSolicitudList(): SolicitudListResults?{
-        val call = getRetrofit().create(ApiService::class.java).getSolicitudList("/get")
+        val call = getRetrofit().create(ApiService::class.java).getSolicitudList("/solicitud/getAll")
         val solicitudList = call.body()
         return solicitudList
-
     }
-
 }

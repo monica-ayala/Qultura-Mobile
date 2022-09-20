@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rl_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@drawable/top_bar_background"
+        >
+
+        <TextView
+            android:id="@+id/tv_top_bar_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Eventos"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <View
+            android:layout_width="140dp"
+            android:layout_height="3dp"
+            android:layout_alignBottom="@id/tv_top_bar_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="-4dp"
+            android:background="@color/secondary_color"
+
+            />
+    </RelativeLayout>
+
+    <!-- Aca empieza el lugar donde debería de ir la foto -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_top_bar"
+        android:id="@+id/ll_foto_evento"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="540dp"
+            android:src="@drawable/aaaaaaa" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@drawable/top_bar_background"
+        android:layout_below="@+id/ll_foto_evento"
+
+
+        >
+
+        <TextView
+            android:id="@+id/tv_bottom_bar_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-black"
+            android:text="info"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <View
+            android:layout_width="140dp"
+            android:layout_height="3dp"
+            android:layout_alignBottom="@id/tv_bottom_bar_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="-4dp"
+            android:background="@color/secondary_color"
+
+            />
+    </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/ll_info"
+        android:layout_below="@+id/ll_foto_evento"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        >
+
+        <TextView
+            android:id="@+id/titulo_detalle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Bailongo en el centro histórico"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/fecha_detalle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif"
+            android:text="Viernes 25 de septiembre en plaza de armas."
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textAlignment="center"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/boton_ubicacion"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="79dp"
+            android:background="@drawable/button_ubicacion"
+            android:textColor="@color/black"
+            android:text="Ubicacion"
+            android:textSize="24dp"
+
+
+
+
+            />
+
+
+
+
+    </LinearLayout>
+
+
+
+
+    <!--
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_list_eventos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_detalle_evento"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp" />
+
+
+</RelativeLayout>
+
+    -->

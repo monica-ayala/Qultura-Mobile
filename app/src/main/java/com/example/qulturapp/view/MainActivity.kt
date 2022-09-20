@@ -6,13 +6,14 @@ import android.os.Bundle
 import com.example.qulturapp.R
 import com.example.qulturapp.view.eventos.EventoActivity
 import com.example.qulturapp.view.sesion.ActivitySignIn
+import com.example.qulturapp.view.solicitudes.ActivitySolicitudes
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val intentEvento = Intent(this, EventoActivity::class.java)
-        startActivity(intentEvento)
+        val intentSignIn = Intent(this, ActivitySolicitudes::class.java)
+        startActivity(intentSignIn)
     }
 }

@@ -2,6 +2,7 @@ package com.example.qulturapp.view.solicitudes
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.qulturapp.R
@@ -26,7 +27,9 @@ class ActivitySolicitudes: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mis_solicitudes)
+        solicitudesViewModel.listaSolicitudes.observe(this, Observer {
+            initializeList(it)
+        })
         solicitudesViewModel.agregaSolicitudes()
-        initializeList(solicitudesViewModel.listaSolicitudes.toList())
     }
 }

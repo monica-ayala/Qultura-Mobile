@@ -1,5 +1,7 @@
 package com.example.qulturapp.viewmodel.solicitudes
 
+import android.util.Log
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.qulturapp.model.ApiCallerService
@@ -7,7 +9,7 @@ import com.example.qulturapp.model.solicitudes.SolicitudLista
 import kotlinx.coroutines.launch
 
 class SolicitudesViewModel: ViewModel() {
-    var listaSolicitudes = mutableListOf<SolicitudLista>()
+    var listaSolicitudes: MutableLiveData< List<SolicitudLista> > = MutableLiveData(listOf())
     //val listaEjemplo = listOf("Silla de ruedas", "Guía por audio", "si", "otro: una cosa extra")
     private var caller: ApiCallerService = ApiCallerService()
 
@@ -24,22 +26,29 @@ class SolicitudesViewModel: ViewModel() {
     fun agregaSolicitudes(){
         viewModelScope.launch {
             val solicitudList = caller.searchSolicitudList()
+            val listaSolicitudesAct = mutableListOf<SolicitudLista>()
             solicitudList?.solicitudes?.forEach { solicitud ->
                 var listaNecesidades = mutableListOf<String>()
                 for(necesidad in solicitudList.necesidades) {
                     if(necesidad.id_solicitud == solicitud.id_solicitud)
                         listaNecesidades.add(necesidad.necesidad)
                 }
+                val anio = solicitud.fecha.subSequence(0, 4)
+                val mes = solicitud.fecha.subSequence(5, 7)
+                val dia = solicitud.fecha.subSequence(8, 10)
                 val nuevaSolicitud = SolicitudLista(
                     solicitud.id_solicitud,
                     solicitud.info_adicional,
-                    solicitud.fecha,
+                    "$dia/$mes/$anio",
                     solicitud.asistentes,
                     solicitud.estado,
-                    "Museo de arte falta esto",
+                    solicitud.museo,
                     listaNecesidades
                 )
+                listaSolicitudesAct.add(nuevaSolicitud)
             }
+            Log.d("SOlicitudes", solicitudList.toString())
+            listaSolicitudes.postValue(listaSolicitudesAct.toList())
         }
     }
 

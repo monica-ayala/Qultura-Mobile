@@ -17,6 +17,7 @@ import com.example.qulturapp.model.solicitudes.SolicitudLista
 
 class SolicitudesListAdapter (private val data:List<SolicitudLista>, private val context: Context): RecyclerView.Adapter<ViewHolder>() {
     private val dataML = data.toMutableList()
+    private val solicitudesViewModel = SolicitudesViewModel()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
@@ -36,7 +37,7 @@ class SolicitudesListAdapter (private val data:List<SolicitudLista>, private val
 
             altertaCancelar.setPositiveButton("Si",
                 DialogInterface.OnClickListener { dialog, _ ->
-                    eliminaSolicitud(position)
+                    eliminaSolicitud(item)
                     dialog.cancel()
                 })
 
@@ -48,8 +49,10 @@ class SolicitudesListAdapter (private val data:List<SolicitudLista>, private val
         }
     }
 
-    private fun eliminaSolicitud(position: Int) {
-        dataML.removeAt(position);
+    private fun eliminaSolicitud(item: SolicitudLista) {
+        val position = dataML.indexOf(item)
+        solicitudesViewModel.eliminaSolicitud(dataML[position].id_solicitud)
+        dataML.remove(item);
         notifyItemRemoved(position)
         notifyItemRangeChanged(position, itemCount)
     }
@@ -87,8 +90,10 @@ class ViewHolder (view: View): RecyclerView.ViewHolder(view) {
             pos = !pos
         }
 
-        if(item.estado == 0){
-            estado.text = "Estatus: \n Aceptado"
+        estado.text = when(item.estado){
+            0 -> "Estatus: \n Aceptado"
+            1 -> "Estatus: \n En proceso"
+            else -> "Estatus: \n Rechazado"
         }
     }
 }

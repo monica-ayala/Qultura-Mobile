@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.qulturapp.R
+import com.example.qulturapp.view.eventos.EventoActivity
 import com.example.qulturapp.view.sesion.ActivitySignIn
 import com.example.qulturapp.view.solicitudes.ActivitySolicitudes
 

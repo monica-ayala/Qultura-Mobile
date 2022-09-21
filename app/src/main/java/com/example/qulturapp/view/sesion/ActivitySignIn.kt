@@ -1,12 +1,15 @@
 package com.example.qulturapp.view.sesion
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Patterns
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
 import com.example.qulturapp.R
+import com.example.qulturapp.view.solicitudes.ActivitySolicitudes
 import com.example.qulturapp.viewmodel.sesion.SesionViewModel
 import java.util.regex.Pattern
 
@@ -34,9 +37,7 @@ class ActivitySignIn: AppCompatActivity() {
     private fun iniciaSesion() {
         when {
             !validaInfo() -> mensajeInfoIncompleta()
-            !sesionViewModel.validaUsuario(correo.text.toString(),
-                contrasenia.text.toString()) -> mensajeErrorDatos()
-            else -> TODO() //Si entra
+            else -> sesionViewModel.validaUsuario(correo.text.toString(), contrasenia.text.toString() )
         }
     }
 
@@ -49,7 +50,26 @@ class ActivitySignIn: AppCompatActivity() {
         return completo
     }
 
+    private fun ingresarAplicacion(inicia: Boolean?) {
+        when(inicia) {
+            true -> iniciaPaginaPrincipal()
+            false -> {
+                sesionViewModel.sesionIniciada.postValue(null)
+                mensajeErrorDatos()
+                }
+            else -> {}
+        }
+    }
+
+    private fun iniciaPaginaPrincipal() {
+        val intentSolicitudes = Intent(this, ActivitySolicitudes::class.java)
+        startActivity(intentSolicitudes)
+    }
+
     private fun setListeners() {
+        sesionViewModel.sesionIniciada.observe(this, Observer {
+            ingresarAplicacion(it)
+        })
         botonSignIn.setOnClickListener {
             iniciaSesion()
         }

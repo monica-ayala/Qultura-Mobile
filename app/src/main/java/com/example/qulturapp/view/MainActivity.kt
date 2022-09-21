@@ -11,8 +11,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        val intentEvento = Intent(this, EventoActivity::class.java)
-        startActivity(intentEvento)
+        setContentView(R.layout.activity_detalle_evento)
     }
 }

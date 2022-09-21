@@ -91,7 +91,9 @@
         android:layout_below="@+id/ll_foto_evento"
         android:orientation="vertical"
         android:layout_height="match_parent"
-        android:background="@color/white"
+        android:background="@drawable/button_ubicacion"
+
+
         >
 
         <TextView
@@ -128,31 +130,10 @@
             android:textColor="@color/black"
             android:text="Ubicacion"
             android:textSize="24dp"
-
-
-
-
             />
 
 
 
 
     </LinearLayout>
-
-
-
-
-    <!--
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_list_eventos"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/ll_detalle_evento"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginRight="15dp" />
-
-
 </RelativeLayout>
-
-    -->

@@ -195,5 +195,4 @@
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.lifecycle:lifecycle-runtime-ktx:2.5.1@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.savedstate:savedstate-ktx:1.2.0@aar" level="project" />
   </component>
-  <component name="TestModuleProperties" production-module="Qulturapp.app.main" />
 </module>

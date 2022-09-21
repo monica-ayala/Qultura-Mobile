@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.qulturapp.R
 import com.example.qulturapp.model.MuseumListAdapter
 import com.example.qulturapp.model.MuseumResults
+import com.example.qulturapp.view.museum.Museum
 import com.example.qulturapp.view.sesion.ActivitySignIn
 import com.example.qulturapp.viewmodel.MuseumsViewModel
 
@@ -21,7 +22,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val intentSignIn = Intent(this, ActivitySignIn::class.java)
+        val intentSignIn = Intent(this, Museum::class.java)
+        startActivity(intentSignIn)
 
         viewmodel.onCreate()
         viewmodel.searchMuseumList()

@@ -3,6 +3,7 @@ package com.example.qulturapp.view
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.content.ContextCompat.startActivity
 import com.example.qulturapp.R
 import com.example.qulturapp.view.sesion.ActivitySignIn
 import com.example.qulturapp.view.solicitudes.ActivitySolicitudes

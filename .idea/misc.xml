@@ -17,8 +17,9 @@
         <entry key="..\:/User/Documents/AndroidProjects/Qultura-Mobile/app/src/main/res/layout/item_museum_detail.xml" value="0.253125" />
         <entry key="..\:/User/Documents/AndroidProjects/Qultura-Mobile/app/src/main/res/layout/item_solicitud.xml" value="0.25416666666666665" />
         <entry key="app/src/main/res/layout/activity_mis_solicitudes.xml" value="0.2078125" />
-        <entry key="app/src/main/res/layout/activity_museum.xml" value="0.20069122314453128" />
-        <entry key="app/src/main/res/layout/item_gallery_detail.xml" value="0.23882598876953115" />
+        <entry key="app/src/main/res/layout/activity_museum.xml" value="0.35628509521484375" />
+        <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.2078125" />
+        <entry key="app/src/main/res/layout/item_gallery_detail.xml" value="0.3538681030273438" />
         <entry key="app/src/main/res/layout/item_museum_detail.xml" value="0.2776268115942029" />
       </map>
     </option>

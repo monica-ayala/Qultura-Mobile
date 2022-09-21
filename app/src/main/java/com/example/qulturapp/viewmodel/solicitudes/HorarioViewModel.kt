@@ -6,6 +6,10 @@ import com.example.qulturapp.model.horarios.Horario
 class HorarioViewModel: ViewModel() {
     var listaHorario = mutableListOf<Horario>()
 
+    var day_selected : String? = null
+    var monthYear_selected : String? = null
+    var hora_selected : String? = null
+
     fun agregaHorarios() {
         val horario1 = Horario("09:00 AM")
         val horario2 = Horario("10:00 AM")

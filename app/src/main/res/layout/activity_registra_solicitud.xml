@@ -50,7 +50,7 @@
                 android:text="@string/back"
                 android:textAlignment="center"
                 android:textColor="@color/black"
-                android:textSize="11sp"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 android:onClick="previousMonthAction"
                 tools:ignore="UsingOnClickInXml" />
@@ -76,7 +76,7 @@
                 android:textColor="@color/black"
                 android:background="@null"
                 android:textStyle="bold"
-                android:textSize="11sp"
+                android:textSize="18sp"
                 android:textAlignment="center"
                 android:onClick="nextMonthAction"
                 tools:ignore="UsingOnClickInXml" />
@@ -211,25 +211,19 @@
             android:orientation="horizontal"
             android:scrollbars="horizontal" />
 
-        <RelativeLayout
-            android:id="@+id/rl_boton_siguiente"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/rv_list_horarios"
-            >
-
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/boton_siguiente"
                 android:layout_width="260dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/rv_list_horarios"
                 android:background="@drawable/button_solicitud_siguiente"
                 android:padding="10dp"
                 android:text="@string/buton_siguiente"
                 android:textColor="@color/black" />
 
-        </RelativeLayout>
 
     </RelativeLayout>
 

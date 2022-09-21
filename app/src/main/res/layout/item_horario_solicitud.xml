@@ -11,38 +11,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:cardCornerRadius="50dp"
-        app:strokeColor="@color/card_box_border"
-        app:strokeWidth="2dp"
-        
-        app:cardBackgroundColor="@color/card_box_border"
         >
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:id="@+id/ll_horario"
-            android:padding="5dp">
-
-            <LinearLayout
-                android:layout_width="55dp"
-                android:layout_height="15dp"
-                android:orientation="vertical"
-                >
-
-                <TextView
-                    android:id="@+id/tv_horario"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="2dp"
-                    android:text="12:00PM"
-                    android:textColor="@color/black"
-                    android:textSize="11dp" />
-
-            </LinearLayout>
-
-
-        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/boton_hora"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:padding="5dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="@color/card_box_border"
+            android:textSize="10sp"
+            android:text="12:00PM"
+            android:textColor="@color/black" />
 
     </com.google.android.material.card.MaterialCardView>
 

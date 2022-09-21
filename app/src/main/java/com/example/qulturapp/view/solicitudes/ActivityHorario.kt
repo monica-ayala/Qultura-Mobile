@@ -1,10 +1,12 @@
 package com.example.qulturapp.view.solicitudes
 
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.util.Log
 import android.view.View
+import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
@@ -21,14 +23,14 @@ import java.time.LocalDate
 import java.time.YearMonth
 import java.time.format.DateTimeFormatter
 
-class ActivityHorario: AppCompatActivity(), CalendarAdapter.OnItemListener {
+class ActivityHorario: AppCompatActivity(){
     //Horario
     private val HorarioViewModel = HorarioViewModel()
     private lateinit var adapter: HorarioListAdapter
 
 
     private fun initializeList(list:List<Horario>){
-        adapter = HorarioListAdapter(list)
+        adapter = HorarioListAdapter(list, this, HorarioViewModel)
         val layoutManager = GridLayoutManager(this, 5)
         val rvHorarios = findViewById<RecyclerView>(R.id.rv_list_horarios)
 
@@ -40,15 +42,17 @@ class ActivityHorario: AppCompatActivity(), CalendarAdapter.OnItemListener {
     //Calendario
 
     private lateinit var selectedDate:LocalDate
+    private lateinit var monthYearText:TextView
 
     @RequiresApi(Build.VERSION_CODES.O)
     private fun setMonthView(){
         val rvCalendar = findViewById<RecyclerView>(R.id.rv_calendarselect)
-        val monthYearText = findViewById<TextView>(R.id.tv_textoMes)
+        monthYearText = findViewById<TextView>(R.id.tv_textoMes)
 
         monthYearText.text = (monthYearFromDate(selectedDate))
+        HorarioViewModel.monthYear_selected = monthYearText.text as String
         val daysInMonth = daysInMonthArray(selectedDate)
-        val calendarAdapter = CalendarAdapter(daysInMonth.toList(),this)
+        val calendarAdapter = CalendarAdapter(daysInMonth.toList(), this, HorarioViewModel)
         val layoutManager_calendar = GridLayoutManager(this, 7)
         rvCalendar.layoutManager = layoutManager_calendar
         rvCalendar.adapter = calendarAdapter
@@ -91,15 +95,7 @@ class ActivityHorario: AppCompatActivity(), CalendarAdapter.OnItemListener {
         setMonthView()
     }
 
-    @RequiresApi(Build.VERSION_CODES.O)
-    override fun onItemClick(position: Int, dayText: String) {
-        super.onItemClick(position, dayText)
-        if(dayText == " "){
-            val message = "Selected Date " + dayText + " " + monthYearFromDate(selectedDate)
-            Toast.makeText(this, message, Toast.LENGTH_LONG).show()
-        }
-
-    }
+    //
 
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -111,5 +107,14 @@ class ActivityHorario: AppCompatActivity(), CalendarAdapter.OnItemListener {
 
         HorarioViewModel.agregaHorarios()
         initializeList(HorarioViewModel.listaHorario.toList())
+
+        // on click boton siguiente
+        val boton_siguiente = findViewById<Button>(R.id.boton_siguiente)
+        boton_siguiente.setOnClickListener{
+            if(HorarioViewModel.day_selected != null && HorarioViewModel.hora_selected != null && HorarioViewModel.monthYear_selected != null){
+                val intentRegistrar_Horario2 = Intent(this, ActivityHorario2::class.java)
+                startActivity(intentRegistrar_Horario2)
+            }
+        }
     }
 }

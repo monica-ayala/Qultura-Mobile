@@ -15,80 +15,130 @@
         android:layout_centerHorizontal="true"
         android:background="@color/trans_black" />
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
         android:layout_marginTop="35dp"
         android:layout_marginEnd="35dp"
-        android:layout_marginBottom="35dp"
-        android:orientation="vertical">
-
-        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/profile_image"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_gravity="center"
-
-            android:src="@drawable/lechuga"
-            app:civ_border_color="@color/white"
-            app:civ_border_width="4dp" />
-
-        <TextView
-            android:id="@+id/tv_top_bar_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:fontFamily="sans-serif-black"
-            android:text="LECHUGAN"
-            android:textColor="@color/white"
-            android:textSize="35sp" />
+        android:layout_marginBottom="90dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginHorizontal="10dp"
-            android:orientation="horizontal">
+            android:layout_height="match_parent"
 
-            <ImageView
-                android:id="@+id/direcccion_icon"
-                android:layout_width="match_parent"
-                android:layout_height="25dp"
-                android:layout_gravity="center_vertical"
-                android:layout_weight=".7"
-                android:src="@drawable/ubi_icon" />
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile_image"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+
+                android:src="@drawable/lechuga"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="4dp" />
 
             <TextView
-                android:id="@+id/tv_direccion_museo"
+                android:id="@+id/tv_top_bar_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-black"
+                android:text="LECHUGAN"
+                android:textColor="@color/white"
+                android:textSize="35sp" />
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/direcccion_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".7"
+                    android:src="@drawable/ubi_icon" />
+
+                <TextView
+                    android:id="@+id/tv_direccion_museo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="6dp"
+                    android:layout_weight=".3"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center_vertical"
+                    android:text="Av. Lechuginni Santa Clara P.C 210"
+                    android:textColor="@color/white"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_horario_museo"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight=".5"
+                    android:background="#802B2727"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:text="12:00-17:00"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/white"
+                android:layout_marginTop="8dp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:background="@color/transparent"
+                android:backgroundTint="@color/transparent"
+                android:text="Ver Salas"
+                android:textAlignment="viewStart"
+                android:textSize="20dp"
+                android:fontFamily="sans-serif"
+                android:layout_marginHorizontal="15dp"
+                android:drawableRight="@drawable/rightarrow"
+                android:textAllCaps="false"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/white" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:layout_marginHorizontal="6dp"
-                android:layout_weight=".3"
                 android:fontFamily="sans-serif"
                 android:gravity="center_vertical"
-                android:text="Av. Lechuginni Santa Clara P.C 210"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus euismod maximus erat eget ultrices. Donec aliquam vitae nulla sit amet mattis. Suspendisse lacinia tristique lorem, eget accumsan metus imperdiet in. Aliquam pharetra erat quis mauris molestie bibendum. Cras fermentum consequat leo a fringilla. Proin sit amet sem scelerisque, maximus arcu ac, auctor massa. Suspendisse lacus tortor, elementum quis lobortis pellentesque, laoreet et lacus. Nam scelerisque gravida tincidunt. Phasellus mollis congue ornare. Integer vitae nibh sagittis, maximus sem vel, tincidunt mauris. Pellentesque est magna, molestie ornare nisi id, interdum rutrum quam. Ut sodales risus id bibendum tincidunt.Donec nunc justo, eleifend ut sapien eget, scelerisque maximus elit. Fusce vitae nisi efficitur dui lacinia commodo non eget dui. Vestibulum condimentum sapien elit, quis dignissim quam porta quis. Donec quis ante nec libero facilisis facilisis. Suspendisse cursus sit amet risus imperdiet hendrerit. Curabitur ultricies sit amet sapien eu maximus. Interdum et malesuada fames ac ante ipsum primis in faucibus."
                 android:textColor="@color/white"
-                android:textSize="12sp" />
+                android:textSize="13sp" />
 
-            <TextView
-                android:id="@+id/tv_horario_museo"
-                android:layout_width="match_parent"
-                android:layout_height="25dp"
-                android:layout_marginTop="8dp"
-                android:layout_weight=".5"
-                android:background="#802B2727"
-                android:fontFamily="sans-serif"
-                android:gravity="center"
-                android:text="12:00-17:00"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="15sp" />
 
         </LinearLayout>
+    </ScrollView>
 
-
-    </LinearLayout>
-
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/round_button"
+        android:text="Solicitud de Recorrido"
+        android:textAllCaps="false"
+        android:textColor="#fff"/>
 
 
 </RelativeLayout>

@@ -1,6 +1,6 @@
 package com.example.qulturapp.model
 
-import com.example.qulturapp.model.MuseumListResults
+import com.example.qulturapp.model.museums.MuseumListResults
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Url

@@ -1,4 +1,4 @@
-package com.example.qulturapp.viewmodel
+package com.example.qulturapp.viewmodel.museums
 
 import android.util.Log
 import androidx.lifecycle.ViewModel

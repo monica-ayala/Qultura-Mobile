@@ -5,10 +5,10 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.example.qulturapp.R
-import com.example.qulturapp.model.MuseumListAdapter
-import com.example.qulturapp.model.MuseumResults
+import com.example.qulturapp.model.museums.MuseumListAdapter
+import com.example.qulturapp.model.museums.MuseumResults
 import com.example.qulturapp.view.sesion.ActivitySignIn
-import com.example.qulturapp.viewmodel.MuseumsViewModel
+import com.example.qulturapp.viewmodel.museums.MuseumsViewModel
 
 class MainActivity : AppCompatActivity() {
 

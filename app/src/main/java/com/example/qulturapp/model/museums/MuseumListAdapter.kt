@@ -1,9 +1,10 @@
-package com.example.qulturapp.model
+package com.example.qulturapp.model.museums
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.qulturapp.R
+import com.example.qulturapp.model.ViewHolder
 
 class MuseumListAdapter (private val data:List<MuseumResults>) :RecyclerView.Adapter<ViewHolder>(){
 

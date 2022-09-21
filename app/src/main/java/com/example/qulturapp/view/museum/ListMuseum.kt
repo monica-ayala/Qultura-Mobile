@@ -3,6 +3,7 @@ package com.example.qulturapp.view.museum
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.qulturapp.R
+import com.example.qulturapp.model.museums.TextList
 import com.smarteist.autoimageslider.SliderView
 
 class ListMuseum : AppCompatActivity() {

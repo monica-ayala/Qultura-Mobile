@@ -7,6 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.example.qulturapp.R
+import com.example.qulturapp.model.museums.TextList
 import com.smarteist.autoimageslider.SliderViewAdapter
 
 // on below line we are creating a class for slider

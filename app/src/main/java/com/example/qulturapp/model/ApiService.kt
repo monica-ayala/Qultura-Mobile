@@ -1,5 +1,6 @@
 package com.example.qulturapp.model
 
+import com.example.qulturapp.model.sesion.UsuarioListResults
 import com.example.qulturapp.model.solicitudes.SolicitudListResults
 import okhttp3.RequestBody
 import retrofit2.Response
@@ -15,4 +16,7 @@ interface ApiService {
 
     @POST
     suspend fun deleteSolicitud(@Url url:String, @Body requestBody: RequestBody): Response<RequestBody>
+
+    @POST
+    suspend fun getUsuario(@Url url:String, @Body requestBody: RequestBody): Response<UsuarioListResults>
 }

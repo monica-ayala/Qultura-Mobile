@@ -4,12 +4,15 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat.startActivity
 import com.example.qulturapp.R
 import com.example.qulturapp.view.museum.Museum
 import com.example.qulturapp.model.museums.MuseumListAdapter
 import com.example.qulturapp.model.museums.MuseumResults
 import com.example.qulturapp.view.sesion.ActivitySignIn
 import com.example.qulturapp.viewmodel.museums.MuseumsViewModel
+import com.example.qulturapp.view.solicitudes.ActivitySolicitudes
+
 
 class MainActivity : AppCompatActivity() {
 

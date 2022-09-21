@@ -1,9 +1,6 @@
 package com.example.qulturapp.model
 
-import android.util.Log
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
+import com.example.qulturapp.model.museums.MuseumListResults
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 

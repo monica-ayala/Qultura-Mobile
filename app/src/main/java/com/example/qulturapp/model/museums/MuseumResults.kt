@@ -1,4 +1,4 @@
-package com.example.qulturapp.model
+package com.example.qulturapp.model.museums
 
 import com.google.gson.annotations.SerializedName
 

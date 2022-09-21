@@ -1,5 +1,6 @@
 package com.example.qulturapp.view
 
+import GalleriesViewModel
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.viewModels
@@ -18,6 +19,8 @@ class MainActivity : AppCompatActivity() {
 
     private val viewmodel: MuseumsViewModel by viewModels()
 
+    private val g_viewmodel: GalleriesViewModel by viewModels()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -25,6 +28,8 @@ class MainActivity : AppCompatActivity() {
 
         viewmodel.onCreate()
         viewmodel.searchMuseumList()
+        g_viewmodel.g_onCreate()
+        g_viewmodel.searchGalleryList()
 
     }
 

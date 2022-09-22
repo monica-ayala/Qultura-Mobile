@@ -10,8 +10,6 @@ import org.osmdroid.util.GeoPoint
 import org.osmdroid.views.MapView
 import org.osmdroid.views.overlay.mylocation.GpsMyLocationProvider
 import org.osmdroid.views.overlay.mylocation.MyLocationNewOverlay
-import android.R
-
 import android.Manifest
 import android.annotation.SuppressLint
 import android.content.*
@@ -39,13 +37,13 @@ import org.osmdroid.api.IMapController
 import org.osmdroid.config.Configuration
 
 
-import org.osmdroid.views.overlay.Marker
-import org.osmdroid.views.overlay.Polygon
-import org.osmdroid.views.overlay.Polyline
 import org.osmdroid.views.overlay.compass.CompassOverlay
 import org.osmdroid.views.overlay.compass.InternalCompassOrientationProvider
 import timber.log.Timber
 import java.util.*
+
+import com.example.qulturapp.R
+import org.osmdroid.views.overlay.*
 
 class ActivityMap: AppCompatActivity (){
     private val REQUEST_PERMISSIONS_REQUEST_CODE = 1
@@ -104,8 +102,6 @@ class ActivityMap: AppCompatActivity (){
     var path1: Polyline? = null
 
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         if (BuildConfig.DEBUG) {
@@ -133,6 +129,28 @@ class ActivityMap: AppCompatActivity (){
             Manifest.permission.INTERNET
         )
         activityResultLauncher.launch(appPerms)
+
+        // adding icons
+        //your items
+        val items = ArrayList<OverlayItem>()
+        items.add(OverlayItem("Title", "Description", GeoPoint(0.0, 0.0)))
+
+        //the overlay
+        var overlay = ItemizedOverlayWithFocus<OverlayItem>(items, object:
+            ItemizedIconOverlay.OnItemGestureListener<OverlayItem> {
+            override fun onItemSingleTapUp(index:Int, item:OverlayItem):Boolean {
+                //do something
+                return true
+            }
+            override fun onItemLongPress(index:Int, item: OverlayItem):Boolean {
+                return false
+            }
+        }, this)
+        overlay.setFocusItemsOnTap(true);
+
+        map.overlays.add(overlay);
+
+
     }
     override fun onResume() {
         super.onResume()
@@ -286,7 +304,7 @@ class ActivityMap: AppCompatActivity (){
             marker = Marker(map)
             marker!!.title = "Estais aqui"
             marker!!.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM)
-            marker!!.icon = ContextCompat.getDrawable(this, R.drawable.ic_menu_mapmode)
+            marker!!.icon = ContextCompat.getDrawable(this, R.drawable.ic_position)
             map.overlays.add(marker)
         }
         return marker!!
@@ -328,19 +346,4 @@ class ActivityMap: AppCompatActivity (){
         map.invalidate()
     }
 
-    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        val permissionsToRequest = ArrayList<String>()
-        var i = 0
-        while (i < grantResults.size) {
-            permissionsToRequest.add(permissions[i])
-            i++
-        }
-        if (permissionsToRequest.size > 0) {
-            ActivityCompat.requestPermissions(
-                this,
-                permissionsToRequest.toTypedArray(),
-                REQUEST_PERMISSIONS_REQUEST_CODE)
-        }
-    }
 }

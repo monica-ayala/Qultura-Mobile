@@ -1,82 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".view.museum.Museum"
-    android:background="@drawable/lechuga">
-
-    <View
-        android:id="@+id/overlay_image"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_centerHorizontal="true"
-        android:background="@color/trans_black" />
-
-    <TextView
-        android:id="@+id/tv_top_bar_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="35dp"
-        android:fontFamily="sans-serif-black"
-        android:text="Salas"
-        android:textColor="@color/white"
-        android:textSize="25sp" />
-
-    <View
-        android:layout_width="200dp"
-        android:layout_height="2dp"
-        android:layout_alignBottom="@id/tv_top_bar_text"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="-4dp"
-        android:background="@color/secondary_color" />
+    android:orientation="horizontal"
+    android:layout_margin="5dp"
+    >
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginHorizontal="25dp"
-        android:layout_marginTop="85dp">
+        android:layout_width="160dp"
+        android:layout_height="190dp"
+        android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="160dp"
-            android:layout_height="190dp"
-            android:orientation="vertical">
+        <androidx.cardview.widget.CardView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_gravity="center"
-                android:layout_margin="5dp"
+            android:elevation="10dp"
+            app:cardCornerRadius="8dp">
 
-                android:elevation="10dp"
-                app:cardCornerRadius="8dp">
+            <ImageView
+                android:id="@+id/roundedImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:scaleType="centerCrop"
+                android:src="@drawable/lechuga" />
+        </androidx.cardview.widget.CardView>
 
-                <ImageView
-                    android:id="@+id/roundedImageView"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@color/white"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/lechuga" />
-            </androidx.cardview.widget.CardView>
-
-
-            <TextView
-                android:id="@+id/tv_sala_nom"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:fontFamily="sans-serif-black"
-                android:text="Sala 1"
-                android:textColor="@color/white"
-                android:textSize="15sp" />
-
-        </LinearLayout>
-
+        <TextView
+            android:id="@+id/tv_sala_nom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-black"
+            android:text="Sala 1"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
 
     </LinearLayout>
+
 
 </RelativeLayout>

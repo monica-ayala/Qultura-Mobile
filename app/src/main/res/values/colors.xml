@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="white">#FFFFFFFF</color>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
     <color name="primary_color">#F70C1A30</color>
     <color name="secondary_color">#FFDC3B</color>
     <color name="button_red">#FF6666</color>
@@ -14,4 +14,6 @@
     <color name="card_box_border">#838383</color>
     <color name="tertiary_color">#B9B9B9</color>
     <color name="gray_edit_box">#EFEFEF</color>
+    <color name="trans_black">#90000000</color>
+    <color name="transparent">#00000000</color>
 </resources>

@@ -1,5 +1,6 @@
 package com.example.qulturapp.model
 
+import com.example.qulturapp.model.museums.MuseumListResults
 import android.util.Log
 import com.example.qulturapp.model.sesion.UsuarioListResults
 import com.example.qulturapp.model.solicitudes.SolicitudListResults
@@ -15,6 +16,17 @@ class ApiCallerService {
             .baseUrl("http://ec2-3-145-68-44.us-east-2.compute.amazonaws.com:8080")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
+    }
+
+    suspend fun searchMuseumList(): MuseumListResults?{
+
+            val call = getRetrofit().create(ApiService::class.java).getMuseumList("/get")
+            val museumList = call.body()
+            return museumList
+            /*val vista = findViewById(R.id.tvget) as TextView
+            vista.text = museumList!!.museo.size.toString()*/
+
+
     }
 
 

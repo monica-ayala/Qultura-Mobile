@@ -151,7 +151,7 @@ class ActivityMap: AppCompatActivity (){
         overlay.setFocusItemsOnTap(true);
 
         map.overlays.add(overlay);
-        
+
     }
     override fun onResume() {
         super.onResume()
@@ -303,7 +303,7 @@ class ActivityMap: AppCompatActivity (){
     private fun getPositionMarker(): Marker { //Singelton
         if (marker == null) {
             marker = Marker(map)
-            marker!!.title = "Estais aqui"
+            marker!!.title = "Usted se encuentra aquí"
             marker!!.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM)
             marker!!.icon = ContextCompat.getDrawable(this, R.drawable.ic_position)
             map.overlays.add(marker)
@@ -317,9 +317,16 @@ class ActivityMap: AppCompatActivity (){
         mapController.setCenter(startPoint)
         getPositionMarker().position = startPoint
         map.invalidate()
+
+        // Place map in  for museum of art of Queretaro
+        val mapController = map.controller
+        mapController.setZoom(17.5)
+        val startPoint = GeoPoint(20.59138, -100.3935);
+        mapController.setCenter(startPoint);
     }
 
     fun onClickDraw2(view: View?) {
+        /*
         startPoint.latitude = startPoint.latitude + (rnd.nextDouble() - 0.5) * 0.001
         mapController.setCenter(startPoint)
         val circle = Polygon(map)
@@ -330,21 +337,49 @@ class ActivityMap: AppCompatActivity (){
         circle.title = "Area X"
         map.overlays.add(circle) //Duplicate every time new
         map.invalidate()
+        */
+
+        // Place map in  for museum of art of Queretaro
+        val mapController = map.controller
+        mapController.setZoom(17.5)
+        val startPoint = GeoPoint(20.59138, -100.3935);
+        mapController.setCenter(startPoint);
+
     }
 
     fun onClickDraw3(view: View?) {
+        /*
         val mCompassOverlay = CompassOverlay(this, InternalCompassOrientationProvider(this), map)
         mCompassOverlay.enableCompass()
         map.overlays.add(mCompassOverlay)
         map.invalidate()
+
+         */
+        //Place map in Galeria Libertad
+        val mapController = map.controller
+        mapController.setZoom(17.5)
+        val startPoint = GeoPoint(20.5925, -100.3897);
+        mapController.setCenter(startPoint);
+
     }
 
     fun onClickDraw4(view: View?) {
         //Polyline path = new Polyline();
+        /*
         startPoint.latitude = startPoint.latitude + (rnd.nextDouble() - 0.5) * 0.001
         startPoint.longitude = startPoint.longitude + (rnd.nextDouble() - 0.5) * 0.001
         getPath().addPoint(startPoint.clone())
         map.invalidate()
+
+         */
+
+        //Place map in Secretaria de Cultura
+        val mapController = map.controller
+        mapController.setZoom(17.5)
+        val startPoint = GeoPoint(20.58819, -100.39645);
+        mapController.setCenter(startPoint);
+
+
     }
 
 }

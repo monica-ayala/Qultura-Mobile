@@ -70,7 +70,7 @@
                 android:layout_weight="1"
                 android:textSize="12sp"
                 android:onClick="onClickDraw1"
-                android:text="Marker" />
+                android:text="Punto Inicial" />
 
             <Button
                 android:layout_width="0dp"
@@ -78,7 +78,7 @@
                 android:layout_weight="1"
                 android:textSize="12sp"
                 android:onClick="onClickDraw2"
-                android:text="Area" />
+                android:text="Museo de Arte" />
 
             <Button
                 android:layout_width="0dp"
@@ -86,7 +86,7 @@
                 android:layout_weight="1"
                 android:textSize="12sp"
                 android:onClick="onClickDraw3"
-                android:text="Com." />
+                android:text="Galeria Libertad" />
 
             <Button
                 android:layout_width="0dp"
@@ -94,7 +94,7 @@
                 android:layout_weight="1"
                 android:textSize="12sp"
                 android:onClick="onClickDraw4"
-                android:text="Path" />
+                android:text="Secretaria de Cultura" />
 
         </LinearLayout>
 

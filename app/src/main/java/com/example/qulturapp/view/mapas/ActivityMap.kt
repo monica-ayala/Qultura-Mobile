@@ -131,9 +131,11 @@ class ActivityMap: AppCompatActivity (){
         activityResultLauncher.launch(appPerms)
 
         // adding icons
-        //your items
+        //list of museums
         val items = ArrayList<OverlayItem>()
-        items.add(OverlayItem("Title", "Description", GeoPoint(0.0, 0.0)))
+        items.add(OverlayItem("Museo de Arte de Queretaro", "Exconvento de San Agustín, Claustro Barroco, el más importante de América. Museo inclusivo con servicios de accesibilidad. Visitas guiadas, talleres, eventos culturales. ", GeoPoint(20.59138, -100.3935)))
+        items.add(OverlayItem("Galeria Libertad", "A un costado de Plaza de Armas se encuentra ubicada la Galería Libertad, digno albergue para la obra pictográfica producida en nuestro país y en el extranjero.", GeoPoint(20.5925, -100.3897)))
+        items.add(OverlayItem("Secretaria de Cultura", " El Instituto Queretano de la Cultura y las Artes se transforman en Secretaría de Cultura del Estado de Querétaro. ", GeoPoint(20.58819, -100.39645)))
 
         //the overlay
         var overlay = ItemizedOverlayWithFocus<OverlayItem>(items, object:
@@ -142,15 +144,14 @@ class ActivityMap: AppCompatActivity (){
                 //do something
                 return true
             }
-            override fun onItemLongPress(index:Int, item: OverlayItem):Boolean {
+            override fun onItemLongPress(index:Int, item:OverlayItem):Boolean {
                 return false
             }
         }, this)
         overlay.setFocusItemsOnTap(true);
 
         map.overlays.add(overlay);
-
-
+        
     }
     override fun onResume() {
         super.onResume()

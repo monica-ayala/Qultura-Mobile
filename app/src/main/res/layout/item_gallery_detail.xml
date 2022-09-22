@@ -6,6 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
     android:layout_margin="5dp"
+    android:background="@color/black"
     >
 
     <LinearLayout
@@ -13,14 +14,16 @@
         android:layout_height="190dp"
         android:orientation="vertical">
 
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_gravity="center"
             android:layout_margin="5dp"
 
             android:elevation="10dp"
-            app:cardCornerRadius="8dp">
+            app:cardCornerRadius="8dp"
+            app:strokeWidth="3dp"
+            app:strokeColor="@color/white">
 
             <ImageView
                 android:id="@+id/roundedImageView"
@@ -29,7 +32,7 @@
                 android:background="@color/white"
                 android:scaleType="centerCrop"
                 android:src="@drawable/lechuga" />
-        </androidx.cardview.widget.CardView>
+        </com.google.android.material.card.MaterialCardView>
 
         <TextView
             android:id="@+id/tv_sala_nom"
@@ -38,7 +41,7 @@
             android:layout_gravity="center"
             android:fontFamily="sans-serif-black"
             android:text="Sala 1"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="15sp" />
 
     </LinearLayout>

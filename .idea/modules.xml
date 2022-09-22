@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Qultura-Mobile.app.Qulturapp.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Qultura-Mobile.app.Qulturapp.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Qultura-Mobile.app.Qulturapp.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Qultura-Mobile.app.Qulturapp.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Qultura-Mobile.app.Qulturapp.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Qultura-Mobile.app.Qulturapp.app.unitTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Qulturapp.iml" filepath="$PROJECT_DIR$/.idea/modules/Qulturapp.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Qulturapp.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Qulturapp.app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Qulturapp.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Qulturapp.app.androidTest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Qulturapp.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Qulturapp.app.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Qulturapp.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Qulturapp.app.unitTest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.Qulturapp.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.Qulturapp.app.androidTest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.Qulturapp.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.Qulturapp.app.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.Qulturapp.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.Qulturapp.app.unitTest.iml" />
     </modules>
   </component>
 </project>

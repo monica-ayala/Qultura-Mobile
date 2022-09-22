@@ -1,5 +1,8 @@
 package com.example.qulturapp.model
 
+import com.example.qulturapp.model.museums.MuseumListResults
+import android.util.Log
+import com.example.qulturapp.model.sesion.UsuarioListResults
 import com.example.qulturapp.model.solicitudes.SolicitudListResults
 import okhttp3.MediaType
 import okhttp3.RequestBody
@@ -13,6 +16,17 @@ class ApiCallerService {
             .baseUrl("http://ec2-3-145-68-44.us-east-2.compute.amazonaws.com:8080")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
+    }
+
+    suspend fun searchMuseumList(): MuseumListResults?{
+
+            val call = getRetrofit().create(ApiService::class.java).getMuseumList("/get")
+            val museumList = call.body()
+            return museumList
+            /*val vista = findViewById(R.id.tvget) as TextView
+            vista.text = museumList!!.museo.size.toString()*/
+
+
     }
 
 
@@ -30,5 +44,19 @@ class ApiCallerService {
             """.trimIndent()
         val requestBody = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), params)
         val call = getRetrofit().create(ApiService::class.java).deleteSolicitud("/solicitud/cancelar", requestBody)
+    }
+
+    suspend fun searchUsuario(correo: String, contrasenia: String): UsuarioListResults? {
+        Log.d("UHFOUDHIUSHFD", correo)
+        val params = """
+            {
+            "us_correo":"$correo",
+            "us_contrasenia":"$contrasenia"
+            }
+            """.trimIndent()
+        val requestBody = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), params)
+        val call = getRetrofit().create(ApiService::class.java).getUsuario("/usuario/login_movil", requestBody)
+        Log.d("UHFOUDHIUSHFDS", call.body().toString())
+        return call.body()
     }
 }

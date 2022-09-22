@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/rl_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <TextView
+            android:id="@+id/tv_top_bar_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Solicitud de Recorrido"
+            android:textColor="@color/primary_color"
+            android:textSize="24sp" />
+
+        <View
+            android:layout_width="260dp"
+            android:layout_height="2dp"
+            android:layout_alignBottom="@id/tv_top_bar_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="-4dp"
+            android:background="@color/secondary_color" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_calendarmonth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/rl_top_bar"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:text="@string/back"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:onClick="previousMonthAction"
+                tools:ignore="UsingOnClickInXml" />
+
+            <TextView
+                android:id="@+id/tv_textoMes"
+                android:layout_width="wrap_content"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:text="@string/CalendarioFecha"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                 >
+
+            </TextView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:text="@string/next"
+                android:textColor="@color/black"
+                android:background="@null"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textAlignment="center"
+                android:onClick="nextMonthAction"
+                tools:ignore="UsingOnClickInXml" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_calendarday"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/ll_calendarmonth"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="DOM"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:textSize="16sp">
+        </TextView>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="LUN"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:textSize="16sp">
+        </TextView>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="MAR"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:textSize="16sp">
+        </TextView>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="MIE"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:textSize="16sp">
+        </TextView>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="JUE"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:textSize="16sp">
+        </TextView>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="VIE"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:textSize="16sp">
+        </TextView>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="SAB"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:textSize="16sp">
+        </TextView>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:id="@+id/rv_calendarselect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_calendarday"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rv_calendarselect">
+
+        <TextView
+            android:id="@+id/tv_horario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Horarios"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp">
+
+        </TextView>
+
+        <View
+            android:layout_width="90dp"
+            android:layout_height="2dp"
+            android:layout_alignBottom="@id/tv_horario"
+            android:layout_marginStart="15dp"
+            android:background="@color/secondary_color" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_list_horarios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_horario"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:orientation="horizontal"
+            android:scrollbars="horizontal" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/boton_siguiente"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/rv_list_horarios"
+                android:background="@drawable/button_solicitud_siguiente"
+                android:padding="10dp"
+                android:text="@string/buton_siguiente"
+                android:textColor="@color/black" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

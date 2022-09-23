@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Qulturapp</string>
+    <string name="ajustes">Ajustes</string>
+    <string name="mi_perfil">Mi Perfil</string>
+    <string name="localizacion">Localización</string>
+    <string name="llamadas">Llamadas</string>
+    <string name="modo_oscuro">Modo Oscuro</string>
+    <string name="boton_sos">Botón SOS</string>
+    <string name="notificaciones">Notificaciones</string>
+    <string name="contraste">Contraste</string>
+</resources>

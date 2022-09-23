@@ -15,19 +15,19 @@ class HorarioViewModel: ViewModel() {
     var hora_selected : String? = null
     var numVisitantes : String? = null
     var info_adicinal : String? = null
-    var necesidades = arrayOf<Int>()
+    var necesidades = mutableListOf<Int>()
 
     fun agregaHorarios() {
-        val horario1 = Horario("09:00 AM")
-        val horario2 = Horario("10:00 AM")
-        val horario3 = Horario("11:00 AM")
-        val horario4 = Horario("12:00 PM")
-        val horario5 = Horario("13:00 PM")
-        val horario6 = Horario("14:00 PM")
-        val horario7 = Horario("15:00 PM")
-        val horario8 = Horario("16:00 PM")
-        val horario9 = Horario("17:00 PM")
-        val horario10 = Horario("18:00 PM")
+        val horario1 = Horario("09:00")
+        val horario2 = Horario("10:00")
+        val horario3 = Horario("11:00")
+        val horario4 = Horario("12:00")
+        val horario5 = Horario("13:00")
+        val horario6 = Horario("14:00")
+        val horario7 = Horario("15:00")
+        val horario8 = Horario("16:00")
+        val horario9 = Horario("17:00")
+        val horario10 = Horario("18:00")
         listaHorario.add(horario1)
         listaHorario.add(horario2)
         listaHorario.add(horario3)
@@ -48,7 +48,7 @@ class HorarioViewModel: ViewModel() {
                 hora_selected?.let { it2 ->
                     numVisitantes?.let { it3 ->
                         info_adicinal?.let { it4 ->
-                            caller.agregaSolicitud(it, it1, it2, it3, it4,necesidades)
+                            caller.agregaSolicitud(it, it1, it2, it3.toInt(), it4,necesidades)
                         }
                     }
                 }

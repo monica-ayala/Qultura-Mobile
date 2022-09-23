@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+<<<<<<< HEAD
         <entry key="..\:/Users/chosn/OneDrive/Documentos/5 Semestre/Qultura-Mobile/app/src/main/res/drawable/button_categoria.xml" value="0.1115" />
         <entry key="..\:/Users/chosn/OneDrive/Documentos/5 Semestre/Qultura-Mobile/app/src/main/res/layout/activity_consulta_eventos.xml" value="0.2" />
         <entry key="..\:/Users/chosn/OneDrive/Documentos/5 Semestre/Qultura-Mobile/app/src/main/res/layout/item_evento.xml" value="0.264" />
@@ -40,6 +41,17 @@
         <entry key="app/src/main/res/layout/item_calendarcell.xml" value="0.25" />
         <entry key="app/src/main/res/layout/item_horario_solicitud.xml" value="0.9653930664062501" />
         <entry key="app/src/main/res/layout/item_solicitud.xml" value="0.15894039735099338" />
+=======
+        <entry key="..\:/Qultura-Mobile/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.172" />
+        <entry key="..\:/Qultura-Mobile/app/src/main/res/drawable-v24/ic_position.xml" value="0.172" />
+        <entry key="..\:/Qultura-Mobile/app/src/main/res/drawable/button_gradient_bg.xml" value="0.112" />
+        <entry key="..\:/Qultura-Mobile/app/src/main/res/drawable/cancel_button_bg.xml" value="0.112" />
+        <entry key="..\:/Qultura-Mobile/app/src/main/res/drawable/center_box_bg.xml" value="0.112" />
+        <entry key="..\:/Qultura-Mobile/app/src/main/res/drawable/ic_launcher_background.xml" value="0.172" />
+        <entry key="..\:/Qultura-Mobile/app/src/main/res/layout/activity_main.xml" value="0.1852355072463768" />
+        <entry key="..\:/Qultura-Mobile/app/src/main/res/layout/activity_map.xml" value="0.1" />
+        <entry key="..\:/Qultura-Mobile/app/src/main/res/layout/activity_mis_solicitudes.xml" value="0.1852355072463768" />
+>>>>>>> 2e7a14382ef519e96ac04c1d2b6b3fcfcf83c2a7
       </map>
     </option>
   </component>

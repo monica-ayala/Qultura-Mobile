@@ -37,19 +37,20 @@ class ActivityHorario2: AppCompatActivity() {
             HorarioViewModel.numVisitantes = visitantes.text.toString()
 
             if(CB_silla.isChecked){
-                HorarioViewModel.necesidades += 1
+                HorarioViewModel.necesidades.add(1)
             }
             if(CB_rampa.isChecked){
-                HorarioViewModel.necesidades += 3
+                HorarioViewModel.necesidades.add(3)
             }
             if(CB_guia.isChecked){
-                HorarioViewModel.necesidades += 2
+                HorarioViewModel.necesidades.add(2)
             }
             if(CB_interprete.isChecked){
-                HorarioViewModel.necesidades += 4
+                HorarioViewModel.necesidades.add(4)
             }
 
             if(HorarioViewModel.numVisitantes != null && HorarioViewModel.numVisitantes != ""){
+                HorarioViewModel.agregaSolicitud()
 
             }else{
                 val toast = Toast.makeText(applicationContext, "Selecciona un numero de visitantes", Toast.LENGTH_SHORT)

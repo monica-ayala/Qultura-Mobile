@@ -1,5 +1,6 @@
 package com.example.qulturapp.view.museum
 
+import android.content.Intent
 import android.media.AudioManager
 import android.media.MediaPlayer
 import android.net.Uri
@@ -42,7 +43,7 @@ class Lounge: AppCompatActivity() {
     private fun initRecyclerView(){
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerObra)
         recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.adapter = ObrasAdapter(ObrasProvider.obraList)
+        recyclerView.adapter = ObrasAdapter(ObrasProvider.obraList,this )
     }
 
 }

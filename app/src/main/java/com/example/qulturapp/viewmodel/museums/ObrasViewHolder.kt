@@ -1,6 +1,7 @@
 package com.example.qulturapp.viewmodel.museums
 
 import android.view.View
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -11,7 +12,7 @@ import com.example.qulturapp.model.museums.Obras
 class ObrasViewHolder(view: View):RecyclerView.ViewHolder(view) {
 
     //val obraid = view.findViewById<TextView>(R.id.tvObraId)
-    val obranom = view.findViewById<TextView>(R.id.tvObraNom)
+    val obranom = view.findViewById<Button>(R.id.tvObraNom)
     //val obraaudio = view.findViewById<TextView>(R.id.tvObraAudio)
     val obrafoto = view.findViewById<ImageView>(R.id.ivObra)
 

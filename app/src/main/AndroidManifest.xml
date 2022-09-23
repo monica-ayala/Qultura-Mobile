@@ -44,7 +44,9 @@
         <activity android:name=".view.solicitudes.ActivityHorario"></activity>
         <activity android:name=".view.museum.Museum"></activity>
         <activity android:name=".view.solicitudes.ActivityHorario2"></activity>
+        <activity android:name=".view.museum.Gallery"></activity>
         <activity android:name=".view.eventos.EventoActivity"></activity>
+        <activity android:name=".view.museum.Artwork"></activity>
         <activity android:name=".view.museum.Lounge"></activity>
     </application>
 

@@ -20,7 +20,7 @@
         android:layout_width="60dp"
         android:layout_height="50dp"
         android:background="@color/transparent"
-        android:drawableRight="@drawable/resource_return"/>
+        android:drawableRight="@drawable/resource_return" />
 
     <ScrollView
         android:layout_width="match_parent"

@@ -28,13 +28,15 @@
 
             android:orientation="vertical">
 
-            <androidx.cardview.widget.CardView
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
                 android:layout_margin="5dp"
                 android:elevation="10dp"
-                app:cardCornerRadius="15dp">
+                app:cardCornerRadius="15dp"
+                app:strokeColor="@color/white"
+                app:strokeWidth="2dp">
 
                 <ImageView
                     android:id="@+id/roundedImageView"
@@ -43,7 +45,7 @@
                     android:background="@color/white"
                     android:scaleType="centerCrop"
                     android:src="@drawable/lechuga" />
-            </androidx.cardview.widget.CardView>
+            </com.google.android.material.card.MaterialCardView>
 
             <View
                 android:layout_width="match_parent"

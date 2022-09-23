@@ -5,10 +5,14 @@
       <map>
         <entry key="..\:/Users/chosn/OneDrive/Documentos/5 Semestre/Qultura-Mobile/app/src/main/res/drawable/button_categoria.xml" value="0.1115" />
         <entry key="..\:/Users/chosn/OneDrive/Documentos/5 Semestre/Qultura-Mobile/app/src/main/res/drawable/button_gradient_bg.xml" value="0.18" />
+        <entry key="..\:/Users/chosn/OneDrive/Documentos/5 Semestre/Qultura-Mobile/app/src/main/res/drawable/cancel_button_bg.xml" value="0.134" />
+        <entry key="..\:/Users/chosn/OneDrive/Documentos/5 Semestre/Qultura-Mobile/app/src/main/res/drawable/round_black_button.xml" value="0.18" />
+        <entry key="..\:/Users/chosn/OneDrive/Documentos/5 Semestre/Qultura-Mobile/app/src/main/res/drawable/round_button.xml" value="0.18" />
         <entry key="..\:/Users/chosn/OneDrive/Documentos/5 Semestre/Qultura-Mobile/app/src/main/res/drawable/sanctorum.xml" value="0.1535" />
         <entry key="..\:/Users/chosn/OneDrive/Documentos/5 Semestre/Qultura-Mobile/app/src/main/res/drawable/top_bar_background.xml" value="0.18" />
         <entry key="..\:/Users/chosn/OneDrive/Documentos/5 Semestre/Qultura-Mobile/app/src/main/res/layout/activity_consulta_eventos.xml" value="0.2" />
         <entry key="..\:/Users/chosn/OneDrive/Documentos/5 Semestre/Qultura-Mobile/app/src/main/res/layout/activity_detalle_evento.xml" value="0.176" />
+        <entry key="..\:/Users/chosn/OneDrive/Documentos/5 Semestre/Qultura-Mobile/app/src/main/res/layout/activity_list_museum.xml" value="0.1013253527148354" />
         <entry key="..\:/Users/chosn/OneDrive/Documentos/5 Semestre/Qultura-Mobile/app/src/main/res/layout/activity_mis_solicitudes.xml" value="0.20521590423257802" />
         <entry key="..\:/Users/chosn/OneDrive/Documentos/5 Semestre/Qultura-Mobile/app/src/main/res/layout/item_evento.xml" value="0.264" />
         <entry key="..\:/Users/chosn/OneDrive/Documentos/5 Semestre/Qultura-Mobile/app/src/main/res/layout/item_solicitud.xml" value="0.23007246376811594" />

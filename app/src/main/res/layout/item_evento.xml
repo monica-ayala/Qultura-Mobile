@@ -21,23 +21,19 @@
             android:scaleType="centerCrop"
             android:src="@drawable/sanctorum" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_alignBottom="@+id/iv_event_icon"
-        android:background="@color/primary_color"
-        />
 
-        <TextView
-            android:id="@+id/nombre_evento"
+        <androidx.appcompat.widget.AppCompatButton
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="160dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/iv_event_icon"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/round_black_button"
             android:fontFamily="sans-serif-black"
-            android:gravity="center"
-            android:text="Sanctorum"
-            android:textColor="@color/white"
-            android:textSize="23sp" />
+            android:text="@string/sanctorum"
+            android:textSize="20dp" />
+
+
+
 
     </RelativeLayout>
 </com.google.android.material.card.MaterialCardView>

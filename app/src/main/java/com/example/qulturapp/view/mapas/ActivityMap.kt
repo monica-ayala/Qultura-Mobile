@@ -23,9 +23,6 @@ import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 
 import androidx.core.content.ContextCompat
-import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.fragment.findNavController
 import androidx.viewbinding.BuildConfig
 import com.example.qulturapp.databinding.ActivityMapBinding
 import com.google.android.gms.common.api.ResolvableApiException

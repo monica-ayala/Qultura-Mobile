@@ -26,7 +26,7 @@
             app:strokeColor="@color/white">
 
             <ImageView
-                android:id="@+id/roundedImageView"
+                android:id="@+id/iv_sala_gallery"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/white"

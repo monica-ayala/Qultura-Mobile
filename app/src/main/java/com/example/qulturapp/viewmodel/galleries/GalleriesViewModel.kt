@@ -10,7 +10,7 @@ class GalleriesViewModel: ViewModel() {
 
 
 
-    fun g_onCreate() {
+    fun onCreate() {
         gcaller = ApiCallerService()
 
     }

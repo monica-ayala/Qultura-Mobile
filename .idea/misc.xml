@@ -17,12 +17,13 @@
         <entry key="..\:/User/Documents/AndroidProjects/Qultura-Mobile/app/src/main/res/layout/item_museum_detail.xml" value="0.253125" />
         <entry key="..\:/User/Documents/AndroidProjects/Qultura-Mobile/app/src/main/res/layout/item_solicitud.xml" value="0.25416666666666665" />
         <entry key="app/src/main/res/layout/activity_consulta_eventos.xml" value="0.30262196858723966" />
-        <entry key="app/src/main/res/layout/activity_gallery.xml" value="0.2798913043478261" />
-        <entry key="app/src/main/res/layout/activity_mis_solicitudes.xml" value="0.2078125" />
+        <entry key="app/src/main/res/layout/activity_gallery.xml" value="0.4869033813476563" />
+        <entry key="app/src/main/res/layout/activity_mis_solicitudes.xml" value="0.8041671752929689" />
         <entry key="app/src/main/res/layout/activity_museum.xml" value="0.35628509521484375" />
         <entry key="app/src/main/res/layout/activity_registra_solicitud.xml" value="0.2798913043478261" />
+        <entry key="app/src/main/res/layout/activity_registra_solicitudpt2.xml" value="0.3211050724637681" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.2078125" />
-        <entry key="app/src/main/res/layout/item_gallery_detail.xml" value="0.4199325561523437" />
+        <entry key="app/src/main/res/layout/item_gallery_detail.xml" value="0.604047513599238" />
         <entry key="app/src/main/res/layout/item_horario_solicitud.xml" value="0.2798913043478261" />
         <entry key="app/src/main/res/layout/item_museum_detail.xml" value="0.2776268115942029" />
         <entry key="app/src/main/res/layout/item_solicitud.xml" value="0.2798913043478261" />

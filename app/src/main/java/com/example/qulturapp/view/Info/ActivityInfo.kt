@@ -1,6 +1,7 @@
 package com.example.qulturapp.view.Info
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -14,14 +15,14 @@ import com.example.qulturapp.viewmodel.Informacion.GuiasViewModel
 import com.example.qulturapp.viewmodel.Informacion.LinksListAdapter
 import com.example.qulturapp.viewmodel.Informacion.LinksViewModel
 
-class ActivityInfo: AppCompatActivity(), GuiasListAdapter.OnGuiaClickListener {
+class ActivityInfo: AppCompatActivity(), GuiasListAdapter.OnGuiaClickListener, LinksListAdapter.OnLinkClickListener {
     private val linksViewModel = LinksViewModel()
     private lateinit var adapter: LinksListAdapter
     private val guiasViewModel = GuiasViewModel()
     private lateinit var adapterGuias: GuiasListAdapter
 
     private fun initializeList(list:List<Link>){
-        adapter = LinksListAdapter(list)
+        adapter = LinksListAdapter(list, this)
 
         val layoutManager = LinearLayoutManager(this)
         val rvLinks = findViewById<RecyclerView>(R.id.rv_list_links)
@@ -47,13 +48,22 @@ class ActivityInfo: AppCompatActivity(), GuiasListAdapter.OnGuiaClickListener {
         initializeGuias(guiasViewModel.listaGuias.toList())
     }
 
-    override fun onGuiaClick(name: String, description: String, tip: String) {
+    override fun onGuiaClick(name: String, description: String, tip: String, icon: String) {
         Toast.makeText(this, "La Guia es: $description", Toast.LENGTH_SHORT).show()
         val intent = Intent(this, GuiaActivity::class.java)
         intent.putExtra("name", name)
         intent.putExtra("description", description)
         intent.putExtra("tip", tip)
+        intent.putExtra("icon", icon)
+        Toast.makeText(this, "La imagen es: $icon", Toast.LENGTH_SHORT).show()
 
+        startActivity(intent)
+    }
+
+    override fun onLinkClick(name: String, url: String) {
+        Toast.makeText(this, "El Link es: $name", Toast.LENGTH_SHORT).show()
+        val uri: Uri = Uri.parse(url) // missing 'http://' will cause crashed
+        val intent = Intent(Intent.ACTION_VIEW, uri)
         startActivity(intent)
     }
 }

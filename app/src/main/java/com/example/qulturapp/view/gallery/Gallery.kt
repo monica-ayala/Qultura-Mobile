@@ -17,7 +17,7 @@ class Gallery:AppCompatActivity() {
     private fun initializeList(list:List<GalleryResults>) {
         adapter = GalleryListAdapter(list, this)
         val layoutManager = LinearLayoutManager(this)
-        val rvGalleries = findViewById<RecyclerView>(R.id.rv_list_galleries)
+        val rvGalleries = findViewById<RecyclerView>(R.id.rv_list_horarios)
         rvGalleries.layoutManager = layoutManager
         rvGalleries.adapter = adapter
     }

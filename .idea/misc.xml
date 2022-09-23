@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+<<<<<<< HEAD
         <entry key="..\:/Users/Said/AndroidStudioProjects/Qultura-Mobile/app/src/main/res/layout/activity_configuration.xml" value="0.22" />
         <entry key="..\:/Users/Said/AndroidStudioProjects/Qultura-Mobile/app/src/main/res/layout/activity_profile.xml" value="0.2" />
         <entry key="..\:/Users/chosn/OneDrive/Documentos/5 Semestre/Qultura-Mobile/app/src/main/res/drawable/button_categoria.xml" value="0.1115" />
@@ -24,6 +25,22 @@
         <entry key="..\:/Users/emili/Documents/Tec/Laboratorio/TC2007B/Qultura-Mobile/app/src/main/res/layout/activity_sign_in.xml" value="0.358695652173913" />
         <entry key="..\:/Users/emili/Documents/Tec/Laboratorio/TC2007B/Qultura-Mobile/app/src/main/res/layout/activity_sign_up.xml" value="0.358695652173913" />
         <entry key="..\:/Users/emili/Documents/Tec/Laboratorio/TC2007B/Qultura-Mobile/app/src/main/res/layout/item_solicitud.xml" value="0.33" />
+=======
+        <entry key="..\:/Qultura-Mobile/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.172" />
+        <entry key="..\:/Qultura-Mobile/app/src/main/res/drawable-v24/ic_position.xml" value="0.172" />
+        <entry key="..\:/Qultura-Mobile/app/src/main/res/drawable/button_gradient_bg.xml" value="0.112" />
+        <entry key="..\:/Qultura-Mobile/app/src/main/res/drawable/cancel_button_bg.xml" value="0.112" />
+        <entry key="..\:/Qultura-Mobile/app/src/main/res/drawable/center_box_bg.xml" value="0.112" />
+        <entry key="..\:/Qultura-Mobile/app/src/main/res/drawable/ic_baseline_error_outline_24.xml" value="0.1955" />
+        <entry key="..\:/Qultura-Mobile/app/src/main/res/drawable/ic_launcher_background.xml" value="0.172" />
+        <entry key="..\:/Qultura-Mobile/app/src/main/res/layout/activity_emergencia.xml" value="0.20416666666666666" />
+        <entry key="..\:/Qultura-Mobile/app/src/main/res/layout/activity_guia.xml" value="0.20416666666666666" />
+        <entry key="..\:/Qultura-Mobile/app/src/main/res/layout/activity_main.xml" value="0.1852355072463768" />
+        <entry key="..\:/Qultura-Mobile/app/src/main/res/layout/activity_map.xml" value="0.1" />
+        <entry key="..\:/Qultura-Mobile/app/src/main/res/layout/activity_mis_solicitudes.xml" value="0.1852355072463768" />
+        <entry key="..\:/Qultura-Mobile/app/src/main/res/layout/activity_sign_in.xml" value="0.20416666666666666" />
+        <entry key="..\:/Qultura-Mobile/app/src/main/res/layout/list_item.xml" value="0.203125" />
+>>>>>>> phan10
       </map>
     </option>
   </component>

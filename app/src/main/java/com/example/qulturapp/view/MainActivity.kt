@@ -11,6 +11,7 @@ import com.example.qulturapp.model.museums.MuseumListAdapter
 import com.example.qulturapp.model.museums.MuseumResults
 import com.example.qulturapp.view.museum.Lounge
 import com.example.qulturapp.view.Info.ActivityInfo
+import com.example.qulturapp.view.emergencia.EmergenciaActivity
 import com.example.qulturapp.view.mapas.ActivityMap
 import com.example.qulturapp.view.sesion.ActivitySignIn
 import com.example.qulturapp.view.sesion.ActivitySignUp
@@ -23,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val intentSignIn = Intent(this, ListMuseum::class.java)
+
         startActivity(intentSignIn)
     }
 }

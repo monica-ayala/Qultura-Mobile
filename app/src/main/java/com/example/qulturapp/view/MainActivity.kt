@@ -13,6 +13,8 @@ import com.example.qulturapp.view.museum.Lounge
 import com.example.qulturapp.view.Info.ActivityInfo
 import com.example.qulturapp.view.mapas.ActivityMap
 import com.example.qulturapp.view.sesion.ActivitySignIn
+import com.example.qulturapp.view.sesion.ActivitySignUp
+import com.example.qulturapp.viewmodel.museums.MuseumsViewModel
 import com.example.qulturapp.view.solicitudes.ActivitySolicitudes
 
 class MainActivity : AppCompatActivity() {

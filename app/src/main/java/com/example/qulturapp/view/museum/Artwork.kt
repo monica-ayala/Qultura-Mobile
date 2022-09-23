@@ -12,6 +12,11 @@ class Artwork: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_artwork)
 
+        val rbtn = findViewById<View>(R.id.returnObra)
+        rbtn.setOnClickListener{
+            val intent = Intent(this, Lounge::class.java)
+            startActivity(intent)
+        }
 
     }
 }

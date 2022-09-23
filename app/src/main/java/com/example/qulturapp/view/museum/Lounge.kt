@@ -37,6 +37,11 @@ class Lounge: AppCompatActivity() {
             )
             mediaPlayer?.start()
         }*/
+        val rbtn = findViewById<View>(R.id.returnLounge)
+        rbtn.setOnClickListener{
+            val intent = Intent(this, Gallery::class.java)
+            startActivity(intent)
+        }
     }
 
 

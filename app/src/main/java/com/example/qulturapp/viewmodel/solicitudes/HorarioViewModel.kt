@@ -1,14 +1,21 @@
 package com.example.qulturapp.viewmodel.solicitudes
 
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.example.qulturapp.model.ApiCallerService
 import com.example.qulturapp.model.horarios.Horario
+import kotlinx.coroutines.launch
 
 class HorarioViewModel: ViewModel() {
+    private var caller: ApiCallerService = ApiCallerService()
     var listaHorario = mutableListOf<Horario>()
 
     var day_selected : String? = null
     var monthYear_selected : String? = null
     var hora_selected : String? = null
+    var numVisitantes : String? = null
+    var info_adicinal : String? = null
+    var necesidades = arrayOf<Int>()
 
     fun agregaHorarios() {
         val horario1 = Horario("09:00 AM")
@@ -32,5 +39,20 @@ class HorarioViewModel: ViewModel() {
         listaHorario.add(horario9)
         listaHorario.add(horario10)
 
+    }
+
+
+    fun agregaSolicitud(){
+        viewModelScope.launch {
+            day_selected?.let { monthYear_selected?.let { it1 ->
+                hora_selected?.let { it2 ->
+                    numVisitantes?.let { it3 ->
+                        info_adicinal?.let { it4 ->
+                            caller.agregaSolicitud(it, it1, it2, it3, it4,necesidades)
+                        }
+                    }
+                }
+            } }
+        }
     }
 }

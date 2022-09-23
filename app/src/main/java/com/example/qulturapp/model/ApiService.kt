@@ -15,4 +15,7 @@ interface ApiService {
 
     @POST
     suspend fun deleteSolicitud(@Url url:String, @Body requestBody: RequestBody): Response<RequestBody>
+
+    @POST
+    suspend fun agregaSolicitud(@Url url:String, @Body requestBody: RequestBody): Response<RequestBody>
 }

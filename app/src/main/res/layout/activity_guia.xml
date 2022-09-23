@@ -79,6 +79,14 @@
         tools:text="TipsTipsTips"
         android:textColor="@color/primary_color">
     </TextView>
+
+    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+        android:id="@+id/youtube"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:videoId="S0Q4gqBUs7c"
+        app:autoPlay="true" />
     </LinearLayout>
 
 </LinearLayout>

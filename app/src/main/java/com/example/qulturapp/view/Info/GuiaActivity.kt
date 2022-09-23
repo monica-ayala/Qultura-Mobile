@@ -1,11 +1,14 @@
 package com.example.qulturapp.view.Info
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
-import com.bumptech.glide.Glide
+import androidx.appcompat.app.AppCompatActivity
 import com.example.qulturapp.R
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+
 
 class GuiaActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,17 +19,31 @@ class GuiaActivity : AppCompatActivity() {
             val guiaDescription = findViewById<TextView>(R.id.tv_guia_desc)
             val guiaTip = findViewById<TextView>(R.id.tv_guia_tip)
             val guiaIcon = findViewById<ImageView>(R.id.iv_guia_icon)
+            val youTubePlayerView = findViewById<YouTubePlayerView>(R.id.youtube)
+            lifecycle.addObserver(youTubePlayerView)
+
+
 
             val nombre : String? = intent.getStringExtra("name")
             val description : String? = intent.getStringExtra("description")
             val tip : String? = intent.getStringExtra("tip")
             val icon : String? = intent.getStringExtra("icon")
+            val video : String? = intent.getStringExtra("video")
 
             guiaTitle.text = nombre
             guiaDescription.text = description
             guiaTip.text = tip
 
+            youTubePlayerView.addYouTubePlayerListener(object : AbstractYouTubePlayerListener() {
+                override fun onReady(youTubePlayer: YouTubePlayer) {
+                    val videoId = video
+                    if (videoId != null) {
+                        youTubePlayer.loadVideo(videoId, 0f)
+                    }
+                }
+            })
 
         }
+
     }
 }

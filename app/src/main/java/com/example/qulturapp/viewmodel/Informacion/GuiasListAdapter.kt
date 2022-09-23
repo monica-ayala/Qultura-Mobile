@@ -11,7 +11,7 @@ import com.example.qulturapp.model.Info.Guia
 class GuiasListAdapter (private val data: List<Guia>, private val guiaItemClickListener:OnGuiaClickListener): RecyclerView.Adapter<GuiasListAdapter.ViewHolderGuias>() {
 
     interface OnGuiaClickListener{
-        fun onGuiaClick(name: String, desc: String, tip: String, icon: String)
+        fun onGuiaClick(name: String, desc: String, tip: String, icon: String, video: String)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderGuias {
@@ -30,7 +30,7 @@ class GuiasListAdapter (private val data: List<Guia>, private val guiaItemClickL
         val nameGuia = view.findViewById(R.id.tv_guia_name) as TextView
 
         fun bindGuia(item: Guia){
-            itemView.setOnClickListener { guiaItemClickListener.onGuiaClick(item.name, item.desc, item.tip, item.icon) }
+            itemView.setOnClickListener { guiaItemClickListener.onGuiaClick(item.name, item.desc, item.tip, item.icon, item.video) }
             nameGuia.text = item.name
         }
     }

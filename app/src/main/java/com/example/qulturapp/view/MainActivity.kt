@@ -36,14 +36,6 @@ class MainActivity : AppCompatActivity() {
         viewmodel.searchMuseumList()
         g_viewmodel.searchGalleryList()
 
-        initRecyclerView()
-
-    }
-
-    private fun initRecyclerView(){
-        val recyclerView = findViewById<RecyclerView>(R.id.rv_list_galleries)
-        recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.adapter = SalasAdapter(SalaProvider.galleryList)
     }
 
 }

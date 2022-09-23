@@ -8,10 +8,15 @@
         <entry key="..\:/Qultura-Mobile/app/src/main/res/drawable/button_gradient_bg.xml" value="0.112" />
         <entry key="..\:/Qultura-Mobile/app/src/main/res/drawable/cancel_button_bg.xml" value="0.112" />
         <entry key="..\:/Qultura-Mobile/app/src/main/res/drawable/center_box_bg.xml" value="0.112" />
+        <entry key="..\:/Qultura-Mobile/app/src/main/res/drawable/ic_baseline_error_outline_24.xml" value="0.1955" />
         <entry key="..\:/Qultura-Mobile/app/src/main/res/drawable/ic_launcher_background.xml" value="0.172" />
+        <entry key="..\:/Qultura-Mobile/app/src/main/res/layout/activity_emergencia.xml" value="0.20416666666666666" />
+        <entry key="..\:/Qultura-Mobile/app/src/main/res/layout/activity_guia.xml" value="0.20416666666666666" />
         <entry key="..\:/Qultura-Mobile/app/src/main/res/layout/activity_main.xml" value="0.1852355072463768" />
         <entry key="..\:/Qultura-Mobile/app/src/main/res/layout/activity_map.xml" value="0.1" />
         <entry key="..\:/Qultura-Mobile/app/src/main/res/layout/activity_mis_solicitudes.xml" value="0.1852355072463768" />
+        <entry key="..\:/Qultura-Mobile/app/src/main/res/layout/activity_sign_in.xml" value="0.20416666666666666" />
+        <entry key="..\:/Qultura-Mobile/app/src/main/res/layout/list_item.xml" value="0.203125" />
       </map>
     </option>
   </component>

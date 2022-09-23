@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.museum.ListMuseum"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/rl_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@drawable/top_bar_background"
+        android:backgroundTint="@color/primary_color">
+        <TextView
+            android:id="@+id/tv_top_bar_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-black"
+            android:text="QUAPP"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <View
+            android:layout_width="200dp"
+            android:layout_height="2dp"
+            android:layout_alignBottom="@id/tv_top_bar_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="-4dp"
+            android:background="@color/secondary_color" />
+    </RelativeLayout>
+
+    <!--
+       slideranimation duration is to set duration for transition between two slides
+       sliderautocycledirection is to set animationbetween transition of your slides
+       sliderindicator enables is used to display the indicators for slider
+       slider indicator gravity is to set gravity for indicator gravity
+       slider indicator margin is to set margin for indicator
+       slider indicator orientation is used to add orientation for slider
+       slider indicator padding is use to add padding to indicator
+       slider indicator selected color is use to specify selected color
+       and slider indicator unselected color is use to specify the color when
+       the slider is unselected
+        slider scroll time in sec is used to specify scrolling time in seconds
+    -->
+
+    <com.smarteist.autoimageslider.SliderView
+        android:id="@+id/slider"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        app:sliderAnimationDuration="600"
+        app:sliderAutoCycleDirection="back_and_forth"
+        app:sliderIndicatorAnimationDuration="600"
+        app:sliderIndicatorEnabled="true"
+        app:sliderIndicatorGravity="center_horizontal|bottom"
+        app:sliderIndicatorMarginBottom="15dp"
+        app:sliderIndicatorOrientation="horizontal"
+        app:sliderIndicatorPadding="3dp"
+        app:sliderIndicatorRadius="2dp"
+        app:sliderIndicatorSelectedColor="@color/black"
+        app:sliderIndicatorUnselectedColor="@color/white"
+        app:sliderScrollTimeInSec="1" />
+    <ImageView
+        android:id="@+id/myimage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:contentDescription="@string/app_name"
+        android:layout_marginTop="530dp"
+        android:src="@drawable/colorevent"
+        android:scaleType="fitXY"
+        android:visibility="visible"/>
+
+    <View
+        android:id="@+id/overlay_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="530dp"
+        android:background="@color/trans_black" />
+
+    <TextView
+        android:id="@+id/mytextimage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:textAlignment="center"
+        android:text="EVENTOS"
+        android:layout_marginTop="585dp"
+        android:textColor="@color/white"
+        android:textSize="60dp" />
+
+
+
+</RelativeLayout>

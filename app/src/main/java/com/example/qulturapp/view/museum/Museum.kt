@@ -23,7 +23,7 @@ class Museum:AppCompatActivity() {
             val intent = Intent(this, ListMuseum::class.java)
             startActivity(intent)
         }
-        val solibtn = findViewById<View>(R.id.returnMuseo)
+        val solibtn = findViewById<View>(R.id.solicitudBtn)
         solibtn.setOnClickListener{
             val intent = Intent(this, ActivitySignUp::class.java)
             startActivity(intent)

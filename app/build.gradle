@@ -81,7 +81,7 @@ dependencies {
     implementation "androidx.activity:activity-ktx:1.5.1"
 
     // Osmdroid dependencies
-    implementation 'org.osmdroid:osmdroid-android:6.1.10'
+    implementation 'org.osmdroid:osmdroid-android:6.1.13'
     implementation 'org.osmdroid:osmdroid-wms:6.1.10'
     implementation 'org.osmdroid:osmdroid-mapsforge:6.1.10'
     implementation 'org.osmdroid:osmdroid-geopackage:6.1.10'

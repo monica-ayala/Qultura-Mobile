@@ -39,6 +39,7 @@
             android:exported="true"></activity>
         <activity android:name=".view.solicitudes.ActivitySolicitudes"></activity>
         <activity android:name=".view.sesion.ActivitySignUp"></activity>
+        <activity android:name=".view.mapas.ActivityMap"></activity>
         <activity android:name=".view.sesion.ActivitySignIn"></activity>
         <activity android:name=".view.solicitudes.ActivityHorario"></activity>
         <activity android:name=".view.museum.Museum"></activity>

@@ -2,6 +2,7 @@
 
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
@@ -121,7 +122,6 @@
 
 <!--Primer Evento -->
 
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -129,6 +129,7 @@
         android:layout_marginTop="15dp"
         android:id="@+id/primer_evento"
         >
+
 
         <ImageView
             android:id="@+id/iv_event1_icon"
@@ -148,15 +149,18 @@
             android:fontFamily="sans-serif-black"
             android:text="@string/sanctorum"
             android:textSize="20dp" />
+    </RelativeLayout>
 
-        <!--segundo Evento
+
+        <!--Segundo-->
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@id/primer_evento"
-            android:layout_marginTop="15dp"
-            >
+            android:layout_below="@id/ll_filtros"
+            android:layout_marginTop="300dp">
+
+
 
             <ImageView
                 android:id="@+id/iv_event_icon"
@@ -164,7 +168,9 @@
                 android:layout_height="200dp"
                 android:adjustViewBounds="true"
                 android:scaleType="centerCrop"
-                android:src="@drawable/sanctorum" />
+                android:src="@drawable/prueba_evento"
+                android:paddingHorizontal="30dp"
+                />
 
 
             <androidx.appcompat.widget.AppCompatButton
@@ -174,17 +180,9 @@
                 android:layout_marginTop="10dp"
                 android:background="@drawable/round_black_button"
                 android:fontFamily="sans-serif-black"
-                android:text="@string/sanctorum"
+                android:text="Shock Rock 2"
                 android:textSize="20dp" />
-
--->
-
-
-    </RelativeLayout>
-
-
-
-
+</RelativeLayout>
 
 <!-- Recycler comentada, resolver luego.
 

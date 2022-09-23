@@ -18,19 +18,27 @@
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="10dp"
                 android:padding="12dp"
                 android:src="@drawable/back_icon" />
 
             <TextView
+                android:id="@+id/profile_header"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="15dp"
                 android:fontFamily="sans-serif-black"
-                android:text="@string/mi_perfil"
+                android:text="Mi Perfil"
                 android:textColor="@color/primary_text_color"
                 android:textSize="40dp" />
+
+            <View
+                android:layout_width="160dp"
+                android:layout_height="3dp"
+                android:layout_below="@+id/profile_header"
+                android:layout_centerHorizontal="true"
+                android:background="@color/secondary_color" />
 
         </RelativeLayout>
 
@@ -107,7 +115,7 @@
             android:layout_width="220dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="100dp"
             android:background="@drawable/button_gradient_bg"
             android:text="Cerrar sesión"
             android:textColor="@color/white"

@@ -22,7 +22,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
             android:fontFamily="sans-serif-black"
-            android:text="QUAPP"
+            android:text="QULTURA"
             android:textColor="@color/white"
             android:textSize="20sp" />
 
@@ -53,8 +53,8 @@
         android:id="@+id/slider"
         android:layout_width="match_parent"
         android:layout_height="400dp"
-        android:layout_marginTop="100dp"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
         app:sliderAnimationDuration="600"
         app:sliderAutoCycleDirection="back_and_forth"
         app:sliderIndicatorAnimationDuration="600"
@@ -67,6 +67,14 @@
         app:sliderIndicatorSelectedColor="@color/black"
         app:sliderIndicatorUnselectedColor="@color/white"
         app:sliderScrollTimeInSec="1" />
+
+    <Button
+        android:id="@+id/museoBtn"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:background="@drawable/trans_button"
+        android:layout_marginTop="100dp" />
+
     <ImageView
         android:id="@+id/myimage"
         android:layout_width="match_parent"
@@ -93,6 +101,11 @@
         android:layout_marginTop="585dp"
         android:textColor="@color/white"
         android:textSize="60dp" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/trans_button"
+        android:layout_marginTop="530dp" />
 
 
 

@@ -15,6 +15,13 @@
         android:layout_centerHorizontal="true"
         android:background="@color/trans_black" />
 
+    <Button
+        android:id="@+id/returnMuseo"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:background="@color/transparent"
+        android:drawableRight="@drawable/resource_return"/>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -23,11 +30,14 @@
         android:layout_marginEnd="35dp"
         android:layout_marginBottom="90dp">
 
+
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
 
             android:orientation="vertical">
+
 
             <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/profile_image"
@@ -97,6 +107,7 @@
                 android:layout_marginTop="8dp"/>
 
             <Button
+                android:id="@+id/verSalasBtn"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
                 android:background="@color/transparent"

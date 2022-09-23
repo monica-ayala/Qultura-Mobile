@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val intentSignIn = Intent(this, Lounge::class.java)
+        val intentSignIn = Intent(this, ListMuseum::class.java)
         startActivity(intentSignIn)
     }
 }

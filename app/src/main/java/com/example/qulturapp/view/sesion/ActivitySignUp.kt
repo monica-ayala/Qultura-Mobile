@@ -9,7 +9,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import com.example.qulturapp.R
-import com.example.qulturapp.view.solicitudes.ActivitySolicitudes
 import com.example.qulturapp.viewmodel.sesion.SesionViewModel
 import java.util.regex.Pattern
 
@@ -58,7 +57,7 @@ class ActivitySignUp: AppCompatActivity() {
         when(inicia) {
             true -> iniciaPaginaSignIn()
             false -> {
-                sesionViewModel.sesionIniciada.postValue(null)
+                sesionViewModel.usuarioCreado.postValue(null)
                 mensajeInfoRepetida()
             }
             else -> {}
@@ -71,7 +70,7 @@ class ActivitySignUp: AppCompatActivity() {
     }
 
     private fun setListeners() {
-        sesionViewModel.sesionIniciada.observe(this, Observer {
+        sesionViewModel.usuarioCreado.observe(this, Observer {
             revisarCuenta(it)
         })
         botonSignUp.setOnClickListener {

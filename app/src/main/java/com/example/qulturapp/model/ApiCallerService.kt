@@ -1,6 +1,5 @@
 package com.example.qulturapp.model
 
-import android.util.Log
 import com.example.qulturapp.model.museums.MuseumListResults
 import com.example.qulturapp.model.sesion.EncuentraUsuario
 import com.example.qulturapp.model.sesion.UsuarioListResults
@@ -8,7 +7,6 @@ import com.example.qulturapp.model.solicitudes.SolicitudListResults
 import okhttp3.MediaType
 import okhttp3.OkHttpClient
 import okhttp3.RequestBody
-import org.json.JSONObject
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
@@ -19,7 +17,6 @@ class ApiCallerService {
         return Retrofit.Builder()
             .baseUrl("http://ec2-3-145-68-44.us-east-2.compute.amazonaws.com:8080")
             .addConverterFactory(GsonConverterFactory.create())
-            .client(getClient())
             .build()
     }
 
@@ -41,7 +38,6 @@ class ApiCallerService {
 
 
     }
-
 
     suspend fun searchSolicitudList(): SolicitudListResults?{
         val call = getRetrofit().create(ApiService::class.java).getSolicitudList("/solicitud/getAll")
@@ -68,7 +64,6 @@ class ApiCallerService {
             """.trimIndent()
         val requestBody = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), params)
         val call = getRetrofit().create(ApiService::class.java).getUsuario("/usuario/login_movil", requestBody)
-        Log.d("COCOCOOSA", call.body().toString())
         return call.body()
     }
 
@@ -82,7 +77,6 @@ class ApiCallerService {
             """.trimIndent()
         val requestBody = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), params)
         val call = getRetrofit().create(ApiService::class.java).registraUsuario("/usuario/signup_movil", requestBody)
-        Log.d("COCOCOOSA", call.body().toString())
         return call.body()
     }
 }

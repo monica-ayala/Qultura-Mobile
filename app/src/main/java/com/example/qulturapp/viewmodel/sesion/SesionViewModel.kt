@@ -11,16 +11,16 @@ import kotlinx.coroutines.launch
 
 class SesionViewModel: ViewModel() {
     private var caller: ApiCallerService = ApiCallerService()
-    var usuarioNuevo: MutableLiveData<Boolean> = MutableLiveData(null)
+    var usuarioCreado: MutableLiveData<Boolean> = MutableLiveData(null)
     var sesionIniciada: MutableLiveData<Boolean> = MutableLiveData(null)
 
     fun guardarUsuario(nombre: String, correo: String, contrasenia: String) {
         viewModelScope.launch {
             val exito = caller.agregarUsuario(nombre, correo, contrasenia)?.paso
             if(exito == 1){
-                usuarioNuevo.postValue(true)
+                usuarioCreado.postValue(true)
             } else {
-                usuarioNuevo.postValue(false)
+                usuarioCreado.postValue(false)
             }
         }
     }

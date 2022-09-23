@@ -45,6 +45,7 @@
         <activity android:name=".view.museum.Museum"></activity>
         <activity android:name=".view.solicitudes.ActivityHorario2"></activity>
         <activity android:name=".view.eventos.EventoActivity"></activity>
+        <activity android:name=".view.artwork.Artwork"></activity>
     </application>
 
 </manifest>

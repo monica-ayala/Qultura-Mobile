@@ -3,15 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/chosn/OneDrive/Documentos/5 Semestre/Qultura-Mobile/app/src/main/res/drawable/button_categoria.xml" value="0.1115" />
-        <entry key="..\:/Users/chosn/OneDrive/Documentos/5 Semestre/Qultura-Mobile/app/src/main/res/drawable/button_gradient_bg.xml" value="0.18" />
-        <entry key="..\:/Users/chosn/OneDrive/Documentos/5 Semestre/Qultura-Mobile/app/src/main/res/drawable/sanctorum.xml" value="0.1535" />
-        <entry key="..\:/Users/chosn/OneDrive/Documentos/5 Semestre/Qultura-Mobile/app/src/main/res/drawable/top_bar_background.xml" value="0.18" />
-        <entry key="..\:/Users/chosn/OneDrive/Documentos/5 Semestre/Qultura-Mobile/app/src/main/res/layout/activity_consulta_eventos.xml" value="0.2" />
-        <entry key="..\:/Users/chosn/OneDrive/Documentos/5 Semestre/Qultura-Mobile/app/src/main/res/layout/activity_detalle_evento.xml" value="0.176" />
-        <entry key="..\:/Users/chosn/OneDrive/Documentos/5 Semestre/Qultura-Mobile/app/src/main/res/layout/activity_mis_solicitudes.xml" value="0.20521590423257802" />
-        <entry key="..\:/Users/chosn/OneDrive/Documentos/5 Semestre/Qultura-Mobile/app/src/main/res/layout/item_evento.xml" value="0.264" />
-        <entry key="..\:/Users/chosn/OneDrive/Documentos/5 Semestre/Qultura-Mobile/app/src/main/res/layout/item_solicitud.xml" value="0.23007246376811594" />
+        <entry key="..\:/Users/Ricardo Caceres/Documents/Tec de Monterrey/Quinto Semestre/Integración de Seguridad Informática en Redes y Sistemas de Software/Proyecto/Qultura-Mobile/app/src/main/res/layout/activity_guia.xml" value="0.264" />
+        <entry key="..\:/Users/Ricardo Caceres/Documents/Tec de Monterrey/Quinto Semestre/Integración de Seguridad Informática en Redes y Sistemas de Software/Proyecto/Qultura-Mobile/app/src/main/res/layout/activity_info.xml" value="0.2" />
+        <entry key="..\:/Users/Ricardo Caceres/Documents/Tec de Monterrey/Quinto Semestre/Integración de Seguridad Informática en Redes y Sistemas de Software/Proyecto/Qultura-Mobile/app/src/main/res/layout/activity_main.xml" value="0.2453125" />
+        <entry key="..\:/Users/Ricardo Caceres/Documents/Tec de Monterrey/Quinto Semestre/Integración de Seguridad Informática en Redes y Sistemas de Software/Proyecto/Qultura-Mobile/app/src/main/res/layout/activity_mis_solicitudes.xml" value="0.2453125" />
+        <entry key="..\:/Users/Ricardo Caceres/Documents/Tec de Monterrey/Quinto Semestre/Integración de Seguridad Informática en Redes y Sistemas de Software/Proyecto/Qultura-Mobile/app/src/main/res/layout/activity_sign_in.xml" value="0.2453125" />
+        <entry key="..\:/Users/Ricardo Caceres/Documents/Tec de Monterrey/Quinto Semestre/Integración de Seguridad Informática en Redes y Sistemas de Software/Proyecto/Qultura-Mobile/app/src/main/res/layout/activity_sign_up.xml" value="0.2453125" />
+        <entry key="..\:/Users/Ricardo Caceres/Documents/Tec de Monterrey/Quinto Semestre/Integración de Seguridad Informática en Redes y Sistemas de Software/Proyecto/Qultura-Mobile/app/src/main/res/layout/item_guia.xml" value="0.264" />
+        <entry key="..\:/Users/Ricardo Caceres/Documents/Tec de Monterrey/Quinto Semestre/Integración de Seguridad Informática en Redes y Sistemas de Software/Proyecto/Qultura-Mobile/app/src/main/res/layout/item_links.xml" value="0.2" />
+        <entry key="..\:/Users/Ricardo Caceres/Documents/Tec de Monterrey/Quinto Semestre/Integración de Seguridad Informática en Redes y Sistemas de Software/Proyecto/Qultura-Mobile/app/src/main/res/layout/item_solicitud.xml" value="0.264" />
         <entry key="..\:/Users/emili/Documents/Tec/Laboratorio/TC2007B/Qultura-Mobile/app/src/main/res/drawable/button_gradient_bg.xml" value="0.203" />
         <entry key="..\:/Users/emili/Documents/Tec/Laboratorio/TC2007B/Qultura-Mobile/app/src/main/res/drawable/cancel_button.xml" value="0.2985" />
         <entry key="..\:/Users/emili/Documents/Tec/Laboratorio/TC2007B/Qultura-Mobile/app/src/main/res/drawable/center_box_bg.xml" value="0.203" />

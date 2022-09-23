@@ -150,7 +150,9 @@ class ActivityMap: AppCompatActivity (){
         }, this)
         overlay.setFocusItemsOnTap(true);
 
-        map.overlays.add(overlay);
+        map.overlays.add(overlay)
+
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
     }
     override fun onResume() {

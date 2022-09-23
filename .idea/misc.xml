@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <entry key="..\:/Qultura-Mobile/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.172" />
         <entry key="..\:/Qultura-Mobile/app/src/main/res/drawable-v24/ic_position.xml" value="0.172" />
         <entry key="..\:/Qultura-Mobile/app/src/main/res/drawable/button_gradient_bg.xml" value="0.112" />
@@ -50,6 +51,35 @@
         <entry key="app/src/main/res/layout/item_horario_solicitud.xml" value="0.9653930664062501" />
         <entry key="app/src/main/res/layout/item_solicitud.xml" value="0.15894039735099338" />
 >>>>>>> div1
+=======
+        <entry key="..\:/User/Documents/AndroidProjects/Qultura-Mobile/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2265" />
+        <entry key="..\:/User/Documents/AndroidProjects/Qultura-Mobile/app/src/main/res/drawable/button_gradient_bg.xml" value="0.2265" />
+        <entry key="..\:/User/Documents/AndroidProjects/Qultura-Mobile/app/src/main/res/drawable/cancel_button_bg.xml" value="0.2265" />
+        <entry key="..\:/User/Documents/AndroidProjects/Qultura-Mobile/app/src/main/res/drawable/center_box_bg.xml" value="0.2265" />
+        <entry key="..\:/User/Documents/AndroidProjects/Qultura-Mobile/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2265" />
+        <entry key="..\:/User/Documents/AndroidProjects/Qultura-Mobile/app/src/main/res/drawable/top_bar_background.xml" value="0.2265" />
+        <entry key="..\:/User/Documents/AndroidProjects/Qultura-Mobile/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/User/Documents/AndroidProjects/Qultura-Mobile/app/src/main/res/layout/activity_mis_solicitudes.xml" value="0.25416666666666665" />
+        <entry key="..\:/User/Documents/AndroidProjects/Qultura-Mobile/app/src/main/res/layout/activity_show_museum.xml" value="0.2" />
+        <entry key="..\:/User/Documents/AndroidProjects/Qultura-Mobile/app/src/main/res/layout/activity_sign_in.xml" value="0.25416666666666665" />
+        <entry key="..\:/User/Documents/AndroidProjects/Qultura-Mobile/app/src/main/res/layout/activity_sign_up.xml" value="0.25416666666666665" />
+        <entry key="..\:/User/Documents/AndroidProjects/Qultura-Mobile/app/src/main/res/layout/item_museum_detail.xml" value="0.253125" />
+        <entry key="..\:/User/Documents/AndroidProjects/Qultura-Mobile/app/src/main/res/layout/item_solicitud.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ricar/AndroidStudioProjects/Qultura-Mobile/app/src/main/res/drawable/round_button.xml" value="0.106" />
+        <entry key="..\:/Users/ricar/AndroidStudioProjects/Qultura-Mobile/app/src/main/res/drawable/trans_button.xml" value="0.106" />
+        <entry key="..\:/Users/ricar/AndroidStudioProjects/Qultura-Mobile/app/src/main/res/layout/activity_artwork.xml" value="0.259375" />
+        <entry key="..\:/Users/ricar/AndroidStudioProjects/Qultura-Mobile/app/src/main/res/layout/activity_list_museum.xml" value="0.259375" />
+        <entry key="..\:/Users/ricar/AndroidStudioProjects/Qultura-Mobile/app/src/main/res/layout/activity_lounge.xml" value="0.25833333333333336" />
+        <entry key="..\:/Users/ricar/AndroidStudioProjects/Qultura-Mobile/app/src/main/res/layout/activity_museum.xml" value="0.2" />
+        <entry key="..\:/Users/ricar/AndroidStudioProjects/Qultura-Mobile/app/src/main/res/layout/item_museum_detail.xml" value="0.12613981762917933" />
+        <entry key="..\:/Users/ricar/AndroidStudioProjects/Qultura-Mobile/app/src/main/res/layout/item_obras.xml" value="0.264" />
+        <entry key="..\:/Users/ricar/AndroidStudioProjects/Qultura-Mobile/app/src/main/res/layout/slider_item.xml" value="0.259375" />
+        <entry key="app/src/main/res/layout/activity_mis_solicitudes.xml" value="0.2078125" />
+        <entry key="app/src/main/res/layout/activity_museum.xml" value="0.35628509521484375" />
+        <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.2078125" />
+        <entry key="app/src/main/res/layout/item_gallery_detail.xml" value="0.3538681030273438" />
+        <entry key="app/src/main/res/layout/item_museum_detail.xml" value="0.2776268115942029" />
+>>>>>>> 304988dbe9ed02d48ecfb5e903af899884c41c10
       </map>
     </option>
   </component>

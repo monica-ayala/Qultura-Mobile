@@ -20,11 +20,11 @@ class ViewHolderLinks (view: View): RecyclerView.ViewHolder(view){
 //    }
 }
 
-class ViewHolderGuias (view: View): RecyclerView.ViewHolder(view){
-    val nameGuia = view.findViewById(R.id.tv_guia_name) as TextView
-
-
-    fun bindGuia(item: Guia){
-        nameGuia.text = item.name
-    }
-}
+//class ViewHolderGuias (view: View): RecyclerView.ViewHolder(view){
+//    val nameGuia = view.findViewById(R.id.tv_guia_name) as TextView
+//
+//    fun bindGuia(item: Guia){
+//        itemView.setOnClickListener {  }
+//        nameGuia.text = item.name
+//    }
+//}

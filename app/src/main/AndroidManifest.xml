@@ -14,6 +14,9 @@
         android:theme="@style/Theme.Qulturapp"
         tools:targetApi="31">
         <activity
+            android:name=".GuiaActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.MainActivity"
             android:exported="true">
             <intent-filter>
@@ -22,18 +25,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".view.solicitudes.ActivitySolicitudes">
-        </activity>
-        <activity
-            android:name=".view.sesion.ActivitySignUp">
-        </activity>
-        <activity
-            android:name=".view.sesion.ActivitySignIn">
-        </activity>
-        <activity
-            android:name=".view.Info.ActivityInfo">
-        </activity>
+        <activity android:name=".view.solicitudes.ActivitySolicitudes"></activity>
+        <activity android:name=".view.sesion.ActivitySignUp"></activity>
+        <activity android:name=".view.sesion.ActivitySignIn"></activity>
+        <activity android:name=".view.Info.ActivityInfo"></activity>
+        <activity android:name=".view.Info.GuiaActivity"></activity>
     </application>
+
 
 </manifest>

@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Qulturapp</string>
-<<<<<<< HEAD
     <string name="eventos">Eventos</string>
     <string name="poster_del_evento">Poster del evento</string>
     <string name="bailongo_en_el_centro_hist_rico">Bailongo en el centro histórico</string>
@@ -8,10 +7,8 @@
     <string name="ubicacion">Ubicacion</string>
     <string name="viernes_25_de_septiembre_en_plaza_de_armas">Viernes 25 de septiembre en plaza de armas.</string>
     <string name="sanctorum">Sanctorum</string>
-=======
     <string name="back"><![CDATA[<]]></string>
     <string name="next"><![CDATA[>]]></string>
     <string name="CalendarioFecha">Septiembre 2022</string>
     <string name="buton_siguiente">Siguiente</string>
->>>>>>> 13dfad12209fad7a984219d2f1b9b921ff2f460a
 </resources>

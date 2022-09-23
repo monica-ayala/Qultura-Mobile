@@ -11,11 +11,9 @@ import com.example.qulturapp.view.museum.Museum
 import com.example.qulturapp.model.museums.MuseumListAdapter
 import com.example.qulturapp.model.museums.MuseumResults
 import com.example.qulturapp.view.sesion.ActivitySignIn
-<<<<<<< HEAD
-=======
+
 import com.example.qulturapp.viewmodel.museums.MuseumsViewModel
 import com.example.qulturapp.view.solicitudes.ActivitySolicitudes
->>>>>>> 13dfad12209fad7a984219d2f1b9b921ff2f460a
 
 
 class MainActivity : AppCompatActivity() {
@@ -28,17 +26,14 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-<<<<<<< HEAD
+
         setContentView(R.layout.activity_detalle_evento)
-=======
         setContentView(R.layout.activity_main)
         val intentSignIn = Intent(this, Museum::class.java)
         startActivity(intentSignIn)
 
         viewmodel.onCreate()
         viewmodel.searchMuseumList()
-
->>>>>>> 13dfad12209fad7a984219d2f1b9b921ff2f460a
     }
 
 }

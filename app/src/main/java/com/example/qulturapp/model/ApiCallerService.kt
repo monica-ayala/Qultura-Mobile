@@ -6,6 +6,7 @@ import com.example.qulturapp.model.sesion.EncuentraUsuario
 import com.example.qulturapp.model.sesion.UsuarioListResults
 import com.example.qulturapp.model.solicitudes.SolicitudListResults
 import okhttp3.MediaType
+import okhttp3.OkHttpClient
 import okhttp3.RequestBody
 import org.json.JSONObject
 import retrofit2.Retrofit
@@ -18,7 +19,16 @@ class ApiCallerService {
         return Retrofit.Builder()
             .baseUrl("http://ec2-3-145-68-44.us-east-2.compute.amazonaws.com:8080")
             .addConverterFactory(GsonConverterFactory.create())
+            .client(getClient())
             .build()
+    }
+
+    private fun getClient(): OkHttpClient {
+        val client = OkHttpClient.Builder()
+            .addInterceptor(HeaderInterceptor())
+            .build()
+
+        return client
     }
 
     suspend fun searchMuseumList(): MuseumListResults?{
@@ -40,15 +50,12 @@ class ApiCallerService {
     }
 
     suspend fun eliminaSolicitud(id_solicitud: Int){
-        val paramObject: JSONObject = JSONObject()
-        paramObject.put("id_solicitud", id_solicitud)
         val params = """
             {
             "id_solicitud":$id_solicitud
             }
             """.trimIndent()
-        Log.d("COCOCOOSA", params)
-        val requestBody = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), paramObject.toString())
+        val requestBody = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), params)
         val call = getRetrofit().create(ApiService::class.java).deleteSolicitud("/solicitud/cancelar", requestBody)
     }
 

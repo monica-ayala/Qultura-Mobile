@@ -3,13 +3,11 @@ package com.example.qulturapp.model
 import com.example.qulturapp.model.museums.MuseumListResults
 import com.example.qulturapp.model.sesion.EncuentraUsuario
 import retrofit2.Response
-import retrofit2.http.GET
 import com.example.qulturapp.model.sesion.UsuarioListResults
 import com.example.qulturapp.model.solicitudes.SolicitudListResults
 import okhttp3.RequestBody
-import retrofit2.http.Body
-import retrofit2.http.POST
-import retrofit2.http.Url
+import org.json.JSONObject
+import retrofit2.http.*
 
 interface ApiService {
 

@@ -7,15 +7,15 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.qulturapp.R
 import com.example.qulturapp.model.eventos.Evento
 import com.example.qulturapp.model.solicitudes.Solicitud
-import com.example.qulturapp.viewmodel.eventos.EventosListAdapter
+//import com.example.qulturapp.viewmodel.eventos.EventosListAdapter
 import com.example.qulturapp.viewmodel.eventos.EventosViewModel
 import com.example.qulturapp.viewmodel.solicitudes.SolicitudesListAdapter
 import com.example.qulturapp.viewmodel.solicitudes.SolicitudesViewModel
 
 class EventoActivity: AppCompatActivity() {
+    /*
     private val eventosViewModel = EventosViewModel()
     private lateinit var adapter: EventosListAdapter
-
     private fun initializeList(list:List<Evento>) {
         adapter = EventosListAdapter(list)
 
@@ -24,12 +24,10 @@ class EventoActivity: AppCompatActivity() {
         rvEvento.layoutManager = layoutManager
         rvEvento.adapter = adapter
 
-    }
+    }*/
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_consulta_eventos)
-        eventosViewModel.agregarEvento()
-        initializeList(eventosViewModel.listaEventos.toList())
     }
 }

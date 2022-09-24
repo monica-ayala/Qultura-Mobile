@@ -16,6 +16,7 @@ import com.example.qulturapp.view.emergencia.EmergenciaActivity
 import com.example.qulturapp.view.mapas.ActivityMap
 import com.example.qulturapp.view.perfil.ProfileActivity
 import com.example.qulturapp.view.sesion.ActivitySignIn
+import com.example.qulturapp.view.solicitudes.ActivityHorario
 import com.example.qulturapp.view.sesion.ActivitySignUp
 import com.example.qulturapp.viewmodel.museums.MuseumsViewModel
 import com.example.qulturapp.view.solicitudes.ActivitySolicitudes
@@ -25,8 +26,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val intentSignIn = Intent(this, ActivityInfo::class.java)
-
+        val intentSignIn = Intent(this, ListMuseum::class.java)
         startActivity(intentSignIn)
     }
 }

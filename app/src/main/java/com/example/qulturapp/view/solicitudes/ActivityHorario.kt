@@ -43,6 +43,7 @@ class ActivityHorario: AppCompatActivity(){
 
     private lateinit var selectedDate:LocalDate
     private lateinit var monthYearText:TextView
+    private lateinit var monthYear:String
 
     @RequiresApi(Build.VERSION_CODES.O)
     private fun setMonthView(){
@@ -79,7 +80,10 @@ class ActivityHorario: AppCompatActivity(){
 
     @RequiresApi(Build.VERSION_CODES.O)
     private fun monthYearFromDate(date: LocalDate):String{
+
         val formatter : DateTimeFormatter = (DateTimeFormatter.ofPattern("MMMM yyyy"))
+        val formatter2 : DateTimeFormatter = (DateTimeFormatter.ofPattern("yyyy-MM"))
+        monthYear = date.format(formatter2)
         return date.format(formatter)
     }
 
@@ -113,7 +117,14 @@ class ActivityHorario: AppCompatActivity(){
         boton_siguiente.setOnClickListener{
             if(HorarioViewModel.day_selected != null && HorarioViewModel.hora_selected != null && HorarioViewModel.monthYear_selected != null){
                 val intentRegistrar_Horario2 = Intent(this, ActivityHorario2::class.java)
+                intentRegistrar_Horario2.putExtra("day_selected", HorarioViewModel.day_selected)
+                intentRegistrar_Horario2.putExtra("hora_selected", HorarioViewModel.hora_selected)
+                intentRegistrar_Horario2.putExtra("monthYear_selected", HorarioViewModel.monthYear_selected)
+                intentRegistrar_Horario2.putExtra("monthYear", monthYear)
                 startActivity(intentRegistrar_Horario2)
+            }else{
+                val toast = Toast.makeText(applicationContext, "Datos incompletos", Toast.LENGTH_SHORT)
+                toast.show()
             }
         }
     }

@@ -21,6 +21,9 @@ interface ApiService {
     suspend fun deleteSolicitud(@Url url:String, @Body requestBody: RequestBody): Response<RequestBody>
 
     @POST
+    suspend fun agregaSolicitud(@Url url:String, @Body requestBody: RequestBody): Response<RequestBody>
+
+    @GET
     suspend fun getUsuario(@Url url:String, @Body requestBody: RequestBody): Response<UsuarioListResults>
 
     @POST

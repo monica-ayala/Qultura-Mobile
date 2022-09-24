@@ -15,17 +15,17 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
         android:fontFamily="sans-serif-black"
-        android:text="@string/ajustes"
+        android:text="Ajustes"
         android:textColor="@color/white"
         android:textSize="40sp" />
 
     <View
         android:layout_width="140dp"
         android:layout_height="3dp"
-        android:background="@color/secondary_color"
         android:layout_below="@+id/configuration_header"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="2dp"/>
+        android:layout_marginTop="2dp"
+        android:background="@color/secondary_color" />
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/layout_navbar"
@@ -117,15 +117,14 @@
                 app:srcCompat="@drawable/profile_icon" />
 
             <TextView
-                android:id="@+id/my_profile_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="5dp"
                 android:fontFamily="sans-serif-black"
-                android:text="@string/mi_perfil"
+                android:text="Mi Perfil"
                 android:textColor="@color/primary_text_color"
-                android:textSize="25sp" />
+                android:textSize="25dp"/>
 
             <ImageView
                 android:layout_width="40dp"
@@ -163,7 +162,7 @@
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="5dp"
                 android:fontFamily="sans-serif-black"
-                android:text="@string/modo_oscuro"
+                android:text="Modo Oscuro"
                 android:textColor="@color/primary_text_color"
                 android:textSize="25sp" />
 
@@ -208,7 +207,7 @@
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="5dp"
                 android:fontFamily="sans-serif-black"
-                android:text="@string/boton_sos"
+                android:text="Botón SOS"
                 android:textColor="@color/primary_text_color"
                 android:textSize="25sp" />
 

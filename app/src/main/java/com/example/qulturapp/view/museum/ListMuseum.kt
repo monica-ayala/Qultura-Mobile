@@ -1,9 +1,13 @@
 package com.example.qulturapp.view.museum
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.qulturapp.R
 import com.smarteist.autoimageslider.SliderView
+
 
 class ListMuseum : AppCompatActivity() {
 
@@ -59,6 +63,14 @@ class ListMuseum : AppCompatActivity() {
         // on below line we are calling start
         // auto cycle to start our cycle.
         sliderView.startAutoCycle()
+
+        val btn = findViewById<View>(R.id.museoBtn)
+        btn.setOnClickListener{
+            val intent = Intent(this, Museum::class.java)
+            startActivity(intent)
+        }
+
+
 
     }
 

@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.qulturapp.R
-import com.example.qulturapp.databinding.ActivityProfileBinding
 
 import com.example.qulturapp.view.museum.ListMuseum
 import com.example.qulturapp.view.museum.Museum

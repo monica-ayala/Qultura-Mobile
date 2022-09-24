@@ -7,24 +7,27 @@ import androidx.lifecycle.viewModelScope
 import com.example.qulturapp.model.ApiCallerService
 import com.example.qulturapp.model.sesion.UsuarioActual
 import kotlinx.coroutines.launch
-import java.security.KeyStore
-import javax.crypto.Cipher
-import javax.crypto.SecretKey
-import javax.crypto.spec.IvParameterSpec
 
 
 class SesionViewModel: ViewModel() {
     private var caller: ApiCallerService = ApiCallerService()
+    var usuarioCreado: MutableLiveData<Boolean> = MutableLiveData(null)
     var sesionIniciada: MutableLiveData<Boolean> = MutableLiveData(null)
 
-    fun guardarUsuario(nombre: String, correo: String, contrasenia: String): Boolean {
-        TODO()
+    fun guardarUsuario(nombre: String, correo: String, contrasenia: String) {
+        viewModelScope.launch {
+            val exito = caller.agregarUsuario(nombre, correo, contrasenia)?.paso
+            if(exito == 1){
+                usuarioCreado.postValue(true)
+            } else {
+                usuarioCreado.postValue(false)
+            }
+        }
     }
 
     fun validaUsuario(correo: String, contrasenia: String){
         viewModelScope.launch{
             val usuarioList = caller.searchUsuario(correo, contrasenia)
-            Log.d("UUUUSUSUSUSUArion", usuarioList.toString())
             if(usuarioList!= null && usuarioList.usuarios.isNotEmpty()) {
                 val usuario = usuarioList.usuarios[0]
                 UsuarioActual.setInfo(usuario.id, usuario.nombre, usuario.correo, usuario.contrasenia, usuario.rol)

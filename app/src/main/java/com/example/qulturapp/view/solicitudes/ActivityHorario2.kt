@@ -51,6 +51,8 @@ class ActivityHorario2: AppCompatActivity() {
 
             if(HorarioViewModel.numVisitantes != null && HorarioViewModel.numVisitantes != ""){
                 HorarioViewModel.agregaSolicitud()
+                val intentSolicitudes = Intent(this, ActivitySolicitudes::class.java)
+                startActivity(intentSolicitudes)
 
             }else{
                 val toast = Toast.makeText(applicationContext, "Selecciona un numero de visitantes", Toast.LENGTH_SHORT)

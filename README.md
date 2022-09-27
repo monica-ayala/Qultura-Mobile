@@ -1,2 +1,1 @@
-# Qultura-Mobile
-
+ayuda

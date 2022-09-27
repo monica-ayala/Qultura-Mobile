@@ -3,8 +3,51 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <entry key="..\:/Users/chosn/OneDrive/Documentos/5 Semestre/Qultura-Mobile/app/src/main/res/drawable/button_categoria.xml" value="0.1115" />
+        <entry key="..\:/Users/chosn/OneDrive/Documentos/5 Semestre/Qultura-Mobile/app/src/main/res/layout/activity_consulta_eventos.xml" value="0.2" />
+        <entry key="..\:/Users/chosn/OneDrive/Documentos/5 Semestre/Qultura-Mobile/app/src/main/res/layout/item_evento.xml" value="0.264" />
+        <entry key="..\:/Users/chosn/OneDrive/Documentos/5 Semestre/Qultura-Mobile/app/src/main/res/layout/item_solicitud.xml" value="0.23007246376811594" />
         <entry key="..\:/Users/emili/Documents/Tec/Laboratorio/TC2007B/Qultura-Mobile/app/src/main/res/drawable/button_gradient_bg.xml" value="0.203" />
         <entry key="..\:/Users/emili/Documents/Tec/Laboratorio/TC2007B/Qultura-Mobile/app/src/main/res/drawable/cancel_button.xml" value="0.2985" />
+        <entry key="..\:/Users/emili/Documents/Tec/Laboratorio/TC2007B/Qultura-Mobile/app/src/main/res/drawable/cancel_button_bg.xml" value="0.203" />
+=======
+        <entry key="..\:/Users/Ricardo Caceres/Documents/Tec de Monterrey/Quinto Semestre/Integración de Seguridad Informática en Redes y Sistemas de Software/Proyecto/Qultura-Mobile/app/src/main/res/drawable/button_categoria.xml" value="0.2825" />
+        <entry key="..\:/Users/Ricardo Caceres/Documents/Tec de Monterrey/Quinto Semestre/Integración de Seguridad Informática en Redes y Sistemas de Software/Proyecto/Qultura-Mobile/app/src/main/res/drawable/button_gradient_bg.xml" value="0.2825" />
+        <entry key="..\:/Users/Ricardo Caceres/Documents/Tec de Monterrey/Quinto Semestre/Integración de Seguridad Informática en Redes y Sistemas de Software/Proyecto/Qultura-Mobile/app/src/main/res/drawable/play_pause_drawable.xml" value="0.2825" />
+        <entry key="..\:/Users/Ricardo Caceres/Documents/Tec de Monterrey/Quinto Semestre/Integración de Seguridad Informática en Redes y Sistemas de Software/Proyecto/Qultura-Mobile/app/src/main/res/drawable/right_arrow_icon.xml" value="0.2825" />
+        <entry key="..\:/Users/Ricardo Caceres/Documents/Tec de Monterrey/Quinto Semestre/Integración de Seguridad Informática en Redes y Sistemas de Software/Proyecto/Qultura-Mobile/app/src/main/res/layout/activity_guia.xml" value="0.264" />
+        <entry key="..\:/Users/Ricardo Caceres/Documents/Tec de Monterrey/Quinto Semestre/Integración de Seguridad Informática en Redes y Sistemas de Software/Proyecto/Qultura-Mobile/app/src/main/res/layout/activity_info.xml" value="0.2" />
+        <entry key="..\:/Users/Ricardo Caceres/Documents/Tec de Monterrey/Quinto Semestre/Integración de Seguridad Informática en Redes y Sistemas de Software/Proyecto/Qultura-Mobile/app/src/main/res/layout/activity_main.xml" value="0.2453125" />
+        <entry key="..\:/Users/Ricardo Caceres/Documents/Tec de Monterrey/Quinto Semestre/Integración de Seguridad Informática en Redes y Sistemas de Software/Proyecto/Qultura-Mobile/app/src/main/res/layout/activity_mis_solicitudes.xml" value="0.2453125" />
+        <entry key="..\:/Users/Ricardo Caceres/Documents/Tec de Monterrey/Quinto Semestre/Integración de Seguridad Informática en Redes y Sistemas de Software/Proyecto/Qultura-Mobile/app/src/main/res/layout/activity_sign_in.xml" value="0.2453125" />
+        <entry key="..\:/Users/Ricardo Caceres/Documents/Tec de Monterrey/Quinto Semestre/Integración de Seguridad Informática en Redes y Sistemas de Software/Proyecto/Qultura-Mobile/app/src/main/res/layout/activity_sign_up.xml" value="0.2453125" />
+        <entry key="..\:/Users/Ricardo Caceres/Documents/Tec de Monterrey/Quinto Semestre/Integración de Seguridad Informática en Redes y Sistemas de Software/Proyecto/Qultura-Mobile/app/src/main/res/layout/blue_right_arrow.xml" value="0.2462962962962963" />
+        <entry key="..\:/Users/Ricardo Caceres/Documents/Tec de Monterrey/Quinto Semestre/Integración de Seguridad Informática en Redes y Sistemas de Software/Proyecto/Qultura-Mobile/app/src/main/res/layout/item_guia.xml" value="0.264" />
+        <entry key="..\:/Users/Ricardo Caceres/Documents/Tec de Monterrey/Quinto Semestre/Integración de Seguridad Informática en Redes y Sistemas de Software/Proyecto/Qultura-Mobile/app/src/main/res/layout/item_links.xml" value="0.2" />
+        <entry key="..\:/Users/Ricardo Caceres/Documents/Tec de Monterrey/Quinto Semestre/Integración de Seguridad Informática en Redes y Sistemas de Software/Proyecto/Qultura-Mobile/app/src/main/res/layout/item_solicitud.xml" value="0.264" />
+=======
+        <entry key="..\:/Users/Said/AndroidStudioProjects/Qultura-Mobile/app/src/main/res/layout/activity_configuration.xml" value="0.22" />
+        <entry key="..\:/Users/Said/AndroidStudioProjects/Qultura-Mobile/app/src/main/res/layout/activity_profile.xml" value="0.2" />
+        <entry key="..\:/Users/chosn/OneDrive/Documentos/5 Semestre/Qultura-Mobile/app/src/main/res/drawable/button_categoria.xml" value="0.1115" />
+        <entry key="..\:/Users/chosn/OneDrive/Documentos/5 Semestre/Qultura-Mobile/app/src/main/res/drawable/button_gradient_bg.xml" value="0.18" />
+        <entry key="..\:/Users/chosn/OneDrive/Documentos/5 Semestre/Qultura-Mobile/app/src/main/res/drawable/cancel_button_bg.xml" value="0.134" />
+        <entry key="..\:/Users/chosn/OneDrive/Documentos/5 Semestre/Qultura-Mobile/app/src/main/res/drawable/round_black_button.xml" value="0.18" />
+        <entry key="..\:/Users/chosn/OneDrive/Documentos/5 Semestre/Qultura-Mobile/app/src/main/res/drawable/round_button.xml" value="0.18" />
+        <entry key="..\:/Users/chosn/OneDrive/Documentos/5 Semestre/Qultura-Mobile/app/src/main/res/drawable/sanctorum.xml" value="0.1535" />
+        <entry key="..\:/Users/chosn/OneDrive/Documentos/5 Semestre/Qultura-Mobile/app/src/main/res/drawable/top_bar_background.xml" value="0.18" />
+        <entry key="..\:/Users/chosn/OneDrive/Documentos/5 Semestre/Qultura-Mobile/app/src/main/res/layout/activity_consulta_eventos.xml" value="0.2" />
+        <entry key="..\:/Users/chosn/OneDrive/Documentos/5 Semestre/Qultura-Mobile/app/src/main/res/layout/activity_detalle_evento.xml" value="0.176" />
+        <entry key="..\:/Users/chosn/OneDrive/Documentos/5 Semestre/Qultura-Mobile/app/src/main/res/layout/activity_list_museum.xml" value="0.1013253527148354" />
+        <entry key="..\:/Users/chosn/OneDrive/Documentos/5 Semestre/Qultura-Mobile/app/src/main/res/layout/activity_mis_solicitudes.xml" value="0.20521590423257802" />
+        <entry key="..\:/Users/chosn/OneDrive/Documentos/5 Semestre/Qultura-Mobile/app/src/main/res/layout/item_evento.xml" value="0.264" />
+        <entry key="..\:/Users/chosn/OneDrive/Documentos/5 Semestre/Qultura-Mobile/app/src/main/res/layout/item_solicitud.xml" value="0.23007246376811594" />
+>>>>>>> 9c5639d9301928848ddc4d397cabc7a476f134a4
+        <entry key="..\:/Users/emili/Documents/Tec/Laboratorio/TC2007B/Qultura-Mobile/app/src/main/res/drawable/button_gradient_bg.xml" value="0.203" />
+        <entry key="..\:/Users/emili/Documents/Tec/Laboratorio/TC2007B/Qultura-Mobile/app/src/main/res/drawable/cancel_button.xml" value="0.2985" />
+>>>>>>> d6107b05b9cf6094de3176c3fdf22c87b36ae134
         <entry key="..\:/Users/emili/Documents/Tec/Laboratorio/TC2007B/Qultura-Mobile/app/src/main/res/drawable/center_box_bg.xml" value="0.203" />
         <entry key="..\:/Users/emili/Documents/Tec/Laboratorio/TC2007B/Qultura-Mobile/app/src/main/res/drawable/solicitud_card_box.xml" value="0.2985" />
         <entry key="..\:/Users/emili/Documents/Tec/Laboratorio/TC2007B/Qultura-Mobile/app/src/main/res/drawable/top_bar_background.xml" value="0.2985" />
@@ -13,6 +56,52 @@
         <entry key="..\:/Users/emili/Documents/Tec/Laboratorio/TC2007B/Qultura-Mobile/app/src/main/res/layout/activity_sign_in.xml" value="0.358695652173913" />
         <entry key="..\:/Users/emili/Documents/Tec/Laboratorio/TC2007B/Qultura-Mobile/app/src/main/res/layout/activity_sign_up.xml" value="0.358695652173913" />
         <entry key="..\:/Users/emili/Documents/Tec/Laboratorio/TC2007B/Qultura-Mobile/app/src/main/res/layout/item_solicitud.xml" value="0.33" />
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1275" />
+        <entry key="app/src/main/res/drawable/button_categoria.xml" value="0.1275" />
+        <entry key="app/src/main/res/drawable/button_gradient_bg.xml" value="0.1275" />
+        <entry key="app/src/main/res/drawable/button_solicitud_siguiente.xml" value="0.1275" />
+        <entry key="app/src/main/res/drawable/calendar_background.xml" value="0.1275" />
+        <entry key="app/src/main/res/drawable/calendar_selected.xml" value="0.1275" />
+        <entry key="app/src/main/res/drawable/calendar_unselected.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/cancel_button_bg.xml" value="0.1275" />
+        <entry key="app/src/main/res/drawable/center_box_bg.xml" value="0.1275" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1275" />
+        <entry key="app/src/main/res/drawable/info_solicitudes.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/textedit_box.xml" value="0.1275" />
+        <entry key="app/src/main/res/drawable/top_bar_background.xml" value="0.1275" />
+        <entry key="app/src/main/res/layout/activity_consulta_eventos.xml" value="0.15520833333333334" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.15520833333333334" />
+        <entry key="app/src/main/res/layout/activity_mis_solicitudes.xml" value="0.17266187050359713" />
+        <entry key="app/src/main/res/layout/activity_registra_solicitud.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_registra_solicitudpt2.xml" value="0.24882075471698112" />
+        <entry key="app/src/main/res/layout/activity_sign_in.xml" value="0.15520833333333334" />
+        <entry key="app/src/main/res/layout/item_calendarcell.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/item_horario_solicitud.xml" value="0.9653930664062501" />
+        <entry key="app/src/main/res/layout/item_solicitud.xml" value="0.15894039735099338" />
+=======
+        <entry key="..\:/Qultura-Mobile/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.172" />
+        <entry key="..\:/Qultura-Mobile/app/src/main/res/drawable-v24/ic_position.xml" value="0.172" />
+        <entry key="..\:/Qultura-Mobile/app/src/main/res/drawable/button_gradient_bg.xml" value="0.112" />
+        <entry key="..\:/Qultura-Mobile/app/src/main/res/drawable/cancel_button_bg.xml" value="0.112" />
+        <entry key="..\:/Qultura-Mobile/app/src/main/res/drawable/center_box_bg.xml" value="0.112" />
+        <entry key="..\:/Qultura-Mobile/app/src/main/res/drawable/ic_launcher_background.xml" value="0.172" />
+        <entry key="..\:/Qultura-Mobile/app/src/main/res/layout/activity_main.xml" value="0.1852355072463768" />
+        <entry key="..\:/Qultura-Mobile/app/src/main/res/layout/activity_map.xml" value="0.1" />
+        <entry key="..\:/Qultura-Mobile/app/src/main/res/layout/activity_mis_solicitudes.xml" value="0.1852355072463768" />
+>>>>>>> 2e7a14382ef519e96ac04c1d2b6b3fcfcf83c2a7
+=======
+>>>>>>> d6107b05b9cf6094de3176c3fdf22c87b36ae134
+=======
+        <entry key="..\:/Users/ricar/AndroidStudioProjects/Qultura-Mobile/app/src/main/res/layout/activity_configuration.xml" value="0.264" />
+        <entry key="..\:/Users/ricar/AndroidStudioProjects/Qultura-Mobile/app/src/main/res/layout/activity_consulta_eventos.xml" value="0.16983695652173914" />
+        <entry key="..\:/Users/ricar/AndroidStudioProjects/Qultura-Mobile/app/src/main/res/layout/activity_detalle_evento.xml" value="0.16983695652173914" />
+        <entry key="..\:/Users/ricar/AndroidStudioProjects/Qultura-Mobile/app/src/main/res/layout/activity_list_museum.xml" value="0.12613981762917933" />
+        <entry key="..\:/Users/ricar/AndroidStudioProjects/Qultura-Mobile/app/src/main/res/layout/activity_lounge.xml" value="0.12182971014492754" />
+        <entry key="..\:/Users/ricar/AndroidStudioProjects/Qultura-Mobile/app/src/main/res/layout/activity_museum.xml" value="0.12613981762917933" />
+        <entry key="..\:/Users/ricar/AndroidStudioProjects/Qultura-Mobile/app/src/main/res/layout/activity_sign_up.xml" value="0.16983695652173914" />
+>>>>>>> 9c5639d9301928848ddc4d397cabc7a476f134a4
       </map>
     </option>
   </component>

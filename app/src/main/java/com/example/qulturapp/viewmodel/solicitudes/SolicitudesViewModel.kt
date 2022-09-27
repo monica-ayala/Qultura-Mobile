@@ -47,8 +47,13 @@ class SolicitudesViewModel: ViewModel() {
                 )
                 listaSolicitudesAct.add(nuevaSolicitud)
             }
-            Log.d("SOlicitudes", solicitudList.toString())
             listaSolicitudes.postValue(listaSolicitudesAct.toList())
+        }
+    }
+
+    fun eliminaSolicitud(id_solicitud: Int){
+        viewModelScope.launch {
+            caller.eliminaSolicitud(id_solicitud)
         }
     }
 

@@ -1,5 +1,8 @@
 package com.example.qulturapp.viewmodel.solicitudes
 
+import android.app.AlertDialog
+import android.content.Context
+import android.content.DialogInterface
 import android.graphics.Color
 import android.view.Gravity
 import android.view.LayoutInflater
@@ -12,18 +15,46 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.qulturapp.R
 import com.example.qulturapp.model.solicitudes.SolicitudLista
 
-class SolicitudesListAdapter (private val data:List<SolicitudLista>): RecyclerView.Adapter<ViewHolder>() {
+class SolicitudesListAdapter (private val data:List<SolicitudLista>, private val context: Context): RecyclerView.Adapter<ViewHolder>() {
+    private val dataML = data.toMutableList()
+    private val solicitudesViewModel = SolicitudesViewModel()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
         return ViewHolder(layoutInflater.inflate(R.layout.item_solicitud, parent, false))
     }
 
-    override fun getItemCount(): Int = data.size
+    override fun getItemCount(): Int = dataML.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val item = data[position]
-        holder.bind(item, position)
+        val item = dataML[position]
+        holder.bind(item)
+
+        holder.botonCancelar.setOnClickListener {
+            val altertaCancelar = AlertDialog.Builder(context)
+            altertaCancelar.setTitle("Cancelar solicitud")
+            altertaCancelar.setMessage("¿Estás seguro de que quieres cancelar esta solicitud?")
+
+            altertaCancelar.setPositiveButton("Si",
+                DialogInterface.OnClickListener { dialog, _ ->
+                    eliminaSolicitud(item)
+                    dialog.cancel()
+                })
+
+            altertaCancelar.setNegativeButton("No",
+                DialogInterface.OnClickListener { dialog, _ ->
+                    dialog.cancel()
+                })
+            altertaCancelar.show()
+        }
+    }
+
+    private fun eliminaSolicitud(item: SolicitudLista) {
+        val position = dataML.indexOf(item)
+        solicitudesViewModel.eliminaSolicitud(dataML[position].id_solicitud)
+        dataML.remove(item);
+        notifyItemRemoved(position)
+        notifyItemRangeChanged(position, itemCount)
     }
 
 }
@@ -39,7 +70,7 @@ class ViewHolder (view: View): RecyclerView.ViewHolder(view) {
 
     val context = view.context
 
-    fun bind(item: SolicitudLista, position:Int) {
+    fun bind(item: SolicitudLista) {
         textMuseo.text = item.museo
         horario.text = item.fecha
         asistentes.text = "Personas: " + item.asistentes.toString()
@@ -59,8 +90,10 @@ class ViewHolder (view: View): RecyclerView.ViewHolder(view) {
             pos = !pos
         }
 
-        if(item.estado == 0){
-            estado.text = "Estatus: \n Aceptado"
+        estado.text = when(item.estado){
+            0 -> "Estatus: \n Aceptado"
+            1 -> "Estatus: \n En proceso"
+            else -> "Estatus: \n Rechazado"
         }
     }
 }

@@ -27,7 +27,7 @@ class SalasAdapter (private val salasList: List<GalleryResults>): RecyclerView.A
 class SalasViewHolder(view: View):RecyclerView.ViewHolder(view) {
 
     //val obraid = view.findViewById<TextView>(R.id.tvObraId)
-    val obranom = view.findViewById<TextView>(R.id.tv_sala_nom)
+    val obranom = view.findViewById<TextView>(R.id.tv_sala_nom_item)
     //val obraaudio = view.findViewById<TextView>(R.id.tvObraAudio)
     val obrafoto = view.findViewById<ImageView>(R.id.iv_sala_gallery)
 

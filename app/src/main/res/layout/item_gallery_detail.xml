@@ -4,7 +4,6 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="horizontal"
     android:layout_margin="5dp"
     android:background="@color/black"
     >
@@ -19,7 +18,6 @@
             android:layout_height="150dp"
             android:layout_gravity="center"
             android:layout_margin="5dp"
-
             android:elevation="10dp"
             app:cardCornerRadius="8dp"
             app:strokeWidth="3dp"
@@ -31,16 +29,15 @@
                 android:layout_height="match_parent"
                 android:background="@color/white"
                 android:scaleType="centerCrop"
-                android:src="@drawable/lechuga" />
+                android:src="@drawable/obra4" />
         </com.google.android.material.card.MaterialCardView>
 
         <TextView
-            android:id="@+id/tv_sala_nom"
+            android:id="@+id/tv_sala_nom_item"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:fontFamily="sans-serif-black"
-            android:text="Sala 1"
             android:textColor="@color/white"
             android:textSize="15sp" />
 

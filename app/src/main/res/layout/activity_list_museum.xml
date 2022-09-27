@@ -101,11 +101,13 @@
         android:layout_marginTop="585dp"
         android:textColor="@color/white"
         android:textSize="60dp" />
+
     <Button
+        android:id="@+id/eventbtn"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:background="@drawable/trans_button"
-        android:layout_marginTop="530dp" />
+        android:layout_marginTop="530dp"
+        android:background="@drawable/trans_button" />
 
 
 

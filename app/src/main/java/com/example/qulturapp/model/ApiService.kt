@@ -23,7 +23,7 @@ interface ApiService {
     @POST
     suspend fun agregaSolicitud(@Url url:String, @Body requestBody: RequestBody): Response<RequestBody>
 
-    @GET
+    @POST
     suspend fun getUsuario(@Url url:String, @Body requestBody: RequestBody): Response<UsuarioListResults>
 
     @POST

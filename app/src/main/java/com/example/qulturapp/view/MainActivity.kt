@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.qulturapp.R
-
 import com.example.qulturapp.view.museum.ListMuseum
 import com.example.qulturapp.view.museum.Museum
 import com.example.qulturapp.model.museums.MuseumListAdapter
@@ -28,9 +27,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
-
-        val intentSignIn = Intent(this, ListMuseum::class.java)
+        val intentSignIn = Intent(this, ActivitySolicitudes::class.java)
         startActivity(intentSignIn)
     }
 }

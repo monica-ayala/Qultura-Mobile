@@ -9,5 +9,6 @@ data class Solicitud(
     @SerializedName("num_asistentes") val asistentes: Int,
     @SerializedName("status") val estado: Int,
     @SerializedName("nom_museo") val museo: String,
+    @SerializedName("imgP_museo") val imagen_museo: String,
     @SerializedName("id_user_solicitud") val usuario: Int
 )

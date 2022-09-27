@@ -7,5 +7,6 @@ data class SolicitudLista(
     val asistentes: Int,
     val estado: Int,
     val museo: String,
+    val imagen_museo: String,
     val necesidades: List<String>
 )

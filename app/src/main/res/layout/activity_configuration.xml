@@ -5,8 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/primary_color"
-    tools:context=".ActivityConfiguration">
+    android:background="@color/primary_color">
 
     <TextView
         android:id="@+id/configuration_header"
@@ -27,6 +26,7 @@
         android:layout_marginTop="2dp"
         android:background="@color/secondary_color" />
 
+    <!--
     <androidx.core.widget.NestedScrollView
         android:id="@+id/layout_navbar"
         android:layout_width="match_parent"
@@ -93,12 +93,13 @@
         </RelativeLayout>
 
     </androidx.core.widget.NestedScrollView>
+    -->
 
     <LinearLayout
         android:id="@+id/configuration_box"
         android:layout_width="match_parent"
-        android:layout_height="490dp"
-        android:layout_above="@+id/layout_navbar"
+        android:layout_height="580dp"
+        android:layout_alignParentBottom="true"
         android:background="@drawable/center_box_bg"
         android:orientation="vertical">
 
@@ -124,7 +125,7 @@
                 android:fontFamily="sans-serif-black"
                 android:text="Mi Perfil"
                 android:textColor="@color/primary_text_color"
-                android:textSize="25dp"/>
+                android:textSize="25dp" />
 
             <ImageView
                 android:layout_width="40dp"

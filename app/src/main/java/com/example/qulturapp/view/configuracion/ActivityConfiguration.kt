@@ -1,16 +1,16 @@
 package com.example.qulturapp.view.configuracion
 
+import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.View
-import android.widget.CompoundButton
-import android.widget.Switch
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.widget.SwitchCompat
 import com.example.qulturapp.R
 import com.example.qulturapp.databinding.ActivityConfigurationBinding
+import com.example.qulturapp.view.perfil.ProfileActivity
 
 class ActivityConfiguration : AppCompatActivity() {
     private lateinit var binding: ActivityConfigurationBinding
@@ -18,6 +18,18 @@ class ActivityConfiguration : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_configuration)
+
+        val button_profile = findViewById<LinearLayout>(R.id.profile_access_button)
+        button_profile.setOnClickListener {
+            val intent = Intent(this, ProfileActivity :: class.java)
+            startActivity(intent)
+        }
+
+//        val button_emergency = findViewById<LinearLayout>(R.id.emergency_access_button)
+//        button_emergency.setOnClickListener {
+//            val intent = Intent(this, EmergenciaActivity :: class.java)
+//            startActivity(intent)
+//        }
 
         // Dark Mode Function
 //        var dm_switch = binding.darkmodeSwitch

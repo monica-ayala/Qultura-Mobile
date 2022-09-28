@@ -48,6 +48,9 @@
         <activity android:name=".view.eventos.EventoActivity"></activity>
         <activity android:name=".view.museum.Artwork"></activity>
         <activity android:name=".view.museum.Lounge"></activity>
+
+        <activity android:name=".view.configuracion.ActivityConfiguration"></activity>
+        <activity android:name=".view.perfil.ProfileActivity"></activity>
     </application>
 
 </manifest>

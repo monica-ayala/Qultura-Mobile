@@ -30,7 +30,8 @@
             android:background="@drawable/round_black_button"
             android:fontFamily="sans-serif-black"
             android:text="@string/sanctorum"
-            android:textSize="20dp" />
+            android:textSize="20dp"
+            android:id="@+id/button_evento"/>
 
 
 

@@ -1,5 +1,6 @@
 package com.example.qulturapp.model
 
+import com.example.qulturapp.model.eventos.EventoListResults
 import com.example.qulturapp.model.museums.MuseumListResults
 import com.example.qulturapp.model.sesion.EncuentraUsuario
 import retrofit2.Response
@@ -28,4 +29,7 @@ interface ApiService {
 
     @POST
     suspend fun registraUsuario(@Url url:String, @Body requestBody: RequestBody): Response<EncuentraUsuario>
+
+    @GET
+    suspend fun getEventList(@Url url:String): Response<EventoListResults>
 }

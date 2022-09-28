@@ -1,6 +1,7 @@
 package com.example.qulturapp.model
 
 import android.util.Log
+import com.example.qulturapp.model.eventos.EventoListResults
 import com.example.qulturapp.model.museums.MuseumListResults
 import com.example.qulturapp.model.sesion.EncuentraUsuario
 import com.example.qulturapp.model.sesion.UsuarioListResults
@@ -106,5 +107,11 @@ class ApiCallerService {
         val requestBody = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), params)
         val call = getRetrofit().create(ApiService::class.java).registraUsuario("/usuario/signup_movil", requestBody)
         return call.body()
+    }
+
+    suspend fun searchEventoList(): EventoListResults? {
+        val call = getRetrofit().create(ApiService::class.java).getEventList("/evento/getAll")
+        val eventosList = call.body()
+        return eventosList
     }
 }

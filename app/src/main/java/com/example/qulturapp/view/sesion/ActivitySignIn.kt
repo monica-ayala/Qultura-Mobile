@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Patterns
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
@@ -22,6 +23,7 @@ class ActivitySignIn: AppCompatActivity() {
     private val sesionViewModel = SesionViewModel()
 
     private lateinit var botonSignIn: Button
+    private lateinit var  textoCrearCuenta: TextView
 
     private fun mensajeInfoIncompleta() {
         Toast.makeText(applicationContext,"Por favor completa los campos que se indican",
@@ -67,12 +69,20 @@ class ActivitySignIn: AppCompatActivity() {
         startActivity(intentSolicitudes)
     }
 
+    private fun iniciaPaginaSignUp() {
+        val intentSolicitudes = Intent(this, ActivitySignUp::class.java)
+        startActivity(intentSolicitudes)
+    }
+
     private fun setListeners() {
         sesionViewModel.sesionIniciada.observe(this, Observer {
             ingresarAplicacion(it)
         })
         botonSignIn.setOnClickListener {
             iniciaSesion()
+        }
+        textoCrearCuenta.setOnClickListener {
+            iniciaPaginaSignUp()
         }
     }
 
@@ -82,6 +92,7 @@ class ActivitySignIn: AppCompatActivity() {
         botonSignIn = findViewById(R.id.button_signin)
         correo = findViewById(R.id.edit_text_email)
         contrasenia = findViewById(R.id.edit_text_pass)
+        textoCrearCuenta = findViewById(R.id.text_toSignUp)
 
         setListeners()
     }

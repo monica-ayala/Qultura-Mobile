@@ -1,7 +1,7 @@
 package com.example.qulturapp.model.sesion
 
 object UsuarioActual {
-    var id: Int = 0
+    var id: Int = 1
     var nombre: String = ""
     var correo: String = ""
     var contrasenia: String = ""

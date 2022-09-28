@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val intentSignIn = Intent(this, EventoActivity::class.java)
+        val intentSignIn = Intent(this, ActivityConfiguration::class.java)
         startActivity(intentSignIn)
     }
 }

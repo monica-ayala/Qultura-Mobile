@@ -12,6 +12,13 @@
         android:background="@drawable/top_bar_background"
         android:backgroundTint="@color/primary_color">
 
+        <Button
+            android:id="@+id/rbtn"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:background="@color/transparent"
+            android:drawableRight="@drawable/resource_return" />
+
         <TextView
             android:id="@+id/tv_top_bar_text"
             android:layout_width="wrap_content"

@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.qulturapp.R
+import com.example.qulturapp.view.eventos.EventoActivity
 import com.smarteist.autoimageslider.SliderView
 
 
@@ -67,6 +68,11 @@ class ListMuseum : AppCompatActivity() {
         val btn = findViewById<View>(R.id.museoBtn)
         btn.setOnClickListener{
             val intent = Intent(this, Museum::class.java)
+            startActivity(intent)
+        }
+        val evbtn: Button = findViewById<View>(R.id.eventbtn) as Button
+        evbtn.setOnClickListener{
+            val intent = Intent(this, EventoActivity::class.java)
             startActivity(intent)
         }
 

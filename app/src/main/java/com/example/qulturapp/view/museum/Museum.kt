@@ -6,6 +6,8 @@ import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.qulturapp.R
+import com.example.qulturapp.view.sesion.ActivitySignUp
+import com.example.qulturapp.view.solicitudes.ActivityHorario
 
 class Museum:AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,6 +22,11 @@ class Museum:AppCompatActivity() {
         val rbtn = findViewById<View>(R.id.returnMuseo)
         rbtn.setOnClickListener{
             val intent = Intent(this, ListMuseum::class.java)
+            startActivity(intent)
+        }
+        val solibtn = findViewById<View>(R.id.solicitudBtn)
+        solibtn.setOnClickListener{
+            val intent = Intent(this, ActivityHorario::class.java)
             startActivity(intent)
         }
 

@@ -4,30 +4,55 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_marginTop="16dp"
-    android:layout_marginLeft="16dp"
-    android:layout_marginRight="16dp"
     android:layout_centerHorizontal="true"
     android:orientation="vertical">
 
-
-    <TextView
-        android:id="@+id/tv_guia_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="32dp"
-        tools:text="TITLE"
-        android:textColor="@color/primary_color"
-        android:textStyle="bold">
-    </TextView>
-
-
-    <View
-        android:id="@+id/divider"
+    <RelativeLayout
+        android:id="@+id/rv_top_bar"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginBottom="16dp"
-        android:background="?android:attr/listDivider" />
+        android:layout_height="75dp"
+        android:background="@drawable/top_bar_background"
+        android:backgroundTintMode="@color/primary_color"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="24dp">
+
+        <TextView
+            android:id="@+id/tv_guia_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="TITULO"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-black"
+            android:textSize="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true">
+        </TextView>
+
+        <View
+            android:layout_width="200dp"
+            android:layout_height="2dp"
+            android:layout_alignBottom="@id/tv_guia_title"
+            android:layout_centerHorizontal="true"
+            android:background="@color/secondary_color"
+            android:layout_marginBottom="-4dp">
+        </View>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:src="@drawable/guiaicon"
+            android:layout_marginBottom="24dp">
+        </ImageView>
 
     <TextView
         android:id="@+id/tv_guia_desc"
@@ -36,8 +61,15 @@
         android:textSize="24dp"
         tools:text="Descripction"
         android:textColor="@color/primary_color"
-        android:layout_marginBottom="24dp">
+        android:layout_marginBottom="16dp">
     </TextView>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="16dp"
+        android:background="?android:attr/listDivider"/>
 
     <TextView
         android:id="@+id/tv_guia_tip"
@@ -45,12 +77,16 @@
         android:layout_height="wrap_content"
         android:textSize="16dp"
         tools:text="TipsTipsTips"
-        android:textColor="@color/primary_color"
-        >
-
+        android:textColor="@color/primary_color">
     </TextView>
 
-
-
+    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+        android:id="@+id/youtube"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:videoId="S0Q4gqBUs7c"
+        app:autoPlay="true" />
+    </LinearLayout>
 
 </LinearLayout>

@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.widget.SwitchCompat
 import com.example.qulturapp.R
 import com.example.qulturapp.databinding.ActivityConfigurationBinding
+import com.example.qulturapp.view.emergencia.EmergenciaActivity
 import com.example.qulturapp.view.perfil.ProfileActivity
 
 class ActivityConfiguration : AppCompatActivity() {
@@ -25,11 +26,11 @@ class ActivityConfiguration : AppCompatActivity() {
             startActivity(intent)
         }
 
-//        val button_emergency = findViewById<LinearLayout>(R.id.emergency_access_button)
-//        button_emergency.setOnClickListener {
-//            val intent = Intent(this, EmergenciaActivity :: class.java)
-//            startActivity(intent)
-//        }
+        val button_emergency = findViewById<LinearLayout>(R.id.emergency_access_button)
+        button_emergency.setOnClickListener {
+            val intent = Intent(this, EmergenciaActivity :: class.java)
+            startActivity(intent)
+        }
 
         // Dark Mode Function
 //        var dm_switch = binding.darkmodeSwitch

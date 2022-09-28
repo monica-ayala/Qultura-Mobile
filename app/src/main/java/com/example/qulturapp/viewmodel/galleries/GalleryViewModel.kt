@@ -9,7 +9,7 @@ import com.example.qulturapp.model.galleries.GalleryResults
 import kotlinx.coroutines.launch
 
 class GalleryViewModel: ViewModel() {
-    var listaGallery: MutableLiveData<List<GalleryResults>> = MutableLiveData(listOf())
+    var listaGallery: MutableLiveData<List<GalleryResults>?> = MutableLiveData(listOf())
 
     private var caller: ApiCallerService = ApiCallerService()
 
@@ -19,6 +19,14 @@ class GalleryViewModel: ViewModel() {
 
             val galleryList = caller.searchGalleryList()
             Log.d("Salas ---> ",galleryList!!.gallery.toString())
+            val listaSalas = mutableListOf<GalleryResults>()
+            for(sala in galleryList.gallery)
+            {
+                val content =  GalleryResults(sala.nom_sala, sala.img_sala)
+                listaSalas.add(content)
+            }
+
+            listaGallery.postValue(listaSalas)
         }
 
     }

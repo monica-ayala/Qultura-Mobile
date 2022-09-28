@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.lifecycle.Observer
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.qulturapp.R
 import com.example.qulturapp.model.galleries.GalleryResults
@@ -20,7 +21,7 @@ class Gallery:AppCompatActivity() {
     private fun initializeList(list:List<GalleryResults>) {
         adapter = GalleryListAdapter(list, this)
 
-        val layoutManager = LinearLayoutManager(this)
+        val layoutManager = GridLayoutManager(this, 2)
         val rvGalleries = findViewById<RecyclerView>(R.id.rv_list_salas)
         rvGalleries.layoutManager = layoutManager
         rvGalleries.adapter = adapter
@@ -30,7 +31,9 @@ class Gallery:AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_gallery)
         galleryViewModel.listaGallery.observe(this, Observer {
-            initializeList(it)
+            if (it != null) {
+                initializeList(it)
+            }
         })
         galleryViewModel.searchGalleryList()
     }

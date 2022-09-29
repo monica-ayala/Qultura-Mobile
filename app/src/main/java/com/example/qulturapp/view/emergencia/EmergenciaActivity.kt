@@ -43,7 +43,7 @@ class EmergenciaActivity : AppCompatActivity() {
                 }
                 else if (binding.dropdownMenu.getText().toString()=="Secretaría de Cultura"){
                     // based on the value in the dropDownMenu the phoneNumber necessarily needs to change
-                    phoneNumber = "876543201"
+                    phoneNumber = "354893214"
 
                 }
                 else if (binding.dropdownMenu.getText().toString()=="Galería Libertad"){

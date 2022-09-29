@@ -6,6 +6,8 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
@@ -31,7 +33,31 @@ class EmergenciaActivity : AppCompatActivity() {
         val adapter = ArrayAdapter(this, R.layout.list_item, items)
         binding.dropdownMenu.setAdapter(adapter)
 
+        binding.dropdownMenu.addTextChangedListener(object : TextWatcher {
 
+            override fun afterTextChanged(s: Editable) {
+                if (binding.dropdownMenu.getText().toString()=="Museo de Arte de Querétaro"){
+                    // based on the value in the dropDownMenu the phoneNumber necessarily needs to change
+                    phoneNumber = "1234567810"
+
+                }
+                else if (binding.dropdownMenu.getText().toString()=="Secretaría de Cultura"){
+                    // based on the value in the dropDownMenu the phoneNumber necessarily needs to change
+                    phoneNumber = "876543201"
+
+                }
+                else if (binding.dropdownMenu.getText().toString()=="Galería Libertad"){
+                    // based on the value in the dropDownMenu the phoneNumber necessarily needs to change
+                    phoneNumber = "6587493254"
+                }
+            }
+
+            override fun beforeTextChanged(s: CharSequence, start: Int,
+                                           count: Int, after: Int) {}
+
+            override fun onTextChanged(s: CharSequence, start: Int,
+                                       before: Int, count: Int) {}
+        })
 
 
         //ClickListener of call button

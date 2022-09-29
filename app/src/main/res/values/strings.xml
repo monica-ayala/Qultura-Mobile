@@ -11,4 +11,5 @@
     <string name="next"><![CDATA[>]]></string>
     <string name="CalendarioFecha">Septiembre 2022</string>
     <string name="buton_siguiente">Siguiente</string>
+    <string name="select">Seleccione Lugar></string>
 </resources>

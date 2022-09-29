@@ -9,11 +9,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.qulturapp.R
 import com.example.qulturapp.model.solicitudes.SolicitudLista
+import com.squareup.picasso.Picasso
 
 class SolicitudesListAdapter (private val data:List<SolicitudLista>, private val context: Context): RecyclerView.Adapter<ViewHolder>() {
     private val dataML = data.toMutableList()
@@ -67,6 +69,7 @@ class ViewHolder (view: View): RecyclerView.ViewHolder(view) {
     val botonCancelar = view.findViewById(R.id.cancel_button) as Button
     val listaNecesidadesIzq = view.findViewById(R.id.rl_checklist_left) as LinearLayout
     val listaNecesidadesDer = view.findViewById(R.id.rl_checklist_right) as LinearLayout
+    val imagenMuseo = view.findViewById(R.id.img_museum) as ImageView
 
     val context = view.context
 
@@ -74,9 +77,14 @@ class ViewHolder (view: View): RecyclerView.ViewHolder(view) {
         textMuseo.text = item.museo
         horario.text = item.fecha
         asistentes.text = "Personas: " + item.asistentes.toString()
+
+        val ligaImg = "http://ec2-3-145-68-44.us-east-2.compute.amazonaws.com:8080/uploads/" + item.imagen_museo
+        Picasso.get().load(ligaImg).into(imagenMuseo);
+
         var pos = true
-
-
+        listaNecesidadesDer.removeAllViews()
+        listaNecesidadesIzq.removeAllViews()
+        
         for(necesidad in item.necesidades) {
             val nuevaOpcion = TextView(context)
             nuevaOpcion.text = "- " + necesidad

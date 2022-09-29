@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/lechuga"
-    tools:context=".view.museum.Museum">
+    android:background="@drawable/obra1"
+    tools:context=".view.museum.Artwork">
 
     <View
         android:id="@+id/overlay_image"
@@ -13,6 +13,12 @@
         android:layout_height="match_parent"
         android:layout_centerHorizontal="true"
         android:background="@color/trans_black" />
+    <Button
+        android:id="@+id/returnObra"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:background="@color/transparent"
+        android:drawableRight="@drawable/resource_return" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -28,13 +34,15 @@
 
             android:orientation="vertical">
 
-            <androidx.cardview.widget.CardView
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
                 android:layout_margin="5dp"
                 android:elevation="10dp"
-                app:cardCornerRadius="15dp">
+                app:cardCornerRadius="15dp"
+                app:strokeColor="@color/white"
+                app:strokeWidth="2dp">
 
                 <ImageView
                     android:id="@+id/roundedImageView"
@@ -42,8 +50,8 @@
                     android:layout_height="match_parent"
                     android:background="@color/white"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/lechuga" />
-            </androidx.cardview.widget.CardView>
+                    android:src="@drawable/obra1" />
+            </com.google.android.material.card.MaterialCardView>
 
             <View
                 android:layout_width="match_parent"

@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.qulturapp.R
 import com.example.qulturapp.model.eventos.Evento
 import com.example.qulturapp.model.solicitudes.Solicitud
-
+/*
 
 class EventosListAdapter (private val data:List<Evento>): RecyclerView.Adapter<ViewHolder>() {
 
@@ -27,7 +27,7 @@ class EventosListAdapter (private val data:List<Evento>): RecyclerView.Adapter<V
 }
 
     class ViewHolder (view: View): RecyclerView.ViewHolder(view) {
-        val nombre_evento = view.findViewById(R.id.nombre_evento) as TextView
+        val nombre_evento = view.findViewById(R.id.) as TextView
         val foto_evento = view.findViewById(R.id.iv_event_icon) as ImageView
 
         fun bind(item: Evento) {
@@ -36,3 +36,4 @@ class EventosListAdapter (private val data:List<Evento>): RecyclerView.Adapter<V
         }
     }
 
+*/

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.gallery.Gallery"
+    android:background="@drawable/obra1">
+
+    <View
+        android:id="@+id/overlay_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:background="@color/trans_black" />
+
+    <TextView
+        android:id="@+id/tv_top_bar_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Salas"
+        android:textColor="@color/white"
+        android:textSize="25sp" />
+
+    <View
+        android:layout_width="200dp"
+        android:layout_height="2dp"
+        android:layout_alignBottom="@id/tv_top_bar_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-4dp"
+        android:background="@color/secondary_color" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_list_salas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tv_top_bar_text"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp" />
+
+
+</RelativeLayout>

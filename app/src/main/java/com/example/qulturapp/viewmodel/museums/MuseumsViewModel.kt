@@ -11,10 +11,13 @@ import kotlinx.coroutines.launch
 class MuseumsViewModel: ViewModel() {
 
     private lateinit var caller: ApiCallerService
+    //private lateinit var gcaller: ApiCallerService
+
 
 
     fun onCreate() {
         caller = ApiCallerService()
+        //gcaller = ApiCallerService()
 
     }
 
@@ -27,5 +30,15 @@ class MuseumsViewModel: ViewModel() {
         }
 
     }
+
+    /*fun searchGalleryList(){
+
+        viewModelScope.launch {
+
+            val galleryList = gcaller.searchGalleryList()
+            Log.d("Salas ---> ",galleryList!!.gallery.toString())
+        }
+
+    }*/
 
 }

@@ -43,6 +43,7 @@ class SolicitudesViewModel: ViewModel() {
                     solicitud.asistentes,
                     solicitud.estado,
                     solicitud.museo,
+                    solicitud.imagen_museo,
                     listaNecesidades
                 )
                 listaSolicitudesAct.add(nuevaSolicitud)

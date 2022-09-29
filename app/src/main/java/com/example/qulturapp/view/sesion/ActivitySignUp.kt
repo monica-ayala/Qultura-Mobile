@@ -1,11 +1,14 @@
 package com.example.qulturapp.view.sesion
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Patterns
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
 import com.example.qulturapp.R
 import com.example.qulturapp.viewmodel.sesion.SesionViewModel
 import java.util.regex.Pattern
@@ -16,6 +19,7 @@ class ActivitySignUp: AppCompatActivity() {
     private lateinit var contrasenia: EditText
     private lateinit var confirmaContrasenia: EditText
     private lateinit var botonSignUp: Button
+    private lateinit var textoIniciaSesion: TextView
 
     private val sesionViewModel = SesionViewModel()
 
@@ -25,15 +29,19 @@ class ActivitySignUp: AppCompatActivity() {
             .show()
     }
 
+    private fun mensajeInfoRepetida() {
+        Toast.makeText(applicationContext,"Este correo ya se encuentra en uso",
+            Toast.LENGTH_SHORT)
+            .show()
+    }
+
     private fun guardarUsuario() {
-        if (!validaInfo()) {
-            mensajeInfoIncompleta()
-        } else {
-            sesionViewModel.guardarUsuario(usuario.text.toString(),
+        when {
+            !validaInfo() -> mensajeInfoIncompleta()
+            else -> sesionViewModel.guardarUsuario(usuario.text.toString(),
                 correo.text.toString(),
                 contrasenia.text.toString())
         }
-
     }
 
     private fun validaInfo(): Boolean {
@@ -47,9 +55,31 @@ class ActivitySignUp: AppCompatActivity() {
         return completo
     }
 
+    private fun revisarCuenta(inicia: Boolean?) {
+        when(inicia) {
+            true -> iniciaPaginaSignIn()
+            false -> {
+                sesionViewModel.usuarioCreado.postValue(null)
+                mensajeInfoRepetida()
+            }
+            else -> {}
+        }
+    }
+
+    private fun iniciaPaginaSignIn() {
+        val intentSignIn = Intent(this, ActivitySignIn::class.java)
+        startActivity(intentSignIn)
+    }
+
     private fun setListeners() {
+        sesionViewModel.usuarioCreado.observe(this, Observer {
+            revisarCuenta(it)
+        })
         botonSignUp.setOnClickListener {
             guardarUsuario()
+        }
+        textoIniciaSesion.setOnClickListener {
+            iniciaPaginaSignIn()
         }
     }
 
@@ -61,6 +91,7 @@ class ActivitySignUp: AppCompatActivity() {
         contrasenia = findViewById(R.id.edit_text_pass)
         confirmaContrasenia = findViewById(R.id.edit_text_passconfirm)
         botonSignUp = findViewById(R.id.button_signup)
+        textoIniciaSesion = findViewById(R.id.text_toSignIn)
 
         setListeners()
     }

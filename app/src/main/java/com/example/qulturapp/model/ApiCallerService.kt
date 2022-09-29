@@ -3,6 +3,7 @@ package com.example.qulturapp.model
 import android.util.Log
 import com.example.qulturapp.model.eventos.EventoListResults
 import com.example.qulturapp.model.museums.MuseumListResults
+import com.example.qulturapp.model.museums.ObraListResult
 import com.example.qulturapp.model.sesion.EncuentraUsuario
 import com.example.qulturapp.model.sesion.UsuarioListResults
 import com.example.qulturapp.model.sesion.UsuarioActual
@@ -113,5 +114,11 @@ class ApiCallerService {
         val call = getRetrofit().create(ApiService::class.java).getEventList("/evento/getAll")
         val eventosList = call.body()
         return eventosList
+    }
+
+    suspend fun searchObraList(): ObraListResult? {
+        val call = getRetrofit().create(ApiService::class.java).getObrasList("/obras/getAll")
+        val obrasList = call.body()
+        return obrasList
     }
 }

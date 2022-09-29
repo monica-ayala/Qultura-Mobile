@@ -2,6 +2,7 @@ package com.example.qulturapp.model
 
 import com.example.qulturapp.model.eventos.EventoListResults
 import com.example.qulturapp.model.museums.MuseumListResults
+import com.example.qulturapp.model.museums.ObraListResult
 import com.example.qulturapp.model.sesion.EncuentraUsuario
 import retrofit2.Response
 import com.example.qulturapp.model.sesion.UsuarioListResults
@@ -32,4 +33,7 @@ interface ApiService {
 
     @GET
     suspend fun getEventList(@Url url:String): Response<EventoListResults>
+
+    @GET
+    suspend fun getObrasList(@Url url:String): Response<ObraListResult>
 }

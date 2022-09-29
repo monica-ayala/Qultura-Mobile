@@ -19,9 +19,9 @@ class ObrasViewHolder(view: View):RecyclerView.ViewHolder(view) {
 
     fun render(obraModel: Obras){
         //obraid.id = obraModel.idObras
-        obranom.text = obraModel.nomObras
+        obranom.text = obraModel.nom_obra
         //obraaudio.text = obraModel.audObras
-        Glide.with(obrafoto.context).load(obraModel.imgObras).into(obrafoto)
+        Glide.with(obrafoto.context).load(obraModel.img_obra).into(obrafoto)
     }
 
 }

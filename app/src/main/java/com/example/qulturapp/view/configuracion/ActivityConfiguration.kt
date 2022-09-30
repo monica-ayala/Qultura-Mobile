@@ -20,6 +20,8 @@ class ActivityConfiguration : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_configuration)
 
+
+        // Preguntar como implementar un if para que te lleve a Sign In si no hay usuario activo
         val button_profile = findViewById<LinearLayout>(R.id.profile_access_button)
         button_profile.setOnClickListener {
             val intent = Intent(this, ProfileActivity :: class.java)

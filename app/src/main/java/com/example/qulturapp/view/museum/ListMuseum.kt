@@ -12,7 +12,10 @@ import com.example.qulturapp.databinding.ActivityListMuseumBinding
 import com.example.qulturapp.databinding.ActivityMainBinding
 import com.example.qulturapp.model.ViewHolderr
 import com.example.qulturapp.model.museums.*
+import com.example.qulturapp.view.Info.ActivityInfo
+import com.example.qulturapp.view.configuracion.ActivityConfiguration
 import com.example.qulturapp.view.eventos.EventoActivity
+import com.example.qulturapp.view.mapas.ActivityMap
 import com.example.qulturapp.viewmodel.museums.MAdapter
 import com.smarteist.autoimageslider.SliderView
 import org.osmdroid.views.overlay.milestones.MilestoneMeterDistanceLister
@@ -42,6 +45,38 @@ class ListMuseum : AppCompatActivity() {
             //carouoselRV.set3DItem(true)
             carouoselRV.setAlpha(true)
             carouoselRV.setInfinite(true)
+        }
+
+        /*
+        val museobtn = findViewById<View>(R.id.carouoselRV)
+        museobtn.setOnClickListener{
+            val intent = Intent(this, Museum::class.java)
+            startActivity(intent)
+        }
+        */
+
+        val mapabtn = findViewById<View>(R.id.mapbtn)
+        mapabtn.setOnClickListener {
+            val intent = Intent(this, ActivityMap::class.java)
+            startActivity(intent)
+        }
+
+        val evenbtn = findViewById<View>(R.id.event_btn)
+        evenbtn.setOnClickListener {
+            val intent = Intent(this, EventoActivity::class.java)
+            startActivity(intent)
+        }
+
+        val guiabtn = findViewById<View>(R.id.guias_btn)
+        guiabtn.setOnClickListener {
+            val intent = Intent(this, ActivityInfo::class.java)
+            startActivity(intent)
+        }
+
+        val ajusbtn = findViewById<View>(R.id.conf_btn)
+        ajusbtn.setOnClickListener {
+            val intent = Intent(this, ActivityConfiguration::class.java)
+            startActivity(intent)
         }
 
     }

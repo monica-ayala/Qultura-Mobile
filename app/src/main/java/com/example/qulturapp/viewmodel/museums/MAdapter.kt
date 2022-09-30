@@ -2,6 +2,7 @@ package com.example.qulturapp.viewmodel.museums
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.qulturapp.databinding.ItemMuseumDetailBinding
@@ -20,6 +21,10 @@ class MAdapter(private var mList: List<MModel>):RecyclerView.Adapter<MAdapter.MH
         holder.binding.apply {
             Glide.with(ivMusImg).load(mus.image).into(ivMusImg)
             tvMusName.text = mus.name
+
+            ivMusImg.setOnClickListener{
+                Toast.makeText(holder.binding.root.context, mus.name, Toast.LENGTH_SHORT).show()
+            }
         }
     }
 

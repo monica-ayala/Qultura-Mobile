@@ -21,6 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
+        android:id="@+id/mapbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/map_icon"
@@ -55,7 +56,8 @@
     <ImageView
         android:id="@+id/event_btn"
         android:layout_width="170dp"
-        android:layout_height="350dp"
+        android:layout_height="330dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="180dp"
         android:background="@drawable/event_btn"
         app:layout_constraintEnd_toEndOf="parent"
@@ -65,7 +67,8 @@
     <ImageView
         android:id="@+id/guias_btn"
         android:layout_width="170dp"
-        android:layout_height="175dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="10dp"
         android:layout_marginStart="10dp"
         android:background="@drawable/guia_btn"
         app:layout_constraintStart_toEndOf="@id/event_btn"
@@ -74,7 +77,8 @@
     <ImageView
         android:id="@+id/conf_btn"
         android:layout_width="170dp"
-        android:layout_height="175dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="10dp"
         android:layout_marginStart="10dp"
         android:background="@drawable/conf_btn"
         app:layout_constraintStart_toEndOf="@id/event_btn"

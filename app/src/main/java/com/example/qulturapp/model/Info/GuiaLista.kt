@@ -6,5 +6,6 @@ data class GuiaLista(
     val icono_guia: String,
     val nombre_guia: String,
     val tip_guia: String,
-    val imagen_guia: String
+    val imagen_guia: String,
+    val desc_guia: String
 )

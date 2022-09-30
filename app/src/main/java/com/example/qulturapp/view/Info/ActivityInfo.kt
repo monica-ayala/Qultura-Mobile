@@ -47,11 +47,11 @@ class ActivityInfo: AppCompatActivity(), GuiasListAdapter.OnGuiaClickListener, L
 //        guiasViewModel.agregaGuia()
         initializeList(linksViewModel.listaLinks.toList())
 //        initializeGuias(guiasViewModel.listaGuias.toList())
-        guiasViewModel.listaGuias.observe(this, {
-            if(it != null) {
+        guiasViewModel.listaGuias.observe(this) {
+            if (it != null) {
                 initializeGuias(it)
             }
-        })
+        }
         guiasViewModel.agregaGuia()
     }
 

@@ -34,7 +34,7 @@ class GuiasListAdapter (private val data: List<GuiaLista>, private val guiaItemC
         val nameGuia = view.findViewById(R.id.tv_guia_name) as TextView
 
         fun bindGuia(item: GuiaLista){
-//            itemView.setOnClickListener { guiaItemClickListener.onGuiaClick(item.nombre_guia, item.desc_guia, item.tip_guia, item.icono_guia, item.video_guia) }
+            itemView.setOnClickListener { guiaItemClickListener.onGuiaClick(item.nombre_guia, item.desc_guia, item.tip_guia, item.icono_guia, item.video_guia) }
             nameGuia.text = item.nombre_guia
         }
     }

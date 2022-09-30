@@ -27,17 +27,18 @@ class GuiasViewModel: ViewModel() {
 
     fun agregaGuia(){
         viewModelScope.launch() {
+            Log.d("ESTO ES UN TEST", "ESTO TAMBIEN EES UN TEST")
             val guiaList = caller.searchGuiaList()
             Log.d("Guias ---->",guiaList!!.guias.toString())
-            val listaGuias = mutableListOf<GuiaLista>()
+            val listGuias = mutableListOf<GuiaLista>()
             for(guia in guiaList.guias){
-                val content = GuiaLista(guia.id_guia, guia.desc_guia,
-                    guia.icono_guia, guia.video_guia, guia.tip_guia,
-                    guia.imagen_guia)
-                listaGuias.add(content)
+                val content = GuiaLista(guia.id_guia,  guia.video_guia,
+                    guia.icono_guia, guia.nombre_guia, guia.tip_guia,
+                    guia.imagen_guia, guia.desc_guia)
+                listGuias.add(content)
             }
 
-            listaGuias.postValue(listaGuias)
+            listaGuias.postValue(listGuias)
         }
     }
 }

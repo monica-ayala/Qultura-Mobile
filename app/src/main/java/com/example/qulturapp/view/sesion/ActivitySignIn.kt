@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import com.example.qulturapp.R
 import com.example.qulturapp.view.museum.ListMuseum
+import com.example.qulturapp.view.solicitudes.ActivityHorario
 import com.example.qulturapp.view.solicitudes.ActivitySolicitudes
 import com.example.qulturapp.viewmodel.sesion.SesionViewModel
 import java.util.regex.Pattern
@@ -65,7 +66,7 @@ class ActivitySignIn: AppCompatActivity() {
     }
 
     private fun iniciaPaginaPrincipal() {
-        val intentSolicitudes = Intent(this, ListMuseum::class.java)
+        val intentSolicitudes = Intent(this, ActivitySolicitudes::class.java)
         startActivity(intentSolicitudes)
     }
 

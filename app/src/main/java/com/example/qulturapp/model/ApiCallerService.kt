@@ -71,11 +71,12 @@ class ApiCallerService {
     }
 
     suspend fun agregaSolicitud(
-        day_selected:String,
-        monthYear_selected:String, hora_selected:String,
-        numVisitantes:Int,
-        info_adicional:String,
-        necesidades: MutableList<Int>
+        day_selected: String,
+        monthYear_selected: String, hora_selected: String,
+        numVisitantes: Int,
+        info_adicional: String,
+        necesidades: MutableList<Int>,
+        necesidades_text: MutableList<String>
     ) {
         val fecha_format = monthYear_selected + "-" + day_selected + " " + hora_selected + ":00"
         val UsuarioActual = UsuarioActual.id
@@ -85,7 +86,8 @@ class ApiCallerService {
             "num_Visitantes":$numVisitantes,
             "info_adicional":"$info_adicional",
             "necesidades":$necesidades,
-            "usuario_necesidad":$UsuarioActual
+            "usuario_necesidad":$UsuarioActual,
+            "necesidades_text":$necesidades_text
             }
             """.trimIndent()
         val requestBody =

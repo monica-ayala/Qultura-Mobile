@@ -103,90 +103,55 @@
         android:background="@drawable/center_box_bg"
         android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="160dp"
-                android:layout_height="160dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:src="@drawable/profile_icon" />
+        <ImageView
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/profile_icon" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="15dp"
-                android:fontFamily="sans-serif-black"
-                android:text="Nombre"
-                android:textColor="@color/primary_text_color"
-                android:textSize="25dp" />
+        <TextView
+            android:id="@+id/nombre_usuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Nombre"
+            android:textColor="@color/primary_text_color"
+            android:textSize="25dp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:fontFamily="sans-serif-black"
-                android:text="Correo electrónico:"
-                android:textColor="@color/primary_text_color"
-                android:textSize="25dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Correo electrónico:"
+            android:textColor="@color/primary_text_color"
+            android:textSize="25dp" />
 
-            <EditText
-                android:id="@+id/editTextEmail"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:fontFamily="sans-serif"
-                android:ems="10"
-                android:inputType="textEmailAddress"
-                android:text="example@algo.com"
-                android:textSize="20dp"
-                android:textAlignment="center" />
+        <TextView
+            android:id="@+id/email_usuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ems="10"
+            android:fontFamily="sans-serif"
+            android:text="example@algo.com"
+            android:textAlignment="center"
+            android:textSize="25dp" />
 
-            <!--
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:fontFamily="sans-serif-black"
-                android:text="Número de teléfono:"
-                android:textColor="@color/primary_text_color"
-                android:textSize="25dp" />
-
-            <EditText
-                android:id="@+id/editTextPhone"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:fontFamily="sans-serif"
-                android:ems="10"
-                android:inputType="phone"
-                android:text="+52 833 447 2849"
-                android:textSize="20dp"
-                android:textAlignment="center" />
-                -->
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button_save_profile_preferences"
-                android:layout_width="220dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="25dp"
-                android:background="@drawable/button_gradient_bg"
-                android:text="Guardar"
-                android:textColor="@color/white"
-                android:textSize="18sp" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button_logout"
-                android:layout_width="220dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="25dp"
-                android:background="@drawable/button_gradient_bg"
-                android:text="Cerrar sesión"
-                android:textColor="@color/white"
-                android:textSize="18sp" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_logout"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/button_gradient_bg"
+            android:text="Cerrar sesión"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
 
     </LinearLayout>
 

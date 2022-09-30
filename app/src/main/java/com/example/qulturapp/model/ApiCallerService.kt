@@ -54,8 +54,8 @@ class ApiCallerService {
 
     }
 
-    suspend fun searchSolicitudList(): SolicitudListResults?{
-        val call = getRetrofit().create(ApiService::class.java).getSolicitudList("/solicitud/getAll")
+    suspend fun searchSolicitudList(id_usuario: Int): SolicitudListResults?{
+        val call = getRetrofit().create(ApiService::class.java).getSolicitudList("/solicitud/getAll/$id_usuario")
         val solicitudList = call.body()
         return solicitudList
     }
@@ -71,13 +71,13 @@ class ApiCallerService {
     }
 
     suspend fun agregaSolicitud(
-        day_selected:String,
-        monthYear_selected:String, hora_selected:String,
-        numVisitantes:Int,
-        info_adicional:String,
-        necesidades: MutableList<Int>
+        day_selected: String,
+        monthYear_selected: String, hora_selected: String,
+        numVisitantes: Int,
+        info_adicional: String,
+        necesidades: MutableList<Int>,
+        necesidades_text: MutableList<String>
     ) {
-        Log.d("necesidades", necesidades.toString())
         val fecha_format = monthYear_selected + "-" + day_selected + " " + hora_selected + ":00"
         val UsuarioActual = UsuarioActual.id
         val params = """
@@ -86,10 +86,10 @@ class ApiCallerService {
             "num_Visitantes":$numVisitantes,
             "info_adicional":"$info_adicional",
             "necesidades":$necesidades,
-            "usuario_necesidad":$UsuarioActual
+            "usuario_necesidad":$UsuarioActual,
+            "necesidades_text":$necesidades_text
             }
             """.trimIndent()
-        Log.d("AAAAAAA",params)
         val requestBody =
             RequestBody.create(MediaType.parse("application/json; charset=utf-8"), params)
         val call = getRetrofit().create(ApiService::class.java)
@@ -100,7 +100,7 @@ class ApiCallerService {
         val params = """
             {
             "us_correo":"$correo",
-            "us_contrasenia":"$contrasenia"
+            "us_password":"$contrasenia"
             }
             """.trimIndent()
         val requestBody = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), params)

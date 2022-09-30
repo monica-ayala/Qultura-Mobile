@@ -1,6 +1,7 @@
 package com.example.qulturapp.model
 
 import android.util.Log
+import com.example.qulturapp.model.Info.GuiasListResults
 import com.example.qulturapp.model.eventos.EventoListResults
 import com.example.qulturapp.model.galleries.GalleryListResults
 import com.example.qulturapp.model.museums.MuseumListResults
@@ -125,5 +126,11 @@ class ApiCallerService {
         val call = getRetrofit().create(ApiService::class.java).getEventList("/evento/getAll")
         val eventosList = call.body()
         return eventosList
+    }
+
+    suspend fun searchGuiaList(): GuiasListResults? {
+        val call = getRetrofit().create(ApiService::class.java).getGuiasList("/guias/getAll")
+        val guiasList = call.body()
+        return guiasList
     }
 }

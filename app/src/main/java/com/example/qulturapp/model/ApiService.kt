@@ -1,5 +1,6 @@
 package com.example.qulturapp.model
 
+import com.example.qulturapp.model.Info.GuiasListResults
 import com.example.qulturapp.model.eventos.EventoListResults
 import com.example.qulturapp.model.galleries.GalleryListResults
 import com.example.qulturapp.model.museums.MuseumListResults
@@ -36,5 +37,8 @@ interface ApiService {
 
     @GET
     suspend fun getEventList(@Url url:String): Response<EventoListResults>
+
+    @GET
+    suspend fun getGuiasList(@Url url:String): Response<GuiasListResults>
 
 }

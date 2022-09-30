@@ -3,6 +3,7 @@ package com.example.qulturapp.model.Info
 import com.google.gson.annotations.SerializedName
 //Comment
 data class Guia(
+    @SerializedName("id_guia") val id_guia: Int,
     @SerializedName("nombre_guia") val nombre_guia: String,
     @SerializedName("desc_guia") val desc_guia: String,
     @SerializedName("icono_guia") val icono_guia: String,

@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.qulturapp.R
 import com.example.qulturapp.model.Info.Guia
+import com.example.qulturapp.model.Info.GuiaLista
 import com.example.qulturapp.model.Info.Link
 import com.example.qulturapp.viewmodel.Informacion.GuiasListAdapter
 import com.example.qulturapp.viewmodel.Informacion.GuiasViewModel
@@ -30,7 +31,7 @@ class ActivityInfo: AppCompatActivity(), GuiasListAdapter.OnGuiaClickListener, L
         rvLinks.adapter = adapter
     }
 
-    private fun initializeGuias(list:List<Guia>){
+    private fun initializeGuias(list:List<GuiaLista>){
         adapterGuias = GuiasListAdapter(list, this)
 
         val layoutManager = LinearLayoutManager(this)
@@ -43,9 +44,15 @@ class ActivityInfo: AppCompatActivity(), GuiasListAdapter.OnGuiaClickListener, L
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_info)
         linksViewModel.agregaLink()
-        guiasViewModel.agregaGuia()
+//        guiasViewModel.agregaGuia()
         initializeList(linksViewModel.listaLinks.toList())
-        initializeGuias(guiasViewModel.listaGuias.toList())
+//        initializeGuias(guiasViewModel.listaGuias.toList())
+        guiasViewModel.listaGuias.observe(this, {
+            if(it != null) {
+                initializeGuias(it)
+            }
+        })
+        guiasViewModel.agregaGuia()
     }
 
     override fun onGuiaClick(name: String, description: String, tip: String, icon: String, video: String) {

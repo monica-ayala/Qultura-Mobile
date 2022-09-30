@@ -20,6 +20,7 @@ class ProfileActivity : AppCompatActivity() {
         val setUsuarioActual : TextView = binding.nombreUsuario
         setUsuarioActual.text = UsuarioActual.nombre
 
+        //Nuevo Comment
         val setEmail : TextView = binding.emailUsuario
         setEmail.text = UsuarioActual.correo
 

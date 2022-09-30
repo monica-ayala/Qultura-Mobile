@@ -24,7 +24,7 @@
     <RelativeLayout
         android:id="@+id/rl_settings"
         android:layout_width="300dp"
-        android:layout_height="370dp"
+        android:layout_height="400dp"
         android:layout_marginTop="-70dp"
         android:layout_below="@id/rl_top_bar"
         android:layout_centerHorizontal="true"
@@ -94,7 +94,18 @@
             android:layout_below="@id/button_signin"
             android:layout_marginTop="25dp"
             android:textColor="@color/primary_color"
-            android:text="¿Olvidaste tu contraseña?"/>
+            android:text="¿Olvidaste tu contraseña?"
+            android:id="@+id/text_olvidaste_contra"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/text_olvidaste_contra"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/primary_text_color"
+            android:text="@string/no_tiene_cuenta"
+            android:id="@+id/text_toSignUp"/>
 
     </RelativeLayout>
 

@@ -27,7 +27,7 @@
     <RelativeLayout
         android:id="@+id/rl_signup_box"
         android:layout_width="300dp"
-        android:layout_height="480dp"
+        android:layout_height="490dp"
         android:layout_marginTop="-70dp"
         android:layout_below="@id/rl_top_bar"
         android:layout_centerHorizontal="true"
@@ -112,6 +112,16 @@
             android:textColor="@color/white"
             android:textSize="18sp"
             android:text="Sign Up" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/button_signup"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/primary_color"
+            android:text="@string/ya_tiene_cuenta"
+            android:id="@+id/text_toSignIn"/>
 
     </RelativeLayout>
 

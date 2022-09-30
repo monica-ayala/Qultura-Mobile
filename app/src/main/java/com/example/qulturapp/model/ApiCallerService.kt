@@ -1,6 +1,8 @@
 package com.example.qulturapp.model
 
 import android.util.Log
+import com.example.qulturapp.model.eventos.EventoListResults
+import com.example.qulturapp.model.galleries.GalleryListResults
 import com.example.qulturapp.model.museums.MuseumListResults
 import com.example.qulturapp.model.sesion.EncuentraUsuario
 import com.example.qulturapp.model.sesion.UsuarioListResults
@@ -37,6 +39,17 @@ class ApiCallerService {
             return museumList
             /*val vista = findViewById(R.id.tvget) as TextView
             vista.text = museumList!!.museo.size.toString()*/
+
+
+    }
+
+    suspend fun searchGalleryList(): GalleryListResults?{
+
+        val call = getRetrofit().create(ApiService::class.java).getGalleryList("/sala/get")
+        val galleryList = call.body()
+        return galleryList
+        /*val vista = findViewById(R.id.tvget) as TextView
+        vista.text = museumList!!.museo.size.toString()*/
 
 
     }
@@ -106,5 +119,11 @@ class ApiCallerService {
         val requestBody = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), params)
         val call = getRetrofit().create(ApiService::class.java).registraUsuario("/usuario/signup_movil", requestBody)
         return call.body()
+    }
+
+    suspend fun searchEventoList(): EventoListResults? {
+        val call = getRetrofit().create(ApiService::class.java).getEventList("/evento/getAll")
+        val eventosList = call.body()
+        return eventosList
     }
 }

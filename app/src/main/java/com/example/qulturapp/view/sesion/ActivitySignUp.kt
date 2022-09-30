@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Patterns
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
@@ -18,6 +19,7 @@ class ActivitySignUp: AppCompatActivity() {
     private lateinit var contrasenia: EditText
     private lateinit var confirmaContrasenia: EditText
     private lateinit var botonSignUp: Button
+    private lateinit var textoIniciaSesion: TextView
 
     private val sesionViewModel = SesionViewModel()
 
@@ -76,6 +78,9 @@ class ActivitySignUp: AppCompatActivity() {
         botonSignUp.setOnClickListener {
             guardarUsuario()
         }
+        textoIniciaSesion.setOnClickListener {
+            iniciaPaginaSignIn()
+        }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -86,6 +91,7 @@ class ActivitySignUp: AppCompatActivity() {
         contrasenia = findViewById(R.id.edit_text_pass)
         confirmaContrasenia = findViewById(R.id.edit_text_passconfirm)
         botonSignUp = findViewById(R.id.button_signup)
+        textoIniciaSesion = findViewById(R.id.text_toSignIn)
 
         setListeners()
     }

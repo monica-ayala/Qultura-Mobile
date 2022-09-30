@@ -7,6 +7,7 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.qulturapp.R
 import com.example.qulturapp.view.sesion.ActivitySignUp
+import com.example.qulturapp.view.solicitudes.ActivityHorario
 
 class Museum:AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,7 +26,7 @@ class Museum:AppCompatActivity() {
         }
         val solibtn = findViewById<View>(R.id.solicitudBtn)
         solibtn.setOnClickListener{
-            val intent = Intent(this, ActivitySignUp::class.java)
+            val intent = Intent(this, ActivityHorario::class.java)
             startActivity(intent)
         }
 

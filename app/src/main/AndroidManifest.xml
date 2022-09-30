@@ -26,7 +26,7 @@
         >
 
         <activity
-            android:name=".view.MainActivity"
+            android:name=".view.lounge.Lounge"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -45,7 +45,6 @@
         <activity android:name=".view.museum.Museum"></activity>
         <activity android:name=".view.solicitudes.ActivityHorario2"></activity>
         <activity android:name=".view.eventos.EventoActivity"></activity>
-        <activity android:name=".view.artwork.Artwork"></activity>
         <activity android:name=".view.eventos.EventoDetalle"></activity>
         <activity android:name=".view.Info.ActivityInfo"></activity>
         <activity android:name=".view.Info.GuiaActivity"></activity>

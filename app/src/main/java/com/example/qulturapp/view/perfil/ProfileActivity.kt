@@ -17,12 +17,12 @@ class ProfileActivity : AppCompatActivity() {
         setContentView(R.layout.activity_profile)
 
         // Assign values
-        val setUsuarioActual : TextView = binding.nombreUsuario
-        setUsuarioActual.text = UsuarioActual.nombre
+        val setCurrentUserName : TextView = binding.nombreUsuario
+        setCurrentUserName.text = UsuarioActual.nombre
 
         //Nuevo Comment
-        val setEmail : TextView = binding.emailUsuario
-        setEmail.text = UsuarioActual.correo
+        val setCurrentEmail : TextView = binding.emailUsuario
+        setCurrentEmail.text = UsuarioActual.correo
 
         // Log out falso :(
         binding.buttonLogout.setOnClickListener {

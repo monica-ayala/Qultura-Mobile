@@ -52,30 +52,31 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/carouoselRV"/>
 
-    <Button
+    <ImageView
         android:id="@+id/event_btn"
         android:layout_width="170dp"
         android:layout_height="350dp"
         android:layout_marginRight="180dp"
-        android:backgroundTint="@color/green_qro"
+        android:background="@drawable/event_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvDescubre"/>
 
-    <Button
+    <ImageView
         android:id="@+id/guias_btn"
         android:layout_width="170dp"
         android:layout_height="175dp"
         android:layout_marginStart="10dp"
+        android:background="@drawable/guia_btn"
         app:layout_constraintStart_toEndOf="@id/event_btn"
         app:layout_constraintTop_toBottomOf="@id/tvDescubre" />
 
-    <Button
+    <ImageView
         android:id="@+id/conf_btn"
         android:layout_width="170dp"
         android:layout_height="175dp"
         android:layout_marginStart="10dp"
-        android:backgroundTint="@color/secondary_color"
+        android:background="@drawable/conf_btn"
         app:layout_constraintStart_toEndOf="@id/event_btn"
         app:layout_constraintTop_toBottomOf="@id/guias_btn"/>
 

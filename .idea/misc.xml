@@ -11,11 +11,14 @@
         <entry key="..\:/Qultura-Mobile/app/src/main/res/drawable/ic_launcher_background.xml" value="0.172" />
         <entry key="..\:/Qultura-Mobile/app/src/main/res/layout/activity_configuration.xml" value="0.18854166666666666" />
         <entry key="..\:/Qultura-Mobile/app/src/main/res/layout/activity_emergencia.xml" value="0.18854166666666666" />
+        <entry key="..\:/Qultura-Mobile/app/src/main/res/layout/activity_info.xml" value="0.18854166666666666" />
         <entry key="..\:/Qultura-Mobile/app/src/main/res/layout/activity_list_museum.xml" value="0.18854166666666666" />
         <entry key="..\:/Qultura-Mobile/app/src/main/res/layout/activity_lounge.xml" value="0.18854166666666666" />
         <entry key="..\:/Qultura-Mobile/app/src/main/res/layout/activity_main.xml" value="0.1852355072463768" />
         <entry key="..\:/Qultura-Mobile/app/src/main/res/layout/activity_map.xml" value="0.1" />
         <entry key="..\:/Qultura-Mobile/app/src/main/res/layout/activity_mis_solicitudes.xml" value="0.1852355072463768" />
+        <entry key="..\:/Qultura-Mobile/app/src/main/res/layout/list_item.xml" value="0.18854166666666666" />
+        <entry key="..\:/Qultura-Mobile/app/src/main/res/layout/slider_item.xml" value="0.18854166666666666" />
       </map>
     </option>
   </component>

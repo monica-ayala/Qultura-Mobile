@@ -6,14 +6,17 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
+import android.os.Handler
 import android.text.Editable
 import android.text.TextWatcher
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import com.example.qulturapp.R
 import com.example.qulturapp.databinding.ActivityEmergenciaBinding
+
 
 
 class EmergenciaActivity : AppCompatActivity() {
@@ -22,6 +25,7 @@ class EmergenciaActivity : AppCompatActivity() {
     var phoneNumber = "1234567810"
 
     private lateinit var binding: ActivityEmergenciaBinding
+    private var i: Int =0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -58,16 +62,28 @@ class EmergenciaActivity : AppCompatActivity() {
             override fun onTextChanged(s: CharSequence, start: Int,
                                        before: Int, count: Int) {}
         })
-
-
+        
         //ClickListener of call button
         binding.panicBtn.setOnClickListener{
+             i++
+            val handler = Handler()
 
-            if (ActivityCompat.checkSelfPermission(this,Manifest.permission.CALL_PHONE)!= PackageManager.PERMISSION_GRANTED){
-                ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.CALL_PHONE),REQUEST_PHONE_CALL )
-            }else {
-                initiateCall()
-            }
+            handler.postDelayed ({
+                if (i==1){
+                    Toast.makeText(this@EmergenciaActivity, "DEBE PRESIONAR EL BOTON 2 VECES PARA HACER LA LLAMADA", Toast.LENGTH_SHORT).show()
+                    binding.btnDescEmergencia.setText("Debe presionar el boton 1 vez más")
+                }else if (i == 2){
+                    Toast.makeText(this@EmergenciaActivity, "Has presionado el boton 2 veces", Toast.LENGTH_SHORT).show()
+                    if (ActivityCompat.checkSelfPermission(this,Manifest.permission.CALL_PHONE)!= PackageManager.PERMISSION_GRANTED){
+                        ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.CALL_PHONE),REQUEST_PHONE_CALL )
+                    }else {
+                        initiateCall()
+                    }
+                }
+                i=0
+            }, 500)
+
+
         }
 
     }

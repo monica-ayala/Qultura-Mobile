@@ -50,6 +50,7 @@
         <activity android:name=".view.Info.ActivityInfo"></activity>
         <activity android:name=".view.Info.GuiaActivity"></activity>
         <activity android:name=".view.museum.Gallery"></activity>
+        <activity android:name=".view.museum.ListMuseum"></activity>
         <activity android:name=".view.museum.Artwork"></activity>
         <activity android:name=".view.museum.Lounge"></activity>
         <activity android:name=".view.configuracion.ActivityConfiguration"></activity>

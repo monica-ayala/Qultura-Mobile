@@ -1,5 +1,6 @@
 package com.example.qulturapp.model
 
+import com.example.qulturapp.model.artwork.ArtworkListResults
 import com.example.qulturapp.model.eventos.EventoListResults
 import com.example.qulturapp.model.galleries.GalleryListResults
 import com.example.qulturapp.model.museums.MuseumListResults
@@ -21,6 +22,9 @@ interface ApiService {
 
     @GET
     suspend fun getSolicitudList(@Url url:String): Response<SolicitudListResults>
+
+    @GET
+    suspend fun getObra(@Url url:String): Response<ArtworkListResults>
 
     @POST
     suspend fun deleteSolicitud(@Url url:String, @Body requestBody: RequestBody): Response<RequestBody>

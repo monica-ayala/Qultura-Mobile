@@ -4,15 +4,17 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
-
+/*
 @Entity(tableName = "obras_table",
     foreignKeys = [ForeignKey(entity = SalaR::class,
         parentColumns = arrayOf("id_salas"),
         childColumns = arrayOf("id_sala"),
         onDelete = ForeignKey.CASCADE)]
-    )
+    )*/
+@Entity(tableName = "obras_table")
 data class ObraR(
     @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "id_obra")
     var id_obra: Int = 0,
 
     @ColumnInfo(name = "nom_obra")
@@ -36,6 +38,6 @@ data class ObraR(
     @ColumnInfo(name = "desc_obra")
     val desc_obra: String = "",
 
-    @ColumnInfo(name = "id_sala", index = true)
+    @ColumnInfo(name = "id_sala")
     val id_sala: Int = 0,
 )

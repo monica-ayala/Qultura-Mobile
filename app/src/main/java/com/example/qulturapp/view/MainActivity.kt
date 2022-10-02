@@ -3,7 +3,9 @@ package com.example.qulturapp.view
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.viewModels
+import androidx.lifecycle.Observer
 import com.example.qulturapp.R
 import com.example.qulturapp.model.database.DbUtil
 import com.example.qulturapp.view.museum.ListMuseum

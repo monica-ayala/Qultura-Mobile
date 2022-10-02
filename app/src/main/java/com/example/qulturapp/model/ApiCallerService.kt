@@ -20,7 +20,7 @@ class ApiCallerService {
     private fun getRetrofit(): Retrofit {
 
         return Retrofit.Builder()
-            .baseUrl("http://ec2-3-145-68-44.us-east-2.compute.amazonaws.com:8080")
+            .baseUrl("http://3.14.37.4:8080")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }

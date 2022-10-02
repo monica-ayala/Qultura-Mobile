@@ -11,6 +11,7 @@ class ViewHolderr (view: View) : RecyclerView.ViewHolder(view){
     private val binding = ItemMuseumDetailBinding.bind(view)
     private val gbinding = ItemGalleryDetailBinding.bind(view)
 
+
     fun bind(item: MuseumResults){
         //binding.tvName.text = item.name
     }

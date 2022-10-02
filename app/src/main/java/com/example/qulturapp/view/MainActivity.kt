@@ -9,7 +9,7 @@ import com.example.qulturapp.view.museum.ListMuseum
 import com.example.qulturapp.view.museum.Museum
 import com.example.qulturapp.model.museums.MuseumResults
 //import com.example.qulturapp.view.eventos.EventoActivity
-import com.example.qulturapp.view.museum.Lounge
+import com.example.qulturapp.view.lounge.Lounge
 import com.example.qulturapp.view.Info.ActivityInfo
 import com.example.qulturapp.view.configuracion.ActivityConfiguration
 import com.example.qulturapp.view.emergencia.EmergenciaActivity

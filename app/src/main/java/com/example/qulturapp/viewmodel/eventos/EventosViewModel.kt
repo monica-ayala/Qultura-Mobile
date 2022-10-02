@@ -1,13 +1,19 @@
 package com.example.qulturapp.viewmodel.eventos
 
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.example.qulturapp.model.ApiCallerService
 import com.example.qulturapp.model.eventos.Evento
+import com.example.qulturapp.model.eventos.EventoListResults
+import kotlinx.coroutines.launch
 
 class EventosViewModel: ViewModel() {
 
-    val listaEventos = mutableListOf<Evento>()
+    val caller = ApiCallerService()
+    var listaEventos = MutableLiveData<EventoListResults?>()
 
-
+    /*
     fun agregarEvento (){
         val evento1 = Evento(1, "Evento de rock en la plaza de armas", "18/10/22", "https://amqueretaro.com/queretaro/2021/03/28/anuncian-evento-virtual-la-cultura-popular-e-indigena-de-queretaro-2021/", "Rock en querataro")
         val evento2 = Evento(2, "Sanctorum", "18/10/22", "https://pbs.twimg.com/media/FcodWemXoAEXIHF.jpg", "Sanctorum")
@@ -15,5 +21,16 @@ class EventosViewModel: ViewModel() {
         listaEventos.add(evento1)
         listaEventos.add(evento2)
         listaEventos.add(evento3)
+    } */
+
+    fun agregarEventos() {
+        viewModelScope.launch {
+            val listEventos = caller.searchEventoList()
+            listEventos.let {
+                listaEventos.postValue(listEventos)
+            }
+        }
     }
+
+
 }

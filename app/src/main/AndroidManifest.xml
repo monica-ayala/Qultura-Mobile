@@ -36,11 +36,12 @@
         </activity>
 
         <activity
-            android:name=".view.museum.ListMuseum"
+            android:name=".view.gallery.Gallery"
             android:exported="true"></activity>
         <activity android:name=".view.solicitudes.ActivitySolicitudes"></activity>
         <activity android:name=".view.sesion.ActivitySignUp"></activity>
         <activity android:name=".view.sesion.ActivitySignIn"></activity>
+        <activity android:name=".view.museum.ListMuseum"></activity>
         <activity android:name=".view.solicitudes.ActivityHorario"></activity>
         <activity android:name=".view.museum.Museum"></activity>
         <activity android:name=".view.solicitudes.ActivityHorario2"></activity>
@@ -49,10 +50,12 @@
         <activity android:name=".view.Info.ActivityInfo"></activity>
         <activity android:name=".view.Info.GuiaActivity"></activity>
         <activity android:name=".view.museum.Gallery"></activity>
+        <activity android:name=".view.museum.ListMuseum"></activity>
         <activity android:name=".view.museum.Artwork"></activity>
         <activity android:name=".view.museum.Lounge"></activity>
         <activity android:name=".view.configuracion.ActivityConfiguration"></activity>
         <activity android:name=".view.perfil.ProfileActivity"></activity>
+        <activity android:name=".view.emergencia.EmergenciaActivity"></activity>
     </application>
 
 </manifest>

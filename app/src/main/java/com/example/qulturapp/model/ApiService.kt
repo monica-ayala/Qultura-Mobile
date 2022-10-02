@@ -1,6 +1,8 @@
 package com.example.qulturapp.model
 
 import com.example.qulturapp.model.artwork.ArtworkListResults
+import com.example.qulturapp.model.eventos.EventoListResults
+import com.example.qulturapp.model.galleries.GalleryListResults
 import com.example.qulturapp.model.museums.MuseumListResults
 import com.example.qulturapp.model.sesion.EncuentraUsuario
 import retrofit2.Response
@@ -14,6 +16,9 @@ interface ApiService {
 
     @GET
     suspend fun getMuseumList(@Url url:String): Response<MuseumListResults>
+
+    @GET
+    suspend fun getGalleryList(@Url url:String): Response<GalleryListResults>
 
     @GET
     suspend fun getSolicitudList(@Url url:String): Response<SolicitudListResults>
@@ -32,4 +37,8 @@ interface ApiService {
 
     @POST
     suspend fun registraUsuario(@Url url:String, @Body requestBody: RequestBody): Response<EncuentraUsuario>
+
+    @GET
+    suspend fun getEventList(@Url url:String): Response<EventoListResults>
+
 }

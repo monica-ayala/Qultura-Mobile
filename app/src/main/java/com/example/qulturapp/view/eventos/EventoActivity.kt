@@ -6,20 +6,23 @@ import android.view.View
 import android.widget.Button
 import android.widget.Gallery
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.qulturapp.R
 import com.example.qulturapp.model.eventos.Evento
 import com.example.qulturapp.model.solicitudes.Solicitud
+import com.example.qulturapp.viewmodel.eventos.EventosListAdapter
 //import com.example.qulturapp.viewmodel.eventos.EventosListAdapter
 import com.example.qulturapp.viewmodel.eventos.EventosViewModel
 import com.example.qulturapp.viewmodel.solicitudes.SolicitudesListAdapter
 import com.example.qulturapp.viewmodel.solicitudes.SolicitudesViewModel
 
 class EventoActivity: AppCompatActivity() {
-    /*
+
     private val eventosViewModel = EventosViewModel()
     private lateinit var adapter: EventosListAdapter
+
     private fun initializeList(list:List<Evento>) {
         adapter = EventosListAdapter(list)
 
@@ -28,7 +31,7 @@ class EventoActivity: AppCompatActivity() {
         rvEvento.layoutManager = layoutManager
         rvEvento.adapter = adapter
 
-    }*/
+    }
 
 
 
@@ -36,11 +39,20 @@ class EventoActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_consulta_eventos)
 
+        eventosViewModel.listaEventos.observe(this, Observer { list ->
+                if (list != null) {
+                    initializeList(list.eventos)
+                }
+        })
+
+        eventosViewModel.agregarEventos()
+
+        /*
         val btn = findViewById<View>(R.id.Boton_evento)
         btn.setOnClickListener{
             val intent = Intent(this, EventoDetalle::class.java)
             startActivity(intent)
-        }
+        } */
     }
 
 

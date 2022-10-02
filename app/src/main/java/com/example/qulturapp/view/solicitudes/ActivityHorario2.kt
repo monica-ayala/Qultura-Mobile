@@ -38,15 +38,19 @@ class ActivityHorario2: AppCompatActivity() {
 
             if(CB_silla.isChecked){
                 HorarioViewModel.necesidades.add(1)
+                HorarioViewModel.necesidades_text.add(CB_silla.text as String)
             }
             if(CB_rampa.isChecked){
                 HorarioViewModel.necesidades.add(3)
+                HorarioViewModel.necesidades_text.add(CB_rampa.text as String)
             }
             if(CB_guia.isChecked){
                 HorarioViewModel.necesidades.add(2)
+                HorarioViewModel.necesidades_text.add(CB_guia.text as String)
             }
             if(CB_interprete.isChecked){
                 HorarioViewModel.necesidades.add(4)
+                HorarioViewModel.necesidades_text.add(CB_interprete.text as String)
             }
 
             if(HorarioViewModel.numVisitantes != null && HorarioViewModel.numVisitantes != ""){

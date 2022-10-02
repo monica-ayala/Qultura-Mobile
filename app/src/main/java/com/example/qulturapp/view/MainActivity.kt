@@ -9,8 +9,8 @@ import com.example.qulturapp.view.museum.ListMuseum
 import com.example.qulturapp.view.museum.Museum
 import com.example.qulturapp.model.museums.MuseumListAdapter
 import com.example.qulturapp.model.museums.MuseumResults
-import com.example.qulturapp.view.eventos.EventoActivity
-import com.example.qulturapp.view.museum.Lounge
+//import com.example.qulturapp.view.eventos.EventoActivity
+import com.example.qulturapp.view.lounge.Lounge
 import com.example.qulturapp.view.Info.ActivityInfo
 import com.example.qulturapp.view.configuracion.ActivityConfiguration
 import com.example.qulturapp.view.emergencia.EmergenciaActivity
@@ -29,18 +29,12 @@ import com.example.qulturapp.viewmodel.galleries.GalleryViewModel
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var musList:List<GalleryResults>
-
-    private lateinit var adapter: GalleryListAdapter
-
-    private val viewmodel: GalleryViewModel by viewModels()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         val intentSignIn = Intent(this, ListMuseum::class.java)
         startActivity(intentSignIn)
 
-        viewmodel.searchGalleryList()
     }
 }

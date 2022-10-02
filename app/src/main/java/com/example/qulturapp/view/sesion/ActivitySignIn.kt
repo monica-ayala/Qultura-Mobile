@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import com.example.qulturapp.R
+import com.example.qulturapp.view.configuracion.ActivityConfiguration
 import com.example.qulturapp.view.museum.ListMuseum
 import com.example.qulturapp.view.perfil.ProfileActivity
 import com.example.qulturapp.view.solicitudes.ActivityHorario

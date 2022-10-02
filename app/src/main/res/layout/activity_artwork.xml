@@ -74,7 +74,7 @@
                     android:layout_weight=".3"
                     android:fontFamily="sans-serif-black"
                     android:text="Obra"
-                    android:textColor="@color/white"
+                    android:textColor="@color/header_text_color"
                     android:textSize="35sp" />
 
 
@@ -109,7 +109,7 @@
                     android:fontFamily="sans-serif"
                     android:gravity="center_vertical"
                     android:text="Teodora Vicenta de la Purísima Concepción de la Inmaculada Trinidad Villavicencio"
-                    android:textColor="@color/white"
+                    android:textColor="@color/header_text_color"
                     android:textSize="13sp" />
 
                 <TextView
@@ -122,7 +122,7 @@
                     android:gravity="center"
                     android:text="2009"
                     android:textAlignment="center"
-                    android:textColor="@color/white"
+                    android:textColor="@color/header_text_color"
                     android:textSize="15sp" />
 
             </LinearLayout>
@@ -135,7 +135,7 @@
                 android:fontFamily="sans-serif"
                 android:gravity="center_vertical"
                 android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus euismod maximus erat eget ultrices. Donec aliquam vitae nulla sit amet mattis. Suspendisse lacinia tristique lorem, eget accumsan metus imperdiet in. Aliquam pharetra erat quis mauris molestie bibendum. Cras fermentum consequat leo a fringilla. Proin sit amet sem scelerisque, maximus arcu ac, auctor massa. Suspendisse lacus tortor, elementum quis lobortis pellentesque, laoreet et lacus. Nam scelerisque gravida tincidunt. Phasellus mollis congue ornare. Integer vitae nibh sagittis, maximus sem vel, tincidunt mauris. Pellentesque est magna, molestie ornare nisi id, interdum rutrum quam. Ut sodales risus id bibendum tincidunt.Donec nunc justo, eleifend ut sapien eget, scelerisque maximus elit. Fusce vitae nisi efficitur dui lacinia commodo non eget dui. Vestibulum condimentum sapien elit, quis dignissim quam porta quis. Donec quis ante nec libero facilisis facilisis. Suspendisse cursus sit amet risus imperdiet hendrerit. Curabitur ultricies sit amet sapien eu maximus. Interdum et malesuada fames ac ante ipsum primis in faucibus."
-                android:textColor="@color/white"
+                android:textColor="@color/header_text_color"
                 android:textSize="13sp" />
 
         </LinearLayout>

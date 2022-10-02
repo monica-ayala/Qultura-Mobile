@@ -14,7 +14,7 @@ import com.example.qulturapp.model.ViewHolderr
 import com.example.qulturapp.model.museums.*
 import com.example.qulturapp.view.Info.ActivityInfo
 import com.example.qulturapp.view.configuracion.ActivityConfiguration
-import com.example.qulturapp.view.eventos.EventoActivity
+//import com.example.qulturapp.view.eventos.EventoActivity
 import com.example.qulturapp.view.mapas.ActivityMap
 import com.example.qulturapp.viewmodel.museums.MAdapter
 import com.smarteist.autoimageslider.SliderView
@@ -61,11 +61,11 @@ class ListMuseum : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val evenbtn = findViewById<View>(R.id.event_btn)
+/*        val evenbtn = findViewById<View>(R.id.event_btn)
         evenbtn.setOnClickListener {
             val intent = Intent(this, EventoActivity::class.java)
             startActivity(intent)
-        }
+        }*/
 
         val guiabtn = findViewById<View>(R.id.guias_btn)
         guiabtn.setOnClickListener {

@@ -20,13 +20,11 @@
             android:id="@+id/tv_guia_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="TITULO"
-            android:textColor="@color/white"
+            android:layout_centerInParent="true"
             android:fontFamily="sans-serif-black"
+            android:textColor="@color/header_text_color"
             android:textSize="20dp"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true">
-        </TextView>
+            tools:text="TITULO"></TextView>
 
         <View
             android:layout_width="200dp"
@@ -60,7 +58,7 @@
         android:layout_height="wrap_content"
         android:textSize="24dp"
         tools:text="Descripction"
-        android:textColor="@color/primary_color"
+        android:textColor="@color/primary_text_color"
         android:layout_marginBottom="16dp">
     </TextView>
 
@@ -77,7 +75,7 @@
         android:layout_height="wrap_content"
         android:textSize="16dp"
         tools:text="TipsTipsTips"
-        android:textColor="@color/primary_color">
+        android:textColor="@color/primary_text_color">
     </TextView>
 
     <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView

@@ -5,10 +5,15 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.qulturapp.R
+import com.example.qulturapp.model.museums.MuseumResults
+import com.example.qulturapp.model.museums.TextList
 import com.smarteist.autoimageslider.SliderViewAdapter
 
+
+/*
 // on below line we are creating a class for slider
 // adapter and passing our array list to it.
 class SliderAdapter(imageUrl: ArrayList<TextList>, /*textStr: ArrayList<String>*/) :
@@ -61,4 +66,4 @@ class SliderAdapter(imageUrl: ArrayList<TextList>, /*textStr: ArrayList<String>*
         var imageView: ImageView = itemView!!.findViewById(R.id.myimage)
         var textView: TextView = itemView!!.findViewById(R.id.mytextimage)
     }
-}
+}*/

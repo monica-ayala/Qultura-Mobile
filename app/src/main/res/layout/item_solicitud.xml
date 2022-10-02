@@ -45,7 +45,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Museo de Arte de Querétaro"
-                        android:textColor="@color/black"
+                        android:textColor="@color/primary_text_color"
                         android:textStyle="bold"
                         android:textSize="24dp"
                         android:id="@+id/tv_museum"/>
@@ -55,7 +55,7 @@
                         android:layout_height="wrap_content"
                         android:text="12 de Marzo"
                         android:textSize="22dp"
-                        android:textColor="@color/black"
+                        android:textColor="@color/primary_text_color"
                         android:layout_marginTop="8dp"
                         android:id="@+id/tv_horario"/>
 
@@ -78,7 +78,7 @@
                     android:text="Estatus: "
                     android:layout_weight="0.5"
                     android:textSize="20sp"
-                    android:textColor="@color/black"
+                    android:textColor="@color/primary_text_color"
                     android:gravity="center"
                     android:id="@+id/tv_estado"
                     />
@@ -89,7 +89,7 @@
                     android:text="Personas: "
                     android:layout_weight="0.5"
                     android:gravity="center"
-                    android:textColor="@color/black"
+                    android:textColor="@color/primary_text_color"
                     android:textSize="20sp"
                     android:id="@+id/tv_personas"
                     />
@@ -126,16 +126,16 @@
             </LinearLayout>
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/cancel_button"
                 android:layout_width="260dp"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/ll_list_necesidades"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
-                android:layout_below="@id/ll_list_necesidades"
                 android:background="@drawable/cancel_button_bg"
                 android:paddingBottom="1dp"
                 android:text="Cancelar"
-                android:textColor="@color/white"
-                android:id="@+id/cancel_button"/>
+                android:textColor="@color/header_text_color" />
 
         </RelativeLayout>
 

@@ -15,7 +15,7 @@
         android:layout_marginTop="50dp"
         android:fontFamily="sans-serif-black"
         android:text="Mi Perfil"
-        android:textColor="@color/white"
+        android:textColor="@color/header_text_color"
         android:textSize="40sp" />
 
     <View
@@ -150,7 +150,7 @@
             android:layout_marginTop="50dp"
             android:background="@drawable/button_gradient_bg"
             android:text="Cerrar sesión"
-            android:textColor="@color/white"
+            android:textColor="@color/header_text_color"
             android:textSize="18sp" />
 
     </LinearLayout>

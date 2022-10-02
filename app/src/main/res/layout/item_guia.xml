@@ -26,17 +26,17 @@
                 android:layout_marginRight="16dp"
                 android:src="@drawable/guiaicon">
             </ImageView>
+
             <TextView
                 android:id="@+id/tv_guia_name"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_toEndOf="@+id/iv_guia_icon"
-                tools:text="Guia Text"
-                android:textStyle="bold"
+                android:textColor="@color/primary_text_color"
                 android:textSize="16dp"
-                android:textColor="@color/primary_color">
-            </TextView>
+                android:textStyle="bold"
+                tools:text="Guia Text"></TextView>
 
             <ImageView
                 android:id="@+id/iv_arrow_buttonIcon"

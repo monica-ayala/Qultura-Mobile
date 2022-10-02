@@ -39,7 +39,7 @@
             android:layout_marginTop="20dp"
             android:fontFamily="sans-serif-black"
             android:text="Sign In"
-            android:textColor="@color/primary_color"
+            android:textColor="@color/primary_text_color"
             android:textSize="40sp" />
 
         <View
@@ -84,18 +84,18 @@
             android:layout_marginTop="30dp"
             android:background="@drawable/button_gradient_bg"
             android:text="Sign In"
-            android:textColor="@color/white"
+            android:textColor="@color/header_text_color"
             android:textSize="18sp" />
 
         <TextView
+            android:id="@+id/text_olvidaste_contra"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
             android:layout_below="@id/button_signin"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="25dp"
-            android:textColor="@color/primary_color"
             android:text="¿Olvidaste tu contraseña?"
-            android:id="@+id/text_olvidaste_contra"/>
+            android:textColor="@color/primary_text_color" />
 
         <TextView
             android:layout_width="wrap_content"

@@ -25,7 +25,7 @@
             android:background="@color/card_box_border"
             android:textSize="10sp"
             android:text="12:00PM"
-            android:textColor="@color/black" />
+            android:textColor="@color/primary_text_color" />
 
     </com.google.android.material.card.MaterialCardView>
 

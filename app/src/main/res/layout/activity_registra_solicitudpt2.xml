@@ -20,7 +20,7 @@
             android:layout_marginTop="40dp"
             android:fontFamily="sans-serif-black"
             android:text="Visitantes"
-            android:textColor="@color/primary_color"
+            android:textColor="@color/primary_text_color"
             android:textSize="25sp" />
 
         <View
@@ -43,7 +43,7 @@
         android:background="@drawable/textedit_box"
         android:hint="numero de visitantes"
         android:inputType="number"
-        android:textColor="@color/black"
+        android:textColor="@color/primary_text_color"
         android:textColorHint="@color/card_box_border" />
 
 
@@ -62,7 +62,7 @@
             android:layout_marginTop="20dp"
             android:text="Necesidades"
             android:textAlignment="center"
-            android:textColor="@color/black"
+            android:textColor="@color/primary_text_color"
             android:textSize="25sp"
             android:textStyle="bold">
 
@@ -91,14 +91,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="60dp"
                 android:text="Silla de ruedas"
-                android:textColor="@color/black"/>
+                android:textColor="@color/primary_text_color"/>
             <CheckBox
                 android:id="@+id/CB_Guia"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
 
-                android:textColor="@color/black"
+                android:textColor="@color/primary_text_color"
                 android:text="Guia de museo" />
 
         </LinearLayout>
@@ -117,14 +117,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="23dp"
-                android:textColor="@color/black"
+                android:textColor="@color/primary_text_color"
                 android:text="Rampa en la entrada" />
             <CheckBox
                 android:id="@+id/CB_Interprete"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
-                android:textColor="@color/black"
+                android:textColor="@color/primary_text_color"
                 android:text="Interprete de lengua de señas" />
 
         </LinearLayout>
@@ -139,7 +139,7 @@
             android:layout_marginEnd="20dp"
             android:background="@drawable/textedit_box"
             android:hint="Otro"
-            android:textColor="@color/black"
+            android:textColor="@color/primary_text_color"
             android:textColorHint="@color/card_box_border" />
 
     </RelativeLayout>
@@ -160,7 +160,7 @@
             android:background="@drawable/info_solicitudes"
             android:padding="20dp"
             android:text="** Podras revisar el estatus de tu solicitud en el apartado de Mis Solicitudes. Disponibilidad de los servicios es dependiente del museo.**"
-            android:textColor="@color/black"
+            android:textColor="@color/primary_text_color"
             android:textSize="13sp" />
 
     </RelativeLayout>
@@ -180,7 +180,7 @@
             android:background="@drawable/button_solicitud_siguiente"
             android:padding="10dp"
             android:text="Realizar solicitud"
-            android:textColor="@color/black" />
+            android:textColor="@color/primary_text_color" />
 
     </RelativeLayout>
 

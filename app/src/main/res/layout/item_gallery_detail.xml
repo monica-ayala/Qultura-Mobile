@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:fontFamily="sans-serif-black"
-            android:textColor="@color/white"
+            android:textColor="@color/header_text_color"
             android:textSize="15sp" />
 
     </LinearLayout>

@@ -37,7 +37,7 @@
                     tools:text="LinkText"
                     android:textStyle="bold"
                     android:textSize="16dp"
-                    android:textColor="@color/primary_color">
+                    android:textColor="@color/primary_text_color">
                 </TextView>
                 <ImageView
                     android:id="@+id/iv_link_buttonIcon"

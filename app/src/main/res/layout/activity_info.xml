@@ -17,13 +17,11 @@
             android:id="@+id/tv_top_bar_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Información"
-            android:textColor="@color/white"
+            android:layout_centerInParent="true"
             android:fontFamily="sans-serif-black"
-            android:textSize="20dp"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true">
-        </TextView>
+            android:text="Información"
+            android:textColor="@color/header_text_color"
+            android:textSize="20dp"></TextView>
 
         <View
             android:layout_width="200dp"
@@ -39,14 +37,13 @@
         android:id="@+id/tv_title_links"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Links"
-        android:textColor="@color/primary_color"
-        android:fontFamily="sans-serif-black"
-        android:textSize="20dp"
         android:layout_below="@id/rl_top_bar"
+        android:layout_marginLeft="34dp"
         android:layout_marginTop="50dp"
-        android:layout_marginLeft="34dp">
-    </TextView>
+        android:fontFamily="sans-serif-black"
+        android:text="Links"
+        android:textColor="@color/primary_text_color"
+        android:textSize="20dp"></TextView>
     <View
         android:layout_width="62dp"
         android:layout_height="2dp"
@@ -55,28 +52,27 @@
         android:layout_marginBottom="-2dp"
         android:layout_marginLeft="27dp">
     </View>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_list_links"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_title_links"
+        android:layout_marginLeft="27dp"
         android:layout_marginTop="5dp"
-        android:layout_marginRight="27dp"
-        android:layout_marginLeft="27dp">
-    </androidx.recyclerview.widget.RecyclerView>
+        android:layout_marginRight="27dp"></androidx.recyclerview.widget.RecyclerView>
 
     <TextView
         android:id="@+id/tv_title_guias"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Guías"
-        android:textColor="@color/primary_color"
-        android:fontFamily="sans-serif-black"
-        android:textSize="20dp"
         android:layout_below="@id/rv_list_links"
+        android:layout_marginLeft="34dp"
         android:layout_marginTop="20dp"
-        android:layout_marginLeft="34dp">
-    </TextView>
+        android:fontFamily="sans-serif-black"
+        android:text="Guías"
+        android:textColor="@color/primary_text_color"
+        android:textSize="20dp"></TextView>
     <View
         android:layout_width="62dp"
         android:layout_height="2dp"

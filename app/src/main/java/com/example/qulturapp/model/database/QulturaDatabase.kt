@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 @Database(entities = [MuseoR::class, GuiaR::class, ObraR::class, SalaR::class], version = 1, exportSchema = false)
 abstract class QulturaDatabase : RoomDatabase() {
 
-    abstract val sleepDatabaseDao: QulturaDatabaseDao
+    abstract val qulturaDatabaseDao: QulturaDatabaseDao
 
     companion object {
 

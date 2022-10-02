@@ -21,8 +21,15 @@ class ActivityConfiguration : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_configuration)
 
+        // Variable declaration
         val button_profile = findViewById<LinearLayout>(R.id.profile_access_button)
         val button_solicitudes = findViewById<LinearLayout>(R.id.solicitudes_access_button)
+        val button_emergency = findViewById<LinearLayout>(R.id.emergency_access_button)
+        val switchTheme = findViewById<Switch>(R.id.darkmode_switch)
+
+        val sharedPreferences : SharedPreferences = getSharedPreferences("Save", MODE_PRIVATE)
+        val editor : SharedPreferences.Editor = getSharedPreferences("Save", MODE_PRIVATE).edit()
+        switchTheme.setChecked(sharedPreferences.getBoolean("Value", false))
 
         fun mensajePerfil() {
             Toast.makeText(applicationContext,"Inicia sesión para consultar tu perfil",
@@ -62,17 +69,10 @@ class ActivityConfiguration : AppCompatActivity() {
             }
         }
 
-        val button_emergency = findViewById<LinearLayout>(R.id.emergency_access_button)
         button_emergency.setOnClickListener {
             val intent = Intent(this, EmergenciaActivity::class.java)
             startActivity(intent)
         }
-
-        val switchTheme = findViewById<Switch>(R.id.darkmode_switch)
-
-        val sharedPreferences : SharedPreferences = getSharedPreferences("Save", MODE_PRIVATE)
-        switchTheme.setChecked(sharedPreferences.getBoolean("Value", false))
-        val editor : SharedPreferences.Editor = getSharedPreferences("Save", MODE_PRIVATE).edit()
 
         switchTheme.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {

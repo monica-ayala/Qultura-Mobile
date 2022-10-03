@@ -5,14 +5,17 @@ import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
 
+/*
 @Entity(tableName = "salas_table",
     foreignKeys = [ForeignKey(entity = MuseoR::class,
         parentColumns = arrayOf("id_museo"),
         childColumns = arrayOf("id_museo_sala"),
         onDelete = ForeignKey.CASCADE)]
-)
+) */
+@Entity(tableName = "salas_table")
 data class SalaR(
     @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "id_salas")
     var id_salas: Int = 0,
 
     @ColumnInfo(name = "nom_sala")
@@ -28,8 +31,8 @@ data class SalaR(
     val img_sala: String = "",
 
     @ColumnInfo(name = "status_sala")
-    val status_sala: String = "",
+    val status_sala: Int = 0,
 
-    @ColumnInfo(name = "id_museo_sala", index = true)
+    @ColumnInfo(name = "id_museo_sala")
     val id_museo_sala: Int = 0
 )

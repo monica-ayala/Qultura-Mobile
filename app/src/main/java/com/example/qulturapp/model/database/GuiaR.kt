@@ -7,6 +7,7 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "guias_table")
 data class GuiaR(
     @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "id_guia")
     var id_guia: Int = 0,
 
     @ColumnInfo(name = "video_guia")

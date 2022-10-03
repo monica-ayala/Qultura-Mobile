@@ -52,7 +52,7 @@
             android:layout_marginHorizontal="35dp"
             android:layout_weight="0.33"
             android:layout_marginTop="170dp"
-            android:text="Presiona repetidamente el botón para solicitar asistencia."
+            android:text="Presiona 2 veces seguidas el botón para solicitar asistencia."
             android:background="@drawable/button_categoria"
             android:id="@+id/btn_desc_emergencia"
             />

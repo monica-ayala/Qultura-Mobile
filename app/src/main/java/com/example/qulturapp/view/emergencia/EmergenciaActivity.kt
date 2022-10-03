@@ -62,7 +62,7 @@ class EmergenciaActivity : AppCompatActivity() {
             override fun onTextChanged(s: CharSequence, start: Int,
                                        before: Int, count: Int) {}
         })
-        
+
         //ClickListener of call button
         binding.panicBtn.setOnClickListener{
              i++
@@ -70,10 +70,12 @@ class EmergenciaActivity : AppCompatActivity() {
 
             handler.postDelayed ({
                 if (i==1){
-                    Toast.makeText(this@EmergenciaActivity, "DEBE PRESIONAR EL BOTON 2 VECES PARA HACER LA LLAMADA", Toast.LENGTH_SHORT).show()
-                    binding.btnDescEmergencia.setText("Debe presionar el boton 1 vez más")
+                    //Toast.makeText(this@EmergenciaActivity, "DEBE PRESIONAR EL BOTON 2 VECES PARA HACER LA LLAMADA", Toast.LENGTH_SHORT).show()
+                    buildToastMessageOnce()
+                   // binding.btnDescEmergencia.setText("Debe presionar el boton 1 vez más")
                 }else if (i == 2){
-                    Toast.makeText(this@EmergenciaActivity, "Has presionado el boton 2 veces", Toast.LENGTH_SHORT).show()
+                    buildToastMessageTwice()
+                    // Toast.makeText(this@EmergenciaActivity, "Has presionado el boton 2 veces", Toast.LENGTH_SHORT).show()
                     if (ActivityCompat.checkSelfPermission(this,Manifest.permission.CALL_PHONE)!= PackageManager.PERMISSION_GRANTED){
                         ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.CALL_PHONE),REQUEST_PHONE_CALL )
                     }else {
@@ -81,6 +83,7 @@ class EmergenciaActivity : AppCompatActivity() {
                     }
                 }
                 i=0
+                binding.btnDescEmergencia.setText("Presiona repetidamente el botón para solicitar asistencia.")
             }, 500)
 
 
@@ -103,4 +106,16 @@ class EmergenciaActivity : AppCompatActivity() {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         if (requestCode == REQUEST_PHONE_CALL)initiateCall()
     }
+
+    companion object{
+        fun buildToastMessageTwice(): String{
+            return "Has presionado el boton 2 veces"
+
+        }
+        fun buildToastMessageOnce(): String{
+            return "Debe presionar el boton 1 vez más"
+
+        }
+    }
+
 }

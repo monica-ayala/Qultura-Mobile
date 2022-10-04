@@ -12,32 +12,30 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:id="@+id/iv_event_icon"
-        android:src="@drawable/prueba_evento"
-        android:scaleType="centerCrop"
-        android:adjustViewBounds="true"
-        />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_alignBottom="@+id/iv_event_icon"
-        android:background="@color/primary_color"
-        />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Show Rock 2"
-        android:layout_marginTop="160dp"
-        android:textColor="@color/white"
-        android:gravity="center"
-        android:textSize="23sp"
-        android:fontFamily="sans-serif-black"
-        android:id="@+id/nombre_evento"
-        />
+        <ImageView
+            android:id="@+id/iv_event_icon"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sanctorum" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_evento"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/iv_event_icon"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/round_black_button"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/sanctorum"
+            android:textSize="20dp"
+            android:textColor="@color/primary_text_color"/>
+
+
+
 
     </RelativeLayout>
 </com.google.android.material.card.MaterialCardView>

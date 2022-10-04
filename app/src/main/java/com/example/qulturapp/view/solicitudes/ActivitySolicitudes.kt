@@ -1,6 +1,8 @@
 package com.example.qulturapp.view.solicitudes
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -8,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.qulturapp.R
 import com.example.qulturapp.viewmodel.solicitudes.SolicitudesListAdapter
 import com.example.qulturapp.model.solicitudes.SolicitudLista
+import com.example.qulturapp.view.museum.ListMuseum
 import com.example.qulturapp.viewmodel.solicitudes.SolicitudesViewModel
 
 class ActivitySolicitudes: AppCompatActivity() {
@@ -32,5 +35,11 @@ class ActivitySolicitudes: AppCompatActivity() {
             initializeList(it)
         })
         solicitudesViewModel.agregaSolicitudes()
+
+        val listbtn = findViewById<View>(R.id.rbtn)
+        listbtn.setOnClickListener{
+            val intent = Intent(this, ListMuseum::class.java)
+            startActivity(intent)
+        }
     }
 }

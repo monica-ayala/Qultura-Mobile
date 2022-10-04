@@ -5,6 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.qulturapp.model.ApiCallerService
+import com.example.qulturapp.model.sesion.UsuarioActual
 import com.example.qulturapp.model.solicitudes.SolicitudLista
 import kotlinx.coroutines.launch
 
@@ -25,7 +26,7 @@ class SolicitudesViewModel: ViewModel() {
 
     fun agregaSolicitudes(){
         viewModelScope.launch {
-            val solicitudList = caller.searchSolicitudList()
+            val solicitudList = caller.searchSolicitudList(UsuarioActual.id)
             val listaSolicitudesAct = mutableListOf<SolicitudLista>()
             solicitudList?.solicitudes?.forEach { solicitud ->
                 var listaNecesidades = mutableListOf<String>()
@@ -43,6 +44,7 @@ class SolicitudesViewModel: ViewModel() {
                     solicitud.asistentes,
                     solicitud.estado,
                     solicitud.museo,
+                    solicitud.imagen_museo,
                     listaNecesidades
                 )
                 listaSolicitudesAct.add(nuevaSolicitud)

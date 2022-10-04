@@ -20,14 +20,14 @@
             android:layout_height="190dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="-25dp"
-            android:src="@drawable/logo_secretaria"/>
+            android:src="@drawable/logo_secretaria" />
 
     </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/rl_signup_box"
         android:layout_width="300dp"
-        android:layout_height="480dp"
+        android:layout_height="490dp"
         android:layout_marginTop="-70dp"
         android:layout_below="@id/rl_top_bar"
         android:layout_centerHorizontal="true"
@@ -42,7 +42,7 @@
             android:layout_marginTop="20dp"
             android:fontFamily="sans-serif-black"
             android:text="Sign up"
-            android:textColor="@color/primary_color"
+            android:textColor="@color/primary_text_color"
             android:textSize="40sp" />
 
         <View
@@ -105,13 +105,23 @@
             android:id="@+id/button_signup"
             android:layout_width="220dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:layout_centerHorizontal="true"
-            android:background="@drawable/button_gradient_bg"
             android:layout_below="@id/edit_text_passconfirm"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            android:text="Sign Up" />
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/button_gradient_bg"
+            android:text="Sign Up"
+            android:textColor="@color/header_text_color"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/text_toSignIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/button_signup"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="@string/ya_tiene_cuenta"
+            android:textColor="@color/primary_text_color" />
 
     </RelativeLayout>
 

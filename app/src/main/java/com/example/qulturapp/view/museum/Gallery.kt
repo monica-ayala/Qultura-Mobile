@@ -12,16 +12,16 @@ class Gallery: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_gallery)
 
-        val btn: Button = findViewById<View>(R.id.salaUnoBtn) as Button
-        btn.setOnClickListener{
-            val intent = Intent(this, Lounge::class.java)
-            startActivity(intent)
-        }
-        val rbtn = findViewById<View>(R.id.returnSala)
-        rbtn.setOnClickListener{
-            val intent = Intent(this, Museum::class.java)
-            startActivity(intent)
-        }
+//        val btn: Button = findViewById<View>(R.id.salaUnoBtn) as Button
+//        btn.setOnClickListener{
+//            val intent = Intent(this, Lounge::class.java)
+//            startActivity(intent)
+//        }
+//        val rbtn = findViewById<View>(R.id.returnSala)
+//        rbtn.setOnClickListener{
+//            val intent = Intent(this, Museum::class.java)
+//            startActivity(intent)
+//        }
 
     }
 }

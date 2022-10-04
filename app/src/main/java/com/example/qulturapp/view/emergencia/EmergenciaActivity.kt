@@ -52,7 +52,7 @@ class EmergenciaActivity : AppCompatActivity() {
                 }
                 else if (binding.dropdownMenu.getText().toString()=="Galería Libertad"){
                     // based on the value in the dropDownMenu the phoneNumber necessarily needs to change
-                    phoneNumber = "6587493254"
+                    phoneNumber = "6897854215"
                 }
             }
 
@@ -70,12 +70,11 @@ class EmergenciaActivity : AppCompatActivity() {
 
             handler.postDelayed ({
                 if (i==1){
-                    //Toast.makeText(this@EmergenciaActivity, "DEBE PRESIONAR EL BOTON 2 VECES PARA HACER LA LLAMADA", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@EmergenciaActivity, "DEBE PRESIONAR EL BOTON 2 VECES PARA HACER LA LLAMADA", Toast.LENGTH_SHORT).show()
                     buildToastMessageOnce()
-                   // binding.btnDescEmergencia.setText("Debe presionar el boton 1 vez más")
                 }else if (i == 2){
                     buildToastMessageTwice()
-                    // Toast.makeText(this@EmergenciaActivity, "Has presionado el boton 2 veces", Toast.LENGTH_SHORT).show()
+                     Toast.makeText(this@EmergenciaActivity, "Has presionado el boton 2 veces", Toast.LENGTH_SHORT).show()
                     if (ActivityCompat.checkSelfPermission(this,Manifest.permission.CALL_PHONE)!= PackageManager.PERMISSION_GRANTED){
                         ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.CALL_PHONE),REQUEST_PHONE_CALL )
                     }else {
@@ -83,7 +82,7 @@ class EmergenciaActivity : AppCompatActivity() {
                     }
                 }
                 i=0
-                binding.btnDescEmergencia.setText("Presiona repetidamente el botón para solicitar asistencia.")
+                binding.btnDescEmergencia.setText("Presiona 2 veces seguidas el botón para solicitar asistencia ")
             }, 500)
 
 

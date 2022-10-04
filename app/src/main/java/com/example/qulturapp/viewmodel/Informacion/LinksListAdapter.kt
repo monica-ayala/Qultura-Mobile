@@ -9,10 +9,13 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.qulturapp.R
 import com.example.qulturapp.model.Info.Guia
 import com.example.qulturapp.model.Info.Link
+import com.example.qulturapp.model.Info.LinkLista
 
 
+class LinksListAdapter (private val data:List<LinkLista>, private val linkItemClickListener:OnLinkClickListener): RecyclerView.Adapter<LinksListAdapter.ViewHolderLinks>() {
+    private val dataLinkML = data.toMutableList()
+    private val linkViewModel = LinksViewModel()
 
-class LinksListAdapter (private val data:List<Link>, private val linkItemClickListener:OnLinkClickListener): RecyclerView.Adapter<LinksListAdapter.ViewHolderLinks>() {
 
     interface OnLinkClickListener{
         fun onLinkClick(name: String, url: String)
@@ -23,10 +26,10 @@ class LinksListAdapter (private val data:List<Link>, private val linkItemClickLi
         return ViewHolderLinks(layoutInflater.inflate(R.layout.item_links, parent, false))
     }
 
-    override fun getItemCount(): Int = data.size
+    override fun getItemCount(): Int = dataLinkML.size
 
     override fun onBindViewHolder(holder: ViewHolderLinks, position: Int) {
-        val item = data[position]
+        val item = dataLinkML[position]
         holder.bind(item)
     }
 
@@ -34,9 +37,9 @@ class LinksListAdapter (private val data:List<Link>, private val linkItemClickLi
         val textLink = view.findViewById(R.id.tv_link_name) as TextView
 //    val nameGuia = view.findViewById(R.id.tv_guia_name) as TextView
 
-        fun bind(item: Link){
-            itemView.setOnClickListener { linkItemClickListener.onLinkClick(item.link, item.url) }
-            textLink.text = item.link
+        fun bind(item: LinkLista){
+            itemView.setOnClickListener { linkItemClickListener.onLinkClick(item.link, item.nombre_link) }
+            textLink.text = item.nombre_link
         }
     }
 

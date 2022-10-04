@@ -67,7 +67,7 @@ class ListMuseum : AppCompatActivity() {
             startActivity(intent)
         }*/
 
-        val guiabtn = findViewById<View>(R.id.guias_btn)
+        /*val guiabtn = findViewById<View>(R.id.guias_btn)
         guiabtn.setOnClickListener {
             val intent = Intent(this, ActivityInfo::class.java)
             startActivity(intent)
@@ -77,7 +77,7 @@ class ListMuseum : AppCompatActivity() {
         ajusbtn.setOnClickListener {
             val intent = Intent(this, ActivityConfiguration::class.java)
             startActivity(intent)
-        }
+        }*/
 
     }
 

@@ -20,7 +20,7 @@
             android:layout_marginTop="40dp"
             android:fontFamily="sans-serif-black"
             android:text="Solicitud de Recorrido"
-            android:textColor="@color/primary_color"
+            android:textColor="@color/primary_text_color"
             android:textSize="24sp" />
 
         <View
@@ -49,7 +49,7 @@
                 android:background="@null"
                 android:text="@string/back"
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                android:textColor="@color/primary_text_color"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:onClick="previousMonthAction"
@@ -63,7 +63,7 @@
                 android:text="@string/CalendarioFecha"
                 android:textSize="20sp"
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                android:textColor="@color/primary_text_color"
                  >
 
             </TextView>
@@ -73,7 +73,7 @@
                 android:layout_height="20dp"
                 android:layout_weight="1"
                 android:text="@string/next"
-                android:textColor="@color/black"
+                android:textColor="@color/primary_text_color"
                 android:background="@null"
                 android:textStyle="bold"
                 android:textSize="18sp"
@@ -99,7 +99,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="DOM"
-            android:textColor="@color/black"
+            android:textColor="@color/primary_text_color"
             android:textAlignment="center"
             android:textSize="16sp">
         </TextView>
@@ -108,7 +108,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="LUN"
-            android:textColor="@color/black"
+            android:textColor="@color/primary_text_color"
             android:textAlignment="center"
             android:textSize="16sp">
         </TextView>
@@ -117,7 +117,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="MAR"
-            android:textColor="@color/black"
+            android:textColor="@color/primary_text_color"
             android:textAlignment="center"
             android:textSize="16sp">
         </TextView>
@@ -126,7 +126,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="MIE"
-            android:textColor="@color/black"
+            android:textColor="@color/primary_text_color"
             android:textAlignment="center"
             android:textSize="16sp">
         </TextView>
@@ -135,7 +135,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="JUE"
-            android:textColor="@color/black"
+            android:textColor="@color/primary_text_color"
             android:textAlignment="center"
             android:textSize="16sp">
         </TextView>
@@ -144,7 +144,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="VIE"
-            android:textColor="@color/black"
+            android:textColor="@color/primary_text_color"
             android:textAlignment="center"
             android:textSize="16sp">
         </TextView>
@@ -153,7 +153,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="SAB"
-            android:textColor="@color/black"
+            android:textColor="@color/primary_text_color"
             android:textAlignment="center"
             android:textSize="16sp">
         </TextView>
@@ -166,9 +166,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/ll_calendarday"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp">
+        android:layout_marginRight="20dp">
 
     </androidx.recyclerview.widget.RecyclerView>
 
@@ -182,13 +182,13 @@
             android:id="@+id/tv_horario"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Horarios"
-            android:textSize="20sp"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textStyle="bold"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
-            android:layout_marginStart="20dp">
+            android:text="Horarios"
+            android:textAlignment="center"
+            android:textColor="@color/primary_text_color"
+            android:textSize="20sp"
+            android:textStyle="bold">
 
         </TextView>
 
@@ -211,18 +211,17 @@
             android:orientation="horizontal"
             android:scrollbars="horizontal" />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/boton_siguiente"
-                android:layout_width="260dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_centerVertical="true"
-                android:layout_centerHorizontal="true"
-                android:layout_below="@id/rv_list_horarios"
-                android:background="@drawable/button_solicitud_siguiente"
-                android:padding="10dp"
-                android:text="@string/buton_siguiente"
-                android:textColor="@color/black" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/boton_siguiente"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rv_list_horarios"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_solicitud_siguiente"
+            android:padding="10dp"
+            android:text="@string/buton_siguiente"
+            android:textColor="@color/primary_text_color" />
 
 
     </RelativeLayout>

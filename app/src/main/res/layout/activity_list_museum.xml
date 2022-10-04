@@ -1,136 +1,209 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.museum.ListMuseum">
+
+    <TextView
+        android:id="@+id/tvMuseum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="MUSEOS"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/primary_text_color"
+        android:textSize="35sp"
+        android:layout_marginEnd="130dp"
+        app:layout_constraintBottom_toTopOf="@id/carouoselRV"
+        app:layout_constraintEnd_toStartOf="@id/mapbtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/mapbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/transparent"
+        android:src="@drawable/map_icon"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@id/carouoselRV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvMuseum"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.jackandphantom.carouselrecyclerview.CarouselRecyclerview
+        android:id="@+id/carouoselRV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/tvDescubre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvMuseum" />
+
+    <TextView
+        android:id="@+id/tvDescubre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="DESCUBRE"
+        android:textColor="@color/primary_text_color"
+        android:textSize="35sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="150dp"
+        app:layout_constraintBottom_toTopOf="@id/event_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/carouoselRV" />
+
+    <ImageView
+        android:id="@+id/event_btn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/event_btn"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/conf_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDescubre" />
+
+    <ImageView
+        android:id="@+id/guias_btn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/guia_btn"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toTopOf="@id/conf_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/event_btn"
+        app:layout_constraintTop_toBottomOf="@id/tvDescubre" />
+
+    <ImageView
+        android:id="@+id/conf_btn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/conf_btn"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/event_btn"
+        app:layout_constraintTop_toBottomOf="@id/guias_btn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+<!--
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:weightSum="2">
+    tools:context=".view.museum.ListMuseum"
+    android:background="@color/white">
 
-    <LinearLayout
+    <RelativeLayout
+        android:id="@+id/rl_top_bar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1.15"
-        android:orientation="vertical">
-
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:id="@+id/tvMuseum"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginLeft="20dp"
-                android:fontFamily="sans-serif-black"
-                android:text="MUSEOS"
-                android:textColor="@color/black"
-                android:textSize="35sp"/>
-
-
-            <ImageButton
-                android:id="@+id/mapbtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/map_icon"
-                android:layout_marginLeft="270dp"
-                android:layout_marginTop="7dp"
-                android:backgroundTint="@color/transparent"/>
-
-
-        </RelativeLayout>
-
-
-
-
-        <com.jackandphantom.carouselrecyclerview.CarouselRecyclerview
-            android:id="@+id/carouoselRV"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight=".85"
-        android:orientation="vertical">
-
+        android:layout_height="75dp"
+        android:background="@drawable/top_bar_background"
+        android:backgroundTint="@color/primary_color">
         <TextView
-            android:id="@+id/tvDescubre"
-            android:layout_width="350dp"
+            android:id="@+id/tv_top_bar_text"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginLeft="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
             android:fontFamily="sans-serif-black"
-            android:text="DESCUBRE"
-            android:textColor="@color/black"
-            android:textSize="35sp"/>
+            android:text="QULTURA"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
 
-        <RelativeLayout
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:context=".MainActivity">
-
-            <LinearLayout
-                android:id="@+id/firstLayout"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_toLeftOf="@+id/secondView"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/event_btn"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/event_btn"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginBottom="10dp"/>
+        <View
+            android:layout_width="200dp"
+            android:layout_height="2dp"
+            android:layout_alignBottom="@id/tv_top_bar_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="-4dp"
+            android:background="@color/secondary_color" />
+    </RelativeLayout>
 
 
-            </LinearLayout>
 
-            <View
-                android:id="@+id/secondView"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_centerHorizontal="true"/>
+    <com.smarteist.autoimageslider.SliderView
+        android:id="@+id/slider"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        app:sliderAnimationDuration="600"
+        app:sliderAutoCycleDirection="back_and_forth"
+        app:sliderIndicatorAnimationDuration="600"
+        app:sliderIndicatorEnabled="true"
+        app:sliderIndicatorGravity="center_horizontal|bottom"
+        app:sliderIndicatorMarginBottom="15dp"
+        app:sliderIndicatorOrientation="horizontal"
+        app:sliderIndicatorPadding="3dp"
+        app:sliderIndicatorRadius="2dp"
+        app:sliderIndicatorSelectedColor="@color/black"
+        app:sliderIndicatorUnselectedColor="@color/white"
+        app:sliderScrollTimeInSec="1" />
 
-            <LinearLayout
-                android:id="@+id/thirdLayout"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_toRightOf="@+id/secondView"
-                android:orientation="vertical"
-                android:weightSum="2"
-                android:layout_marginBottom="10dp"
-                android:layout_marginRight="20dp"
-                android:gravity="center">
+    <Button
+        android:id="@+id/museoBtn"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:background="@drawable/trans_button"
+        android:layout_marginTop="100dp" />
 
-                <ImageView
-                    android:id="@+id/guias_btn"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="3dp"
-                    android:background="@drawable/guia_btn"
-                    android:layout_weight="1"/>
+    <ImageView
+        android:id="@+id/myimage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:contentDescription="@string/app_name"
+        android:layout_marginTop="530dp"
+        android:src="@drawable/colorevent"
+        android:scaleType="fitXY"
+        android:visibility="visible"/>
 
-                <ImageView
-                    android:id="@+id/conf_btn"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="3dp"
-                    android:background="@drawable/conf_btn"
-                    android:layout_weight="1"/>
+    <View
+        android:id="@+id/overlay_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="530dp"
+        android:background="@color/trans_black" />
 
-            </LinearLayout>
+    <TextView
+        android:id="@+id/mytextimage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:textAlignment="center"
+        android:text="EVENTOS"
+        android:layout_marginTop="585dp"
+        android:textColor="@color/white"
+        android:textSize="60dp" />
 
-        </RelativeLayout>
+    <Button
+        android:id="@+id/eventbtn"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="530dp"
+        android:background="@drawable/trans_button" />
 
-    </LinearLayout>
 
-</LinearLayout>
+
+</RelativeLayout>
+
+-->

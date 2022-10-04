@@ -7,6 +7,7 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "museos_table")
 data class MuseoR(
     @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "id_museo")
     var id_museo: Int = 0,
 
     @ColumnInfo(name = "nom_museo")

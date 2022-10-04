@@ -1,6 +1,7 @@
 package com.example.qulturapp.model
 
 import android.util.Log
+import com.example.qulturapp.model.artwork.ArtworkListResults
 import com.example.qulturapp.model.eventos.EventoListResults
 import com.example.qulturapp.model.galleries.GalleryListResults
 import com.example.qulturapp.model.museums.MuseumListResults
@@ -19,7 +20,7 @@ class ApiCallerService {
     private fun getRetrofit(): Retrofit {
 
         return Retrofit.Builder()
-            .baseUrl("http://ec2-3-145-68-44.us-east-2.compute.amazonaws.com:8080")
+            .baseUrl("http://3.14.37.4:8080")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
@@ -119,6 +120,13 @@ class ApiCallerService {
         val requestBody = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), params)
         val call = getRetrofit().create(ApiService::class.java).registraUsuario("/usuario/signup_movil", requestBody)
         return call.body()
+    }
+
+    suspend fun getObra(): ArtworkListResults?{
+
+        val call = getRetrofit().create(ApiService::class.java).getObra("/obra/get")
+        val artworkList = call.body()
+        return artworkList
     }
 
     suspend fun searchEventoList(): EventoListResults? {

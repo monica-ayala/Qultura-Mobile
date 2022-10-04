@@ -14,6 +14,7 @@ import com.example.qulturapp.model.ViewHolderr
 import com.example.qulturapp.model.museums.*
 import com.example.qulturapp.view.Info.ActivityInfo
 import com.example.qulturapp.view.configuracion.ActivityConfiguration
+import com.example.qulturapp.view.eventos.EventoActivity
 //import com.example.qulturapp.view.eventos.EventoActivity
 import com.example.qulturapp.view.mapas.ActivityMap
 import com.example.qulturapp.viewmodel.museums.MAdapter
@@ -47,13 +48,12 @@ class ListMuseum : AppCompatActivity() {
             carouoselRV.setInfinite(true)
         }
 
-        /*
+
         val museobtn = findViewById<View>(R.id.carouoselRV)
         museobtn.setOnClickListener{
             val intent = Intent(this, Museum::class.java)
             startActivity(intent)
         }
-        */
 
         val mapabtn = findViewById<View>(R.id.mapbtn)
         mapabtn.setOnClickListener {
@@ -61,13 +61,13 @@ class ListMuseum : AppCompatActivity() {
             startActivity(intent)
         }
 
-/*        val evenbtn = findViewById<View>(R.id.event_btn)
+        val evenbtn = findViewById<View>(R.id.event_btn)
         evenbtn.setOnClickListener {
             val intent = Intent(this, EventoActivity::class.java)
             startActivity(intent)
-        }*/
+        }
 
-        /*val guiabtn = findViewById<View>(R.id.guias_btn)
+        val guiabtn = findViewById<View>(R.id.guias_btn)
         guiabtn.setOnClickListener {
             val intent = Intent(this, ActivityInfo::class.java)
             startActivity(intent)
@@ -77,7 +77,7 @@ class ListMuseum : AppCompatActivity() {
         ajusbtn.setOnClickListener {
             val intent = Intent(this, ActivityConfiguration::class.java)
             startActivity(intent)
-        }*/
+        }
 
     }
 

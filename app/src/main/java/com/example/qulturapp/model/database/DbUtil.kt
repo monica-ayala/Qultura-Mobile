@@ -5,6 +5,7 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.room.Room
 import com.example.qulturapp.model.ApiCallerService
+import com.example.qulturapp.model.Info.Guia
 import com.example.qulturapp.model.artwork.Obra
 import com.example.qulturapp.model.galleries.Sala
 import com.example.qulturapp.model.museums.Museo
@@ -75,6 +76,21 @@ class DbUtil(private val context: Context) {
         }
     }
 
+    private suspend fun addGuias(guias: List<Guia>) {
+        guias.forEach{ guia ->
+                val guiaNueva = GuiaR(
+                    guia.id_guia,
+                    guia.video_guia,
+                    guia.desc_guia,
+                    guia.icono_guia,
+                    guia.nombre_guia,
+                    guia.tip_guia,
+                    guia.imagen_guia)
+
+                qulturaDao.insertGuia(guiaNueva)
+            }
+    }
+
     fun initRoomDatabase(){
         db = QulturaDatabase.getInstance(context)
 
@@ -89,6 +105,7 @@ class DbUtil(private val context: Context) {
             val salas = caller.searchGalleryList()
             val museos = caller.searchMuseumList()
             val obras = caller.getObra()
+            val guias = caller.searchGuiaList()
 
             qulturaDao.clearObras()
             qulturaDao.clearSalas()
@@ -98,6 +115,7 @@ class DbUtil(private val context: Context) {
             museos?.let { addMuseos(it.museo) }
             salas?.let { addSalas(it.gallery) }
             obras?.let { addObras(it.artwork) }
+            guias?.let { addGuias(it.guias) }
 
         }
     }

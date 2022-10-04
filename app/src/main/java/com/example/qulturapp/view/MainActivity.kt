@@ -36,9 +36,13 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        dbUtil.initRoomDatabase()
         setContentView(R.layout.activity_main)
+<<<<<<< HEAD
         val intentSignIn = Intent(this, Museums::class.java)
+=======
+        dbUtil.initRoomDatabase()
+        val intentSignIn = Intent(this, ActivityInfo::class.java)
+>>>>>>> 15907e1e3981c4f1bc3061e24382b0ecd1862302
         startActivity(intentSignIn)
 
     }

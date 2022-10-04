@@ -22,7 +22,7 @@ class GalleryViewModel: ViewModel() {
             val listaSalas = mutableListOf<GalleryResults>()
             for(sala in galleryList.gallery)
             {
-                val content =  GalleryResults(sala.nom_sala, sala.img_sala)
+                val content =  GalleryResults(sala.nom_sala, sala.img_sala, sala.id_sala)
                 listaSalas.add(content)
             }
 

@@ -33,7 +33,7 @@ class Museums : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_list_museum)
+        setContentView(R.layout.activity_museums)
         museumsViewModel.listaMuseum.observe(this, Observer {
             if (it != null) {
                 initializeList(it)
@@ -53,17 +53,17 @@ class Museums : AppCompatActivity() {
             startActivity(intent)
         }*/
 
-//        val guiabtn = findViewById<View>(R.id.guias_btn)
-//        guiabtn.setOnClickListener {
-//            val intent = Intent(this, ActivityInfo::class.java)
-//            startActivity(intent)
-//        }
-//
-//        val ajusbtn = findViewById<View>(R.id.conf_btn)
-//        ajusbtn.setOnClickListener {
-//            val intent = Intent(this, ActivityConfiguration::class.java)
-//            startActivity(intent)
-//        }
+        val guiabtn = findViewById<View>(R.id.guias_btn)
+        guiabtn.setOnClickListener {
+            val intent = Intent(this, ActivityInfo::class.java)
+            startActivity(intent)
+        }
+
+        val ajusbtn = findViewById<View>(R.id.conf_btn)
+        ajusbtn.setOnClickListener {
+            val intent = Intent(this, ActivityConfiguration::class.java)
+            startActivity(intent)
+        }
     }
 
 }

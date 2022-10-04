@@ -3,7 +3,9 @@ package com.example.qulturapp.model
 import com.example.qulturapp.model.artwork.ArtworkListResults
 import com.example.qulturapp.model.eventos.EventoListResults
 import com.example.qulturapp.model.galleries.GalleryListResults
+import com.example.qulturapp.model.museums.Museo
 import com.example.qulturapp.model.museums.MuseumListResults
+import com.example.qulturapp.model.museums.MuseumResults
 import com.example.qulturapp.model.sesion.EncuentraUsuario
 import retrofit2.Response
 import com.example.qulturapp.model.sesion.UsuarioListResults
@@ -40,5 +42,8 @@ interface ApiService {
 
     @GET
     suspend fun getEventList(@Url url:String): Response<EventoListResults>
+
+    @GET
+    suspend fun getOneMuseum(@Url url:String): Response<Museo>
 
 }

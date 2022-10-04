@@ -25,7 +25,7 @@ class MuseumsViewModel: ViewModel() {
             val listaMuseos = mutableListOf<MuseumResults>()
             for(museo in museumList.museo)
             {
-                val content =  MuseumResults(museo?.nom_museo, museo?.imgP_museo)
+                val content =  MuseumResults(museo?.nom_museo, museo?.imgP_museo, museo.id_museo)
 
                 listaMuseos.add(content)
             }

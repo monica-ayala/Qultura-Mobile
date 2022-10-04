@@ -24,6 +24,7 @@ import com.example.qulturapp.view.sesion.ActivitySignUp
 import com.example.qulturapp.view.solicitudes.ActivitySolicitudes
 import com.example.qulturapp.model.galleries.GalleryResults
 import com.example.qulturapp.view.gallery.Gallery
+import com.example.qulturapp.view.museum.Museums
 import com.example.qulturapp.viewmodel.museums.MuseumsViewModel
 import com.example.qulturapp.viewmodel.galleries.GalleryListAdapter
 import com.example.qulturapp.viewmodel.galleries.GalleryViewModel
@@ -37,7 +38,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         dbUtil.initRoomDatabase()
         setContentView(R.layout.activity_main)
-        val intentSignIn = Intent(this, ListMuseum::class.java)
+        val intentSignIn = Intent(this, Museums::class.java)
         startActivity(intentSignIn)
 
     }

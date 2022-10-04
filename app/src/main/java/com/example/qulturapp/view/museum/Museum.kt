@@ -21,7 +21,7 @@ class Museum:AppCompatActivity() {
         }
         val rbtn = findViewById<View>(R.id.returnMuseo)
         rbtn.setOnClickListener{
-            val intent = Intent(this, ListMuseum::class.java)
+            val intent = Intent(this, Museums::class.java)
             startActivity(intent)
         }
         val solibtn = findViewById<View>(R.id.solicitudBtn)

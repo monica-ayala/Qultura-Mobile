@@ -1,4 +1,4 @@
-package com.example.qulturapp.view.museum
+package com.example.qulturapp.model.museums
 
 data class TextList(
     val url:String,

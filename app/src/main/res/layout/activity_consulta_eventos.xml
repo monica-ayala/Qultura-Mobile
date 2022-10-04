@@ -17,17 +17,17 @@
 
 
         >
+
         <TextView
+            android:id="@+id/tv_top_bar_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/tv_top_bar_text"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
             android:fontFamily="sans-serif-black"
             android:text="Eventos"
-            android:textColor="@color/white"
-            android:textSize="30sp"
-            />
+            android:textColor="@color/header_text_color"
+            android:textSize="30sp" />
 
         <View
             android:layout_width="140dp"

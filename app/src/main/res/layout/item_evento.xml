@@ -23,6 +23,7 @@
 
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_evento"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_below="@id/iv_event_icon"
@@ -31,7 +32,7 @@
             android:fontFamily="sans-serif-black"
             android:text="@string/sanctorum"
             android:textSize="20dp"
-            android:id="@+id/button_evento"/>
+            android:textColor="@color/primary_text_color"/>
 
 
 

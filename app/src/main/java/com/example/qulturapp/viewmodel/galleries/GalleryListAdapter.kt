@@ -10,7 +10,6 @@ import com.example.qulturapp.R
 import com.example.qulturapp.model.galleries.GalleryResults
 import com.example.qulturapp.viewmodel.galleries.GalleryViewModel
 
-
 class GalleryListAdapter(private val data: List<GalleryResults>, private val context: Context) : RecyclerView.Adapter<ViewHolder>(){
     private val dataGalleryML = data.toMutableList()
     private val galleryViewModel = GalleryViewModel()

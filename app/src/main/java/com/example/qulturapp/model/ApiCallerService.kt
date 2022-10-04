@@ -1,6 +1,7 @@
 package com.example.qulturapp.model
 
 import android.util.Log
+import com.example.qulturapp.model.artwork.ArtworkListResults
 import com.example.qulturapp.model.eventos.EventoListResults
 import com.example.qulturapp.model.galleries.GalleryListResults
 import com.example.qulturapp.model.museums.MuseumListResults
@@ -19,7 +20,7 @@ class ApiCallerService {
     private fun getRetrofit(): Retrofit {
 
         return Retrofit.Builder()
-            .baseUrl("http://ec2-3-145-68-44.us-east-2.compute.amazonaws.com:8080")
+            .baseUrl("http://3.14.37.4:8080")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
@@ -71,11 +72,12 @@ class ApiCallerService {
     }
 
     suspend fun agregaSolicitud(
-        day_selected:String,
-        monthYear_selected:String, hora_selected:String,
-        numVisitantes:Int,
-        info_adicional:String,
-        necesidades: MutableList<Int>
+        day_selected: String,
+        monthYear_selected: String, hora_selected: String,
+        numVisitantes: Int,
+        info_adicional: String,
+        necesidades: MutableList<Int>,
+        necesidades_text: MutableList<String>
     ) {
         val fecha_format = monthYear_selected + "-" + day_selected + " " + hora_selected + ":00"
         val UsuarioActual = UsuarioActual.id
@@ -85,7 +87,8 @@ class ApiCallerService {
             "num_Visitantes":$numVisitantes,
             "info_adicional":"$info_adicional",
             "necesidades":$necesidades,
-            "usuario_necesidad":$UsuarioActual
+            "usuario_necesidad":$UsuarioActual,
+            "necesidades_text":$necesidades_text
             }
             """.trimIndent()
         val requestBody =
@@ -117,6 +120,13 @@ class ApiCallerService {
         val requestBody = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), params)
         val call = getRetrofit().create(ApiService::class.java).registraUsuario("/usuario/signup_movil", requestBody)
         return call.body()
+    }
+
+    suspend fun getObra(): ArtworkListResults?{
+
+        val call = getRetrofit().create(ApiService::class.java).getObra("/obra/get")
+        val artworkList = call.body()
+        return artworkList
     }
 
     suspend fun searchEventoList(): EventoListResults? {

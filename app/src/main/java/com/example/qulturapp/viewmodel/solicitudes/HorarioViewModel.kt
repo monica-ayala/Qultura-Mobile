@@ -16,6 +16,8 @@ class HorarioViewModel: ViewModel() {
     var numVisitantes : String? = null
     var info_adicinal : String? = null
     var necesidades = mutableListOf<Int>()
+    var necesidades_text = mutableListOf<String>()
+
 
     fun agregaHorarios() {
         val horario1 = Horario("09:00")
@@ -48,7 +50,7 @@ class HorarioViewModel: ViewModel() {
                 hora_selected?.let { it2 ->
                     numVisitantes?.let { it3 ->
                         info_adicinal?.let { it4 ->
-                            caller.agregaSolicitud(it, it1, it2, it3.toInt(), it4,necesidades)
+                            caller.agregaSolicitud(it, it1, it2, it3.toInt(), it4,necesidades, necesidades_text)
                         }
                     }
                 }

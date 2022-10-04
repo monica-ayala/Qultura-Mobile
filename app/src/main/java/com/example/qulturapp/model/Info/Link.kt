@@ -4,5 +4,5 @@ import com.google.gson.annotations.SerializedName
 
 data class Link(
     @SerializedName("link") val link: String,
-    @SerializedName("url") val url: String
+    @SerializedName("nombre_link") val nombre_link: String
 )

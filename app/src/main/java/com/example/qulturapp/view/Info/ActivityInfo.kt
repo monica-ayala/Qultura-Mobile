@@ -77,7 +77,7 @@ class ActivityInfo: AppCompatActivity(), GuiasListAdapter.OnGuiaClickListener, L
 
     override fun onLinkClick(name: String, url: String) {
         Toast.makeText(this, "El Link es: $name", Toast.LENGTH_SHORT).show()
-        val uri: Uri = Uri.parse(url) // missing 'http://' will cause crashed
+        val uri: Uri = Uri.parse(name) // missing 'http://' will cause crashed
         val intent = Intent(Intent.ACTION_VIEW, uri)
         startActivity(intent)
     }

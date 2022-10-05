@@ -2,6 +2,7 @@ package com.example.qulturapp.view.museum
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
@@ -64,6 +65,7 @@ class ListMuseum : AppCompatActivity() {
         val evenbtn = findViewById<View>(R.id.event_btn)
         evenbtn.setOnClickListener {
             val intent = Intent(this, EventoActivity::class.java)
+            Log.d("amogus","mamongusaurio rex")
             startActivity(intent)
         }
 

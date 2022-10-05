@@ -102,20 +102,22 @@ class DbUtil(private val context: Context) {
         listaGuias = qulturaDao.getAllGuias()
 
         CoroutineScope(IO).launch {
-            val salas = caller.searchGalleryList()
-            val museos = caller.searchMuseumList()
-            val obras = caller.getObra()
-            val guias = caller.searchGuiaList()
+            try {
+                val salas = caller.searchGalleryList()
+                val museos = caller.searchMuseumList()
+                val obras = caller.getObra()
+                val guias = caller.searchGuiaList()
 
-            qulturaDao.clearObras()
-            qulturaDao.clearSalas()
-            qulturaDao.clearMuseos()
-            qulturaDao.clearGuias()
+                qulturaDao.clearObras()
+                qulturaDao.clearSalas()
+                qulturaDao.clearMuseos()
+                qulturaDao.clearGuias()
 
-            museos?.let { addMuseos(it.museo) }
-            salas?.let { addSalas(it.gallery) }
-            obras?.let { addObras(it.artwork) }
-            guias?.let { addGuias(it.guias) }
+                museos?.let { addMuseos(it.museo) }
+                salas?.let { addSalas(it.gallery) }
+                obras?.let { addObras(it.artwork) }
+                guias?.let { addGuias(it.guias) }
+            } catch (e: Exception) { }
 
         }
     }

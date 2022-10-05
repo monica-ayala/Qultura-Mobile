@@ -36,6 +36,10 @@ class MuseumListAdapter(private val data:List<MuseumResults>, private val contex
         holder.museoImg.setOnClickListener {
             val intent = Intent(context, Museum::class.java)
             intent.putExtra("id", item.id_museo)
+            intent.putExtra("desc", item.desc)
+            intent.putExtra("nom", item.name)
+            intent.putExtra("ubi", item.ubi)
+
             context.startActivity(intent)
         }
 
@@ -53,6 +57,9 @@ class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         museoNombre.text = item.name
         Glide.with(museoImg).load(item.url).into(museoImg)
         item.id_museo
+        item.name
+        item.desc
+        item.ubi
 
     }
 }

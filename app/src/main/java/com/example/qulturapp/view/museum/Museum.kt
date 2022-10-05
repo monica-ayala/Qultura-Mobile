@@ -18,15 +18,21 @@ import com.example.qulturapp.viewmodel.museum.MuseumViewModel
 
 class Museum:AppCompatActivity() {
 
+    private var caller: ApiCallerService = ApiCallerService()
+
     private val museumViewModel = MuseumViewModel()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_museum)
 
-        val id_museo = intent.getIntExtra("id", 0)
+        val idMuseo = intent.getIntExtra("id", 0)
+        val nomMuseo = intent.getStringExtra("nom")
+        val ubiMuseo = intent.getStringExtra("ubi")
+        val descMuseo = intent.getStringExtra("desc")
 
-        museumViewModel.getMuseo(id_museo)
+
 
         val btn: Button = findViewById<View>(R.id.verSalasBtn) as Button
         btn.setOnClickListener{
@@ -42,8 +48,21 @@ class Museum:AppCompatActivity() {
         solibtn.setOnClickListener{
             //val intent = Intent(this, ActivityHorario::class.java)
             //startActivity(intent)
-            Log.d("IDS:", id_museo.toString())
         }
+
+        Log.d("IDS:", idMuseo.toString())
+        if (nomMuseo != null) {
+            Log.d("Nombre:", nomMuseo)
+        }
+        if (ubiMuseo != null) {
+            Log.d("Ubi:", ubiMuseo)
+        }
+        if (descMuseo != null) {
+            Log.d("Des:", descMuseo)
+        }
+
+
+
 
     }
 }

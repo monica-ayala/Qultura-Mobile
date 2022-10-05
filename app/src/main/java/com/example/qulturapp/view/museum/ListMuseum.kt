@@ -3,6 +3,7 @@ package com.example.qulturapp.view.museum
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.qulturapp.R
 import com.example.qulturapp.model.museums.MuseumResults
@@ -68,6 +69,7 @@ class ListMuseum : AppCompatActivity() {
         }
 
     }
+}
 
 
 
@@ -145,4 +147,4 @@ class ListMuseum : AppCompatActivity() {
 
     }
 
-}
+}*/

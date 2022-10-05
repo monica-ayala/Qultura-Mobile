@@ -26,7 +26,8 @@ class MuseumViewModel: ViewModel() {
         viewModelScope.launch {
 
             val museu = caller.getMuseo(id_museo)
-            Log.d("IDs: ", museu!!.id_museo.toString())
+            Log.d("ID museo que busco:", museu!!.id_museo.toString())
+
 
         }
     }

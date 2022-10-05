@@ -25,8 +25,7 @@ import com.example.qulturapp.view.solicitudes.ActivitySolicitudes
 import com.example.qulturapp.model.galleries.GalleryResults
 import com.example.qulturapp.view.eventos.EventoActivity
 import com.example.qulturapp.view.gallery.Gallery
-import com.example.qulturapp.view.museum.Museums
-import com.example.qulturapp.viewmodel.museums.MuseumsViewModel
+import com.example.qulturapp.viewmodel.museum.MuseumViewModel
 import com.example.qulturapp.viewmodel.galleries.GalleryListAdapter
 import com.example.qulturapp.viewmodel.galleries.GalleryViewModel
 

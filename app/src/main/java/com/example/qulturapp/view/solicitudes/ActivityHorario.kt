@@ -44,6 +44,7 @@ class ActivityHorario: AppCompatActivity(){
     private lateinit var selectedDate:LocalDate
     private lateinit var monthYearText:TextView
     private lateinit var monthYear:String
+    private var calendarcounter:Int = 0
 
     @RequiresApi(Build.VERSION_CODES.O)
     private fun setMonthView(){
@@ -53,7 +54,7 @@ class ActivityHorario: AppCompatActivity(){
         monthYearText.text = (monthYearFromDate(selectedDate))
         HorarioViewModel.monthYear_selected = monthYearText.text as String
         val daysInMonth = daysInMonthArray(selectedDate)
-        val calendarAdapter = CalendarAdapter(daysInMonth.toList(), this, HorarioViewModel)
+        val calendarAdapter = CalendarAdapter(daysInMonth.toList(), this, HorarioViewModel, calendarcounter,selectedDate)
         val layoutManager_calendar = GridLayoutManager(this, 7)
         rvCalendar.layoutManager = layoutManager_calendar
         rvCalendar.adapter = calendarAdapter
@@ -89,14 +90,26 @@ class ActivityHorario: AppCompatActivity(){
 
     @RequiresApi(Build.VERSION_CODES.O)
     fun previousMonthAction(view : View){
-        selectedDate = selectedDate.minusMonths(1)
-        setMonthView()
+        if (calendarcounter != 0){
+            selectedDate = selectedDate.minusMonths(1)
+            calendarcounter -= 1
+            setMonthView()
+        }else{
+            val toast = Toast.makeText(applicationContext, "No puedes regresar al pasado", Toast.LENGTH_SHORT)
+            toast.show()
+        }
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
     fun nextMonthAction(view : View){
-        selectedDate = selectedDate.plusMonths(1)
-        setMonthView()
+        if(calendarcounter != 12){
+            selectedDate = selectedDate.plusMonths(1)
+            calendarcounter += 1
+            setMonthView()
+        }else{
+            val toast = Toast.makeText(applicationContext, "No planees tanto al futuro", Toast.LENGTH_SHORT)
+            toast.show()
+        }
     }
 
     //

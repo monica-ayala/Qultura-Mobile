@@ -90,6 +90,7 @@ class ApiCallerService {
             "necesidades_text":$necesidades_text
             }
             """.trimIndent()
+        Log.d("AAAAAAAAAAA", necesidades_text.toString())
         val requestBody =
             RequestBody.create(MediaType.parse("application/json; charset=utf-8"), params)
         val call = getRetrofit().create(ApiService::class.java)

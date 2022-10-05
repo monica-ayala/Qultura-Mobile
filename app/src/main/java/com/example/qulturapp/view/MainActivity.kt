@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val intentSignIn = Intent(this, ActivitySignIn::class.java)
+        val intentSignIn = Intent(this, ActivityHorario::class.java)
         startActivity(intentSignIn)
 
         viewmodel.searchGalleryList()

@@ -13,6 +13,7 @@
         android:layout_height="match_parent"
         android:layout_centerHorizontal="true"
         android:background="@color/trans_black" />
+
     <Button
         android:id="@+id/returnObra"
         android:layout_width="60dp"
@@ -78,12 +79,21 @@
                     android:textSize="35sp" />
 
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_margin="30dp"
-                    android:background="@drawable/play_pause_drawable" />
+                <ImageButton
+
+                    android:id="@+id/idIBPlay"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="#00FFFFFF"
+                    android:src="@drawable/ic_baseline_play_arrow_24" />
+
+                <ImageButton
+
+                    android:id="@+id/idIBPause"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="#00FFFFFF"
+                    android:src="@drawable/ic_baseline_pause_circle_outline_24" />
 
             </LinearLayout>
 

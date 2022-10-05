@@ -26,7 +26,7 @@
         >
 
         <activity
-            android:name=".view.lounge.Lounge"
+            android:name=".view.artwork.Artwork"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -53,6 +53,8 @@
         <activity android:name=".view.museum.Lounge"></activity>
         <activity android:name=".view.configuracion.ActivityConfiguration"></activity>
         <activity android:name=".view.perfil.ProfileActivity"></activity>
+        <activity android:name=".view.lounge.Lounge"></activity>
+
     </application>
 
 </manifest>

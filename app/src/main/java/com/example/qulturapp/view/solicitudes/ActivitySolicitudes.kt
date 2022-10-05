@@ -3,6 +3,7 @@ package com.example.qulturapp.view.solicitudes
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -17,6 +18,11 @@ class ActivitySolicitudes: AppCompatActivity() {
     private val solicitudesViewModel = SolicitudesViewModel()
     private lateinit var adapter: SolicitudesListAdapter
 
+    private fun mensajeErrorConexion() {
+        Toast.makeText(applicationContext,"Ha ocurrido un error de conexión",
+            Toast.LENGTH_SHORT)
+            .show()
+    }
 
     private fun initializeList(list:List<SolicitudLista>) {
         adapter = SolicitudesListAdapter(list, this)
@@ -34,6 +40,12 @@ class ActivitySolicitudes: AppCompatActivity() {
         solicitudesViewModel.listaSolicitudes.observe(this, Observer {
             initializeList(it)
         })
+        solicitudesViewModel.statusConexion.observe(this, Observer {
+            if(it == false) {
+                mensajeErrorConexion()
+            }
+        })
+
         solicitudesViewModel.agregaSolicitudes()
 
         val listbtn = findViewById<View>(R.id.rbtn)

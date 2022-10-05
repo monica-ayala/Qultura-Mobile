@@ -24,7 +24,7 @@ class EventoActivity: AppCompatActivity() {
     private lateinit var adapter: EventosListAdapter
 
     private fun initializeList(list:List<Evento>) {
-        adapter = EventosListAdapter(list)
+        adapter = EventosListAdapter(list, this)
 
         val layoutManager = LinearLayoutManager(this)
         val rvEvento = findViewById<RecyclerView>(R.id.rv_list_eventos)

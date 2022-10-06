@@ -45,7 +45,7 @@ class Museum:AppCompatActivity() {
         val museumDesc = findViewById<TextView>(R.id.tv_musDesc)
         museumDesc.text = descMuseo
         val museumProfileImg = findViewById<ImageView>(R.id.profile_image)
-        val museumImg = "http://3.14.37.4:8080/uploads/" + imgMuseo
+        val museumImg = "https://qulturaqro.live/uploads/" + imgMuseo
         Picasso.get().load(museumImg).into(museumProfileImg)
         val museumBgImg = findViewById<ImageView>(R.id.iv_BgImg)
         Picasso.get().load(museumImg).into(museumBgImg)
@@ -55,6 +55,10 @@ class Museum:AppCompatActivity() {
         val btn: Button = findViewById<View>(R.id.verSalasBtn) as Button
         btn.setOnClickListener{
             val intent = Intent(this, Gallery::class.java)
+
+            intent.putExtra("id", idMuseo)
+            intent.putExtra("url", imgMuseo)
+
             startActivity(intent)
         }
         val rbtn = findViewById<View>(R.id.returnMuseo)

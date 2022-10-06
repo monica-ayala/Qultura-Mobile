@@ -5,6 +5,7 @@ import com.example.qulturapp.model.Info.LinksListResults
 import com.example.qulturapp.model.artwork.ArtworkListResults
 import com.example.qulturapp.model.eventos.EventoListResults
 import com.example.qulturapp.model.galleries.GalleryListResults
+import com.example.qulturapp.model.galleries.Sala
 import com.example.qulturapp.model.museums.Museo
 import com.example.qulturapp.model.museums.MuseumListResults
 import com.example.qulturapp.model.museums.MuseumResults
@@ -23,6 +24,9 @@ interface ApiService {
 
     @GET
     suspend fun getGalleryList(@Url url:String): Response<GalleryListResults>
+
+    @GET
+    suspend fun getOneGallery(@Url url:String): Response<GalleryListResults>
 
     @GET
     suspend fun getSolicitudList(@Url url:String): Response<SolicitudListResults>

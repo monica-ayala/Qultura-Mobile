@@ -2,6 +2,7 @@ package com.example.qulturapp.view.gallery
 
 
 import android.os.Bundle
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.lifecycle.Observer
@@ -11,6 +12,7 @@ import com.example.qulturapp.R
 import com.example.qulturapp.model.galleries.GalleryResults
 import com.example.qulturapp.viewmodel.galleries.GalleryListAdapter
 import com.example.qulturapp.viewmodel.galleries.GalleryViewModel
+import com.squareup.picasso.Picasso
 
 
 class Gallery:AppCompatActivity() {
@@ -30,12 +32,20 @@ class Gallery:AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_gallery)
+
+        val idMuseo = intent.getIntExtra("id", 0)
+        val imgMuseo = intent.getStringExtra("url")
+
+        val salaBgImg = findViewById<ImageView>(R.id.profile_image)
+        val museumImg = "https://qulturaqro.live/uploads/" + imgMuseo
+        //Picasso.get().load(museumImg).into(salaBgImg)
+
         galleryViewModel.listaGallery.observe(this, Observer {
             if (it != null) {
                 initializeList(it)
             }
         })
-        galleryViewModel.searchGalleryList()
+        galleryViewModel.searchGalleryList(idMuseo)
     }
 }
 

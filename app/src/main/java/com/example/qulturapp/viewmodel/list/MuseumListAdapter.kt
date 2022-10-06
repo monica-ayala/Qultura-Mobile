@@ -16,6 +16,7 @@ import com.example.qulturapp.R
 import com.example.qulturapp.model.museums.MuseumResults
 import com.example.qulturapp.view.museum.Artwork
 import com.example.qulturapp.view.museum.Museum
+import com.squareup.picasso.Picasso
 
 class MuseumListAdapter(private val data:List<MuseumResults>, private val context: Context) :RecyclerView.Adapter<ViewHolder>(){
     private val dataMuseumML = data.toMutableList()
@@ -39,6 +40,7 @@ class MuseumListAdapter(private val data:List<MuseumResults>, private val contex
             intent.putExtra("desc", item.desc)
             intent.putExtra("nom", item.name)
             intent.putExtra("ubi", item.ubi)
+            intent.putExtra("url",item.url)
 
             context.startActivity(intent)
         }
@@ -55,11 +57,14 @@ class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
     fun bind(item: MuseumResults) {
         museoNombre.text = item.name
-        Glide.with(museoImg).load(item.url).into(museoImg)
+        //Glide.with(museoImg).load(item.url).into(museoImg)
         item.id_museo
         item.name
         item.desc
         item.ubi
+
+        val ligaImg = "http://3.14.37.4:8080/uploads/" + item.url
+        Picasso.get().load(ligaImg).into(museoImg);
 
     }
 }

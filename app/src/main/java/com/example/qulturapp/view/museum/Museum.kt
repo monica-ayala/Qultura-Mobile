@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Button
+import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.qulturapp.R
@@ -14,6 +16,8 @@ import com.example.qulturapp.view.sesion.ActivitySignUp
 import com.example.qulturapp.view.solicitudes.ActivityHorario
 import com.example.qulturapp.view.museum.ListMuseum
 import com.example.qulturapp.viewmodel.museum.MuseumViewModel
+import com.example.qulturapp.viewmodel.solicitudes.HorarioViewModel
+import com.squareup.picasso.Picasso
 
 
 class Museum:AppCompatActivity() {
@@ -31,6 +35,16 @@ class Museum:AppCompatActivity() {
         val nomMuseo = intent.getStringExtra("nom")
         val ubiMuseo = intent.getStringExtra("ubi")
         val descMuseo = intent.getStringExtra("desc")
+        val imgMuseo =  intent.getStringExtra("url")
+
+
+        val museumName = findViewById<TextView>(R.id.tv_top_bar_text)
+        museumName.text = (nomMuseo)
+        val museumProfileImg = findViewById<ImageView>(R.id.profile_image)
+        val museumImg = "http://3.14.37.4:8080/uploads/" + imgMuseo
+        Picasso.get().load(museumImg).into(museumProfileImg)
+        val museumBgImg = findViewById<ImageView>(R.id.iv_BgImg)
+        Picasso.get().load(museumImg).into(museumBgImg)
 
 
 
@@ -60,6 +74,9 @@ class Museum:AppCompatActivity() {
         if (descMuseo != null) {
             Log.d("Des:", descMuseo)
         }
+        if(imgMuseo != null) {
+            Log.d("url", imgMuseo)
+            }
 
         // ctm github
 

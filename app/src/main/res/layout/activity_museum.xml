@@ -5,8 +5,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.museum.Museum"
-    android:background="@drawable/maqro">
+    tools:context=".view.museum.Museum">
+
+    <ImageView
+        android:id="@+id/iv_BgImg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY" />
 
     <View
         android:id="@+id/overlay_image"

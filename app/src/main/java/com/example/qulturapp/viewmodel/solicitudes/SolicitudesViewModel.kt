@@ -11,8 +11,8 @@ import kotlinx.coroutines.launch
 
 class SolicitudesViewModel: ViewModel() {
     var listaSolicitudes: MutableLiveData< List<SolicitudLista> > = MutableLiveData(listOf())
-    //val listaEjemplo = listOf("Silla de ruedas", "Guía por audio", "si", "otro: una cosa extra")
     private var caller: ApiCallerService = ApiCallerService()
+    var statusConexion: MutableLiveData<Boolean> = MutableLiveData(null)
 
     /*
     fun agregaSolicitudes() {
@@ -26,36 +26,44 @@ class SolicitudesViewModel: ViewModel() {
 
     fun agregaSolicitudes(){
         viewModelScope.launch {
-            val solicitudList = caller.searchSolicitudList(UsuarioActual.id)
-            val listaSolicitudesAct = mutableListOf<SolicitudLista>()
-            solicitudList?.solicitudes?.forEach { solicitud ->
-                var listaNecesidades = mutableListOf<String>()
-                for(necesidad in solicitudList.necesidades) {
-                    if(necesidad.id_solicitud == solicitud.id_solicitud)
-                        listaNecesidades.add(necesidad.necesidad)
+            try {
+                val solicitudList = caller.searchSolicitudList(UsuarioActual.id)
+                val listaSolicitudesAct = mutableListOf<SolicitudLista>()
+                solicitudList?.solicitudes?.forEach { solicitud ->
+                    var listaNecesidades = mutableListOf<String>()
+                    for (necesidad in solicitudList.necesidades) {
+                        if (necesidad.id_solicitud == solicitud.id_solicitud)
+                            listaNecesidades.add(necesidad.necesidad)
+                    }
+                    val anio = solicitud.fecha.subSequence(0, 4)
+                    val mes = solicitud.fecha.subSequence(5, 7)
+                    val dia = solicitud.fecha.subSequence(8, 10)
+                    val nuevaSolicitud = SolicitudLista(
+                        solicitud.id_solicitud,
+                        solicitud.info_adicional,
+                        "$dia/$mes/$anio",
+                        solicitud.asistentes,
+                        solicitud.estado,
+                        solicitud.museo,
+                        solicitud.imagen_museo,
+                        listaNecesidades
+                    )
+                    listaSolicitudesAct.add(nuevaSolicitud)
                 }
-                val anio = solicitud.fecha.subSequence(0, 4)
-                val mes = solicitud.fecha.subSequence(5, 7)
-                val dia = solicitud.fecha.subSequence(8, 10)
-                val nuevaSolicitud = SolicitudLista(
-                    solicitud.id_solicitud,
-                    solicitud.info_adicional,
-                    "$dia/$mes/$anio",
-                    solicitud.asistentes,
-                    solicitud.estado,
-                    solicitud.museo,
-                    solicitud.imagen_museo,
-                    listaNecesidades
-                )
-                listaSolicitudesAct.add(nuevaSolicitud)
+                listaSolicitudes.postValue(listaSolicitudesAct.toList())
+            } catch (e: Exception) {
+                statusConexion.postValue(false)
             }
-            listaSolicitudes.postValue(listaSolicitudesAct.toList())
         }
     }
 
     fun eliminaSolicitud(id_solicitud: Int){
         viewModelScope.launch {
-            caller.eliminaSolicitud(id_solicitud)
+            try {
+                caller.eliminaSolicitud(id_solicitud)
+            } catch (e: Exception) {
+                statusConexion.postValue(false)
+            }
         }
     }
 

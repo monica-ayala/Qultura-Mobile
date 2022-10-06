@@ -45,6 +45,7 @@ class Gallery:AppCompatActivity() {
                 initializeList(it)
             }
         })
+        //a
         galleryViewModel.searchGalleryList(idMuseo)
     }
 }

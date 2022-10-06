@@ -39,7 +39,11 @@ class Museum:AppCompatActivity() {
 
 
         val museumName = findViewById<TextView>(R.id.tv_top_bar_text)
-        museumName.text = (nomMuseo)
+        museumName.text = nomMuseo
+        val museumUbi = findViewById<TextView>(R.id.tv_direccion_museo)
+        museumUbi.text = ubiMuseo
+        val museumDesc = findViewById<TextView>(R.id.tv_musDesc)
+        museumDesc.text = descMuseo
         val museumProfileImg = findViewById<ImageView>(R.id.profile_image)
         val museumImg = "http://3.14.37.4:8080/uploads/" + imgMuseo
         Picasso.get().load(museumImg).into(museumProfileImg)

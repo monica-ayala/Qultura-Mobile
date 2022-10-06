@@ -48,8 +48,6 @@
                 android:layout_width="200dp"
                 android:layout_height="200dp"
                 android:layout_gravity="center"
-
-                android:src="@drawable/maqro"
                 app:civ_border_color="@color/white"
                 app:civ_border_width="4dp" />
 
@@ -129,6 +127,7 @@
                 android:layout_height="2dp"
                 android:background="@color/white" />
             <TextView
+                android:id="@+id/tv_musDesc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"

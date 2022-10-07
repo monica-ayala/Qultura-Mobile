@@ -85,7 +85,7 @@
             android:id="@+id/fecha_detalle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="14dp"
             android:fontFamily="sans-serif"
             android:text="martes 4 de octubre, auditorio del museo de la ciudad."
             android:textAlignment="center"

@@ -74,7 +74,7 @@ class ActivitySignIn: AppCompatActivity() {
     }
 
     private fun iniciaPaginaPrincipal() {
-        val intentSolicitudes = Intent(this, ProfileActivity::class.java)
+        val intentSolicitudes = Intent(this, ListMuseum::class.java)
         startActivity(intentSolicitudes)
     }
 

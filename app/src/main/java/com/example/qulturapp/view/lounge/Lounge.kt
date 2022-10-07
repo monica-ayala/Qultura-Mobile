@@ -2,6 +2,8 @@ package com.example.qulturapp.view.lounge
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -10,6 +12,7 @@ import com.example.qulturapp.R
 import com.example.qulturapp.model.artwork.ArtworkResults
 import com.example.qulturapp.viewmodel.artworks.ArtworkListAdapter
 import com.example.qulturapp.viewmodel.artworks.ArtworkViewModel
+import com.squareup.picasso.Picasso
 
 class Lounge : AppCompatActivity() {
     private val artworkViewModel = ArtworkViewModel()
@@ -33,5 +36,21 @@ class Lounge : AppCompatActivity() {
             }
         })
         artworkViewModel.getObra()
+
+        val nomSala = intent.getStringExtra("nom")
+        val imgMuseo = intent.getStringExtra("url")
+        val descSala = intent.getStringExtra("desc")
+
+        val museumName = findViewById<TextView>(R.id.tv_top_bar_text)
+        museumName.text = nomSala
+
+        val salaDesc = findViewById<TextView>(R.id.readmore)
+        salaDesc.text = descSala
+
+        val obraBgImg = findViewById<ImageView>(R.id.ivSalaBG)
+        val obraProfileImg = findViewById<ImageView>(R.id.roundedImageView)
+        val museumImg = "https://qulturaqro.live/uploads/" + imgMuseo
+        Picasso.get().load(museumImg).into(obraBgImg)
+        Picasso.get().load(museumImg).into(obraProfileImg)
     }
 }

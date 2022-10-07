@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
         } catch (e: NumberFormatException) {
             null
         }
-        val intentSignIn = Intent(this, ActivitySignIn::class.java)
+        val intentSignIn = Intent(this, ListMuseum::class.java)
         startActivity(intentSignIn)
 
     }

@@ -19,13 +19,6 @@
         android:layout_centerHorizontal="true"
         android:background="@color/trans_black" />
 
-    <Button
-        android:id="@+id/returnLounge"
-        android:layout_width="60dp"
-        android:layout_height="50dp"
-        android:background="@color/transparent"
-        android:drawableRight="@drawable/resource_return" />
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -5,8 +5,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.gallery.Gallery"
-    android:background="@drawable/obra1">
+    tools:context=".view.gallery.Gallery">
+
+    <ImageView
+        android:id="@+id/ivGalleryBg"
+        android:scaleType="fitXY"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
     <View
         android:id="@+id/overlay_image"

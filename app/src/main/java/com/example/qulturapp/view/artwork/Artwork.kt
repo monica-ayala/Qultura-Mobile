@@ -19,10 +19,7 @@ class Artwork: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_lounge)
-
-        val intentSignIn = Intent(this, Lounge::class.java)
-        startActivity(intentSignIn)
+        setContentView(R.layout.activity_artwork)
         viewmodel.getObra()
     }
 }

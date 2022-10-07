@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.qulturapp.R
 import com.example.qulturapp.model.galleries.GalleryResults
+import com.example.qulturapp.model.galleries.Sala
 import com.example.qulturapp.viewmodel.galleries.GalleryListAdapter
 import com.example.qulturapp.viewmodel.galleries.GalleryViewModel
 import com.squareup.picasso.Picasso
@@ -20,7 +21,7 @@ class Gallery:AppCompatActivity() {
     private lateinit var adapter: GalleryListAdapter
 
 
-    private fun initializeList(list:List<GalleryResults>) {
+    private fun initializeList(list:List<Sala>) {
         adapter = GalleryListAdapter(list, this)
 
         val layoutManager = GridLayoutManager(this, 2)
@@ -36,9 +37,9 @@ class Gallery:AppCompatActivity() {
         val idMuseo = intent.getIntExtra("id", 0)
         val imgMuseo = intent.getStringExtra("url")
 
-        val salaBgImg = findViewById<ImageView>(R.id.profile_image)
+        val salaBgImg = findViewById<ImageView>(R.id.ivGalleryBg)
         val museumImg = "https://qulturaqro.live/uploads/" + imgMuseo
-        //Picasso.get().load(museumImg).into(salaBgImg)
+        Picasso.get().load(museumImg).into(salaBgImg)
 
         galleryViewModel.listaGallery.observe(this, Observer {
             if (it != null) {

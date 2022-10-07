@@ -13,16 +13,16 @@ class GalleryViewModel: ViewModel() {
 
     private var caller: ApiCallerService = ApiCallerService()
 
-    fun searchGalleryList(){
+    fun searchGalleryList(idMuseo:Int){
 
         viewModelScope.launch {
 
-            val galleryList = caller.searchGalleryList()
+            val galleryList = caller.getGallery(idMuseo)
             Log.d("Salas ---> ",galleryList!!.gallery.toString())
             val listaSalas = mutableListOf<GalleryResults>()
             for(sala in galleryList.gallery)
             {
-                val content =  GalleryResults(sala.nom_sala, sala.img_sala)
+                val content =  GalleryResults(sala.nom_sala, sala.img_sala, sala.id_sala)
                 listaSalas.add(content)
             }
 

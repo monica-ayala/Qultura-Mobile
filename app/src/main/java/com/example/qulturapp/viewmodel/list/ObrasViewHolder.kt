@@ -1,4 +1,4 @@
-package com.example.qulturapp.viewmodel.museums
+package com.example.qulturapp.viewmodel.list
 
 import android.view.View
 import android.widget.Button

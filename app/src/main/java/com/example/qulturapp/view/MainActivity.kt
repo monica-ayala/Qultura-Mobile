@@ -23,9 +23,9 @@ import com.example.qulturapp.view.solicitudes.ActivityHorario
 import com.example.qulturapp.view.sesion.ActivitySignUp
 import com.example.qulturapp.view.solicitudes.ActivitySolicitudes
 import com.example.qulturapp.model.galleries.GalleryResults
+import com.example.qulturapp.view.eventos.EventoActivity
 import com.example.qulturapp.view.gallery.Gallery
-import com.example.qulturapp.view.museum.Museums
-import com.example.qulturapp.viewmodel.museums.MuseumsViewModel
+import com.example.qulturapp.viewmodel.list.MuseumsViewModel
 import com.example.qulturapp.viewmodel.galleries.GalleryListAdapter
 import com.example.qulturapp.viewmodel.galleries.GalleryViewModel
 
@@ -36,9 +36,14 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        dbUtil.initRoomDatabase()
         setContentView(R.layout.activity_main)
-        val intentSignIn = Intent(this, ActivityInfo::class.java)
+        val intentSignIn = Intent(this, ListMuseum::class.java)
+        dbUtil.initRoomDatabase()
+        try {
+            dbUtil.initRoomDatabase()
+        } catch (e: NumberFormatException) {
+            null
+        }
         startActivity(intentSignIn)
 
     }

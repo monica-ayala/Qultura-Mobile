@@ -27,8 +27,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/white"
-                android:scaleType="centerCrop"
-                android:src="@drawable/obra4" />
+                android:scaleType="centerCrop"/>
         </com.google.android.material.card.MaterialCardView>
 
         <TextView

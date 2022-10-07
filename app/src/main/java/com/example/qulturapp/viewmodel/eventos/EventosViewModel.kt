@@ -12,6 +12,7 @@ class EventosViewModel: ViewModel() {
 
     val caller = ApiCallerService()
     var listaEventos = MutableLiveData<EventoListResults?>()
+    var statusConexion: MutableLiveData<Boolean> = MutableLiveData(null)
 
     /*
     fun agregarEvento (){
@@ -25,9 +26,13 @@ class EventosViewModel: ViewModel() {
 
     fun agregarEventos() {
         viewModelScope.launch {
-            val listEventos = caller.searchEventoList()
-            listEventos.let {
-                listaEventos.postValue(listEventos)
+            try {
+                val listEventos = caller.searchEventoList()
+                listEventos.let {
+                    listaEventos.postValue(listEventos)
+                }
+            } catch (e: Exception) {
+                statusConexion.postValue(false)
             }
         }
     }

@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         dbUtil.initRoomDatabase()
-        val intentSignIn = Intent(this, ActivityInfo::class.java)
+        val intentSignIn = Intent(this, ListMuseum::class.java)
         startActivity(intentSignIn)
 
     }

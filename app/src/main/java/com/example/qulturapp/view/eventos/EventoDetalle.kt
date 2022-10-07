@@ -27,7 +27,17 @@ class EventoDetalle : AppCompatActivity(){
             .resize(0, 2000)
             .into(fotoEvento)
 
+        val fecha = intent.getStringExtra("fecha_evento")
+        val lugar = intent.getStringExtra("lugar_evento")
+
+        val anio = fecha?.subSequence(0, 4)
+        val mes = fecha?.subSequence(5, 7)
+        val dia = fecha?.subSequence(8, 10)
+
+
         nombreEvento.text = intent.getStringExtra("nombre_evento")
-        fechaEvento.text = intent.getStringExtra("fecha_evento")
+        fechaEvento.text = "$dia/$mes/$anio en $lugar"
+
+
     }
 }

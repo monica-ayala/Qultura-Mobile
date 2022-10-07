@@ -126,7 +126,9 @@ class ActivityHorario: AppCompatActivity(){
         initializeList(HorarioViewModel.listaHorario.toList())
 
         // on click boton siguiente
+        val idMuseo = intent.getIntExtra("id_museo",0)
         val boton_siguiente = findViewById<Button>(R.id.boton_siguiente)
+
         boton_siguiente.setOnClickListener{
             if(HorarioViewModel.day_selected != null && HorarioViewModel.hora_selected != null && HorarioViewModel.monthYear_selected != null){
                 val intentRegistrar_Horario2 = Intent(this, ActivityHorario2::class.java)
@@ -134,6 +136,7 @@ class ActivityHorario: AppCompatActivity(){
                 intentRegistrar_Horario2.putExtra("hora_selected", HorarioViewModel.hora_selected)
                 intentRegistrar_Horario2.putExtra("monthYear_selected", HorarioViewModel.monthYear_selected)
                 intentRegistrar_Horario2.putExtra("monthYear", monthYear)
+                intentRegistrar_Horario2.putExtra("id_museo", idMuseo)
                 startActivity(intentRegistrar_Horario2)
             }else{
                 val toast = Toast.makeText(applicationContext, "Datos incompletos", Toast.LENGTH_SHORT)

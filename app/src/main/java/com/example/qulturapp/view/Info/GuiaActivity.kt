@@ -2,6 +2,7 @@ package com.example.qulturapp.view.Info
 
 import android.os.Bundle
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.qulturapp.R
@@ -19,7 +20,9 @@ class GuiaActivity : AppCompatActivity() {
             val guiaDescription = findViewById<TextView>(R.id.tv_guia_desc)
             val guiaTip = findViewById<TextView>(R.id.tv_guia_tip)
             val guiaIcon = findViewById<ImageView>(R.id.iv_guia_icon)
-            val youTubePlayerView = findViewById<YouTubePlayerView>(R.id.youtube)
+            var linearLayout = findViewById<LinearLayout>(R.id.ly_guia)
+            //val youTubePlayerView = findViewById<YouTubePlayerView>(R.id.youtube)
+            val youTubePlayerView = YouTubePlayerView(this)
             lifecycle.addObserver(youTubePlayerView)
 
 
@@ -42,6 +45,9 @@ class GuiaActivity : AppCompatActivity() {
                     }
                 }
             })
+            linearLayout.addView(youTubePlayerView)
+
+
 
         }
 

@@ -110,8 +110,7 @@ class ApiCallerService {
             """.trimIndent()
         val requestBody =
             RequestBody.create(MediaType.parse("application/json; charset=utf-8"), params)
-        val call = getRetrofit().create(ApiService::class.java)
-            .agregaSolicitud("/solicitud/nuevaSolicitud", requestBody)
+        getRetrofit().create(ApiService::class.java).agregaSolicitud("/solicitud/nuevaSolicitud", requestBody)
     }
 
     suspend fun searchUsuario(correo: String, contrasenia: String): UsuarioListResults? {

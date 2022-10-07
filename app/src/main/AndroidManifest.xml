@@ -47,11 +47,12 @@
         <activity android:name=".view.eventos.EventoActivity"></activity>
         <activity android:name=".view.eventos.EventoDetalle"></activity>
         <activity android:name=".view.Info.ActivityInfo"></activity>
+        <activity android:name=".view.mapas.ActivityMap"></activity>
         <activity android:name=".view.Info.GuiaActivity"></activity>
         <activity android:name=".view.museum.Gallery"></activity>
         <activity android:name=".view.gallery.Gallery"></activity>
-        <activity android:name=".view.museum.Artwork"></activity>
-        <activity android:name=".view.museum.Lounge"></activity>
+        <activity android:name=".view.artwork.Artwork"></activity>
+        <activity android:name=".view.lounge.Lounge"></activity>
         <activity android:name=".view.configuracion.ActivityConfiguration"></activity>
         <activity android:name=".view.perfil.ProfileActivity"></activity>
         <activity android:name=".view.emergencia.EmergenciaActivity"></activity>

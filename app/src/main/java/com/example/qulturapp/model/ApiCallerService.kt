@@ -92,7 +92,8 @@ class ApiCallerService {
         numVisitantes: Int,
         info_adicional: String,
         necesidades: MutableList<Int>,
-        necesidades_text: MutableList<String>
+        necesidades_text: MutableList<String>,
+        id_museo: Int
     ) {
         val fecha_format = monthYear_selected + "-" + day_selected + " " + hora_selected + ":00"
         val UsuarioActual = UsuarioActual.id
@@ -103,7 +104,8 @@ class ApiCallerService {
             "info_adicional":"$info_adicional",
             "necesidades":$necesidades,
             "usuario_necesidad":$UsuarioActual,
-            "necesidades_text":$necesidades_text
+            "necesidades_text":$necesidades_text,
+            "id_museo":$id_museo
             }
             """.trimIndent()
         val requestBody =

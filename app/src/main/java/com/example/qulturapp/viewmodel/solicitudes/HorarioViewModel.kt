@@ -1,5 +1,6 @@
 package com.example.qulturapp.viewmodel.solicitudes
 
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.qulturapp.model.ApiCallerService
@@ -9,6 +10,8 @@ import kotlinx.coroutines.launch
 class HorarioViewModel: ViewModel() {
     private var caller: ApiCallerService = ApiCallerService()
     var listaHorario = mutableListOf<Horario>()
+
+    var exitoSolicitud: MutableLiveData<Boolean> = MutableLiveData(null)
 
     var day_selected : String? = null
     var monthYear_selected : String? = null
@@ -52,6 +55,7 @@ class HorarioViewModel: ViewModel() {
                     numVisitantes?.let { it3 ->
                         info_adicinal?.let { it4 ->
                             caller.agregaSolicitud(it, it1, it2, it3.toInt(), it4,necesidades, necesidades_text, id_museo)
+                            exitoSolicitud.postValue(true)
                         }
                     }
                 }

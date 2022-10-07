@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
 import com.example.qulturapp.viewmodel.solicitudes.HorarioViewModel
 import com.example.qulturapp.R
 import com.example.qulturapp.model.sesion.UsuarioActual
@@ -12,7 +13,7 @@ import com.example.qulturapp.model.horarios.Horario
 
 class ActivityHorario2: AppCompatActivity() {
 
-    private val HorarioViewModel = HorarioViewModel()
+    private val horarioViewModel = HorarioViewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,39 +33,44 @@ class ActivityHorario2: AppCompatActivity() {
         val CB_interprete = findViewById<CheckBox>(R.id.CB_Interprete)
         val UsuarioActual = UsuarioActual.correo
 
+        horarioViewModel.exitoSolicitud.observe(this, Observer {
+            if(it == true) {
+                val intentSolicitudes = Intent(this, ActivitySolicitudes::class.java)
+                startActivity(intentSolicitudes)
+            }
+        })
+
         boton_realizarsol.setOnClickListener{
             if(UsuarioActual == ""){
                 val toast = Toast.makeText(applicationContext, "No haz iniciado sesion", Toast.LENGTH_SHORT)
                 toast.show()
             }else{
-                HorarioViewModel.id_museo = idMuseo
-                HorarioViewModel.day_selected = intent.getStringExtra("day_selected")
-                HorarioViewModel.monthYear_selected = intent.getStringExtra("monthYear")
-                HorarioViewModel.hora_selected = intent.getStringExtra("hora_selected")
-                HorarioViewModel.info_adicinal = info_extra.text.toString()
-                HorarioViewModel.numVisitantes = visitantes.text.toString()
+                horarioViewModel.id_museo = idMuseo
+                horarioViewModel.day_selected = intent.getStringExtra("day_selected")
+                horarioViewModel.monthYear_selected = intent.getStringExtra("monthYear")
+                horarioViewModel.hora_selected = intent.getStringExtra("hora_selected")
+                horarioViewModel.info_adicinal = info_extra.text.toString()
+                horarioViewModel.numVisitantes = visitantes.text.toString()
 
                 if(CB_silla.isChecked){
-                    HorarioViewModel.necesidades.add(1)
-                    HorarioViewModel.necesidades_text.add('"' + (CB_silla.text as String) + '"')
+                    horarioViewModel.necesidades.add(1)
+                    horarioViewModel.necesidades_text.add('"' + (CB_silla.text as String) + '"')
                 }
                 if(CB_rampa.isChecked){
-                    HorarioViewModel.necesidades.add(3)
-                    HorarioViewModel.necesidades_text.add('"' + (CB_rampa.text as String) + '"')
+                    horarioViewModel.necesidades.add(3)
+                    horarioViewModel.necesidades_text.add('"' + (CB_rampa.text as String) + '"')
                 }
                 if(CB_guia.isChecked){
-                    HorarioViewModel.necesidades.add(2)
-                    HorarioViewModel.necesidades_text.add('"' + (CB_guia.text as String) + '"')
+                    horarioViewModel.necesidades.add(2)
+                    horarioViewModel.necesidades_text.add('"' + (CB_guia.text as String) + '"')
                 }
                 if(CB_interprete.isChecked){
-                    HorarioViewModel.necesidades.add(4)
-                    HorarioViewModel.necesidades_text.add('"' + (CB_interprete.text as String) + '"')
+                    horarioViewModel.necesidades.add(4)
+                    horarioViewModel.necesidades_text.add('"' + (CB_interprete.text as String) + '"')
                 }
 
-                if(HorarioViewModel.numVisitantes != null && HorarioViewModel.numVisitantes != ""){
-                    HorarioViewModel.agregaSolicitud()
-                    val intentSolicitudes = Intent(this, ActivitySolicitudes::class.java)
-                    startActivity(intentSolicitudes)
+                if(horarioViewModel.numVisitantes != null && horarioViewModel.numVisitantes != ""){
+                    horarioViewModel.agregaSolicitud()
 
                 }else{
                     val toast = Toast.makeText(applicationContext, "Selecciona un numero de visitantes", Toast.LENGTH_SHORT)

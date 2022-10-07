@@ -42,6 +42,7 @@ class EventosListAdapter (private val data:List<Evento>, private val context: Co
         val intentEvento = Intent(context, EventoDetalle::class.java)
         intentEvento.putExtra("nombre_evento", item.info_evento)
         intentEvento.putExtra("fecha_evento", item.fecha_evento)
+        intentEvento.putExtra("lugar_evento", item.ubicacion_evento)
         intentEvento.putExtra("img_evento", item.multimedia_evento)
         context.startActivity(intentEvento)
     }

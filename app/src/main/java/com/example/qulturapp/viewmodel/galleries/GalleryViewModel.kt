@@ -6,10 +6,11 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.qulturapp.model.ApiCallerService
 import com.example.qulturapp.model.galleries.GalleryResults
+import com.example.qulturapp.model.galleries.Sala
 import kotlinx.coroutines.launch
 
 class GalleryViewModel: ViewModel() {
-    var listaGallery: MutableLiveData<List<GalleryResults>?> = MutableLiveData(listOf())
+    var listaGallery: MutableLiveData<List<Sala>?> = MutableLiveData(listOf())
 
     private var caller: ApiCallerService = ApiCallerService()
 
@@ -26,7 +27,7 @@ class GalleryViewModel: ViewModel() {
                 listaSalas.add(content)
             }
 
-            listaGallery.postValue(listaSalas)
+            listaGallery.postValue(galleryList.gallery)
         }
 
     }

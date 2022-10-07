@@ -6,6 +6,8 @@ import com.example.qulturapp.model.Info.LinksListResults
 import com.example.qulturapp.model.artwork.ArtworkListResults
 import com.example.qulturapp.model.eventos.EventoListResults
 import com.example.qulturapp.model.galleries.GalleryListResults
+import com.example.qulturapp.model.galleries.Sala
+import com.example.qulturapp.model.museums.Museo
 import com.example.qulturapp.model.museums.MuseumListResults
 import com.example.qulturapp.model.sesion.EncuentraUsuario
 import com.example.qulturapp.model.sesion.UsuarioListResults
@@ -40,10 +42,21 @@ class ApiCallerService {
             val call = getRetrofit().create(ApiService::class.java).getMuseumList("/get")
             val museumList = call.body()
             return museumList
-            /*val vista = findViewById(R.id.tvget) as TextView
-            vista.text = museumList!!.museo.size.toString()*/
 
+    }
 
+    suspend fun getMuseo(id_museo: Int): Museo?{
+
+        val call = getRetrofit().create(ApiService::class.java).getOneMuseum("/museo/$id_museo/get")
+        val museum = call.body()
+        return museum
+
+    }
+
+    suspend fun getGallery(id_museo: Int): GalleryListResults?{
+        val call = getRetrofit().create(ApiService::class.java).getOneGallery("sala/$id_museo/getSalas")
+        val galleries = call.body()
+        return galleries
     }
 
     suspend fun searchGalleryList(): GalleryListResults?{

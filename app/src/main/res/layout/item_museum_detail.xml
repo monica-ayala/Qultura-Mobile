@@ -39,9 +39,10 @@
 
                 <TextView
                     android:id="@+id/tvMusName"
-                    android:layout_width="wrap_content"
+                    android:layout_width="180dp"
                     android:fontFamily="sans-serif-black"
                     android:layout_height="wrap_content"
+                    android:textAlignment="center"
                     android:layout_gravity="center"/>
 
             </androidx.cardview.widget.CardView>
@@ -49,15 +50,6 @@
 
         </androidx.cardview.widget.CardView>
 
-
-
-
-
-
     </RelativeLayout>
-
-
-
-
 
 </LinearLayout>

@@ -24,7 +24,7 @@ class ApiCallerService {
     private fun getRetrofit(): Retrofit {
 
         return Retrofit.Builder()
-            .baseUrl("https://qulturaqro.live/")
+            .baseUrl("http://3.14.37.4:8080")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }

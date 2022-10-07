@@ -7,53 +7,85 @@ import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
-import androidx.appcompat.widget.SwitchCompat
 import com.example.qulturapp.R
 import com.example.qulturapp.databinding.ActivityConfigurationBinding
+import com.example.qulturapp.model.sesion.Usuario
+import com.example.qulturapp.model.sesion.UsuarioActual
 import com.example.qulturapp.view.emergencia.EmergenciaActivity
 import com.example.qulturapp.view.perfil.ProfileActivity
+import com.example.qulturapp.view.sesion.ActivitySignIn
+import com.example.qulturapp.view.solicitudes.ActivitySolicitudes
 
 class ActivityConfiguration : AppCompatActivity() {
-    private lateinit var binding: ActivityConfigurationBinding
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_configuration)
 
         val button_profile = findViewById<LinearLayout>(R.id.profile_access_button)
-        button_profile.setOnClickListener {
-            val intent = Intent(this, ProfileActivity :: class.java)
-            startActivity(intent)
+        val button_solicitudes = findViewById<LinearLayout>(R.id.solicitudes_access_button)
+
+        fun mensajePerfil() {
+            Toast.makeText(applicationContext,"Inicia sesión para consultar tu perfil",
+                Toast.LENGTH_SHORT)
+                .show()
+        }
+
+        fun mensajeSolicitudes() {
+            Toast.makeText(applicationContext,"Inicia sesión para consultar tus solicitudes",
+                Toast.LENGTH_SHORT)
+                .show()
+        }
+
+        if (UsuarioActual.correo == "") {
+            button_profile.setOnClickListener {
+                mensajePerfil()
+                val intent = Intent(this, ActivitySignIn::class.java)
+                startActivity(intent)
+            }
+        } else {
+            button_profile.setOnClickListener {
+                val intent = Intent(this, ProfileActivity::class.java)
+                startActivity(intent)
+            }
+        }
+
+        if (UsuarioActual.correo == "") {
+            button_solicitudes.setOnClickListener {
+                mensajeSolicitudes()
+                val intent = Intent(this, ActivitySignIn::class.java)
+                startActivity(intent)
+            }
+        } else {
+            button_solicitudes.setOnClickListener {
+                val intent = Intent(this, ActivitySolicitudes::class.java)
+                startActivity(intent)
+            }
         }
 
         val button_emergency = findViewById<LinearLayout>(R.id.emergency_access_button)
         button_emergency.setOnClickListener {
-            val intent = Intent(this, EmergenciaActivity :: class.java)
+            val intent = Intent(this, EmergenciaActivity::class.java)
             startActivity(intent)
         }
 
-        // Dark Mode Function
-//        var dm_switch = binding.darkmodeSwitch
-//        val appSettingPrefs : SharedPreferences = getSharedPreferences("AppSettingsPrefs", 0)
-//        val sharedPrefEdit : SharedPreferences.Editor = appSettingPrefs.edit()
-//        val isNightModeOn : Boolean = appSettingPrefs.getBoolean("NightMode", false)
-//
-//        if(isNightModeOn) {
-//            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-//        } else {
-//            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-//        }
-//
-//        dm_switch.setOnCheckedChangeListener { _, isChecked ->
-//            if(isNightModeOn) {
-//                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-//                sharedPrefEdit.putBoolean("NightMode", false)
-//                sharedPrefEdit.apply()
-//            } else {
-//                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-//                sharedPrefEdit.putBoolean("NightMode", true)
-//                sharedPrefEdit.apply()
-//            }
-//        }
+        val switchTheme = findViewById<Switch>(R.id.darkmode_switch)
+
+        val sharedPreferences : SharedPreferences = getSharedPreferences("Save", MODE_PRIVATE)
+        switchTheme.setChecked(sharedPreferences.getBoolean("Value", false))
+        val editor : SharedPreferences.Editor = getSharedPreferences("Save", MODE_PRIVATE).edit()
+
+        switchTheme.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+                editor.putBoolean("Value", true)
+                editor.apply()
+                switchTheme.setChecked(true)
+            } else {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+                editor.putBoolean("Value", false)
+                editor.apply()
+                switchTheme.setChecked(false)
+            }
+        }
     }
 }

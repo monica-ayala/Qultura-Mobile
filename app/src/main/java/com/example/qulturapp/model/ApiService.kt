@@ -1,5 +1,8 @@
 package com.example.qulturapp.model
 
+import com.example.qulturapp.model.Info.GuiasListResults
+import com.example.qulturapp.model.Info.LinksListResults
+import com.example.qulturapp.model.artwork.ArtworkListResults
 import com.example.qulturapp.model.eventos.EventoListResults
 import com.example.qulturapp.model.galleries.GalleryListResults
 import com.example.qulturapp.model.museums.MuseumListResults
@@ -22,6 +25,9 @@ interface ApiService {
     @GET
     suspend fun getSolicitudList(@Url url:String): Response<SolicitudListResults>
 
+    @GET
+    suspend fun getObra(@Url url:String): Response<ArtworkListResults>
+
     @POST
     suspend fun deleteSolicitud(@Url url:String, @Body requestBody: RequestBody): Response<RequestBody>
 
@@ -36,5 +42,11 @@ interface ApiService {
 
     @GET
     suspend fun getEventList(@Url url:String): Response<EventoListResults>
+
+    @GET
+    suspend fun getGuiasList(@Url url:String): Response<GuiasListResults>
+
+    @GET
+    suspend fun getLinksList(@Url url:String): Response<LinksListResults>
 
 }

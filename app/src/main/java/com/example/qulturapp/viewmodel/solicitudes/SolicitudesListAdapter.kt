@@ -99,9 +99,9 @@ class ViewHolder (view: View): RecyclerView.ViewHolder(view) {
         }
 
         estado.text = when(item.estado){
-            0 -> "Estatus: \n Aceptado"
+            2 -> "Estatus: \n Aceptado"
             1 -> "Estatus: \n En proceso"
-            else -> "Estatus: \n Rechazado"
+            else -> "Estatus: \n Negado"
         }
     }
 }

@@ -24,7 +24,7 @@
         android:backgroundTint="@color/transparent"
         android:text="Ver Salas"
         android:textAlignment="viewStart"
-        android:textSize="20dp"
+        android:textSize="15dp"
         android:fontFamily="sans-serif"
         android:layout_marginHorizontal="15dp"
         android:drawableRight="@drawable/rightarrow"

@@ -14,6 +14,7 @@
     <color name="tertiary_color">#B9B9B9</color>
 
     <color name="primary_text_color">#FFFFFF</color>
+    <color name="header_text_color">#FFFFFFFF</color>
 
     <color name="button_red">#FF6666</color>
 

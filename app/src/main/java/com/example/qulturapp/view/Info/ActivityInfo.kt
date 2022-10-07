@@ -9,7 +9,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.qulturapp.R
 import com.example.qulturapp.model.Info.Guia
+import com.example.qulturapp.model.Info.GuiaLista
 import com.example.qulturapp.model.Info.Link
+import com.example.qulturapp.model.Info.LinkLista
 import com.example.qulturapp.viewmodel.Informacion.GuiasListAdapter
 import com.example.qulturapp.viewmodel.Informacion.GuiasViewModel
 import com.example.qulturapp.viewmodel.Informacion.LinksListAdapter
@@ -21,7 +23,7 @@ class ActivityInfo: AppCompatActivity(), GuiasListAdapter.OnGuiaClickListener, L
     private val guiasViewModel = GuiasViewModel()
     private lateinit var adapterGuias: GuiasListAdapter
 
-    private fun initializeList(list:List<Link>){
+    private fun initializeList(list:List<LinkLista>){
         adapter = LinksListAdapter(list, this)
 
         val layoutManager = LinearLayoutManager(this)
@@ -30,7 +32,7 @@ class ActivityInfo: AppCompatActivity(), GuiasListAdapter.OnGuiaClickListener, L
         rvLinks.adapter = adapter
     }
 
-    private fun initializeGuias(list:List<Guia>){
+    private fun initializeGuias(list:List<GuiaLista>){
         adapterGuias = GuiasListAdapter(list, this)
 
         val layoutManager = LinearLayoutManager(this)
@@ -42,10 +44,22 @@ class ActivityInfo: AppCompatActivity(), GuiasListAdapter.OnGuiaClickListener, L
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_info)
-        linksViewModel.agregaLink()
+//        linksViewModel.agregaLink()
+//        guiasViewModel.agregaGuia()
+//        initializeList(linksViewModel.listaLinks.toList())
+//        initializeGuias(guiasViewModel.listaGuias.toList())
+        guiasViewModel.listaGuias.observe(this) {
+            if (it != null) {
+                initializeGuias(it)
+            }
+        }
         guiasViewModel.agregaGuia()
-        initializeList(linksViewModel.listaLinks.toList())
-        initializeGuias(guiasViewModel.listaGuias.toList())
+        linksViewModel.listaLinks.observe(this) {
+            if (it != null) {
+                initializeList(it)
+            }
+        }
+        linksViewModel.agregaLink()
     }
 
     override fun onGuiaClick(name: String, description: String, tip: String, icon: String, video: String) {
@@ -63,7 +77,7 @@ class ActivityInfo: AppCompatActivity(), GuiasListAdapter.OnGuiaClickListener, L
 
     override fun onLinkClick(name: String, url: String) {
         Toast.makeText(this, "El Link es: $name", Toast.LENGTH_SHORT).show()
-        val uri: Uri = Uri.parse(url) // missing 'http://' will cause crashed
+        val uri: Uri = Uri.parse(name) // missing 'http://' will cause crashed
         val intent = Intent(Intent.ACTION_VIEW, uri)
         startActivity(intent)
     }

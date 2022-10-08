@@ -38,7 +38,7 @@ class EmergenciaActivityTest{
         onView(withId(R.id.dropdown_menu))
             .perform(click())
         onData(anything()).atPosition(1).perform(click());
-        onView(withId(R.id.dropdown_menu)).check(matches(withText(("Museo de Arte de Queretaro"))))
+        onView(withId(R.id.dropdown_menu)).check(matches(withText(("Museo de Arte de Querétaro"))))
     }
 
     @Test
@@ -54,7 +54,4 @@ class EmergenciaActivityTest{
             .perform(doubleClick())
             .check(noOverlaps())
     }
-
-
-
 }

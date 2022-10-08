@@ -40,6 +40,12 @@ class ActivitySignIn: AppCompatActivity() {
             .show()
     }
 
+    private fun mensajeErrorConexion() {
+        Toast.makeText(applicationContext,"Ha ocurrido un error de conexión",
+            Toast.LENGTH_SHORT)
+            .show()
+    }
+
     private fun iniciaSesion() {
         when {
             !validaInfo() -> mensajeInfoIncompleta()
@@ -68,7 +74,7 @@ class ActivitySignIn: AppCompatActivity() {
     }
 
     private fun iniciaPaginaPrincipal() {
-        val intentSolicitudes = Intent(this, ProfileActivity::class.java)
+        val intentSolicitudes = Intent(this, ListMuseum::class.java)
         startActivity(intentSolicitudes)
     }
 
@@ -80,6 +86,11 @@ class ActivitySignIn: AppCompatActivity() {
     private fun setListeners() {
         sesionViewModel.sesionIniciada.observe(this, Observer {
             ingresarAplicacion(it)
+        })
+        sesionViewModel.statusConexion.observe(this, Observer {
+            if(it == false) {
+                mensajeErrorConexion()
+            }
         })
         botonSignIn.setOnClickListener {
             iniciaSesion()

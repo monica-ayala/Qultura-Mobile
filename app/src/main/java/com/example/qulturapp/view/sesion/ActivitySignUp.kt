@@ -35,6 +35,12 @@ class ActivitySignUp: AppCompatActivity() {
             .show()
     }
 
+    private fun mensajeErrorConexion() {
+        Toast.makeText(applicationContext,"Ha ocurrido un error de conexión",
+            Toast.LENGTH_SHORT)
+            .show()
+    }
+
     private fun guardarUsuario() {
         when {
             !validaInfo() -> mensajeInfoIncompleta()
@@ -74,6 +80,11 @@ class ActivitySignUp: AppCompatActivity() {
     private fun setListeners() {
         sesionViewModel.usuarioCreado.observe(this, Observer {
             revisarCuenta(it)
+        })
+        sesionViewModel.statusConexion.observe(this, Observer {
+            if(it == false) {
+                mensajeErrorConexion()
+            }
         })
         botonSignUp.setOnClickListener {
             guardarUsuario()

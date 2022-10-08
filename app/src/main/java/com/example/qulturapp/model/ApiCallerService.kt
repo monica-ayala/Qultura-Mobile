@@ -6,6 +6,8 @@ import com.example.qulturapp.model.Info.LinksListResults
 import com.example.qulturapp.model.artwork.ArtworkListResults
 import com.example.qulturapp.model.eventos.EventoListResults
 import com.example.qulturapp.model.galleries.GalleryListResults
+import com.example.qulturapp.model.galleries.Sala
+import com.example.qulturapp.model.museums.Museo
 import com.example.qulturapp.model.museums.MuseumListResults
 import com.example.qulturapp.model.sesion.EncuentraUsuario
 import com.example.qulturapp.model.sesion.UsuarioListResults
@@ -22,7 +24,7 @@ class ApiCallerService {
     private fun getRetrofit(): Retrofit {
 
         return Retrofit.Builder()
-            .baseUrl("http://3.14.37.4:8080")
+            .baseUrl("https://qulturaqro.live/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
@@ -40,10 +42,21 @@ class ApiCallerService {
             val call = getRetrofit().create(ApiService::class.java).getMuseumList("/get")
             val museumList = call.body()
             return museumList
-            /*val vista = findViewById(R.id.tvget) as TextView
-            vista.text = museumList!!.museo.size.toString()*/
 
+    }
 
+    suspend fun getMuseo(id_museo: Int): Museo?{
+
+        val call = getRetrofit().create(ApiService::class.java).getOneMuseum("/museo/$id_museo/get")
+        val museum = call.body()
+        return museum
+
+    }
+
+    suspend fun getGallery(id_museo: Int): GalleryListResults?{
+        val call = getRetrofit().create(ApiService::class.java).getOneGallery("sala/$id_museo/getSalas")
+        val galleries = call.body()
+        return galleries
     }
 
     suspend fun searchGalleryList(): GalleryListResults?{
@@ -79,7 +92,8 @@ class ApiCallerService {
         numVisitantes: Int,
         info_adicional: String,
         necesidades: MutableList<Int>,
-        necesidades_text: MutableList<String>
+        necesidades_text: MutableList<String>,
+        id_museo: Int
     ) {
         val fecha_format = monthYear_selected + "-" + day_selected + " " + hora_selected + ":00"
         val UsuarioActual = UsuarioActual.id
@@ -90,13 +104,13 @@ class ApiCallerService {
             "info_adicional":"$info_adicional",
             "necesidades":$necesidades,
             "usuario_necesidad":$UsuarioActual,
-            "necesidades_text":$necesidades_text
+            "necesidades_text":$necesidades_text,
+            "id_museo":$id_museo
             }
             """.trimIndent()
         val requestBody =
             RequestBody.create(MediaType.parse("application/json; charset=utf-8"), params)
-        val call = getRetrofit().create(ApiService::class.java)
-            .agregaSolicitud("/solicitud/nuevaSolicitud", requestBody)
+        getRetrofit().create(ApiService::class.java).agregaSolicitud("/solicitud/nuevaSolicitud", requestBody)
     }
 
     suspend fun searchUsuario(correo: String, contrasenia: String): UsuarioListResults? {

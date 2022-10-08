@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.qulturapp.R
 import com.example.qulturapp.model.museums.Obras
 import com.example.qulturapp.model.museums.ObrasProvider
-import com.example.qulturapp.viewmodel.museums.ObrasAdapter
+import com.example.qulturapp.viewmodel.list.ObrasAdapter
 import java.io.IOException
 
 
@@ -37,11 +37,6 @@ class Lounge: AppCompatActivity() {
             )
             mediaPlayer?.start()
         }*/
-        val rbtn = findViewById<View>(R.id.returnLounge)
-        rbtn.setOnClickListener{
-            val intent = Intent(this, Gallery::class.java)
-            startActivity(intent)
-        }
     }
 
 

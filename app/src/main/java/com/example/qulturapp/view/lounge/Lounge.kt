@@ -35,11 +35,14 @@ class Lounge : AppCompatActivity() {
                 initializeList(it)
             }
         })
-        artworkViewModel.getObra()
+
 
         val nomSala = intent.getStringExtra("nom")
         val imgMuseo = intent.getStringExtra("url")
         val descSala = intent.getStringExtra("desc")
+        val idSala = intent.getIntExtra("id", 2)
+
+        artworkViewModel.getObra(idSala)
 
         val museumName = findViewById<TextView>(R.id.tv_top_bar_text)
         museumName.text = nomSala

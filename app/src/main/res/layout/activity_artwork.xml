@@ -118,15 +118,15 @@
                     android:scaleY="2"
                     android:src="@drawable/ic_baseline_play_circle_outline_24" />
 
-                <ImageButton
+<!--                <ImageButton-->
 
-                    android:id="@+id/idIBPause"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:background="#00FFFFFF"
-                    android:scaleX="2"
-                    android:scaleY="2"
-                    android:src="@drawable/ic_outline_stop_circle_24" />
+<!--                    android:id="@+id/idIBStop"-->
+<!--                    android:layout_width="50dp"-->
+<!--                    android:layout_height="50dp"-->
+<!--                    android:background="#00FFFFFF"-->
+<!--                    android:scaleX="2"-->
+<!--                    android:scaleY="2"-->
+<!--                    android:src="@drawable/ic_outline_stop_circle_24" />-->
 
             </LinearLayout>
 

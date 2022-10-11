@@ -12,6 +12,7 @@ import com.example.qulturapp.viewmodel.artworks.ArtworkViewModel
 import android.media.AudioManager
 import android.media.ImageReader
 import android.media.MediaPlayer
+import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.Toast
@@ -19,7 +20,7 @@ import android.widget.Toast
 class Artwork : AppCompatActivity() {
 
     lateinit var playIB: ImageButton
-    lateinit var pauseIB: ImageButton
+    lateinit var stopIB: ImageButton
     lateinit var mediaPlayer: MediaPlayer
     //lateinit var play_pause: ImageView
 
@@ -36,45 +37,53 @@ class Artwork : AppCompatActivity() {
         //viewmodel.getObra()
 
         playIB = findViewById(R.id.idIBPlay)
-        pauseIB = findViewById(R.id.idIBPause)
+        //stopIB = findViewById(R.id.idIBStop)
 
         mediaPlayer = MediaPlayer()
 
+        var audioUrl = "https://qulturaqro.live/uploads/Red%20Apple.mp3"
+
+        mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC)
+
+        mediaPlayer.setDataSource(audioUrl)
+
+        mediaPlayer.prepare()
+
         playIB.setOnClickListener {
-                var audioUrl = "https://qulturaqro.live/uploads/1.01%20Discovery%20of%20Gravitation.mp3"
-                mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC)
 
-                try {
-                    mediaPlayer.setDataSource(audioUrl)
-
-                    mediaPlayer.prepare()
-
-                    mediaPlayer.start()
-
-                } catch (e: Exception) {
-
-                    e.printStackTrace()
-                }
-                Toast.makeText(applicationContext, "Comienza Reproducción", Toast.LENGTH_SHORT).show()
-
-        }
-
-        pauseIB.setOnClickListener {
             if (mediaPlayer.isPlaying) {
 
-                mediaPlayer.stop()
+                playIB.setImageResource(R.drawable.ic_baseline_play_circle_outline_24)
+                mediaPlayer.pause()
 
-                mediaPlayer.reset()
-
-                mediaPlayer.release()
-
-                Toast.makeText(applicationContext, "Audio se ha reiniciado", Toast.LENGTH_SHORT)
+                Toast.makeText(applicationContext, "Audio se pausa", Toast.LENGTH_SHORT)
                     .show()
 
-            } else {
-                Toast.makeText(applicationContext, "No hay audio reproduciéndose", Toast.LENGTH_SHORT).show()
-            }
 
+            } else {
+
+                    mediaPlayer.start()
+                    playIB.setImageResource(R.drawable.ic_baseline_pause_circle_outline_24)
+
+                Toast.makeText(applicationContext, "Audio inicia", Toast.LENGTH_SHORT)
+                    .show()
+
+                }
         }
+
+
+
+//        stopIB.setOnClickListener {
+//
+//                mediaPlayer.stop()
+//
+//                mediaPlayer.reset()
+//
+//                mediaPlayer.release()
+//
+//                Toast.makeText(applicationContext, "Audio se ha reiniciado", Toast.LENGTH_SHORT)
+//                    .show()
+//
+//        }
     }
 }

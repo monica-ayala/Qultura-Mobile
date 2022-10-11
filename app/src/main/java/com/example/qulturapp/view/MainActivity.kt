@@ -38,9 +38,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val intentSignIn = Intent(this, ListMuseum::class.java)
-        dbUtil.initRoomDatabase()
         try {
-            dbUtil.initRoomDatabase()
+            dbUtil.initRoomDatabase(2)
         } catch (e: NumberFormatException) {
             null
         }

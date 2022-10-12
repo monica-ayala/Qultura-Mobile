@@ -17,17 +17,17 @@
 
 
         >
+
         <TextView
+            android:id="@+id/tv_top_bar_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/tv_top_bar_text"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
             android:fontFamily="sans-serif-black"
             android:text="Emergencia"
-            android:textColor="@color/white"
-            android:textSize="30sp"
-            />
+            android:textColor="@color/header_text_color"
+            android:textSize="30sp" />
 
         <View
             android:layout_width="140dp"
@@ -52,9 +52,9 @@
             android:layout_marginHorizontal="35dp"
             android:layout_weight="0.33"
             android:layout_marginTop="170dp"
-            android:text="Presiona repetidamente el botón para solicitar asistencia."
-
+            android:text="Presiona 2 veces seguidas el botón para solicitar asistencia"
             android:background="@drawable/button_categoria"
+            android:id="@+id/btn_desc_emergencia"
             />
 
     </LinearLayout>
@@ -80,8 +80,7 @@
                 android:layout_height="match_parent"
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="bottom"
-                android:clickable="true"
-                />
+                android:clickable="true" />
 
 
         </FrameLayout>
@@ -89,12 +88,12 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayout"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-            android:layout_width="0dp"
+            android:layout_width="230dp"
             android:layout_height="0dp"
             android:layout_margin="110dp"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="30dp"
             android:layout_marginTop="15dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="30dp"
             android:layout_marginBottom="16dp"
             android:hint="@string/select"
             app:layout_constraintBottom_toBottomOf="parent"

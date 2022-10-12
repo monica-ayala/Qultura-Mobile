@@ -78,7 +78,7 @@ class ViewHolder (view: View): RecyclerView.ViewHolder(view) {
         horario.text = item.fecha
         asistentes.text = "Personas: " + item.asistentes.toString()
 
-        val ligaImg = "http://ec2-3-145-68-44.us-east-2.compute.amazonaws.com:8080/uploads/" + item.imagen_museo
+        val ligaImg = "http://3.14.37.4:8080/uploads/" + item.imagen_museo
         Picasso.get().load(ligaImg).into(imagenMuseo);
 
         var pos = true
@@ -99,9 +99,9 @@ class ViewHolder (view: View): RecyclerView.ViewHolder(view) {
         }
 
         estado.text = when(item.estado){
-            0 -> "Estatus: \n Aceptado"
+            2 -> "Estatus: \n Aceptado"
             1 -> "Estatus: \n En proceso"
-            else -> "Estatus: \n Rechazado"
+            else -> "Estatus: \n Negado"
         }
     }
 }

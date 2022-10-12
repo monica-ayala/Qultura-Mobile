@@ -44,6 +44,7 @@ class ActivityHorario: AppCompatActivity(){
     private lateinit var selectedDate:LocalDate
     private lateinit var monthYearText:TextView
     private lateinit var monthYear:String
+    private var calendarcounter:Int = 0
 
     @RequiresApi(Build.VERSION_CODES.O)
     private fun setMonthView(){
@@ -53,7 +54,7 @@ class ActivityHorario: AppCompatActivity(){
         monthYearText.text = (monthYearFromDate(selectedDate))
         HorarioViewModel.monthYear_selected = monthYearText.text as String
         val daysInMonth = daysInMonthArray(selectedDate)
-        val calendarAdapter = CalendarAdapter(daysInMonth.toList(), this, HorarioViewModel)
+        val calendarAdapter = CalendarAdapter(daysInMonth.toList(), this, HorarioViewModel, calendarcounter,selectedDate)
         val layoutManager_calendar = GridLayoutManager(this, 7)
         rvCalendar.layoutManager = layoutManager_calendar
         rvCalendar.adapter = calendarAdapter
@@ -89,14 +90,26 @@ class ActivityHorario: AppCompatActivity(){
 
     @RequiresApi(Build.VERSION_CODES.O)
     fun previousMonthAction(view : View){
-        selectedDate = selectedDate.minusMonths(1)
-        setMonthView()
+        if (calendarcounter != 0){
+            selectedDate = selectedDate.minusMonths(1)
+            calendarcounter -= 1
+            setMonthView()
+        }else{
+            val toast = Toast.makeText(applicationContext, "No puedes regresar al pasado", Toast.LENGTH_SHORT)
+            toast.show()
+        }
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
     fun nextMonthAction(view : View){
-        selectedDate = selectedDate.plusMonths(1)
-        setMonthView()
+        if(calendarcounter != 12){
+            selectedDate = selectedDate.plusMonths(1)
+            calendarcounter += 1
+            setMonthView()
+        }else{
+            val toast = Toast.makeText(applicationContext, "No planees tanto al futuro", Toast.LENGTH_SHORT)
+            toast.show()
+        }
     }
 
     //
@@ -113,7 +126,9 @@ class ActivityHorario: AppCompatActivity(){
         initializeList(HorarioViewModel.listaHorario.toList())
 
         // on click boton siguiente
+        val idMuseo = intent.getIntExtra("id_museo",0)
         val boton_siguiente = findViewById<Button>(R.id.boton_siguiente)
+
         boton_siguiente.setOnClickListener{
             if(HorarioViewModel.day_selected != null && HorarioViewModel.hora_selected != null && HorarioViewModel.monthYear_selected != null){
                 val intentRegistrar_Horario2 = Intent(this, ActivityHorario2::class.java)
@@ -121,6 +136,7 @@ class ActivityHorario: AppCompatActivity(){
                 intentRegistrar_Horario2.putExtra("hora_selected", HorarioViewModel.hora_selected)
                 intentRegistrar_Horario2.putExtra("monthYear_selected", HorarioViewModel.monthYear_selected)
                 intentRegistrar_Horario2.putExtra("monthYear", monthYear)
+                intentRegistrar_Horario2.putExtra("id_museo", idMuseo)
                 startActivity(intentRegistrar_Horario2)
             }else{
                 val toast = Toast.makeText(applicationContext, "Datos incompletos", Toast.LENGTH_SHORT)

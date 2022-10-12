@@ -1,4 +1,4 @@
-package com.example.qulturapp.viewmodel.museums
+package com.example.qulturapp.viewmodel.list
 
 import android.content.Context
 import android.content.Intent

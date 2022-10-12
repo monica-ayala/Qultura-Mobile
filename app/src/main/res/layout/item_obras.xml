@@ -10,6 +10,7 @@
         android:id="@+id/ivObra"
         android:layout_width="60dp"
         android:layout_height="60dp"
+        android:scaleType="fitXY"
         android:background="@color/trans_black"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>

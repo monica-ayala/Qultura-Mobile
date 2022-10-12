@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.qulturapp.model.ApiCallerService
 import com.example.qulturapp.model.artwork.ArtworkResults
+import com.j256.ormlite.stmt.query.In
 import kotlinx.coroutines.launch
 
 class ArtworkViewModel: ViewModel() {
@@ -13,15 +14,15 @@ class ArtworkViewModel: ViewModel() {
 
     private var caller: ApiCallerService = ApiCallerService()
 
-    fun getObra(){
+    fun getObra(id_sala:Int){
 
         viewModelScope.launch {
-            val artworkList = caller.getObra()
+            val artworkList = caller.getObra(id_sala)
             Log.d("Obras ---> ",artworkList!!.artwork.toString())
             val listaObras = mutableListOf<ArtworkResults>()
-            for(sala in artworkList.artwork)
+            for(obra in artworkList.artwork)
             {
-                val content =  ArtworkResults(sala.nom_obra, sala.img_obra)
+                val content =  ArtworkResults(obra.nom_obra, obra.img_obra, obra.id_obra)
                 listaObras.add(content)
             }
 

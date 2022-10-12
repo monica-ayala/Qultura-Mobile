@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Patterns
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
@@ -18,6 +19,7 @@ class ActivitySignUp: AppCompatActivity() {
     private lateinit var contrasenia: EditText
     private lateinit var confirmaContrasenia: EditText
     private lateinit var botonSignUp: Button
+    private lateinit var textoIniciaSesion: TextView
 
     private val sesionViewModel = SesionViewModel()
 
@@ -29,6 +31,12 @@ class ActivitySignUp: AppCompatActivity() {
 
     private fun mensajeInfoRepetida() {
         Toast.makeText(applicationContext,"Este correo ya se encuentra en uso",
+            Toast.LENGTH_SHORT)
+            .show()
+    }
+
+    private fun mensajeErrorConexion() {
+        Toast.makeText(applicationContext,"Ha ocurrido un error de conexión",
             Toast.LENGTH_SHORT)
             .show()
     }
@@ -73,8 +81,16 @@ class ActivitySignUp: AppCompatActivity() {
         sesionViewModel.usuarioCreado.observe(this, Observer {
             revisarCuenta(it)
         })
+        sesionViewModel.statusConexion.observe(this, Observer {
+            if(it == false) {
+                mensajeErrorConexion()
+            }
+        })
         botonSignUp.setOnClickListener {
             guardarUsuario()
+        }
+        textoIniciaSesion.setOnClickListener {
+            iniciaPaginaSignIn()
         }
     }
 
@@ -86,6 +102,7 @@ class ActivitySignUp: AppCompatActivity() {
         contrasenia = findViewById(R.id.edit_text_pass)
         confirmaContrasenia = findViewById(R.id.edit_text_passconfirm)
         botonSignUp = findViewById(R.id.button_signup)
+        textoIniciaSesion = findViewById(R.id.text_toSignIn)
 
         setListeners()
     }

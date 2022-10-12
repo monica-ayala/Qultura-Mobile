@@ -5,8 +5,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.museum.Museum"
-    android:background="@drawable/maqro">
+    tools:context=".view.museum.Museum">
+
+    <ImageView
+        android:id="@+id/iv_BgImg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY" />
 
     <View
         android:id="@+id/overlay_image"
@@ -15,18 +20,10 @@
         android:layout_centerHorizontal="true"
         android:background="@color/trans_black" />
 
-    <Button
-        android:id="@+id/returnMuseo"
-        android:layout_width="60dp"
-        android:layout_height="50dp"
-        android:background="@color/transparent"
-        android:drawableRight="@drawable/resource_return" />
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
-        android:layout_marginTop="35dp"
         android:layout_marginEnd="35dp"
         android:layout_marginBottom="90dp">
 
@@ -35,7 +32,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-
+            android:layout_marginTop="35dp"
             android:orientation="vertical">
 
 
@@ -44,8 +41,6 @@
                 android:layout_width="200dp"
                 android:layout_height="200dp"
                 android:layout_gravity="center"
-
-                android:src="@drawable/maqro"
                 app:civ_border_color="@color/white"
                 app:civ_border_width="4dp" />
 
@@ -56,7 +51,7 @@
                 android:layout_gravity="center"
                 android:fontFamily="sans-serif-black"
                 android:text="LECHUGAN"
-                android:textColor="@color/white"
+                android:textColor="@color/header_text_color"
                 android:textSize="35sp" />
 
             <LinearLayout
@@ -82,7 +77,7 @@
                     android:fontFamily="sans-serif"
                     android:gravity="center_vertical"
                     android:text="Av. Lechuginni Santa Clara P.C 210"
-                    android:textColor="@color/white"
+                    android:textColor="@color/header_text_color"
                     android:textSize="13sp" />
 
                 <TextView
@@ -96,7 +91,7 @@
                     android:gravity="center"
                     android:text="12:00-17:00"
                     android:textAlignment="center"
-                    android:textColor="@color/white"
+                    android:textColor="@color/header_text_color"
                     android:textSize="15sp" />
 
             </LinearLayout>
@@ -125,6 +120,7 @@
                 android:layout_height="2dp"
                 android:background="@color/white" />
             <TextView
+                android:id="@+id/tv_musDesc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -132,7 +128,7 @@
                 android:fontFamily="sans-serif"
                 android:gravity="center_vertical"
                 android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus euismod maximus erat eget ultrices. Donec aliquam vitae nulla sit amet mattis. Suspendisse lacinia tristique lorem, eget accumsan metus imperdiet in. Aliquam pharetra erat quis mauris molestie bibendum. Cras fermentum consequat leo a fringilla. Proin sit amet sem scelerisque, maximus arcu ac, auctor massa. Suspendisse lacus tortor, elementum quis lobortis pellentesque, laoreet et lacus. Nam scelerisque gravida tincidunt. Phasellus mollis congue ornare. Integer vitae nibh sagittis, maximus sem vel, tincidunt mauris. Pellentesque est magna, molestie ornare nisi id, interdum rutrum quam. Ut sodales risus id bibendum tincidunt.Donec nunc justo, eleifend ut sapien eget, scelerisque maximus elit. Fusce vitae nisi efficitur dui lacinia commodo non eget dui. Vestibulum condimentum sapien elit, quis dignissim quam porta quis. Donec quis ante nec libero facilisis facilisis. Suspendisse cursus sit amet risus imperdiet hendrerit. Curabitur ultricies sit amet sapien eu maximus. Interdum et malesuada fames ac ante ipsum primis in faucibus."
-                android:textColor="@color/white"
+                android:textColor="@color/header_text_color"
                 android:textSize="13sp" />
 
 
@@ -150,7 +146,7 @@
         android:background="@drawable/round_button"
         android:text="Solicitud de Recorrido"
         android:textAllCaps="false"
-        android:textColor="#fff" />
+        android:textColor="@color/header_text_color" />
 
 
 </RelativeLayout>

@@ -1,4 +1,4 @@
-package com.example.qulturapp.viewmodel.museums
+package com.example.qulturapp.viewmodel.list
 
 import android.view.View
 import android.widget.Button
@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.qulturapp.R
 import com.example.qulturapp.model.museums.Obras
+import com.squareup.picasso.Picasso
 
 class ObrasViewHolder(view: View):RecyclerView.ViewHolder(view) {
 
@@ -21,7 +22,8 @@ class ObrasViewHolder(view: View):RecyclerView.ViewHolder(view) {
         //obraid.id = obraModel.idObras
         obranom.text = obraModel.nomObras
         //obraaudio.text = obraModel.audObras
-        Glide.with(obrafoto.context).load(obraModel.imgObras).into(obrafoto)
+        //val ligaImg = "https://qulturaqro.live/uploads/" + item.img_sala
+        //Picasso.get().load(ligaImg).into(salasImg);
     }
 
 }

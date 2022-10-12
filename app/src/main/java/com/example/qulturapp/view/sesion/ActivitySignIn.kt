@@ -5,11 +5,15 @@ import android.os.Bundle
 import android.util.Patterns
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import com.example.qulturapp.R
+import com.example.qulturapp.view.configuracion.ActivityConfiguration
 import com.example.qulturapp.view.museum.ListMuseum
+import com.example.qulturapp.view.perfil.ProfileActivity
+import com.example.qulturapp.view.solicitudes.ActivityHorario
 import com.example.qulturapp.view.solicitudes.ActivitySolicitudes
 import com.example.qulturapp.viewmodel.sesion.SesionViewModel
 import java.util.regex.Pattern
@@ -22,6 +26,7 @@ class ActivitySignIn: AppCompatActivity() {
     private val sesionViewModel = SesionViewModel()
 
     private lateinit var botonSignIn: Button
+    private lateinit var  textoCrearCuenta: TextView
 
     private fun mensajeInfoIncompleta() {
         Toast.makeText(applicationContext,"Por favor completa los campos que se indican",
@@ -31,6 +36,12 @@ class ActivitySignIn: AppCompatActivity() {
 
     private fun mensajeErrorDatos() {
         Toast.makeText(applicationContext,"Los datos ingresados son incorrectos",
+            Toast.LENGTH_SHORT)
+            .show()
+    }
+
+    private fun mensajeErrorConexion() {
+        Toast.makeText(applicationContext,"Ha ocurrido un error de conexión",
             Toast.LENGTH_SHORT)
             .show()
     }
@@ -67,12 +78,25 @@ class ActivitySignIn: AppCompatActivity() {
         startActivity(intentSolicitudes)
     }
 
+    private fun iniciaPaginaSignUp() {
+        val intentSolicitudes = Intent(this, ActivitySignUp::class.java)
+        startActivity(intentSolicitudes)
+    }
+
     private fun setListeners() {
         sesionViewModel.sesionIniciada.observe(this, Observer {
             ingresarAplicacion(it)
         })
+        sesionViewModel.statusConexion.observe(this, Observer {
+            if(it == false) {
+                mensajeErrorConexion()
+            }
+        })
         botonSignIn.setOnClickListener {
             iniciaSesion()
+        }
+        textoCrearCuenta.setOnClickListener {
+            iniciaPaginaSignUp()
         }
     }
 
@@ -82,6 +106,7 @@ class ActivitySignIn: AppCompatActivity() {
         botonSignIn = findViewById(R.id.button_signin)
         correo = findViewById(R.id.edit_text_email)
         contrasenia = findViewById(R.id.edit_text_pass)
+        textoCrearCuenta = findViewById(R.id.text_toSignUp)
 
         setListeners()
     }

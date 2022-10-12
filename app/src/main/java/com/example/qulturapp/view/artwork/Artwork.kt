@@ -71,12 +71,27 @@ class Artwork : AppCompatActivity() {
             }
         }
 
+        seekbar.setOnSeekBarChangeListener(object: SeekBar.OnSeekBarChangeListener{
+            override fun onProgressChanged(p0: SeekBar?, p1: Int, p2: Boolean) {
+                if (p2){
+                    mediaPlayer.seekTo(p1)
+                }
+            }
+
+            override fun onStartTrackingTouch(p0: SeekBar?) {
+            }
+
+            override fun onStopTrackingTouch(p0: SeekBar?) {
+            }
+
+        })
+
         runnable = Runnable {
             seekbar.progress = mediaPlayer.currentPosition
-            handler.postDelayed(runnable,10)
+            handler.postDelayed(runnable, 10)
         }
 
-        handler.postDelayed(runnable,10)
+        handler.postDelayed(runnable, 10)
         mediaPlayer.setOnCompletionListener {
             mediaPlayer.pause()
             playIB.setImageResource(R.drawable.ic_baseline_play_circle_outline_24)

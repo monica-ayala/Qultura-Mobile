@@ -47,7 +47,7 @@ class Artwork : AppCompatActivity() {
 
         mediaPlayer.prepare()
 
-        seekbar.progress = 0
+        //seekbar.progress = 0
         seekbar.max = mediaPlayer.duration
 
         playIB.setOnClickListener {
@@ -73,10 +73,10 @@ class Artwork : AppCompatActivity() {
 
         runnable = Runnable {
             seekbar.progress = mediaPlayer.currentPosition
-            handler.postDelayed(runnable,1000)
+            handler.postDelayed(runnable,10)
         }
 
-        handler.postDelayed(runnable,1000)
+        handler.postDelayed(runnable,10)
         mediaPlayer.setOnCompletionListener {
             mediaPlayer.pause()
             playIB.setImageResource(R.drawable.ic_baseline_play_circle_outline_24)

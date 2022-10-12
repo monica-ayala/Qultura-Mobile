@@ -75,16 +75,26 @@
                     android:layout_weight=".3"
                     android:fontFamily="sans-serif-black"
                     android:text="Obra"
-                    android:textAlignment="center"
                     android:textColor="@color/white"
                     android:textSize="35sp" />
+
+                <ImageButton
+
+                    android:id="@+id/idIBPlay"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="#00FFFFFF"
+                    android:button="@drawable/ic_baseline_play_circle_outline_24"
+                    android:scaleX="2"
+                    android:scaleY="2"
+                    android:src="@drawable/ic_baseline_play_circle_outline_24" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="15dp"
-                android:layout_marginHorizontal="50dp"
+                android:layout_height="20dp"
+                android:layout_marginHorizontal="65dp"
                 android:gravity="center"
                 android:orientation="horizontal">
 
@@ -99,36 +109,6 @@
 
             </LinearLayout>
 
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:layout_marginHorizontal="10dp"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <ImageButton
-
-                    android:id="@+id/idIBPlay"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:background="#00FFFFFF"
-                    android:button="@drawable/ic_baseline_play_circle_outline_24"
-                    android:scaleX="2"
-                    android:scaleY="2"
-                    android:src="@drawable/ic_baseline_play_circle_outline_24" />
-
-<!--                <ImageButton-->
-
-<!--                    android:id="@+id/idIBStop"-->
-<!--                    android:layout_width="50dp"-->
-<!--                    android:layout_height="50dp"-->
-<!--                    android:background="#00FFFFFF"-->
-<!--                    android:scaleX="2"-->
-<!--                    android:scaleY="2"-->
-<!--                    android:src="@drawable/ic_outline_stop_circle_24" />-->
-
-            </LinearLayout>
 
             <View
                 android:layout_width="match_parent"

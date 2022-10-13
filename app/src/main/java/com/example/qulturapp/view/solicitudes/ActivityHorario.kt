@@ -102,7 +102,7 @@ class ActivityHorario: AppCompatActivity(){
 
     @RequiresApi(Build.VERSION_CODES.O)
     fun nextMonthAction(view : View){
-        if(calendarcounter != 12){
+        if(calendarcounter != 2){
             selectedDate = selectedDate.plusMonths(1)
             calendarcounter += 1
             setMonthView()

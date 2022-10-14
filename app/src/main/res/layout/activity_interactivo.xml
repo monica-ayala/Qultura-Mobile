@@ -7,7 +7,6 @@
 
     <TextView
         android:id="@+id/textView"
-        style="@style/Widget.MaterialComponents.Button.Icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -16,24 +15,126 @@
         android:text="Seleccione el lugar a destacar:"
         android:textAlignment="viewStart"
         android:textColor="#000000"
-        android:textSize="14sp"
-        android:typeface="sans"
-        app:icon="@android:drawable/ic_dialog_alert"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@id/linearLayout"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <TextView
+        android:id="@+id/textViewMuseum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Museo de Arte de Querétaro"
+        android:textAlignment="viewStart"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/linearLayoutImage" />
+
+    <RelativeLayout
+        android:id="@+id/rl_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@drawable/top_bar_background"
+        android:paddingTop="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+
+
+        >
+
+        <TextView
+            android:id="@+id/tv_top_bar_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Mapa Interactivo"
+            android:textColor="@color/header_text_color"
+            android:textSize="30sp" />
+
+        <View
+            android:layout_width="240dp"
+            android:layout_height="3dp"
+            android:layout_alignBottom="@id/tv_top_bar_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="-4dp"
+            android:background="@color/secondary_color"
+
+            />
+    </RelativeLayout>
+
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/linearLayoutFloors"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:layout_marginBottom="300dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/btnFirstFloor"
+            style="@style/Widget.Material3.Button.Icon"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="Boton Piso Uno"
+            android:onClick="onClickFloor1"
+            android:text="Piso 1"
+            android:textAllCaps="true"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btnSecondFloor"
+            style="@style/Widget.Material3.Button.Icon"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="Boton Piso 2"
+            android:onClick="onClickFloor2"
+            android:text="Piso 2"
+            android:textAllCaps="true"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutImage"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="95dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="350dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
+
+        <ImageView
+            android:id="@+id/imageViewMapsMuseums"
+            android:layout_width="match_parent"
+            android:layout_height="370dp"
+            app:srcCompat="@drawable/obra4" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="95dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
 
         <LinearLayout
@@ -41,33 +142,41 @@
             android:layout_height="wrap_content">
 
             <Button
+                android:id="@+id/btnRamp"
+                style="@style/Widget.Material3.Button.ElevatedButton.Icon"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:contentDescription="Boton Rampa"
+                android:onClick="onClickZone1"
                 android:text="Rampas"
                 android:textSize="12sp"
-                android:contentDescription="Boton Rampa"
-                android:onClick="onClickZone1"/>
+                app:icon="@drawable/ic_ramp" />
 
             <Button
-                android:id="@+id/tvLat"
+                android:id="@+id/btnElevator"
+                style="@style/Widget.Material3.Button.ElevatedButton.Icon"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Elevadores"
-                android:textSize="12sp"
-                android:textAlignment="center"
                 android:contentDescription="Boton Elevadores"
-                android:onClick="onClickZone2"/>
+                android:onClick="onClickZone2"
+                android:text="Elevadores"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                app:icon="@drawable/ic_baseline_elevator_24" />
 
             <Button
+                android:id="@+id/btnStairs"
+                style="@style/Widget.Material3.Button.ElevatedButton.Icon"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textSize="12sp"
-                android:text="Escaleras"
                 android:contentDescription="Boton Escaleras"
-                android:onClick="onClickZone3"/>
+                android:onClick="onClickZone3"
+                android:text="Escaleras"
+                android:textSize="12sp"
+                app:icon="@drawable/ic_baseline_stairs_24" />
 
         </LinearLayout>
 
@@ -76,32 +185,40 @@
             android:layout_height="wrap_content">
 
             <Button
+                android:id="@+id/btnReception"
+                style="@style/Widget.Material3.Button.ElevatedButton.Icon"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textSize="12sp"
+                android:contentDescription="Boton Recepcion"
                 android:onClick="onClickZone4"
                 android:text="Recepción"
-                android:contentDescription="Boton Recepcion"
-                />
+                android:textSize="12sp"
+                app:icon="@drawable/ic_reception" />
 
             <Button
+                android:id="@+id/btnOffice"
+                style="@style/Widget.Material3.Button.ElevatedButton.Icon"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textSize="12sp"
+                android:contentDescription="Boton Oficinas"
                 android:onClick="onClickZone5"
                 android:text="Oficinas"
-                android:contentDescription="Boton Oficinas"/>
+                android:textSize="12sp"
+                app:icon="@drawable/ic_office" />
 
             <Button
+                android:id="@+id/btnRestroom"
+                style="@style/Widget.Material3.Button.ElevatedButton.Icon"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textSize="12sp"
+                android:contentDescription="Boton Sanitarios"
                 android:onClick="onClickZone6"
                 android:text="Sanitarios"
-                android:contentDescription="Boton Sanitarios"/>
+                android:textSize="12sp"
+                app:icon="@drawable/ic_restroom" />
 
         </LinearLayout>
 

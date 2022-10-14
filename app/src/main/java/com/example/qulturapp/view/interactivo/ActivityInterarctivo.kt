@@ -22,22 +22,9 @@ class ActivityInterarctivo: AppCompatActivity() {
 
     private lateinit var binding: ActivityInteractivoBinding
     var color: Int = 0
-
-    @SuppressLint("WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityInteractivoBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        val button: AppCompatButton = findViewById(R.id.buttonRamp)
-        button.setOnClickListener {
-            // does not appear at all
-            val altColor = 0x00000000
-            // blends with red, result is purple
-            // val altColor = 0x660000FF
-            val nextColor = if (color == Color.RED) altColor else Color.RED
-            button.backgroundTintList = ColorStateList.valueOf(nextColor)
-            color = nextColor
-        }
     }
 }

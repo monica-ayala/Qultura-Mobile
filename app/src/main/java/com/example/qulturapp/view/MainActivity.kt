@@ -7,6 +7,7 @@ import com.example.qulturapp.R
 import com.example.qulturapp.model.database.DbUtil
 //import com.example.qulturapp.view.eventos.EventoActivity
 import com.example.qulturapp.view.interactivo.ActivityInterarctivo
+import com.example.qulturapp.view.museum.ListMuseum
 
 
 class MainActivity : AppCompatActivity() {

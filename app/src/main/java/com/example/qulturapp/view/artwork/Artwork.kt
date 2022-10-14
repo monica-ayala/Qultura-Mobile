@@ -4,15 +4,15 @@ import android.media.AudioManager
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.os.Handler
-import android.widget.ImageButton
-import android.widget.SeekBar
-import android.widget.Toast
+import android.util.Log
+import android.widget.*
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.example.qulturapp.R
 import com.example.qulturapp.model.artwork.ArtworkResults
 import com.example.qulturapp.viewmodel.artworks.ArtworkListAdapter
 import com.example.qulturapp.viewmodel.artworks.ArtworkViewModel
+import com.squareup.picasso.Picasso
 
 class Artwork : AppCompatActivity() {
 
@@ -31,6 +31,29 @@ class Artwork : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_artwork)
+
+        val nomObra = intent.getStringExtra("nom")
+        val artworkName = findViewById<TextView>(R.id.tv_top_bar_text)
+        artworkName.text = nomObra
+
+        val descObra = intent.getStringExtra("desc")
+        val artworkDesc = findViewById<TextView>(R.id.tv_desc_obra)
+        artworkDesc.text = descObra
+
+        val fechObra = intent.getStringExtra("fecha")
+        val artworkFech = findViewById<TextView>(R.id.tv_fecha_obra)
+        artworkFech.text = fechObra
+
+        val autorObra = intent.getStringExtra("autor")
+        val artworkAutor = findViewById<TextView>(R.id.tv_autor_obra)
+        artworkAutor.text = autorObra
+
+        val imgMuseo = intent.getStringExtra("url")
+        val obraProfileImg = findViewById<ImageView>(R.id.roundedImageView)
+        val obraBgImg = findViewById<ImageView>(R.id.ivObraBG)
+        val museumImg = "https://qulturaqro.live/uploads/" + imgMuseo
+        Picasso.get().load(museumImg).into(obraBgImg)
+        Picasso.get().load(museumImg).into(obraProfileImg)
 
         //viewmodel.getObra()
 

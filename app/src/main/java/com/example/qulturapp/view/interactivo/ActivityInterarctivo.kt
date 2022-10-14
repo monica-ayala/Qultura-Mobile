@@ -5,6 +5,7 @@ import android.annotation.SuppressLint
 import android.content.pm.PackageManager
 import android.content.res.ColorStateList
 import android.graphics.Color
+import android.graphics.drawable.AnimationDrawable
 import android.os.Bundle
 import android.os.Handler
 import android.text.Editable
@@ -13,6 +14,7 @@ import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.app.ActivityCompat
 import com.example.qulturapp.R
 import com.example.qulturapp.databinding.ActivityInteractivoBinding
@@ -26,5 +28,6 @@ class ActivityInterarctivo: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityInteractivoBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
     }
 }

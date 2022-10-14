@@ -3,14 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent" >
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="145dp"
         android:fontFamily="sans-serif-black"
         android:text="Seleccione el lugar a destacar:"
         android:textAlignment="viewStart"
@@ -28,9 +28,10 @@
         android:text="Museo de Arte de Querétaro"
         android:textAlignment="viewStart"
         android:textColor="#000000"
-        android:textSize="16sp"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@id/linearLayoutImage"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/linearLayoutImage" />
+        app:layout_constraintTop_toBottomOf="@+id/rl_top_bar" />
 
     <RelativeLayout
         android:id="@+id/rl_top_bar"
@@ -39,8 +40,6 @@
         android:background="@drawable/top_bar_background"
         android:paddingTop="0dp"
         app:layout_constraintEnd_toEndOf="parent"
-
-
         >
 
         <TextView
@@ -71,11 +70,12 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="80dp"
         android:layout_marginRight="80dp"
-        android:layout_marginBottom="300dp"
+        android:layout_marginBottom="260dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutImage">
 
         <Button
             android:id="@+id/btnFirstFloor"
@@ -94,6 +94,7 @@
             style="@style/Widget.Material3.Button.Icon"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
             android:layout_weight="1"
             android:contentDescription="Boton Piso 2"
             android:onClick="onClickFloor2"
@@ -109,17 +110,18 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-        android:layout_marginBottom="350dp"
+        android:layout_marginBottom="300dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rl_top_bar">
 
 
         <ImageView
             android:id="@+id/imageViewMapsMuseums"
             android:layout_width="match_parent"
-            android:layout_height="370dp"
+            android:layout_height="340dp"
             app:srcCompat="@drawable/obra4" />
 
     </LinearLayout>
@@ -130,7 +132,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-        android:layout_marginBottom="95dp"
+        android:layout_marginBottom="100dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -150,7 +152,7 @@
                 android:contentDescription="Boton Rampa"
                 android:onClick="onClickZone1"
                 android:text="Rampas"
-                android:textSize="12sp"
+                android:textSize="11sp"
                 app:icon="@drawable/ic_ramp" />
 
             <Button
@@ -163,7 +165,7 @@
                 android:onClick="onClickZone2"
                 android:text="Elevadores"
                 android:textAlignment="center"
-                android:textSize="12sp"
+                android:textSize="11sp"
                 app:icon="@drawable/ic_baseline_elevator_24" />
 
             <Button
@@ -175,14 +177,16 @@
                 android:contentDescription="Boton Escaleras"
                 android:onClick="onClickZone3"
                 android:text="Escaleras"
-                android:textSize="12sp"
+                android:textSize="11sp"
                 app:icon="@drawable/ic_baseline_stairs_24" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp">
+
 
             <Button
                 android:id="@+id/btnReception"
@@ -193,7 +197,7 @@
                 android:contentDescription="Boton Recepcion"
                 android:onClick="onClickZone4"
                 android:text="Recepción"
-                android:textSize="12sp"
+                android:textSize="11sp"
                 app:icon="@drawable/ic_reception" />
 
             <Button
@@ -205,7 +209,7 @@
                 android:contentDescription="Boton Oficinas"
                 android:onClick="onClickZone5"
                 android:text="Oficinas"
-                android:textSize="12sp"
+                android:textSize="11sp"
                 app:icon="@drawable/ic_office" />
 
             <Button
@@ -217,7 +221,7 @@
                 android:contentDescription="Boton Sanitarios"
                 android:onClick="onClickZone6"
                 android:text="Sanitarios"
-                android:textSize="12sp"
+                android:textSize="11sp"
                 app:icon="@drawable/ic_restroom" />
 
         </LinearLayout>

@@ -5,8 +5,7 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.ImageView
+import android.widget.*
 import androidx.recyclerview.widget.RecyclerView
 import com.example.qulturapp.R
 import com.example.qulturapp.model.eventos.EventoLista
@@ -28,10 +27,24 @@ class EventosListAdapter (private val data:List<EventoLista>, private val contex
         holder.bind(item)
 
         holder.foto_evento.setOnClickListener {
-            iniciaDetalleEvento(item)
+            //iniciaDetalleEvento(item)
+            holder.contenido_evento.visibility =
+                if(holder.contenido_evento.visibility == View.GONE) {
+                    View.VISIBLE
+                } else {
+                    View.GONE
+                }
+                val params: RelativeLayout.LayoutParams = RelativeLayout.LayoutParams(1000, 1500)
+            holder.foto_evento.setLayoutParams(params)
         }
         holder.botonEvento.setOnClickListener {
-            iniciaDetalleEvento(item)
+            //iniciaDetalleEvento(item)
+            holder.contenido_evento.visibility =
+                if(holder.contenido_evento.visibility == View.GONE) {
+                    View.VISIBLE
+                } else {
+                    View.GONE
+                }
         }
     }
 
@@ -48,13 +61,23 @@ class EventosListAdapter (private val data:List<EventoLista>, private val contex
 
     class ViewHolder (view: View): RecyclerView.ViewHolder(view) {
         val botonEvento = view.findViewById(R.id.button_evento) as Button
-        val foto_evento = view.findViewById(R.id.iv_event_icon) as ImageView
+        var foto_evento = view.findViewById(R.id.iv_event_icon) as ImageView
+        val contenido_evento = view.findViewById(R.id.info_evento) as TextView
 
         fun bind(item: EventoLista) {
             botonEvento.text = item.info_evento
 
             val ligaImg = "http://3.14.37.4:8080/uploads/" + item.multimedia_evento
             Picasso.get().load(ligaImg).into(foto_evento);
+
+            val fecha = item.fecha_evento
+            val lugar = item.ubicacion_evento
+
+            val anio = fecha.subSequence(0, 4)
+            val mes = fecha.subSequence(5, 7)
+            val dia = fecha.subSequence(8, 10)
+
+            contenido_evento.text = "$dia/$mes/$anio \n en $lugar"
 
         }
     }

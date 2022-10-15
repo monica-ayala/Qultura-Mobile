@@ -3,7 +3,9 @@ package com.example.qulturapp.viewmodel.eventos
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
+import android.view.MotionEvent
 import android.view.View
+import android.view.View.OnTouchListener
 import android.view.ViewGroup
 import android.widget.*
 import androidx.recyclerview.widget.RecyclerView
@@ -26,17 +28,37 @@ class EventosListAdapter (private val data:List<EventoLista>, private val contex
         val item = data[position]
         holder.bind(item)
 
+        //Aquí agrego el comportamiento al touch listener porque parece que necesito hacer la accion dos
+        //veces para que la imagen se acomode en el imageview
+        holder.foto_evento.setOnTouchListener(OnTouchListener { v, motionEvent ->
+            if(motionEvent.action == MotionEvent.ACTION_UP) {
+                holder.contenido_evento.visibility =
+                    if (holder.contenido_evento.visibility == View.GONE) {
+                        View.VISIBLE
+                    } else {
+                        View.GONE
+                    }
+
+                if (holder.extendida) {
+                    reducirImagen(holder, item)
+                } else {
+                    agrandarImagen(holder, item)
+                }
+            }
+            false
+        })
+
         holder.foto_evento.setOnClickListener {
             //iniciaDetalleEvento(item)
-            holder.contenido_evento.visibility =
-                if(holder.contenido_evento.visibility == View.GONE) {
-                    View.VISIBLE
-                } else {
-                    View.GONE
-                }
-                val params: RelativeLayout.LayoutParams = RelativeLayout.LayoutParams(1000, 1500)
-            holder.foto_evento.setLayoutParams(params)
+            if(holder.extendida){
+                reducirImagen(holder, item)
+            } else {
+                agrandarImagen(holder, item)
+            }
+
+            holder.extendida = !holder.extendida
         }
+
         holder.botonEvento.setOnClickListener {
             //iniciaDetalleEvento(item)
             holder.contenido_evento.visibility =
@@ -46,6 +68,20 @@ class EventosListAdapter (private val data:List<EventoLista>, private val contex
                     View.GONE
                 }
         }
+    }
+
+    private fun agrandarImagen(holder: ViewHolder, item: EventoLista) {
+        val params = RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, 1000)
+        holder.foto_evento.layoutParams = params
+        val ligaImg = "http://3.14.37.4:8080/uploads/" + item.multimedia_evento
+        Picasso.get().load(ligaImg).fit().into(holder.foto_evento)
+    }
+
+    private fun reducirImagen(holder: ViewHolder, item: EventoLista) {
+        val params = RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, 600)
+        holder.foto_evento.layoutParams = params
+        val ligaImg = "http://3.14.37.4:8080/uploads/" + item.multimedia_evento
+        Picasso.get().load(ligaImg).into(holder.foto_evento)
     }
 
     private fun iniciaDetalleEvento(item: EventoLista) {
@@ -63,6 +99,7 @@ class EventosListAdapter (private val data:List<EventoLista>, private val contex
         val botonEvento = view.findViewById(R.id.button_evento) as Button
         var foto_evento = view.findViewById(R.id.iv_event_icon) as ImageView
         val contenido_evento = view.findViewById(R.id.info_evento) as TextView
+        var extendida = false
 
         fun bind(item: EventoLista) {
             botonEvento.text = item.info_evento

@@ -6,7 +6,6 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.qulturapp.databinding.ItemMuseumDetailBinding
-import com.example.qulturapp.model.museums.MModel
 
 class MAdapter(private var mList: List<MModel>):RecyclerView.Adapter<MAdapter.MHolder>() {
     class MHolder(val binding: ItemMuseumDetailBinding):RecyclerView.ViewHolder(binding.root)

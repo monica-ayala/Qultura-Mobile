@@ -7,24 +7,17 @@ import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.qulturapp.R
 import com.example.qulturapp.model.ApiCallerService
 import com.example.qulturapp.view.gallery.Gallery
-import com.example.qulturapp.view.sesion.ActivitySignUp
 import com.example.qulturapp.view.solicitudes.ActivityHorario
-import com.example.qulturapp.view.museum.ListMuseum
-import com.example.qulturapp.viewmodel.museum.MuseumViewModel
-import com.example.qulturapp.viewmodel.solicitudes.HorarioViewModel
 import com.squareup.picasso.Picasso
 
 
 class Museum:AppCompatActivity() {
 
     private var caller: ApiCallerService = ApiCallerService()
-
-    private val museumViewModel = MuseumViewModel()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

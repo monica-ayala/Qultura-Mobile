@@ -4,8 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/obra1"
-    tools:context=".view.museum.Artwork">
+    tools:context=".view.artwork.Artwork">
+
+    <ImageView
+        android:id="@+id/ivObraBG"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY" />
 
     <View
         android:id="@+id/overlay_image"
@@ -13,13 +18,6 @@
         android:layout_height="match_parent"
         android:layout_centerHorizontal="true"
         android:background="@color/trans_black" />
-
-    <Button
-        android:id="@+id/returnObra"
-        android:layout_width="60dp"
-        android:layout_height="50dp"
-        android:background="@color/transparent"
-        android:drawableRight="@drawable/resource_return" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -50,8 +48,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@color/white"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/obra1" />
+                    android:scaleType="centerCrop"/>
             </com.google.android.material.card.MaterialCardView>
 
             <View
@@ -87,7 +84,7 @@
                     android:button="@drawable/ic_baseline_play_circle_outline_24"
                     android:scaleX="2"
                     android:scaleY="2"
-                    android:src="@drawable/ic_baseline_play_circle_outline_24" />
+                    android:src="@drawable/ic_baseline_play_circle_outline_24"/>
 
             </LinearLayout>
 
@@ -123,7 +120,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tv_direccion_museo"
+                    android:id="@+id/tv_autor_obra"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginHorizontal="6dp"
@@ -135,7 +132,7 @@
                     android:textSize="13sp" />
 
                 <TextView
-                    android:id="@+id/tv_horario_museo"
+                    android:id="@+id/tv_fecha_obra"
                     android:layout_width="match_parent"
                     android:layout_height="25dp"
                     android:layout_marginVertical="10dp"
@@ -150,6 +147,7 @@
             </LinearLayout>
 
             <TextView
+                android:id="@+id/tv_desc_obra"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="6dp"

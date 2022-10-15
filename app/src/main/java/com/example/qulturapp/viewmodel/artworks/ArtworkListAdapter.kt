@@ -35,7 +35,10 @@ class ArtworkListAdapter(private val data: List<ArtworkResults>, private val con
             val intent = Intent(context, Artwork::class.java)
             intent.putExtra("nom", item.name)
             intent.putExtra("url", item.url)
-            intent.putExtra("id",item.id_obra)
+            intent.putExtra("id", item.id_obra)
+            intent.putExtra("desc", item.desc_obra)
+            intent.putExtra("fecha", item.fecha_obra)
+            intent.putExtra("autor", item.autor_obra)
 
             context.startActivity(intent)
         }

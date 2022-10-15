@@ -73,9 +73,6 @@
         <activity android:name=".view.Info.GuiaActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait"></activity>
-        <activity android:name=".view.museum.Gallery"
-            android:configChanges="orientation"
-            android:screenOrientation="portrait"></activity>
         <activity android:name=".view.gallery.Gallery"
             android:configChanges="orientation"
             android:screenOrientation="portrait"></activity>

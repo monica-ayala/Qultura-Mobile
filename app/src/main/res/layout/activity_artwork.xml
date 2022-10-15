@@ -84,7 +84,7 @@
                     android:button="@drawable/ic_baseline_play_circle_outline_24"
                     android:scaleX="2"
                     android:scaleY="2"
-                    android:src="@drawable/ic_baseline_play_circle_outline_24" />
+                    android:src="@drawable/ic_baseline_play_circle_outline_24"/>
 
             </LinearLayout>
 

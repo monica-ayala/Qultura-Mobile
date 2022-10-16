@@ -40,6 +40,8 @@ class MuseumListAdapter(private val data:List<MuseumResults>, private val contex
             context.startActivity(intent)
         }
 
+        holder.museoImg.contentDescription = item.name
+
     }
 
 }

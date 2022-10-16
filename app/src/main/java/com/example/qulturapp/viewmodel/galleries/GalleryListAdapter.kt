@@ -42,6 +42,7 @@ class GalleryListAdapter(private val data: List<Sala>, private val context: Cont
 
             context.startActivity(intent)
         }
+        holder.salasImg.contentDescription = item.nom_sala
     }
 
     override fun getItemCount(): Int = dataGalleryML.size

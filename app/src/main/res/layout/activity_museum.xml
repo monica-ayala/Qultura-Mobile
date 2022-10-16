@@ -36,13 +36,15 @@
             android:orientation="vertical">
 
 
-            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/profile_image"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
                 android:layout_gravity="center"
                 app:civ_border_color="@color/white"
-                app:civ_border_width="4dp" />
+                app:civ_border_width="4dp"
+                android:contentDescription="Foto del museo"/>
 
             <TextView
                 android:id="@+id/tv_top_bar_text"
@@ -113,7 +115,8 @@
                 android:fontFamily="sans-serif"
                 android:layout_marginHorizontal="15dp"
                 android:drawableRight="@drawable/rightarrow"
-                android:textAllCaps="false"/>
+                android:textAllCaps="false"
+                android:contentDescription="Para conocer las salas o exposiciones de este museo haz click"/>
 
             <View
                 android:layout_width="match_parent"
@@ -146,7 +149,8 @@
         android:background="@drawable/round_button"
         android:text="Solicitud de Recorrido"
         android:textAllCaps="false"
-        android:textColor="@color/header_text_color" />
+        android:textColor="@color/header_text_color"
+        android:contentDescription="Realiza una solicitud a este museo presionando este botón"/>
 
 
 </RelativeLayout>

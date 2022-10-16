@@ -20,22 +20,24 @@
                 android:id="@+id/tvMuseum"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
                 android:layout_marginLeft="20dp"
+                android:layout_marginTop="16dp"
+                android:contentDescription="Lista de museos disponibles abajo, haz scroll"
                 android:fontFamily="sans-serif-black"
                 android:text="MUSEOS"
                 android:textColor="@color/primary_text_color"
-                android:textSize="35sp"/>
+                android:textSize="35sp" />
 
 
             <ImageButton
                 android:id="@+id/mapbtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/map_icon"
                 android:layout_marginLeft="270dp"
                 android:layout_marginTop="7dp"
-                android:backgroundTint="@color/transparent"/>
+                android:backgroundTint="@color/transparent"
+                android:src="@drawable/map_icon"
+                android:contentDescription="Toca aquí para mostrar el mapa"/>
 
 
         </RelativeLayout>
@@ -64,9 +66,10 @@
             android:layout_marginTop="16dp"
             android:layout_marginLeft="20dp"
             android:fontFamily="sans-serif-black"
-            android:text="DESCUBRE"
+            android:text="EXPLORA"
             android:textColor="@color/primary_text_color"
-            android:textSize="35sp"/>
+            android:textSize="35sp"
+            android:contentDescription="Explora más haciendo click en la partte de abajo"/>
 
         <RelativeLayout
             xmlns:android="http://schemas.android.com/apk/res/android"
@@ -89,7 +92,8 @@
                     android:background="@drawable/event_btn"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="10dp"
-                    android:layout_marginBottom="10dp"/>
+                    android:layout_marginBottom="10dp"
+                    android:contentDescription="Descubre los eventos aquí"/>
 
 
             </LinearLayout>
@@ -117,7 +121,8 @@
                     android:layout_height="match_parent"
                     android:layout_marginBottom="3dp"
                     android:background="@drawable/guia_btn"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:contentDescription="Revisa las guías aquí"/>
 
                 <ImageView
                     android:id="@+id/conf_btn"
@@ -125,7 +130,8 @@
                     android:layout_height="match_parent"
                     android:layout_marginTop="3dp"
                     android:background="@drawable/conf_btn"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:contentDescription="Para entrar a los ajustes toca aquí"/>
 
             </LinearLayout>
 

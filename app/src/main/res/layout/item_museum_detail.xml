@@ -21,7 +21,8 @@
                 android:id="@+id/ivMusImg"
                 android:layout_width="350dp"
                 android:layout_height="250dp"
-                android:scaleType="fitXY"/>
+                android:scaleType="fitXY"
+                android:contentDescription=""/>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="200dp"

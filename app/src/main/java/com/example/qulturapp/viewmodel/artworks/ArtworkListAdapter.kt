@@ -42,6 +42,8 @@ class ArtworkListAdapter(private val data: List<ArtworkResults>, private val con
 
             context.startActivity(intent)
         }
+
+        holder.obraNombre.contentDescription = item.name
     }
 
     override fun getItemCount(): Int = dataArtworkML.size

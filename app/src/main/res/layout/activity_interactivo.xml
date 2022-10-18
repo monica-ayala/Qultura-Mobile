@@ -10,6 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="25dp"
         android:layout_marginBottom="145dp"
         android:fontFamily="sans-serif-black"
         android:text="Seleccione el lugar a destacar:"
@@ -17,7 +18,8 @@
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@id/linearLayout"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutFloors" />
 
     <TextView
         android:id="@+id/textViewMuseum"
@@ -28,6 +30,7 @@
         android:textAlignment="viewStart"
         android:textColor="#000000"
         android:textSize="24sp"
+        android:layout_marginTop="20dp"
         app:layout_constraintBottom_toTopOf="@id/linearLayoutImage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -122,6 +125,7 @@
             android:id="@+id/imageViewMapsMuseums"
             android:layout_width="match_parent"
             android:layout_height="340dp"
+            android:layout_marginTop="10dp"
             app:srcCompat="@drawable/obra4" />
 
     </LinearLayout>

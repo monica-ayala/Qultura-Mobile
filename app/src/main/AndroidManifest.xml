@@ -97,6 +97,18 @@
         <activity android:name=".view.interactivo.ActivityInterarctivo"
             android:configChanges="orientation"
             android:screenOrientation="portrait"></activity>
+        <activity android:name=".view.interactivo.ActivityInteractivoCEART"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".view.interactivo.ActivityInteractivoGaleriasLibertad"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".view.interactivo.ActivityInteractivoMAQRO"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
+        </activity>
     </application>
 
 </manifest>

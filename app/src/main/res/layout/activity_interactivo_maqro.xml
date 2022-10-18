@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="145dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Seleccione el lugar a destacar:"
+        android:textAlignment="viewStart"
+        android:textColor="@color/primary_text_color"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/linearLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutFloors" />
+
+    <TextView
+        android:id="@+id/textViewMuseum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="Museo de Arte de Queretaro"
+        android:textAlignment="viewStart"
+        android:textColor="@color/primary_text_color"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@id/linearLayoutImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rl_top_bar" />
+
+    <RelativeLayout
+        android:id="@+id/rl_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@drawable/top_bar_background"
+        android:paddingTop="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <TextView
+            android:id="@+id/tv_top_bar_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Mapa Interactivo"
+            android:textColor="@color/header_text_color"
+            android:textSize="30sp" />
+
+        <View
+            android:layout_width="240dp"
+            android:layout_height="3dp"
+            android:layout_alignBottom="@id/tv_top_bar_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="-4dp"
+            android:background="@color/secondary_color"
+
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutFloors"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:layout_marginBottom="260dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutImage">
+
+        <Button
+            android:id="@+id/btnFirstFloor"
+            style="@style/Widget.Material3.Button.Icon"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="Boton Piso Uno"
+            android:onClick="onClickFloor1"
+            android:text="Piso 1"
+            android:textColor="@color/header_text_color"
+            android:textAllCaps="true"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btnSecondFloor"
+            style="@style/Widget.Material3.Button.Icon"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_weight="1"
+            android:contentDescription="Boton Piso 2"
+            android:onClick="onClickFloor2"
+            android:textColor="@color/header_text_color"
+            android:text="Piso 2"
+            android:textAllCaps="true"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutImage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="300dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rl_top_bar">
+
+
+        <ImageView
+            android:id="@+id/imageViewMapMuseum"
+            android:layout_width="match_parent"
+            android:layout_height="330dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/maqro_pb_vacio" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="100dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnRamp"
+                style="@style/Widget.Material3.Button.ElevatedButton.Icon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="Boton Rampa"
+                android:onClick="onClickZone1"
+                android:text="Rampas"
+                android:textSize="11sp"
+                app:icon="@drawable/ic_ramp" />
+
+            <Button
+                android:id="@+id/btnElevator"
+                style="@style/Widget.Material3.Button.ElevatedButton.Icon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="Boton Elevadores"
+                android:onClick="onClickZone2"
+                android:text="Elevadores"
+                android:textAlignment="center"
+                android:textSize="11sp"
+                app:icon="@drawable/ic_baseline_elevator_24" />
+
+            <Button
+                android:id="@+id/btnStairs"
+                style="@style/Widget.Material3.Button.ElevatedButton.Icon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="Boton Escaleras"
+                android:onClick="onClickZone3"
+                android:text="Escaleras"
+                android:textSize="11sp"
+                app:icon="@drawable/ic_baseline_stairs_24" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp">
+
+
+            <Button
+                android:id="@+id/btnReception"
+                style="@style/Widget.Material3.Button.ElevatedButton.Icon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="Boton Recepcion"
+                android:onClick="onClickZone4"
+                android:text="Recepción"
+                android:textSize="11sp"
+                app:icon="@drawable/ic_reception" />
+
+            <Button
+                android:id="@+id/btnOffice"
+                style="@style/Widget.Material3.Button.ElevatedButton.Icon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="Boton Oficinas"
+                android:onClick="onClickZone5"
+                android:text="Oficinas"
+                android:textSize="11sp"
+                app:icon="@drawable/ic_office" />
+
+            <Button
+                android:id="@+id/btnRestroom"
+                style="@style/Widget.Material3.Button.ElevatedButton.Icon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="Boton Sanitarios"
+                android:onClick="onClickZone6"
+                android:text="Sanitarios"
+                android:textSize="11sp"
+                app:icon="@drawable/ic_restroom" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

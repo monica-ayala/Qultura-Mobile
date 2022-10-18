@@ -24,7 +24,7 @@
                 android:layout_marginLeft="20dp"
                 android:fontFamily="sans-serif-black"
                 android:text="MUSEOS"
-                android:textColor="@color/black"
+                android:textColor="@color/primary_text_color"
                 android:textSize="35sp"/>
 
 
@@ -65,7 +65,7 @@
             android:layout_marginLeft="20dp"
             android:fontFamily="sans-serif-black"
             android:text="DESCUBRE"
-            android:textColor="@color/black"
+            android:textColor="@color/primary_text_color"
             android:textSize="35sp"/>
 
         <RelativeLayout

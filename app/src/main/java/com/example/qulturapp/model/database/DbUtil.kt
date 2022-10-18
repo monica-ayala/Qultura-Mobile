@@ -91,7 +91,7 @@ class DbUtil(private val context: Context) {
             }
     }
 
-    fun initRoomDatabase(){
+    fun initRoomDatabase(id_sala:Int){
         db = QulturaDatabase.getInstance(context)
 
         qulturaDao = db.qulturaDatabaseDao
@@ -105,7 +105,7 @@ class DbUtil(private val context: Context) {
             try {
                 val salas = caller.searchGalleryList()
                 val museos = caller.searchMuseumList()
-                val obras = caller.getObra()
+                val obras = caller.getObra(id_sala)
                 val guias = caller.searchGuiaList()
 
                 qulturaDao.clearObras()

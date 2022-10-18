@@ -61,15 +61,12 @@ class Museum:AppCompatActivity() {
 
             startActivity(intent)
         }
-        val rbtn = findViewById<View>(R.id.returnMuseo)
-        rbtn.setOnClickListener{
-            val intent = Intent(this, ListMuseum::class.java)
-            startActivity(intent)
-        }
+
         val solibtn = findViewById<View>(R.id.solicitudBtn)
         solibtn.setOnClickListener{
-            //val intent = Intent(this, ActivityHorario::class.java)
-            //startActivity(intent)
+            val intent = Intent(this, ActivityHorario::class.java)
+            intent.putExtra("id_museo", idMuseo)
+            startActivity(intent)
         }
 
         Log.d("IDS:", idMuseo.toString())

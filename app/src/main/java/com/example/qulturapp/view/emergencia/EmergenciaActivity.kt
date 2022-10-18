@@ -22,7 +22,7 @@ import com.example.qulturapp.databinding.ActivityEmergenciaBinding
 class EmergenciaActivity : AppCompatActivity() {
 
     val REQUEST_PHONE_CALL= 1
-    var phoneNumber = "1234567810"
+    var phoneNumber = "4422519850"
 
     private lateinit var binding: ActivityEmergenciaBinding
     private var i: Int =0
@@ -42,17 +42,17 @@ class EmergenciaActivity : AppCompatActivity() {
             override fun afterTextChanged(s: Editable) {
                 if (binding.dropdownMenu.getText().toString()=="Museo de Arte de Querétaro"){
                     // based on the value in the dropDownMenu the phoneNumber necessarily needs to change
-                    phoneNumber = "1234567810"
+                    phoneNumber = "4422122357"
 
                 }
                 else if (binding.dropdownMenu.getText().toString()=="Secretaría de Cultura"){
                     // based on the value in the dropDownMenu the phoneNumber necessarily needs to change
-                    phoneNumber = "354893214"
+                    phoneNumber = "4422519850"
 
                 }
                 else if (binding.dropdownMenu.getText().toString()=="Galería Libertad"){
                     // based on the value in the dropDownMenu the phoneNumber necessarily needs to change
-                    phoneNumber = "6897854215"
+                    phoneNumber = "4422142358"
                 }
             }
 

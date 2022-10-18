@@ -91,7 +91,8 @@
             android:text="Piso 1"
             android:textColor="@color/header_text_color"
             android:textAllCaps="true"
-            android:textSize="12sp" />
+            android:textSize="12sp"
+            android:backgroundTint="@color/purple_500"/>
 
         <Button
             android:id="@+id/btnSecondFloor"
@@ -105,7 +106,8 @@
             android:textColor="@color/header_text_color"
             android:text="Piso 2"
             android:textAllCaps="true"
-            android:textSize="12sp" />
+            android:textSize="12sp"
+            android:backgroundTint="@color/purple_500"/>
 
     </LinearLayout>
 
@@ -159,7 +161,8 @@
                 android:onClick="onClickZone1"
                 android:text="Rampas"
                 android:textSize="11sp"
-                app:icon="@drawable/ic_ramp" />
+                app:icon="@drawable/ic_ramp"
+                android:enabled="false"/>
 
             <Button
                 android:id="@+id/btnElevator"
@@ -228,6 +231,7 @@
                 android:onClick="onClickZone6"
                 android:text="Sanitarios"
                 android:textSize="11sp"
+                android:backgroundTint="@color/white"
                 app:icon="@drawable/ic_restroom" />
 
         </LinearLayout>

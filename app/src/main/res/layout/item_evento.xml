@@ -19,22 +19,36 @@
             android:layout_height="200dp"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
-            android:src="@drawable/sanctorum" />
+            android:src="@drawable/sanctorum"
+            android:contentDescription="@string/texto_imagen_evento"/>
 
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_evento"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:layout_below="@id/iv_event_icon"
             android:layout_marginTop="10dp"
             android:background="@drawable/round_black_button"
             android:fontFamily="sans-serif-black"
             android:text="@string/sanctorum"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textColor="@color/primary_text_color"/>
 
 
+        <TextView
+            android:id="@+id/info_evento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/button_evento"
+            android:text="Información de evento"
+            android:textSize="15sp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:visibility="gone"/>
 
 
     </RelativeLayout>

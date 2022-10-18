@@ -12,6 +12,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
+import androidx.lifecycle.MutableLiveData
 import com.example.qulturapp.R
 import androidx.recyclerview.widget.RecyclerView
 import com.example.qulturapp.model.horarios.Horario
@@ -36,19 +37,24 @@ class CalendarAdapter(private val daysOfMonth:List<String>, private val con : Co
                 holder.button_dayofMonth.setOnClickListener{
 
                     if(current_holder != null){
-                        current_holder!!.button_dayofMonth.setTextColor(ContextCompat.getColorStateList(con, R.color.black))
+                        current_holder!!.button_dayofMonth.setTextColor(ContextCompat.getColorStateList(con, R.color.primary_text_color))
                         current_holder!!.button_dayofMonth.background = ContextCompat.getDrawable(con, R.drawable.calendar_unselected)
 
                     }
-                    holder.button_dayofMonth.setTextColor(ContextCompat.getColorStateList(con, R.color.white))
+                    holder.button_dayofMonth.setTextColor(ContextCompat.getColorStateList(con, R.color.date_selected))
                     holder.button_dayofMonth.background = ContextCompat.getDrawable(con, R.drawable.calendar_selected)
 
                     current_holder = holder
 
                     HorarioViewModel.day_selected = current_holder!!.button_dayofMonth.text as String
+                    HorarioViewModel.change_fecha_check()
                 }
             }else{
-                holder.button_dayofMonth.setTextColor(ContextCompat.getColorStateList(con, R.color.gray_edit_box))
+                holder.button_dayofMonth.setTextColor(ContextCompat.getColorStateList(con, R.color.invalid_date))
+                holder.button_dayofMonth.setOnClickListener{
+                    val toast = Toast.makeText(con, "Dia invalido", Toast.LENGTH_SHORT)
+                    toast.show()
+                }
             }
         }
     }

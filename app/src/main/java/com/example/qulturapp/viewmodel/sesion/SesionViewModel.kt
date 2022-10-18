@@ -1,6 +1,5 @@
 package com.example.qulturapp.viewmodel.sesion
 
-import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -51,10 +50,6 @@ class SesionViewModel: ViewModel() {
                 statusConexion.postValue(false)
             }
         }
-    }
-
-    fun comparaContrasenia(contrasenia: String) {
-        TODO()
     }
 
     //Aún no tengo idea de como sirve esto solo no lo vean luego checo esta onda

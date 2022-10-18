@@ -1,5 +1,6 @@
 package com.example.qulturapp.model.sesion
 
+//Objeto con información del usuario que ha iniciado sesión
 object UsuarioActual {
     var id: Int = 1
     var nombre: String = ""

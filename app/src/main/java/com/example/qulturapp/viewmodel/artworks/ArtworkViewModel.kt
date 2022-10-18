@@ -22,7 +22,7 @@ class ArtworkViewModel: ViewModel() {
             val listaObras = mutableListOf<ArtworkResults>()
             for(obra in artworkList.artwork)
             {
-                val content =  ArtworkResults(obra.nom_obra, obra.img_obra, obra.id_obra)
+                val content =  ArtworkResults(obra.nom_obra, obra.img_obra, obra.id_obra, obra.desc_obra, obra.fecha_obra, obra.autor_obra)
                 listaObras.add(content)
             }
 

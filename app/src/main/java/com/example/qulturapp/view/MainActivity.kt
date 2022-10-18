@@ -8,10 +8,8 @@ import androidx.activity.viewModels
 import androidx.lifecycle.Observer
 import com.example.qulturapp.R
 import com.example.qulturapp.model.database.DbUtil
-import com.example.qulturapp.view.museum.ListMuseum
 import com.example.qulturapp.view.museum.Museum
 import com.example.qulturapp.model.museums.MuseumResults
-//import com.example.qulturapp.view.eventos.EventoActivity
 import com.example.qulturapp.view.lounge.Lounge
 import com.example.qulturapp.view.Info.ActivityInfo
 import com.example.qulturapp.view.configuracion.ActivityConfiguration
@@ -25,6 +23,7 @@ import com.example.qulturapp.view.solicitudes.ActivitySolicitudes
 import com.example.qulturapp.model.galleries.GalleryResults
 import com.example.qulturapp.view.eventos.EventoActivity
 import com.example.qulturapp.view.gallery.Gallery
+import com.example.qulturapp.view.museum.ListMuseum
 import com.example.qulturapp.viewmodel.list.MuseumsViewModel
 import com.example.qulturapp.viewmodel.galleries.GalleryListAdapter
 import com.example.qulturapp.viewmodel.galleries.GalleryViewModel

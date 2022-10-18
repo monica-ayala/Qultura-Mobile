@@ -16,4 +16,12 @@ object UsuarioActual {
         this.rol = rol
     }
 
+    fun limpiaInfo() {
+        this.id = 1
+        this.nombre = ""
+        this.correo = ""
+        this.contrasenia = ""
+        this.rol = 0
+    }
+
 }

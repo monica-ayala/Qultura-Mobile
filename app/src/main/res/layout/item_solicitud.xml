@@ -33,6 +33,7 @@
                     android:layout_height="100dp"
                     android:src="@mipmap/ic_launcher"
                     android:id="@+id/img_museum"
+                    android:contentDescription="@string/texto_fotografia_museo"
                     />
 
                 <LinearLayout
@@ -47,7 +48,7 @@
                         android:text="Museo de Arte de Querétaro"
                         android:textColor="@color/primary_text_color"
                         android:textStyle="bold"
-                        android:textSize="24dp"
+                        android:textSize="24sp"
                         android:id="@+id/tv_museum"/>
 
                     <TextView
@@ -75,7 +76,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Estatus: "
+                    android:text="@string/testo_estatus"
                     android:layout_weight="0.5"
                     android:textSize="20sp"
                     android:textColor="@color/primary_text_color"
@@ -86,7 +87,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Personas: "
+                    android:text="@string/texto_personas"
                     android:layout_weight="0.5"
                     android:gravity="center"
                     android:textColor="@color/primary_text_color"
@@ -134,7 +135,8 @@
                 android:layout_marginTop="20dp"
                 android:background="@drawable/cancel_button_bg"
                 android:paddingBottom="1dp"
-                android:text="Cancelar"
+                android:text="@string/texto_cancelar"
+                android:contentDescription="@string/texto_boton_cancelar_solicitud"
                 android:textColor="@color/header_text_color" />
 
         </RelativeLayout>

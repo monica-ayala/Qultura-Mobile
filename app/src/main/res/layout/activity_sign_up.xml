@@ -41,7 +41,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
             android:fontFamily="sans-serif-black"
-            android:text="Sign up"
+            android:text="@string/texto_sign_up"
             android:textColor="@color/primary_text_color"
             android:textSize="40sp" />
 
@@ -63,7 +63,7 @@
             android:ems="12"
             android:inputType="textPersonName"
             style="@style/inputSignin"
-            android:hint="Nombre" />
+            android:hint="@string/texto_nombre" />
 
         <EditText
             android:id="@+id/edit_text_email"
@@ -75,7 +75,7 @@
             android:ems="12"
             android:inputType="textEmailAddress"
             style="@style/inputSignin"
-            android:hint="Email"/>
+            android:hint="@string/texto_correo"/>
 
         <EditText
             android:id="@+id/edit_text_pass"
@@ -87,7 +87,7 @@
             android:ems="12"
             style="@style/inputSignin"
             android:inputType="textPassword"
-            android:hint="Contraseña"/>
+            android:hint="@string/texto_contrasenia"/>
 
         <EditText
             android:id="@+id/edit_text_passconfirm"
@@ -99,7 +99,7 @@
             android:ems="12"
             style="@style/inputSignin"
             android:inputType="textPassword"
-            android:hint="Confirmar contraseña"/>
+            android:hint="@string/texto_confirmar_contrasenia"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_signup"
@@ -109,7 +109,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="40dp"
             android:background="@drawable/button_gradient_bg"
-            android:text="Sign Up"
+            android:text="@string/texto_sign_up"
             android:textColor="@color/header_text_color"
             android:textSize="18sp" />
 

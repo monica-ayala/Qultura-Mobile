@@ -29,6 +29,8 @@ class SolicitudesViewModel: ViewModel() {
             try {
                 val solicitudList = caller.searchSolicitudList(UsuarioActual.id)
                 val listaSolicitudesAct = mutableListOf<SolicitudLista>()
+                //Convertims los datos de Solicitud a la clase SolicitudLista, la cuál ya guarda
+                //la lista de necesidades que tiene cada una, esto para facilitar otros procesos
                 solicitudList?.solicitudes?.forEach { solicitud ->
                     var listaNecesidades = mutableListOf<String>()
                     for (necesidad in solicitudList.necesidades) {

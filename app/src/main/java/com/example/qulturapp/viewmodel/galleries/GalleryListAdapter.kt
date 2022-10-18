@@ -38,6 +38,7 @@ class GalleryListAdapter(private val data: List<Sala>, private val context: Cont
             intent.putExtra("nom", item.nom_sala)
             //intent.putExtra("ubi", item.ubi)
             intent.putExtra("url",item.img_sala)
+            intent.putExtra("id",item.id_sala)
 
             context.startActivity(intent)
         }

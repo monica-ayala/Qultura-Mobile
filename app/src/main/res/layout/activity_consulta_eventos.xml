@@ -14,8 +14,6 @@
         android:layout_height="75dp"
         android:id="@+id/rl_top_bar"
         android:background="@drawable/top_bar_background"
-
-
         >
 
         <TextView
@@ -25,7 +23,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
             android:fontFamily="sans-serif-black"
-            android:text="Eventos"
+            android:text="@string/texto_eventos"
             android:textColor="@color/header_text_color"
             android:textSize="30sp" />
 
@@ -46,32 +44,41 @@
         android:layout_below="@id/rl_top_bar"
         android:id="@+id/ll_categorias_first"
         >
-        <androidx.appcompat.widget.AppCompatButton
+        <androidx.appcompat.widget.AppCompatToggleButton
             android:layout_width="110dp"
             android:layout_height="40dp"
             android:layout_marginHorizontal="5dp"
             android:layout_weight="0.33"
             android:layout_marginTop="15dp"
-            android:text="Talleres"
-            android:background="@drawable/button_categoria"
+            android:textOn="@string/tag_talleres"
+            android:textOff="@string/tag_talleres"
+            android:background="@drawable/button_toggle_categoria"
+            android:checked="true"
+            android:id="@+id/filtro_talleres"
             />
-        <androidx.appcompat.widget.AppCompatButton
+        <androidx.appcompat.widget.AppCompatToggleButton
             android:layout_width="140dp"
             android:layout_height="40dp"
             android:layout_marginTop="15dp"
             android:layout_marginHorizontal="5dp"
             android:layout_weight="0.33"
-            android:text="Artes escenicas"
-            android:background="@drawable/button_categoria"
+            android:textOn="@string/tag_artes_escenicas"
+            android:textOff="@string/tag_artes_escenicas"
+            android:background="@drawable/button_toggle_categoria"
+            android:checked="true"
+            android:id="@+id/filtro_artes_escenicas"
             />
-        <androidx.appcompat.widget.AppCompatButton
+        <androidx.appcompat.widget.AppCompatToggleButton
             android:layout_width="110dp"
             android:layout_height="40dp"
             android:layout_marginHorizontal="5dp"
             android:layout_weight="0.33"
             android:layout_marginTop="15dp"
-            android:text="Música"
-            android:background="@drawable/button_categoria"
+            android:textOn="@string/tag_musica"
+            android:textOff="@string/tag_musica"
+            android:background="@drawable/button_toggle_categoria"
+            android:checked="true"
+            android:id="@+id/filtro_musica"
             />
 
     </LinearLayout>
@@ -81,41 +88,53 @@
         android:layout_below="@id/ll_categorias_first"
         android:id="@+id/ll_filtros"
         >
-        <androidx.appcompat.widget.AppCompatButton
+        <androidx.appcompat.widget.AppCompatToggleButton
             android:layout_width="80dp"
             android:layout_height="40dp"
             android:layout_marginHorizontal="5dp"
             android:layout_weight="0.25"
             android:layout_marginTop="7dp"
-            android:text="Danza"
-            android:background="@drawable/button_categoria"
+            android:textOn="@string/tag_danza"
+            android:textOff="@string/tag_danza"
+            android:background="@drawable/button_toggle_categoria"
+            android:checked="true"
+            android:id="@+id/filtro_danza"
             />
-        <androidx.appcompat.widget.AppCompatButton
+        <androidx.appcompat.widget.AppCompatToggleButton
             android:layout_width="115dp"
             android:layout_height="40dp"
             android:layout_marginTop="7dp"
             android:layout_marginHorizontal="5dp"
             android:layout_weight="0.25"
-            android:text="Aire libre"
-            android:background="@drawable/button_categoria"
+            android:textOn="@string/tag_aire_libre"
+            android:textOff="@string/tag_aire_libre"
+            android:background="@drawable/button_toggle_categoria"
+            android:checked="true"
+            android:id="@+id/filtro_aire_libre"
             />
-        <androidx.appcompat.widget.AppCompatButton
+        <androidx.appcompat.widget.AppCompatToggleButton
             android:layout_width="80dp"
             android:layout_height="40dp"
             android:layout_marginHorizontal="5dp"
             android:layout_weight="0.25"
             android:layout_marginTop="7dp"
-            android:text="cine"
-            android:background="@drawable/button_categoria"
+            android:textOn="@string/tag_cine"
+            android:textOff="@string/tag_cine"
+            android:background="@drawable/button_toggle_categoria"
+            android:checked="true"
+            android:id="@+id/filtro_cine"
             />
-        <androidx.appcompat.widget.AppCompatButton
+        <androidx.appcompat.widget.AppCompatToggleButton
             android:layout_width="70dp"
             android:layout_height="40dp"
             android:layout_marginHorizontal="5dp"
             android:layout_weight="0.25"
             android:layout_marginTop="7dp"
-            android:text="otros"
-            android:background="@drawable/button_categoria"
+            android:textOn="@string/tag_otros"
+            android:textOff="@string/tag_otros"
+            android:background="@drawable/button_toggle_categoria"
+            android:checked="true"
+            android:id="@+id/filtro_otros"
             />
 
     </LinearLayout>

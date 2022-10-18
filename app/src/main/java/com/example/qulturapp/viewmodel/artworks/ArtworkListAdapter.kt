@@ -31,11 +31,14 @@ class ArtworkListAdapter(private val data: List<ArtworkResults>, private val con
         val item = dataArtworkML[position]
         holder.bind(item)
 
-        holder.obraImg.setOnClickListener {
+        holder.obraNombre.setOnClickListener {
             val intent = Intent(context, Artwork::class.java)
             intent.putExtra("nom", item.name)
             intent.putExtra("url", item.url)
-            intent.putExtra("id",item.id_obra)
+            intent.putExtra("id", item.id_obra)
+            intent.putExtra("desc", item.desc_obra)
+            intent.putExtra("fecha", item.fecha_obra)
+            intent.putExtra("autor", item.autor_obra)
 
             context.startActivity(intent)
         }
@@ -46,8 +49,8 @@ class ArtworkListAdapter(private val data: List<ArtworkResults>, private val con
 }
 
 class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-    private val obraNombre = view.findViewById(R.id.tvObraNom) as TextView
-    val obraImg = view.findViewById(R.id.ivObra) as ImageView
+    val obraNombre = view.findViewById(R.id.tvObraNom) as TextView
+    private val obraImg = view.findViewById(R.id.ivObra) as ImageView
 
     val context = view.context
 

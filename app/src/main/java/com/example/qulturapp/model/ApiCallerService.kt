@@ -77,9 +77,12 @@ class ApiCallerService {
     }
 
     suspend fun eliminaSolicitud(id_solicitud: Int){
+        val callToken = getRetrofit().create(ApiService::class.java).getToken("/getToken")
+        val token = callToken.body()?.token ?: "NO TOKEN"
         val params = """
             {
-            "id_solicitud":$id_solicitud
+            "id_solicitud":$id_solicitud,
+            "auth":"$token"
             }
             """.trimIndent()
         val requestBody = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), params)
@@ -95,6 +98,8 @@ class ApiCallerService {
         necesidades_text: MutableList<String>,
         id_museo: Int
     ) {
+        val callToken = getRetrofit().create(ApiService::class.java).getToken("/getToken")
+        val token = callToken.body()?.token ?: "NO TOKEN"
         val fecha_format = monthYear_selected + "-" + day_selected + " " + hora_selected + ":00"
         val UsuarioActual = UsuarioActual.id
         val params = """
@@ -105,7 +110,8 @@ class ApiCallerService {
             "necesidades":$necesidades,
             "usuario_necesidad":$UsuarioActual,
             "necesidades_text":$necesidades_text,
-            "id_museo":$id_museo
+            "id_museo":$id_museo,
+            "auth":"$token"
             }
             """.trimIndent()
         val requestBody =
@@ -114,10 +120,13 @@ class ApiCallerService {
     }
 
     suspend fun searchUsuario(correo: String, contrasenia: String): UsuarioListResults? {
+        val callToken = getRetrofit().create(ApiService::class.java).getToken("/getToken")
+        val token = callToken.body()?.token ?: "NO TOKEN"
         val params = """
             {
             "us_correo":"$correo",
-            "us_password":"$contrasenia"
+            "us_password":"$contrasenia",
+            "auth":"$token"
             }
             """.trimIndent()
         val requestBody = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), params)
@@ -126,11 +135,14 @@ class ApiCallerService {
     }
 
     suspend fun agregarUsuario(nombre: String, correo: String, contrasenia: String): EncuentraUsuario? {
+        val callToken = getRetrofit().create(ApiService::class.java).getToken("/getToken")
+        val token = callToken.body()?.token ?: "NO TOKEN"
         val params = """
             {
             "us_nombre":"$nombre",
             "us_correo":"$correo",
             "us_password":"$contrasenia"
+            "auth":"$token"
             }
             """.trimIndent()
         val requestBody = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), params)
@@ -138,9 +150,9 @@ class ApiCallerService {
         return call.body()
     }
 
-    suspend fun getObra(): ArtworkListResults?{
+    suspend fun getObra(id_sala: Int): ArtworkListResults?{
 
-        val call = getRetrofit().create(ApiService::class.java).getObra("/obra/get")
+        val call = getRetrofit().create(ApiService::class.java).getObra("/obra/$id_sala/getObra")
         val artworkList = call.body()
         return artworkList
     }

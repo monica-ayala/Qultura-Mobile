@@ -6,35 +6,55 @@ import androidx.lifecycle.viewModelScope
 import com.example.qulturapp.model.ApiCallerService
 import com.example.qulturapp.model.eventos.Evento
 import com.example.qulturapp.model.eventos.EventoListResults
+import com.example.qulturapp.model.eventos.EventoLista
+import com.example.qulturapp.model.solicitudes.SolicitudLista
 import kotlinx.coroutines.launch
 
 class EventosViewModel: ViewModel() {
 
     val caller = ApiCallerService()
-    var listaEventos = MutableLiveData<EventoListResults?>()
+    var listaEventos = MutableLiveData<List<EventoLista>>()
+    var listaEventosFiltrados = MutableLiveData<List<EventoLista>>()
     var statusConexion: MutableLiveData<Boolean> = MutableLiveData(null)
 
-    /*
-    fun agregarEvento (){
-        val evento1 = Evento(1, "Evento de rock en la plaza de armas", "18/10/22", "https://amqueretaro.com/queretaro/2021/03/28/anuncian-evento-virtual-la-cultura-popular-e-indigena-de-queretaro-2021/", "Rock en querataro")
-        val evento2 = Evento(2, "Sanctorum", "18/10/22", "https://pbs.twimg.com/media/FcodWemXoAEXIHF.jpg", "Sanctorum")
-        val evento3 = Evento(3, "Cata de vino", "18/10/22", "https://billetto.co.uk/blog/wp-content/uploads/2019/05/kym-ellis-391585-unsplash-1024x683.jpg", "Catta de vinos")
-        listaEventos.add(evento1)
-        listaEventos.add(evento2)
-        listaEventos.add(evento3)
-    } */
+    var filtrosTags = mutableListOf("Talleres", "Artes Escénicas", "Música", "Danza", "Aire Libre", "Cine", "Otros")
 
     fun agregarEventos() {
         viewModelScope.launch {
             try {
                 val listEventos = caller.searchEventoList()
-                listEventos.let {
-                    listaEventos.postValue(listEventos)
+                val listaEventosAct = mutableListOf<EventoLista>()
+                listEventos?.eventos?.forEach { evento ->
+                    var listaTags = mutableListOf<String>()
+                    for (tag in listEventos.tags) {
+                        if (evento.id_evento == tag.id_evento)
+                            listaTags.add(tag.nombre_tag)
+                    }
+                    val nuevoEvento = EventoLista(
+                        evento.id_evento,
+                        evento.info_evento,
+                        evento.fecha_evento,
+                        evento.multimedia_evento,
+                        evento.ubicacion_evento,
+                        listaTags
+                    )
+                    listaEventosAct.add(nuevoEvento)
                 }
+                listaEventos.postValue(listaEventosAct.toList())
             } catch (e: Exception) {
                 statusConexion.postValue(false)
             }
         }
+    }
+
+    fun actualizaLista() {
+        var listaEventosAct = mutableListOf<EventoLista>()
+        listaEventos.value?.forEach { evento ->
+            if(evento.tags.any { it in filtrosTags}) {
+                listaEventosAct.add(evento)
+            }
+        }
+        listaEventosFiltrados.postValue(listaEventosAct.toList())
     }
 
 

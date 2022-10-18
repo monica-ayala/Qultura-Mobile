@@ -10,6 +10,7 @@ import com.example.qulturapp.model.museums.Museo
 import com.example.qulturapp.model.museums.MuseumListResults
 import com.example.qulturapp.model.museums.MuseumResults
 import com.example.qulturapp.model.sesion.EncuentraUsuario
+import com.example.qulturapp.model.sesion.TokenResult
 import retrofit2.Response
 import com.example.qulturapp.model.sesion.UsuarioListResults
 import com.example.qulturapp.model.solicitudes.SolicitudListResults
@@ -57,5 +58,8 @@ interface ApiService {
 
     @GET
     suspend fun getLinksList(@Url url:String): Response<LinksListResults>
+
+    @GET
+    suspend fun getToken(@Url url:String): Response<TokenResult>
 
 }

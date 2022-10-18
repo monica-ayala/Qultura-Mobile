@@ -14,4 +14,7 @@
     <string name="select">Seleccione Lugar></string>
     <string name="ya_tiene_cuenta"><u><b>¿Ya tienes cuenta?</b></u></string>
     <string name="no_tiene_cuenta"><u><b>¿Aún no tienes cuenta?</b></u></string>
+    <string name="lorem_ipsum" />
+    <string name="PrimerManual">Primer</string>
+    <string name="SegundoManual">Segundo</string>
 </resources>

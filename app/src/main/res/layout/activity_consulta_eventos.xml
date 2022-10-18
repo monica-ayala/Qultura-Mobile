@@ -46,32 +46,41 @@
         android:layout_below="@id/rl_top_bar"
         android:id="@+id/ll_categorias_first"
         >
-        <androidx.appcompat.widget.AppCompatButton
+        <androidx.appcompat.widget.AppCompatToggleButton
             android:layout_width="110dp"
             android:layout_height="40dp"
             android:layout_marginHorizontal="5dp"
             android:layout_weight="0.33"
             android:layout_marginTop="15dp"
-            android:text="Talleres"
-            android:background="@drawable/button_categoria"
+            android:textOn="Talleres"
+            android:textOff="Talleres"
+            android:background="@drawable/button_toggle_categoria"
+            android:checked="true"
+            android:id="@+id/filtro_talleres"
             />
-        <androidx.appcompat.widget.AppCompatButton
+        <androidx.appcompat.widget.AppCompatToggleButton
             android:layout_width="140dp"
             android:layout_height="40dp"
             android:layout_marginTop="15dp"
             android:layout_marginHorizontal="5dp"
             android:layout_weight="0.33"
-            android:text="Artes escenicas"
-            android:background="@drawable/button_categoria"
+            android:textOn="Artes escenicas"
+            android:textOff="Artes escenicas"
+            android:background="@drawable/button_toggle_categoria"
+            android:checked="true"
+            android:id="@+id/filtro_artes_escenicas"
             />
-        <androidx.appcompat.widget.AppCompatButton
+        <androidx.appcompat.widget.AppCompatToggleButton
             android:layout_width="110dp"
             android:layout_height="40dp"
             android:layout_marginHorizontal="5dp"
             android:layout_weight="0.33"
             android:layout_marginTop="15dp"
-            android:text="Música"
-            android:background="@drawable/button_categoria"
+            android:textOn="Música"
+            android:textOff="Musica"
+            android:background="@drawable/button_toggle_categoria"
+            android:checked="true"
+            android:id="@+id/filtro_musica"
             />
 
     </LinearLayout>
@@ -81,41 +90,53 @@
         android:layout_below="@id/ll_categorias_first"
         android:id="@+id/ll_filtros"
         >
-        <androidx.appcompat.widget.AppCompatButton
+        <androidx.appcompat.widget.AppCompatToggleButton
             android:layout_width="80dp"
             android:layout_height="40dp"
             android:layout_marginHorizontal="5dp"
             android:layout_weight="0.25"
             android:layout_marginTop="7dp"
-            android:text="Danza"
-            android:background="@drawable/button_categoria"
+            android:textOn="Danza"
+            android:textOff="Danza"
+            android:background="@drawable/button_toggle_categoria"
+            android:checked="true"
+            android:id="@+id/filtro_danza"
             />
-        <androidx.appcompat.widget.AppCompatButton
+        <androidx.appcompat.widget.AppCompatToggleButton
             android:layout_width="115dp"
             android:layout_height="40dp"
             android:layout_marginTop="7dp"
             android:layout_marginHorizontal="5dp"
             android:layout_weight="0.25"
-            android:text="Aire libre"
-            android:background="@drawable/button_categoria"
+            android:textOn="Aire libre"
+            android:textOff="Aire Libre"
+            android:background="@drawable/button_toggle_categoria"
+            android:checked="true"
+            android:id="@+id/filtro_aire_libre"
             />
-        <androidx.appcompat.widget.AppCompatButton
+        <androidx.appcompat.widget.AppCompatToggleButton
             android:layout_width="80dp"
             android:layout_height="40dp"
             android:layout_marginHorizontal="5dp"
             android:layout_weight="0.25"
             android:layout_marginTop="7dp"
-            android:text="cine"
-            android:background="@drawable/button_categoria"
+            android:textOn="cine"
+            android:textOff="cine"
+            android:background="@drawable/button_toggle_categoria"
+            android:checked="true"
+            android:id="@+id/filtro_cine"
             />
-        <androidx.appcompat.widget.AppCompatButton
+        <androidx.appcompat.widget.AppCompatToggleButton
             android:layout_width="70dp"
             android:layout_height="40dp"
             android:layout_marginHorizontal="5dp"
             android:layout_weight="0.25"
             android:layout_marginTop="7dp"
-            android:text="otros"
-            android:background="@drawable/button_categoria"
+            android:textOn="otros"
+            android:textOff="otros"
+            android:background="@drawable/button_toggle_categoria"
+            android:checked="true"
+            android:id="@+id/filtro_otros"
             />
 
     </LinearLayout>

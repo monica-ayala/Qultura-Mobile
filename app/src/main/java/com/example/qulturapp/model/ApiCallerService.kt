@@ -24,7 +24,7 @@ class ApiCallerService {
     private fun getRetrofit(): Retrofit {
 
         return Retrofit.Builder()
-            .baseUrl("http://3.14.37.4:8080")
+            .baseUrl("https://qulturaqro.live/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
@@ -110,8 +110,7 @@ class ApiCallerService {
             """.trimIndent()
         val requestBody =
             RequestBody.create(MediaType.parse("application/json; charset=utf-8"), params)
-        val call = getRetrofit().create(ApiService::class.java)
-            .agregaSolicitud("/solicitud/nuevaSolicitud", requestBody)
+        getRetrofit().create(ApiService::class.java).agregaSolicitud("/solicitud/nuevaSolicitud", requestBody)
     }
 
     suspend fun searchUsuario(correo: String, contrasenia: String): UsuarioListResults? {
@@ -139,9 +138,9 @@ class ApiCallerService {
         return call.body()
     }
 
-    suspend fun getObra(): ArtworkListResults?{
+    suspend fun getObra(id_sala: Int): ArtworkListResults?{
 
-        val call = getRetrofit().create(ApiService::class.java).getObra("/obra/get")
+        val call = getRetrofit().create(ApiService::class.java).getObra("/obra/$id_sala/getObra")
         val artworkList = call.body()
         return artworkList
     }

@@ -3,16 +3,14 @@ package com.example.qulturapp.view.solicitudes
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
-import android.os.PersistableBundle
-import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.qulturapp.R
 import com.example.qulturapp.model.horarios.Horario
@@ -22,6 +20,7 @@ import com.example.qulturapp.viewmodel.solicitudes.HorarioViewModel
 import java.time.LocalDate
 import java.time.YearMonth
 import java.time.format.DateTimeFormatter
+import java.util.*
 
 class ActivityHorario: AppCompatActivity(){
     //Horario
@@ -30,7 +29,7 @@ class ActivityHorario: AppCompatActivity(){
 
 
     private fun initializeList(list:List<Horario>){
-        adapter = HorarioListAdapter(list, this, HorarioViewModel)
+        adapter = HorarioListAdapter(list, this, this, HorarioViewModel, calendarcounter)
         val layoutManager = GridLayoutManager(this, 5)
         val rvHorarios = findViewById<RecyclerView>(R.id.rv_list_horarios)
 
@@ -82,7 +81,7 @@ class ActivityHorario: AppCompatActivity(){
     @RequiresApi(Build.VERSION_CODES.O)
     private fun monthYearFromDate(date: LocalDate):String{
 
-        val formatter : DateTimeFormatter = (DateTimeFormatter.ofPattern("MMMM yyyy"))
+        val formatter : DateTimeFormatter = (DateTimeFormatter.ofPattern("MMMM yyyy", Locale("Es", "ES")))
         val formatter2 : DateTimeFormatter = (DateTimeFormatter.ofPattern("yyyy-MM"))
         monthYear = date.format(formatter2)
         return date.format(formatter)
@@ -93,6 +92,7 @@ class ActivityHorario: AppCompatActivity(){
         if (calendarcounter != 0){
             selectedDate = selectedDate.minusMonths(1)
             calendarcounter -= 1
+            HorarioViewModel.fecha_check.value = 0
             setMonthView()
         }else{
             val toast = Toast.makeText(applicationContext, "No puedes regresar al pasado", Toast.LENGTH_SHORT)
@@ -105,6 +105,7 @@ class ActivityHorario: AppCompatActivity(){
         if(calendarcounter != 2){
             selectedDate = selectedDate.plusMonths(1)
             calendarcounter += 1
+            HorarioViewModel.fecha_check.value = 0
             setMonthView()
         }else{
             val toast = Toast.makeText(applicationContext, "No planees tanto al futuro", Toast.LENGTH_SHORT)
@@ -123,7 +124,10 @@ class ActivityHorario: AppCompatActivity(){
         setMonthView()
 
         HorarioViewModel.agregaHorarios()
-        initializeList(HorarioViewModel.listaHorario.toList())
+
+        HorarioViewModel.fecha_check.observe(this, Observer {
+            initializeList(HorarioViewModel.listaHorario.toList())
+        })
 
         // on click boton siguiente
         val idMuseo = intent.getIntExtra("id_museo",0)

@@ -12,6 +12,7 @@
     <color name="secondary_color">#FFDC3B</color>
     <color name="primary_text_color">#F70C1A30</color>
     <color name="header_text_color">#FFFFFFFF</color>
+    <color name="main_header_color">#F70C1A30</color>
     <color name="green_qro">#AFFF04</color>
     <color name="button_red">#FF6666</color>
     <color name="card_box_bg">#00FFFFFF</color>
@@ -21,4 +22,6 @@
     <color name="gray_edit_box">#EFEFEF</color>
     <color name="trans_black">#90000000</color>
     <color name="transparent">#00000000</color>
+    <color name="invalid_date">#EFEFEF</color>
+    <color name="date_selected">#FFFFFF</color>
 </resources>

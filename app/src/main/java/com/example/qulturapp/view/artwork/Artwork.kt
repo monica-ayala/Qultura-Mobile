@@ -62,7 +62,7 @@ class Artwork : AppCompatActivity() {
 
         mediaPlayer = MediaPlayer()
 
-        var audioUrl = "https://qulturaqro.live/uploads/Red%20Apple.mp3"
+        var audioUrl = "https://qulturaqro.live/uploads/museos/1666117245750-audioMuseo.mp3"
 
         mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC)
 

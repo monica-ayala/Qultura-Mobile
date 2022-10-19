@@ -50,10 +50,6 @@ class ActivityInfo: AppCompatActivity(), GuiasListAdapter.OnGuiaClickListener, L
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_info)
-//        linksViewModel.agregaLink()
-//        guiasViewModel.agregaGuia()
-//        initializeList(linksViewModel.listaLinks.toList())
-//        initializeGuias(guiasViewModel.listaGuias.toList())
         guiasViewModel.listaGuias.observe(this) {
             if (it != null) {
                 initializeGuias(it)

@@ -22,4 +22,6 @@
     <color name="gray_edit_box">#EFEFEF</color>
     <color name="trans_black">#90000000</color>
     <color name="transparent">#00000000</color>
+    <color name="invalid_date">#EFEFEF</color>
+    <color name="date_selected">#FFFFFF</color>
 </resources>

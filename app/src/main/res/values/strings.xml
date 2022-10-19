@@ -11,7 +11,7 @@
     <string name="next"><![CDATA[>]]></string>
     <string name="CalendarioFecha">Septiembre 2022</string>
     <string name="buton_siguiente">Siguiente</string>
-    <string name="select">Seleccione Lugar></string>
+    <string name="select">Seleccione Lugar</string>
     <string name="ya_tiene_cuenta"><u><b>¿Ya tienes cuenta?</b></u></string>
     <string name="no_tiene_cuenta"><u><b>¿Aún no tienes cuenta?</b></u></string>
     <string name="lorem_ipsum" />
@@ -20,4 +20,27 @@
     <string name="TecerManual">Si requieres apoyo adicional, puedes llenar una solicitud de recorrido para visitar el museo de tu elección.</string>
     <string name="CuartoManual">Visita la sección de información para consultar diferentes guías y mapas como referencia para tu recorrido.</string>
     <string name="QuintoManual">En caso de requerir de ayuda urgente dentro del museo, presiona repetidamente el botón de ayuda para contactar a personal del museo.</string>
+    <string name="texto_sign_in">Sign In</string>
+    <string name="desc_boton_iniciar_sesion">Boton para iniciar sesión</string>
+    <string name="texto_contrasenia">Contraseña</string>
+    <string name="texto_correo">Email</string>
+    <string name="texto_olvidaste_contrasenia">¿Olvidaste tu contraseña?</string>
+    <string name="texto_sign_up">Sign up</string>
+    <string name="texto_nombre">Nombre</string>
+    <string name="texto_confirmar_contrasenia">Confirmar contraseña</string>
+    <string name="texto_mis_solicitudes">Mis Solicitudes</string>
+    <string name="texto_eventos">Eventos</string>
+    <string name="tag_talleres">Talleres</string>
+    <string name="tag_artes_escenicas">Artes escenicas</string>
+    <string name="tag_musica">Música</string>
+    <string name="tag_danza">Danza</string>
+    <string name="tag_aire_libre">Aire libre</string>
+    <string name="tag_cine">cine</string>
+    <string name="tag_otros">otros</string>
+    <string name="testo_estatus">Estatus:</string>
+    <string name="texto_personas">Personas:</string>
+    <string name="texto_cancelar">Cancelar</string>
+    <string name="texto_boton_cancelar_solicitud">Boton para cancelar solicitud</string>
+    <string name="texto_fotografia_museo">Fotografía del museo</string>
+    <string name="texto_imagen_evento">Imagen del evento</string>
 </resources>

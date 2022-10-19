@@ -1,12 +1,10 @@
 package com.example.qulturapp.model
 
-import android.util.Log
 import com.example.qulturapp.model.Info.GuiasListResults
 import com.example.qulturapp.model.Info.LinksListResults
 import com.example.qulturapp.model.artwork.ArtworkListResults
 import com.example.qulturapp.model.eventos.EventoListResults
 import com.example.qulturapp.model.galleries.GalleryListResults
-import com.example.qulturapp.model.galleries.Sala
 import com.example.qulturapp.model.museums.Museo
 import com.example.qulturapp.model.museums.MuseumListResults
 import com.example.qulturapp.model.sesion.EncuentraUsuario
@@ -77,7 +75,7 @@ class ApiCallerService {
     }
 
     suspend fun eliminaSolicitud(id_solicitud: Int){
-        val callToken = getRetrofit().create(ApiService::class.java).getToken("/getToken")
+        val callToken = getRetrofit().create(ApiService::class.java).getToken("/getToken") //Obtenemos token para acceder a ruta en Web
         val token = callToken.body()?.token ?: "NO TOKEN"
         val params = """
             {
@@ -152,7 +150,7 @@ class ApiCallerService {
 
     suspend fun getObra(id_sala: Int): ArtworkListResults?{
 
-        val call = getRetrofit().create(ApiService::class.java).getObra("/obra/$id_sala/getObra")
+        val call = getRetrofit().create(ApiService::class.java).getObra("/obra/$id_sala/getObras")
         val artworkList = call.body()
         return artworkList
     }

@@ -4,6 +4,7 @@ import android.app.AlertDialog
 import android.content.Context
 import android.content.DialogInterface
 import android.graphics.Color
+import android.util.Log
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
@@ -16,6 +17,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.qulturapp.R
 import com.example.qulturapp.model.solicitudes.SolicitudLista
 import com.squareup.picasso.Picasso
+import java.text.SimpleDateFormat
+import java.util.*
 
 class SolicitudesListAdapter (private val data:List<SolicitudLista>, private val context: Context): RecyclerView.Adapter<ViewHolder>() {
     private val dataML = data.toMutableList()
@@ -39,7 +42,7 @@ class SolicitudesListAdapter (private val data:List<SolicitudLista>, private val
 
             altertaCancelar.setPositiveButton("Si",
                 DialogInterface.OnClickListener { dialog, _ ->
-                    eliminaSolicitud(item)
+                    cancelaSolicitud(item)
                     dialog.cancel()
                 })
 
@@ -51,9 +54,13 @@ class SolicitudesListAdapter (private val data:List<SolicitudLista>, private val
         }
     }
 
+    private fun cancelaSolicitud(item: SolicitudLista) {
+        solicitudesViewModel.eliminaSolicitud(item.id_solicitud) //Eliminar en base de datos
+        eliminaSolicitud(item)
+    }
+
     private fun eliminaSolicitud(item: SolicitudLista) {
         val position = dataML.indexOf(item)
-        solicitudesViewModel.eliminaSolicitud(dataML[position].id_solicitud)
         dataML.remove(item);
         notifyItemRemoved(position)
         notifyItemRangeChanged(position, itemCount)

@@ -38,7 +38,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
             android:fontFamily="sans-serif-black"
-            android:text="Sign In"
+            android:text="@string/texto_sign_in"
             android:textColor="@color/primary_text_color"
             android:textSize="40sp" />
 
@@ -60,7 +60,7 @@
             android:ems="12"
             android:inputType="textEmailAddress"
             style="@style/inputSignin"
-            android:hint="Email"/>
+            android:hint="@string/texto_correo"/>
 
         <EditText
             android:id="@+id/edit_text_pass"
@@ -72,7 +72,7 @@
             android:ems="12"
             style="@style/inputSignin"
             android:inputType="textPassword"
-            android:hint="Contraseña"/>
+            android:hint="@string/texto_contrasenia"/>
 
 
         <androidx.appcompat.widget.AppCompatButton
@@ -83,9 +83,10 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="30dp"
             android:background="@drawable/button_gradient_bg"
-            android:text="Sign In"
+            android:text="@string/texto_sign_in"
             android:textColor="@color/header_text_color"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:contentDescription="@string/desc_boton_iniciar_sesion"/>
 
         <TextView
             android:id="@+id/text_olvidaste_contra"
@@ -94,7 +95,7 @@
             android:layout_below="@id/button_signin"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="25dp"
-            android:text="¿Olvidaste tu contraseña?"
+            android:text="@string/texto_olvidaste_contrasenia"
             android:textColor="@color/primary_text_color" />
 
         <TextView

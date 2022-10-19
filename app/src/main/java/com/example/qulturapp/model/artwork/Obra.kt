@@ -13,5 +13,4 @@ data class Obra(
     @SerializedName("autor_obra") val autor_obra: String,
     @SerializedName("desc_obra") val desc_obra: String,
     @SerializedName("id_sala") val id_sala: Int
-
     )

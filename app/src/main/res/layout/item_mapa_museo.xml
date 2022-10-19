@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="16dp"
+    android:orientation="vertical">
+
+
+
+    <LinearLayout
+        android:id="@+id/ll_mapa_museo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/tv_mapaMuseo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/iv_map_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/web">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/tv_museo_name"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/iv_map_icon"
+                android:textColor="@color/primary_text_color"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                tools:text="MuseoName"></TextView>
+            <ImageView
+                android:id="@+id/iv_arrow_icon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="24dp"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/tv_museo_name"
+                android:src="@drawable/right_arrow_icon">
+            </ImageView>
+        </RelativeLayout>
+
+        I
+
+    </LinearLayout>
+
+
+
+    <View
+        android:id="@+id/divider5"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="15dp"
+        android:background="?android:attr/listDivider" />
+
+</LinearLayout>

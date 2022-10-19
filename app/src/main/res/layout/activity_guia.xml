@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -36,20 +37,26 @@
         </View>
     </RelativeLayout>
 
-
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rv_top_bar">
     <LinearLayout
+        android:layout_below="@id/rv_top_bar"
         android:id="@+id/ly_guia"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:orientation="vertical"
         android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp">
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="30dp">
 
         <ImageView
+            android:id="@+id/iv_guia_image"
             android:layout_width="match_parent"
             android:layout_height="130dp"
-            android:src="@drawable/guiaicon"
+            android:src="@drawable/guiagreen"
             android:layout_marginBottom="24dp">
         </ImageView>
 
@@ -70,16 +77,77 @@
         android:layout_marginBottom="16dp"
         android:background="?android:attr/listDivider"/>
 
-    <TextView
-        android:id="@+id/tv_guia_tip"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="16dp"
-        tools:text="TipsTipsTips"
-        android:textColor="@color/primary_text_color">
-    </TextView>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_Tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tips"
+                android:textSize="20dp"
+                android:textColor="@color/primary_text_color"
+                android:layout_marginBottom="16dp">
+            </TextView>
+            <View
+                android:layout_width="45dp"
+                android:layout_height="2dp"
+                android:layout_alignBottom="@id/tv_Tips"
+                android:layout_centerHorizontal="true"
+                android:background="@color/secondary_color"
+                android:layout_marginBottom="-4dp">
+            </View>
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+            <View
+                android:layout_width="3dp"
+                android:layout_height="match_parent"
+                android:background="@color/primary_text_color"
+                android:layout_marginRight="5dp">
+            </View>
+            <TextView
+                android:id="@+id/tv_guia_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                tools:text="TipsTipsTips"
+                android:textColor="@color/primary_text_color"
+                >
+            </TextView>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_video"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Video Explícativo:"
+                android:textSize="20dp"
+                android:textColor="@color/primary_text_color"
+                android:layout_marginBottom="16dp">
+            </TextView>
+            <View
+                android:layout_width="160dp"
+                android:layout_height="2dp"
+                android:layout_alignBottom="@id/tv_video"
+                android:layout_centerHorizontal="true"
+                android:background="@color/secondary_color"
+                android:layout_marginBottom="-4dp">
+            </View>
+        </RelativeLayout>
+
 
 
     </LinearLayout>
-
-</LinearLayout>
+    </ScrollView>
+</RelativeLayout>

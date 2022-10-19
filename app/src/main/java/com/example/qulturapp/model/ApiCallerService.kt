@@ -77,7 +77,7 @@ class ApiCallerService {
     }
 
     suspend fun eliminaSolicitud(id_solicitud: Int){
-        val callToken = getRetrofit().create(ApiService::class.java).getToken("/getToken")
+        val callToken = getRetrofit().create(ApiService::class.java).getToken("/getToken") //Obtenemos token para acceder a ruta en Web
         val token = callToken.body()?.token ?: "NO TOKEN"
         val params = """
             {

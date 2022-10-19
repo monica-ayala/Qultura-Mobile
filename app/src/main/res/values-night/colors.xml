@@ -18,4 +18,6 @@
     <color name="card_box_border">#838383</color>
     <color name="card_box_line">#DDDDDD</color>
     <color name="gray_edit_box">#EFEFEF</color>
+    <color name="invalid_date">#494949</color>
+    <color name="date_selected">#FFFFFF</color>
 </resources>

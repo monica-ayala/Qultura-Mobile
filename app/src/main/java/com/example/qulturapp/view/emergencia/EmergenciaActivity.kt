@@ -98,8 +98,8 @@ class EmergenciaActivity : AppCompatActivity() {
         startActivity(callIntent)
     }
 
-    // revisa que el codigo recibido sea igual al
-    // codigo correspondiente con el permiso para llamar
+    // Revisa que el codigo recibido sea igual al
+    // Codigo correspondiente con el permiso para llamar
     override fun onRequestPermissionsResult(
         requestCode: Int,
         permissions: Array<out String>,
@@ -109,7 +109,7 @@ class EmergenciaActivity : AppCompatActivity() {
         if (requestCode == REQUEST_PHONE_CALL)initiateCall()
     }
 
-    // objetos utilizados para las pruebas automatizadas
+    // Objetos utilizados para las pruebas automatizadas
     companion object{
         fun buildToastMessageTwice(): String{
             return "Has presionado el boton 2 veces"

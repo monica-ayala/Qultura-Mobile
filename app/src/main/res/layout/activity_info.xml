@@ -85,6 +85,7 @@
                 android:layout_marginBottom="-2dp"
                 android:background="@color/secondary_color">
             </View>
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_list_guias"
                 android:layout_width="match_parent"
@@ -92,8 +93,7 @@
                 android:layout_below="@id/tv_title_guias"
                 android:layout_marginLeft="27dp"
                 android:layout_marginTop="5dp"
-                android:layout_marginRight="27dp">
-            </androidx.recyclerview.widget.RecyclerView>
+                android:layout_marginRight="27dp"></androidx.recyclerview.widget.RecyclerView>
             <TextView
                 android:id="@+id/tv_title_mapas"
                 android:layout_width="wrap_content"
@@ -145,7 +145,7 @@
                                 android:layout_width="50dp"
                                 android:layout_height="50dp"
                                 android:layout_marginRight="16dp"
-                                android:src="@drawable/web"></ImageView>
+                                android:src="@drawable/ubicacion"></ImageView>
 
                             <TextView
                                 android:id="@+id/tv_museo_name"
@@ -209,7 +209,7 @@
                                 android:layout_width="50dp"
                                 android:layout_height="50dp"
                                 android:layout_marginRight="16dp"
-                                android:src="@drawable/web"></ImageView>
+                                android:src="@drawable/ubicacion"></ImageView>
 
                             <TextView
                                 android:id="@+id/tv_museo_name2"
@@ -270,7 +270,7 @@
                                 android:layout_width="50dp"
                                 android:layout_height="50dp"
                                 android:layout_marginRight="16dp"
-                                android:src="@drawable/web"></ImageView>
+                                android:src="@drawable/ubicacion"></ImageView>
 
                             <TextView
                                 android:id="@+id/tv_museo_name3"

@@ -19,7 +19,6 @@ import com.squareup.picasso.Picasso
 
 class GalleryListAdapter(private val data: List<Sala>, private val context: Context) : RecyclerView.Adapter<ViewHolder>(){
     private val dataGalleryML = data.toMutableList()
-    private val galleryViewModel = GalleryViewModel()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)

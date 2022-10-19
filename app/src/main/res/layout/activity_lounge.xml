@@ -48,7 +48,6 @@
                     android:layout_height="match_parent"
                     android:background="@color/white"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/maqro"
                     android:contentDescription="Foto de la sala"/>
             </com.google.android.material.card.MaterialCardView>
 
@@ -67,7 +66,7 @@
                     android:layout_marginHorizontal="6dp"
                     android:layout_weight=".3"
                     android:fontFamily="sans-serif-black"
-                    android:text="Sala 1"
+                    android:text=""
                     android:textColor="@color/header_text_color"
                     android:textSize="35sp" />
 
@@ -76,7 +75,7 @@
                 android:id="@+id/readmore"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus euismod maximus erat eget ultrices. Donec aliquam vitae nulla sit amet mattis. Suspendisse lacinia tristique lorem, eget accumsan metus imperdiet in. Aliquam pharetra erat quis mauris molestie bibendum. Cras fermentum consequat leo a fringilla. Proin sit amet sem scelerisque, maximus arcu ac, auctor massa. Suspendisse lacus tortor, elementum quis lobortis pellentesque, laoreet et lacus. Nam scelerisque gravida tincidunt. Phasellus mollis congue ornare. Integer vitae nibh sagittis, maximus sem vel, tincidunt mauris. Pellentesque est magna, molestie ornare nisi id, interdum rutrum quam. Ut sodales risus id bibendum tincidunt.Donec nunc justo, eleifend ut sapien eget, scelerisque maximus elit. Fusce vitae nisi efficitur dui lacinia commodo non eget dui. Vestibulum condimentum sapien elit, quis dignissim quam porta quis. Donec quis ante nec libero facilisis facilisis. Suspendisse cursus sit amet risus imperdiet hendrerit. Curabitur ultricies sit amet sapien eu maximus. Interdum et malesuada fames ac ante ipsum primis in faucibus."
+                android:text=""
                 android:textColor="@color/header_text_color"
                 app:readMoreColor="@color/secondary_color"
                 app:readMoreMaxLine="4"

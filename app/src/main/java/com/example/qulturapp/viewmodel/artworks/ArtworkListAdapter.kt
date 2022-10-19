@@ -19,7 +19,6 @@ import com.squareup.picasso.Picasso
 
 class ArtworkListAdapter(private val data: List<ArtworkResults>, private val context: Context) : RecyclerView.Adapter<ViewHolder>(){
     private val dataArtworkML = data.toMutableList()
-    private val artworkViewModel = ArtworkViewModel()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)

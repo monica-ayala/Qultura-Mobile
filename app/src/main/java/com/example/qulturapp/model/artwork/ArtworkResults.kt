@@ -1,12 +1,10 @@
 package com.example.qulturapp.model.artwork
 
-import com.google.gson.annotations.SerializedName
-
 data class ArtworkResults(
-    @SerializedName("name") val name:String,
-    @SerializedName("url") val url:String,
-    @SerializedName("id_obra") val id_obra:Int,
-    @SerializedName("desc_obra") val desc_obra: String,
-    @SerializedName("fecha_obra") val fecha_obra: String,
-    @SerializedName("autor_obra") val autor_obra: String,
+    val name:String?,
+    val url:String?,
+    val id_obra:Int,
+    val desc_obra: String?,
+    val fecha_obra: String?,
+    val autor_obra: String?,
 )

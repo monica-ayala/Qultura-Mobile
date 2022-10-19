@@ -13,9 +13,9 @@ import com.example.qulturapp.model.museums.MuseumResults
 import com.example.qulturapp.view.museum.Museum
 import com.squareup.picasso.Picasso
 
+
 class MuseumListAdapter(private val data:List<MuseumResults>, private val context: Context) :RecyclerView.Adapter<ViewHolder>(){
     private val dataMuseumML = data.toMutableList()
-    private val museumViewModel = MuseumsViewModel()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
@@ -54,7 +54,6 @@ class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
     fun bind(item: MuseumResults) {
         museoNombre.text = item.name
-        //Glide.with(museoImg).load(item.url).into(museoImg)
         item.id_museo
         item.name
         item.desc

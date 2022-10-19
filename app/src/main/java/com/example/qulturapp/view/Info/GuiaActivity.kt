@@ -41,7 +41,7 @@ class GuiaActivity : AppCompatActivity() {
                 override fun onReady(youTubePlayer: YouTubePlayer) {
                     val videoId = video
                     if (videoId != null) {
-                        youTubePlayer.loadVideo(videoId, 0f)
+                        youTubePlayer.cueVideo(videoId, 0f)
                     }
                 }
             })

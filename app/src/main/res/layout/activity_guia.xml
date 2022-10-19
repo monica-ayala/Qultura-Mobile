@@ -55,7 +55,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="130dp"
-            android:src="@drawable/guiaicon"
+            android:src="@drawable/guiagreen"
             android:layout_marginBottom="24dp">
         </ImageView>
 

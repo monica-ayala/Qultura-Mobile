@@ -200,7 +200,7 @@ class ActivityMap: AppCompatActivity (){
     }
 
     @SuppressLint("MissingPermission")
-    private fun startLocationUpdates() { //onResume
+    private fun startLocationUpdates() { //onResumecon
         fusedLocationClient.requestLocationUpdates(
             locationRequest,
             locationCallback,

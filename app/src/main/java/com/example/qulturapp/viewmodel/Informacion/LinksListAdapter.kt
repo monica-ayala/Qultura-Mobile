@@ -35,14 +35,12 @@ class LinksListAdapter (private val data:List<LinkLista>, private val linkItemCl
 
     inner class ViewHolderLinks (view: View): RecyclerView.ViewHolder(view){
         val textLink = view.findViewById(R.id.tv_link_name) as TextView
-//    val nameGuia = view.findViewById(R.id.tv_guia_name) as TextView
 
         fun bind(item: LinkLista){
             itemView.setOnClickListener { linkItemClickListener.onLinkClick(item.link, item.nombre_link) }
             textLink.text = item.nombre_link
         }
     }
-
 }
 
 

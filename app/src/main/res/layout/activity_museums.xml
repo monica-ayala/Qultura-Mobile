@@ -32,10 +32,10 @@
                 android:id="@+id/mapbtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/map_icon"
                 android:layout_marginLeft="270dp"
                 android:layout_marginTop="7dp"
-                android:backgroundTint="@color/transparent"/>
+                android:backgroundTint="@color/transparent"
+                android:src="@drawable/map_icon" />
 
 
         </RelativeLayout>

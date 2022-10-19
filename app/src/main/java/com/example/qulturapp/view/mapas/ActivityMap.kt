@@ -318,12 +318,8 @@ class ActivityMap: AppCompatActivity (){
         mapController.setCenter(startPoint)
         getPositionMarker().position = startPoint
         map.invalidate()
-
-        // Colocar mapa en punto inicial
-        val mapController = map.controller
         mapController.setZoom(17.5)
-        val startPoint = GeoPoint(20.59138, -100.3935);
-        mapController.setCenter(startPoint);
+
     }
 
     fun onClickDraw2(view: View?) {

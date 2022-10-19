@@ -19,7 +19,7 @@ import com.example.qulturapp.viewmodel.Informacion.GuiasListAdapter
 import com.example.qulturapp.viewmodel.Informacion.GuiasViewModel
 import com.example.qulturapp.viewmodel.Informacion.LinksListAdapter
 import com.example.qulturapp.viewmodel.Informacion.LinksViewModel
-//Comment
+
 class ActivityInfo: AppCompatActivity(), GuiasListAdapter.OnGuiaClickListener, LinksListAdapter.OnLinkClickListener {
     private val linksViewModel = LinksViewModel()
     private lateinit var adapter: LinksListAdapter

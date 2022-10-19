@@ -108,12 +108,6 @@ class EventoActivity: AppCompatActivity() {
 
         eventosViewModel.agregarEventos()
 
-        /*
-        val btn = findViewById<View>(R.id.Boton_evento)
-        btn.setOnClickListener{
-            val intent = Intent(this, EventoDetalle::class.java)
-            startActivity(intent)
-        } */
     }
 
 

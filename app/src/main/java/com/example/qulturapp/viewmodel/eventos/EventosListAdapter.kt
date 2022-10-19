@@ -49,7 +49,6 @@ class EventosListAdapter (private val data:List<EventoLista>, private val contex
         })
 
         holder.foto_evento.setOnClickListener {
-            //iniciaDetalleEvento(item)
             if(holder.extendida){
                 reducirImagen(holder, item)
             } else {
@@ -60,7 +59,6 @@ class EventosListAdapter (private val data:List<EventoLista>, private val contex
         }
 
         holder.botonEvento.setOnClickListener {
-            //iniciaDetalleEvento(item)
             holder.contenido_evento.visibility =
                 if(holder.contenido_evento.visibility == View.GONE) {
                     View.VISIBLE

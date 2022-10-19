@@ -7,9 +7,10 @@ import org.greenrobot.eventbus.EventBus
  */
 class MyEventLocationSettingsChange(val on:Boolean) {
     companion object {
-        var globalState=false //Set this for first time
+        var globalState=false //Configuracion pror primera vez
         /**
-         * In some devices change event is called twice. We limit this with internal state.
+         * En algunos dispositivos el cambio del evento se llama dos veces
+         * esto se limita con el estado interno
          */
         fun setChangeAndPost(_on:Boolean) {
             if (globalState !=_on) { //Send Just Change

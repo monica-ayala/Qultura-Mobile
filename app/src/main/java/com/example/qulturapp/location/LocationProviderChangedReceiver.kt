@@ -20,11 +20,8 @@ class LocationProviderChangedReceiver : BroadcastReceiver() {
                 isNetworkEnabled =
                     locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER)
                 Timber.i("Location Providers changed, is GPS Enabled: " + isGpsEnabled)
-                //Start your Activity if location was enabled:
-                MyEventLocationSettingsChange.setChangeAndPost(isGpsEnabled) //notify
-                //if (isGpsEnabled) {
-                //Some action
-                //}
+                // Empieza la actividad si la ubicación fue habilitado
+                MyEventLocationSettingsChange.setChangeAndPost(isGpsEnabled) //notificar
             }
         }
     }

@@ -20,14 +20,14 @@ class ProfileActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
 
-        // Assign values
+        // Asignar valores
         val setCurrentUserName : TextView = findViewById(R.id.nombre_usuario)
         setCurrentUserName.text = UsuarioActual.nombre
 
         val setCurrentEmail : TextView = findViewById(R.id.email_usuario)
         setCurrentEmail.text = UsuarioActual.correo
 
-        // Log out falso :(
+        // Funcion cerrar sesion
         val buttonLogout : Button = findViewById(R.id.button_logout)
         buttonLogout.setOnClickListener {
             UsuarioActual.limpiaInfo()

@@ -27,7 +27,7 @@ class ProfileActivity : AppCompatActivity() {
         val setCurrentEmail : TextView = findViewById(R.id.email_usuario)
         setCurrentEmail.text = UsuarioActual.correo
 
-        // Log out falso :(
+        // Log out
         val buttonLogout : Button = findViewById(R.id.button_logout)
         buttonLogout.setOnClickListener {
             UsuarioActual.limpiaInfo()

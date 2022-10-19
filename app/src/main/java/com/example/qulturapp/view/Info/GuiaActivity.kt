@@ -9,6 +9,7 @@ import com.example.qulturapp.R
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+import com.squareup.picasso.Picasso
 
 
 class GuiaActivity : AppCompatActivity() {
@@ -20,11 +21,11 @@ class GuiaActivity : AppCompatActivity() {
             val guiaDescription = findViewById<TextView>(R.id.tv_guia_desc)
             val guiaTip = findViewById<TextView>(R.id.tv_guia_tip)
             val guiaIcon = findViewById<ImageView>(R.id.iv_guia_icon)
+            val guiaImage = findViewById<ImageView>(R.id.iv_guia_image)
             var linearLayout = findViewById<LinearLayout>(R.id.ly_guia)
             //val youTubePlayerView = findViewById<YouTubePlayerView>(R.id.youtube)
             val youTubePlayerView = YouTubePlayerView(this)
             lifecycle.addObserver(youTubePlayerView)
-
 
 
             val nombre : String? = intent.getStringExtra("name")
@@ -32,6 +33,10 @@ class GuiaActivity : AppCompatActivity() {
             val tip : String? = intent.getStringExtra("tip")
             val icon : String? = intent.getStringExtra("icon")
             val video : String? = intent.getStringExtra("video")
+            val _imagen : String? = intent.getStringExtra("imagen")
+
+            val linkImage = "https://qulturaqro.live/uploads/" + _imagen
+            Picasso.get().load(linkImage).into(guiaImage)
 
             guiaTitle.text = nombre
             guiaDescription.text = description
@@ -41,7 +46,7 @@ class GuiaActivity : AppCompatActivity() {
                 override fun onReady(youTubePlayer: YouTubePlayer) {
                     val videoId = video
                     if (videoId != null) {
-                        youTubePlayer.loadVideo(videoId, 0f)
+                        youTubePlayer.cueVideo(videoId, 0f)
                     }
                 }
             })

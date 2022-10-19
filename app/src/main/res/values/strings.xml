@@ -11,7 +11,7 @@
     <string name="next"><![CDATA[>]]></string>
     <string name="CalendarioFecha">Septiembre 2022</string>
     <string name="buton_siguiente">Siguiente</string>
-    <string name="select">Seleccione Lugar></string>
+    <string name="select">Seleccione Lugar</string>
     <string name="ya_tiene_cuenta"><u><b>¿Ya tienes cuenta?</b></u></string>
     <string name="no_tiene_cuenta"><u><b>¿Aún no tienes cuenta?</b></u></string>
     <string name="texto_sign_in">Sign In</string>

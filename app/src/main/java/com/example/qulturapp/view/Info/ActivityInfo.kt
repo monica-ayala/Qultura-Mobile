@@ -13,13 +13,16 @@ import com.example.qulturapp.model.Info.Guia
 import com.example.qulturapp.model.Info.GuiaLista
 import com.example.qulturapp.model.Info.Link
 import com.example.qulturapp.model.Info.LinkLista
+import com.example.qulturapp.view.interactivo.ActivityInteractivoCEART
+import com.example.qulturapp.view.interactivo.ActivityInteractivoGaleriasLibertad
+import com.example.qulturapp.view.interactivo.ActivityInteractivoMAQRO
 import com.example.qulturapp.view.museum.ListMuseum
 import com.example.qulturapp.view.sesion.ActivitySignIn
 import com.example.qulturapp.viewmodel.Informacion.GuiasListAdapter
 import com.example.qulturapp.viewmodel.Informacion.GuiasViewModel
 import com.example.qulturapp.viewmodel.Informacion.LinksListAdapter
 import com.example.qulturapp.viewmodel.Informacion.LinksViewModel
-//Comment
+
 class ActivityInfo: AppCompatActivity(), GuiasListAdapter.OnGuiaClickListener, LinksListAdapter.OnLinkClickListener {
     private val linksViewModel = LinksViewModel()
     private lateinit var adapter: LinksListAdapter
@@ -67,26 +70,26 @@ class ActivityInfo: AppCompatActivity(), GuiasListAdapter.OnGuiaClickListener, L
         val museo1 = findViewById<LinearLayout>(R.id.mapa1)
         museo1.setOnClickListener{
             Toast.makeText(this, "MAPA1", Toast.LENGTH_SHORT).show()
-            val intent = Intent(this, ListMuseum::class.java)
+            val intent = Intent(this, ActivityInteractivoMAQRO::class.java)
             startActivity(intent)
         }
 
         val museo2 = findViewById<LinearLayout>(R.id.mapa2)
         museo2.setOnClickListener{
             Toast.makeText(this, "MAPA2", Toast.LENGTH_SHORT).show()
-            val intent = Intent(this, ListMuseum::class.java)
+            val intent = Intent(this, ActivityInteractivoCEART::class.java)
             startActivity(intent)
         }
 
         val museo3 = findViewById<LinearLayout>(R.id.mapa3)
         museo3.setOnClickListener{
             Toast.makeText(this, "MAPA3", Toast.LENGTH_SHORT).show()
-            val intent = Intent(this, ListMuseum::class.java)
+            val intent = Intent(this, ActivityInteractivoGaleriasLibertad::class.java)
             startActivity(intent)
         }
     }
 
-    override fun onGuiaClick(name: String, description: String, tip: String, icon: String, video: String) {
+    override fun onGuiaClick(name: String, description: String, tip: String, icon: String, video: String, imagen: String) {
         Toast.makeText(this, "La Guia es: $description", Toast.LENGTH_SHORT).show()
         val intent = Intent(this, GuiaActivity::class.java)
         intent.putExtra("name", name)
@@ -94,7 +97,8 @@ class ActivityInfo: AppCompatActivity(), GuiasListAdapter.OnGuiaClickListener, L
         intent.putExtra("tip", tip)
         intent.putExtra("icon", icon)
         intent.putExtra("video", video)
-        Toast.makeText(this, "La imagen es: $icon", Toast.LENGTH_SHORT).show()
+        intent.putExtra("imagen", imagen)
+        Toast.makeText(this, "La imagen es: $imagen", Toast.LENGTH_SHORT).show()
 
         startActivity(intent)
     }

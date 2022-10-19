@@ -58,10 +58,13 @@ class ActivityMap: AppCompatActivity (){
         val REQUEST_CHECK_SETTINGS = 20202
     }
 
+    // funcion que configura los parametros de las actualizaciones
+    // de ubicacion como el intervalo, la cantidad de error de la ubicacion
+    // y la prioridad
     init {
         locationRequest = LocationRequest.create()
             .apply { //https://stackoverflow.com/questions/66489605/is-constructor-locationrequest-deprecated-in-google-maps-v2
-                interval = 1000 //can be much higher
+                interval = 1000 //puede ser mayor
                 fastestInterval = 500
                 smallestDisplacement = 10f //10m
                 priority = LocationRequest.PRIORITY_HIGH_ACCURACY
@@ -71,8 +74,9 @@ class ActivityMap: AppCompatActivity (){
             override fun onLocationResult(locationResult: LocationResult?) {
                 locationResult ?: return
                 for (location in locationResult.locations) {
-                    // Update UI with location data
-                    updateLocation(location) //MY function
+                    // Actualiza la interfaz de usuario con la informacion
+                    // de la ubicación
+                    updateLocation(location)
                 }
             }
         }
@@ -93,6 +97,9 @@ class ActivityMap: AppCompatActivity (){
         }
     }
 
+    // Coloca mapa en Queretaro independientemente de
+    // permisos de ubicación
+
     private lateinit var binding: ActivityMapBinding
     val rnd = Random()
     lateinit var map: MapView
@@ -105,7 +112,7 @@ class ActivityMap: AppCompatActivity (){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         if (BuildConfig.DEBUG) {
-            Timber.plant(Timber.DebugTree()) //Init report type
+            Timber.plant(Timber.DebugTree()) //reporte de función init
         }
         val br: BroadcastReceiver = LocationProviderChangedReceiver()
         val filter = IntentFilter(LocationManager.PROVIDERS_CHANGED_ACTION)
@@ -114,7 +121,7 @@ class ActivityMap: AppCompatActivity (){
         //LocalBroadcastManager.getInstance(this).registerReceiver(locationProviderChange)
         Configuration.getInstance()
             .load(applicationContext, this.getPreferences(Context.MODE_PRIVATE))
-        binding = ActivityMapBinding.inflate(layoutInflater) //ADD THIS LINE
+        binding = ActivityMapBinding.inflate(layoutInflater)
 
         map = binding.map
         map.setTileSource(TileSourceFactory.MAPNIK)
@@ -130,8 +137,8 @@ class ActivityMap: AppCompatActivity (){
         )
         activityResultLauncher.launch(appPerms)
 
-        // adding icons
-        //list of museums
+        // Añadir Iconos
+        // con breve descripcion de cada uno
         val items = ArrayList<OverlayItem>()
         items.add(OverlayItem("Museo de Arte de Queretaro", "Exconvento de San Agustín, Claustro Barroco, el más importante de América. Museo inclusivo con servicios de accesibilidad. Visitas guiadas, talleres, eventos culturales. ", GeoPoint(20.59138, -100.3935)))
         items.add(OverlayItem("Galeria Libertad", "A un costado de Plaza de Armas se encuentra ubicada la Galería Libertad, digno albergue para la obra pictográfica producida en nuestro país y en el extranjero.", GeoPoint(20.5925, -100.3897)))
@@ -155,23 +162,17 @@ class ActivityMap: AppCompatActivity (){
     }
     override fun onResume() {
         super.onResume()
-        //this will refresh the osmdroid configuration on resuming.
-        //if you make changes to the configuration, use
-        //SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        //Configuration.getInstance().load(this, PreferenceManager.getDefaultSharedPreferences(this));
-        binding.map.onResume() //needed for compass, my location overlays, v6.0.0 and up
+        //esto reinicia la configuracion de osmdroid al resumir
+        binding.map.onResume() //requerido para el overlay de ubicacion, v6.0.0 +
     }
     override fun onPause() {
         super.onPause()
-        //this will refresh the osmdroid configuration on resuming.
-        //if you make changes to the configuration, use
-        //SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        //Configuration.getInstance().save(this, prefs);
+        //esto reinicia la configuracion de osmdroid al resumir
         if (requestingLocationUpdates) {
             requestingLocationUpdates = false
             stopLocationUpdates()
         }
-        binding.map.onPause()  //needed for compass, my location overlays, v6.0.0 and up
+        binding.map.onPause()  //requerido para el overlay de ubicacion, v6.0.0 +
     }
 
     override fun onStart() {
@@ -193,13 +194,13 @@ class ActivityMap: AppCompatActivity (){
         }
     }
 
-    fun initLoaction() { //call in create
+    fun initLoaction() { //funcion llamada en onCreate
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
         readLastKnownLocation()
     }
 
     @SuppressLint("MissingPermission")
-    private fun startLocationUpdates() { //onResume
+    private fun startLocationUpdates() { //onResumecon
         fusedLocationClient.requestLocationUpdates(
             locationRequest,
             locationCallback,
@@ -211,7 +212,7 @@ class ActivityMap: AppCompatActivity (){
         fusedLocationClient.removeLocationUpdates(locationCallback)
     }
 
-    @SuppressLint("MissingPermission") //permission are checked before
+    @SuppressLint("MissingPermission") //Permisos son revisados antes
     fun readLastKnownLocation() {
         fusedLocationClient.lastLocation
             .addOnSuccessListener { location: Location? ->
@@ -228,32 +229,30 @@ class ActivityMap: AppCompatActivity (){
             Timber.d("Settings Location IS OK")
             MyEventLocationSettingsChange.globalState = true //default
             initMap()
-            // All location settings are satisfied. The client can initialize
-            // location requests here.
-            // ...
+            // Todas las configuraciones de ubicación fueron cumplidas. El cliente puede
+            // inicializar las peticiones de ubicación.
         }
 
         task.addOnFailureListener { exception ->
             if (exception is ResolvableApiException) {
-                // Location settings are not satisfied, but this can be fixed
-                // by showing the user a dialog.
+                // Configuracion de configuración no fueron cumplidos, pero
+                // se puede usar el dialogo
                 Timber.d("Settings Location addOnFailureListener call settings")
                 try {
-                    // Show the dialog by calling startResolutionForResult(),
-                    // and check the result in onActivityResult().
                     exception.startResolutionForResult(
                         this@ActivityMap,
                         REQUEST_CHECK_SETTINGS
                     )
                 } catch (sendEx: IntentSender.SendIntentException) {
-                    // Ignore the error.
+                    // Ignorar este error
                     Timber.d("Settings Location sendEx??")
                 }
             }
         }
 
     }
-
+    // si el codigo de la peticion de ubicación es la misma a que se recibe por parte
+    // del sistema entonces se llama initMap()
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         Timber.d("Settings onActivityResult for $requestCode result $resultCode")
@@ -278,6 +277,8 @@ class ActivityMap: AppCompatActivity (){
 
     }
 
+    // inicializa en el mapa en el punto inicial
+    // y comienza las actualizaciones de ubicacion
     fun initMap() {
         initLoaction()
         if (!requestingLocationUpdates) {
@@ -317,12 +318,8 @@ class ActivityMap: AppCompatActivity (){
         mapController.setCenter(startPoint)
         getPositionMarker().position = startPoint
         map.invalidate()
-
-        // Place map in  for museum of art of Queretaro
-        val mapController = map.controller
         mapController.setZoom(17.5)
-        val startPoint = GeoPoint(20.59138, -100.3935);
-        mapController.setCenter(startPoint);
+
     }
 
     fun onClickDraw2(view: View?) {
@@ -339,7 +336,7 @@ class ActivityMap: AppCompatActivity (){
         map.invalidate()
         */
 
-        // Place map in  for museum of art of Queretaro
+        // Coloca el mapa en Galeria Libertad
         val mapController = map.controller
         mapController.setZoom(17.5)
         val startPoint = GeoPoint(20.59138, -100.3935);
@@ -355,7 +352,7 @@ class ActivityMap: AppCompatActivity (){
         map.invalidate()
 
          */
-        //Place map in Galeria Libertad
+        //Coloca el mapa en Galeria Libertad
         val mapController = map.controller
         mapController.setZoom(17.5)
         val startPoint = GeoPoint(20.5925, -100.3897);
@@ -373,11 +370,11 @@ class ActivityMap: AppCompatActivity (){
 
          */
 
-        //Place map in Secretaria de Cultura
+        //Colocar mapa en Secretaria de Cultura
         val mapController = map.controller
         mapController.setZoom(17.5)
-        val startPoint = GeoPoint(20.58819, -100.39645);
-        mapController.setCenter(startPoint);
+        val startPoint = GeoPoint(20.58819, -100.39645)
+        mapController.setCenter(startPoint)
 
 
     }

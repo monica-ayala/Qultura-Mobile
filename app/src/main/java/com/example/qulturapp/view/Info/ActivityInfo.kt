@@ -89,7 +89,7 @@ class ActivityInfo: AppCompatActivity(), GuiasListAdapter.OnGuiaClickListener, L
         }
     }
 
-    override fun onGuiaClick(name: String, description: String, tip: String, icon: String, video: String) {
+    override fun onGuiaClick(name: String, description: String, tip: String, icon: String, video: String, imagen: String) {
         Toast.makeText(this, "La Guia es: $description", Toast.LENGTH_SHORT).show()
         val intent = Intent(this, GuiaActivity::class.java)
         intent.putExtra("name", name)
@@ -97,7 +97,8 @@ class ActivityInfo: AppCompatActivity(), GuiasListAdapter.OnGuiaClickListener, L
         intent.putExtra("tip", tip)
         intent.putExtra("icon", icon)
         intent.putExtra("video", video)
-        Toast.makeText(this, "La imagen es: $icon", Toast.LENGTH_SHORT).show()
+        intent.putExtra("imagen", imagen)
+        Toast.makeText(this, "La imagen es: $imagen", Toast.LENGTH_SHORT).show()
 
         startActivity(intent)
     }

@@ -24,7 +24,7 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginRight="16dp"
-                android:src="@drawable/guiaicon">
+                android:src="@drawable/guiared">
             </ImageView>
 
             <TextView

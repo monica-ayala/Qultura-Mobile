@@ -13,6 +13,9 @@ import com.example.qulturapp.model.Info.Guia
 import com.example.qulturapp.model.Info.GuiaLista
 import com.example.qulturapp.model.Info.Link
 import com.example.qulturapp.model.Info.LinkLista
+import com.example.qulturapp.view.interactivo.ActivityInteractivoCEART
+import com.example.qulturapp.view.interactivo.ActivityInteractivoGaleriasLibertad
+import com.example.qulturapp.view.interactivo.ActivityInteractivoMAQRO
 import com.example.qulturapp.view.museum.ListMuseum
 import com.example.qulturapp.view.sesion.ActivitySignIn
 import com.example.qulturapp.viewmodel.Informacion.GuiasListAdapter
@@ -67,21 +70,21 @@ class ActivityInfo: AppCompatActivity(), GuiasListAdapter.OnGuiaClickListener, L
         val museo1 = findViewById<LinearLayout>(R.id.mapa1)
         museo1.setOnClickListener{
             Toast.makeText(this, "MAPA1", Toast.LENGTH_SHORT).show()
-            val intent = Intent(this, ListMuseum::class.java)
+            val intent = Intent(this, ActivityInteractivoMAQRO::class.java)
             startActivity(intent)
         }
 
         val museo2 = findViewById<LinearLayout>(R.id.mapa2)
         museo2.setOnClickListener{
             Toast.makeText(this, "MAPA2", Toast.LENGTH_SHORT).show()
-            val intent = Intent(this, ListMuseum::class.java)
+            val intent = Intent(this, ActivityInteractivoCEART::class.java)
             startActivity(intent)
         }
 
         val museo3 = findViewById<LinearLayout>(R.id.mapa3)
         museo3.setOnClickListener{
             Toast.makeText(this, "MAPA3", Toast.LENGTH_SHORT).show()
-            val intent = Intent(this, ListMuseum::class.java)
+            val intent = Intent(this, ActivityInteractivoGaleriasLibertad::class.java)
             startActivity(intent)
         }
     }

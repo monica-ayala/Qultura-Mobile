@@ -1,12 +1,16 @@
 package com.example.qulturapp.view
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.RelativeLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
 import androidx.viewpager2.widget.ViewPager2
 import com.bumptech.glide.Glide.init
 import com.example.qulturapp.R
+import com.example.qulturapp.view.museum.ListMuseum
+import com.example.qulturapp.view.solicitudes.ActivityHorario
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
@@ -17,6 +21,12 @@ class ManualActivity:AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         init()
+
+        val solibtn = findViewById<View>(R.id.skipBtn)
+        solibtn.setOnClickListener{
+            val intent = Intent(this, ListMuseum::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun init(){
@@ -30,7 +40,7 @@ class ManualActivity:AppCompatActivity() {
         view_pager.registerOnPageChangeCallback(object: ViewPager2.OnPageChangeCallback(){
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
-                Snackbar.make(parent_view, "You are "+ (position+1),Snackbar.LENGTH_SHORT).show()
+                //Snackbar.make(parent_view, "You are "+ (position+1),Snackbar.LENGTH_SHORT).show()
             }
         })
     }

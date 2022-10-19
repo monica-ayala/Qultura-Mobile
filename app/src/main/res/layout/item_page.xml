@@ -7,11 +7,27 @@
     android:layout_height="match_parent"
     android:id="@+id/contain">
 
+
     <ImageView
         android:id="@+id/Frame1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="fitXY"
-        android:src="@drawable/_74998b79e8d74f8b14fc6244e8de488"/>
+        android:layout_height="500dp"
+        android:layout_alignParentBottom="true"
+        android:baselineAlignBottom="true"
+        android:src="@drawable/manual2" />
+
+    <TextView
+        android:id="@+id/tvManual"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="22dp"
+        android:layout_marginHorizontal="10dp"
+        android:text="sadasdadadsadsada"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:layout_marginTop="60dp"/>
+
 
 </RelativeLayout>

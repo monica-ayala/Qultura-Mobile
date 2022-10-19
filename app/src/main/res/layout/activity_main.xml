@@ -7,6 +7,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <Button
+        android:id="@+id/skipBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/transparent"
+        android:text="SALTAR>>"
+        android:layout_alignParentEnd="true"/>
+
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/view_pager"
         android:orientation="horizontal"
@@ -15,13 +23,14 @@
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabs"
-        android:layout_marginBottom="40dp"
-        android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:tabMode="fixed"
-        app:tabGravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/transparent"
         app:tabBackground="@drawable/tab_selector"
-        app:tabIndicatorHeight="0dp"/>
+        app:tabGravity="center"
+        app:tabIndicatorHeight="0dp"
+        app:tabMode="fixed" />
 
 </RelativeLayout>

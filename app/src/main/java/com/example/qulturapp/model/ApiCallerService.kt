@@ -1,12 +1,10 @@
 package com.example.qulturapp.model
 
-import android.util.Log
 import com.example.qulturapp.model.Info.GuiasListResults
 import com.example.qulturapp.model.Info.LinksListResults
 import com.example.qulturapp.model.artwork.ArtworkListResults
 import com.example.qulturapp.model.eventos.EventoListResults
 import com.example.qulturapp.model.galleries.GalleryListResults
-import com.example.qulturapp.model.galleries.Sala
 import com.example.qulturapp.model.museums.Museo
 import com.example.qulturapp.model.museums.MuseumListResults
 import com.example.qulturapp.model.sesion.EncuentraUsuario

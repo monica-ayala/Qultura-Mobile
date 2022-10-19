@@ -20,6 +20,7 @@ class GuiaActivity : AppCompatActivity() {
             val guiaDescription = findViewById<TextView>(R.id.tv_guia_desc)
             val guiaTip = findViewById<TextView>(R.id.tv_guia_tip)
             val guiaIcon = findViewById<ImageView>(R.id.iv_guia_icon)
+            val guiaImage = findViewById<ImageView>(R.id.iv_guia_image)
             var linearLayout = findViewById<LinearLayout>(R.id.ly_guia)
             //val youTubePlayerView = findViewById<YouTubePlayerView>(R.id.youtube)
             val youTubePlayerView = YouTubePlayerView(this)

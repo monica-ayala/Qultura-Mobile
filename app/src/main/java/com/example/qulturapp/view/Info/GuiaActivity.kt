@@ -9,6 +9,7 @@ import com.example.qulturapp.R
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+import com.squareup.picasso.Picasso
 
 
 class GuiaActivity : AppCompatActivity() {
@@ -27,12 +28,15 @@ class GuiaActivity : AppCompatActivity() {
             lifecycle.addObserver(youTubePlayerView)
 
 
-
             val nombre : String? = intent.getStringExtra("name")
             val description : String? = intent.getStringExtra("description")
             val tip : String? = intent.getStringExtra("tip")
             val icon : String? = intent.getStringExtra("icon")
             val video : String? = intent.getStringExtra("video")
+            val _imagen : String? = intent.getStringExtra("imagen")
+
+            val linkImage = "https://qulturaqro.live/uploads/" + _imagen
+            Picasso.get().load(linkImage).into(guiaImage)
 
             guiaTitle.text = nombre
             guiaDescription.text = description

@@ -72,14 +72,14 @@ class EventosListAdapter (private val data:List<EventoLista>, private val contex
     private fun agrandarImagen(holder: ViewHolder, item: EventoLista) {
         val params = RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, 1000)
         holder.foto_evento.layoutParams = params
-        val ligaImg = "http://3.14.37.4:8080/uploads/" + item.multimedia_evento
+        val ligaImg = "http://3.14.37.4:8080/uploads/eventos/" + item.multimedia_evento
         Picasso.get().load(ligaImg).fit().into(holder.foto_evento)
     }
 
     private fun reducirImagen(holder: ViewHolder, item: EventoLista) {
         val params = RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, 600)
         holder.foto_evento.layoutParams = params
-        val ligaImg = "http://3.14.37.4:8080/uploads/" + item.multimedia_evento
+        val ligaImg = "http://3.14.37.4:8080/uploads/eventos/" + item.multimedia_evento
         Picasso.get().load(ligaImg).into(holder.foto_evento)
     }
 
@@ -103,7 +103,7 @@ class EventosListAdapter (private val data:List<EventoLista>, private val contex
         fun bind(item: EventoLista) {
             botonEvento.text = item.info_evento
 
-            val ligaImg = "http://3.14.37.4:8080/uploads/" + item.multimedia_evento
+            val ligaImg = "http://3.14.37.4:8080/uploads/eventos/" + item.multimedia_evento
             Picasso.get().load(ligaImg).into(foto_evento);
 
             val fecha = item.fecha_evento

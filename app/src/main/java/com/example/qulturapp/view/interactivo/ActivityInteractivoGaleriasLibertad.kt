@@ -23,18 +23,22 @@ class ActivityInteractivoGaleriasLibertad: AppCompatActivity() {
         // Boton baños
         val btnRestroom : Button = findViewById(R.id.btnRestroom)
 
+        // Mostrar elevadores
         btnElevator.setOnClickListener {
             mapMuseum.setImageResource(R.drawable.gl_pb_elevador)
         }
 
+        // Mostrar escaleras
         btnStairs.setOnClickListener {
             mapMuseum.setImageResource(R.drawable.gl_pb_escaleras)
         }
 
+        // Mostrar recepcion
         btnReception.setOnClickListener {
             mapMuseum.setImageResource(R.drawable.gl_pb_recepcion)
         }
 
+        // Mostrar baños
         btnRestroom.setOnClickListener {
             mapMuseum.setImageResource(R.drawable.gl_pb_sanitarios)
         }

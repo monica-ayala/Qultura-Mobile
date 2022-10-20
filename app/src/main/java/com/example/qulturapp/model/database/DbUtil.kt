@@ -14,6 +14,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.launch
 
+//Esta clase cuenta con funciones de utilidad para el manejo de la base de datos local
 class DbUtil(private val context: Context) {
     private lateinit var db: QulturaDatabase
     private lateinit var qulturaDao: QulturaDatabaseDao
@@ -91,6 +92,8 @@ class DbUtil(private val context: Context) {
             }
     }
 
+    //Limpiar y actualizar la base de datos local, esto incluye:
+    //Salas, obras, museos y guías
     fun initRoomDatabase(id_sala:Int){
         db = QulturaDatabase.getInstance(context)
 

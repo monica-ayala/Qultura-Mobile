@@ -46,6 +46,7 @@ class ActivitySolicitudes: AppCompatActivity() {
             }
         })
 
+        //Actualiza datos de solicitud con base de datos
         solicitudesViewModel.agregaSolicitudes()
 
         val listbtn = findViewById<View>(R.id.rbtn)

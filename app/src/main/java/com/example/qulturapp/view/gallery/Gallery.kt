@@ -38,7 +38,7 @@ class Gallery:AppCompatActivity() {
         val imgMuseo = intent.getStringExtra("url")
 
         val salaBgImg = findViewById<ImageView>(R.id.ivGalleryBg)
-        val museumImg = "https://qulturaqro.live/uploads/" + imgMuseo
+        val museumImg = "https://qulturaqro.live/uploads/museos/" + imgMuseo
         Picasso.get().load(museumImg).into(salaBgImg)
 
         galleryViewModel.listaGallery.observe(this, Observer {

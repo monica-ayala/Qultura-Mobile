@@ -56,7 +56,7 @@ class Artwork : AppCompatActivity() {
         val imgMuseo = intent.getStringExtra("url")
         val obraProfileImg = findViewById<ImageView>(R.id.roundedImageView)
         val obraBgImg = findViewById<ImageView>(R.id.ivObraBG)
-        val museumImg = "https://qulturaqro.live/uploads/" + imgMuseo
+        val museumImg = "https://qulturaqro.live/uploads/museos/" + imgMuseo
         Picasso.get().load(museumImg).into(obraBgImg)
         Picasso.get().load(museumImg).into(obraProfileImg)
 

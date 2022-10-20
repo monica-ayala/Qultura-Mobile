@@ -18,7 +18,6 @@ class ArtworkViewModel: ViewModel() {
 
         viewModelScope.launch {
             val artworkList = caller.getObra(id_sala)
-            // Log.d("Obras ---> ",artworkList!!.artwork.toString())
             val listaObras = mutableListOf<ArtworkResults>()
             for(obra in artworkList!!.artwork)
             {

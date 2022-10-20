@@ -59,7 +59,7 @@ class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         item.desc
         item.ubi
 
-        val ligaImg = "https://qulturaqro.live/uploads/" + item.url
+        val ligaImg = "https://qulturaqro.live/uploads/museos/" + item.url
         Picasso.get().load(ligaImg).into(museoImg);
 
     }

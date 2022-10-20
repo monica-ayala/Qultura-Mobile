@@ -41,6 +41,7 @@ class EventoActivity: AppCompatActivity() {
 
     }
 
+    //Actualiza la lista con los filtros activos
     private fun modificaFiltros(nombreTag: String, isChecked: Boolean) {
         if(isChecked) {
             eventosViewModel.filtrosTags.add(nombreTag)
@@ -50,6 +51,7 @@ class EventoActivity: AppCompatActivity() {
         eventosViewModel.actualizaLista()
     }
 
+    //Funcionalidad de botones de filtros
     private fun initializeToggleListeners() {
         toggleTalleres.setOnCheckedChangeListener { _, isChecked ->
             modificaFiltros("Talleres", isChecked)

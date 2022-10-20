@@ -17,6 +17,7 @@ class EventosViewModel: ViewModel() {
     var listaEventosFiltrados = MutableLiveData<List<EventoLista>>()
     var statusConexion: MutableLiveData<Boolean> = MutableLiveData(null)
 
+    //Filtros activos
     var filtrosTags = mutableListOf("Talleres", "Artes Escénicas", "Música", "Danza", "Aire Libre", "Cine", "Otros")
 
     fun agregarEventos() {
@@ -47,6 +48,7 @@ class EventosViewModel: ViewModel() {
         }
     }
 
+    //Define lista de eventos a partir de filtros actuales
     fun actualizaLista() {
         var listaEventosAct = mutableListOf<EventoLista>()
         listaEventos.value?.forEach { evento ->

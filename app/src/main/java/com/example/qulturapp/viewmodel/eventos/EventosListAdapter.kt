@@ -68,6 +68,7 @@ class EventosListAdapter (private val data:List<EventoLista>, private val contex
         }
     }
 
+    //Funciones para actualizar el tamaño de las imágenes de cada evento, ajustando dimensiones
     private fun agrandarImagen(holder: ViewHolder, item: EventoLista) {
         val params = RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, 1000)
         holder.foto_evento.layoutParams = params

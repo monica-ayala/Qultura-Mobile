@@ -14,6 +14,12 @@
     <string name="select">Seleccione Lugar</string>
     <string name="ya_tiene_cuenta"><u><b>¿Ya tienes cuenta?</b></u></string>
     <string name="no_tiene_cuenta"><u><b>¿Aún no tienes cuenta?</b></u></string>
+    <string name="lorem_ipsum" />
+    <string name="PrimerManual">Complementa tu recorrido a partir de la información disponible sobre museos, sus salas y obras.</string>
+    <string name="SegundoManual">Recuerda dirigirte al apartado de eventos, donde podrás consultar todos los eventos próximos por parte de la Secretaría de Cultura.</string>
+    <string name="TecerManual">Si requieres apoyo adicional, puedes llenar una solicitud de recorrido para visitar el museo de tu elección.</string>
+    <string name="CuartoManual">Visita la sección de información para consultar diferentes guías y mapas como referencia para tu recorrido.</string>
+    <string name="QuintoManual">En caso de requerir de ayuda urgente dentro del museo, presiona repetidamente el botón de ayuda para contactar a personal del museo.</string>
     <string name="texto_sign_in">Sign In</string>
     <string name="desc_boton_iniciar_sesion">Boton para iniciar sesión</string>
     <string name="texto_contrasenia">Contraseña</string>

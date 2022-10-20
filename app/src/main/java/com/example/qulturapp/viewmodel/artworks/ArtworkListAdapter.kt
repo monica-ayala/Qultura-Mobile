@@ -38,6 +38,7 @@ class ArtworkListAdapter(private val data: List<ArtworkResults>, private val con
             intent.putExtra("desc", item.desc_obra)
             intent.putExtra("fecha", item.fecha_obra)
             intent.putExtra("autor", item.autor_obra)
+            intent.putExtra("audio", item.audio_obra)
 
             context.startActivity(intent)
         }
@@ -58,7 +59,7 @@ class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     fun bind(item: ArtworkResults) {
         obraNombre.text = item.name
 
-        val ligaImg = "https://qulturaqro.live/uploads/" + item.url
+        val ligaImg = "https://qulturaqro.live/uploads/museos/" + item.url
         Picasso.get().load(ligaImg).into(obraImg);
     }
 }

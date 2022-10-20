@@ -55,7 +55,7 @@ class Lounge : AppCompatActivity() {
 
         val obraBgImg = findViewById<ImageView>(R.id.ivSalaBG)
         val obraProfileImg = findViewById<ImageView>(R.id.roundedImageView)
-        val museumImg = "https://qulturaqro.live/uploads/" + imgMuseo
+        val museumImg = "https://qulturaqro.live/uploads/museos/" + imgMuseo
         Picasso.get().load(museumImg).into(obraBgImg)
         Picasso.get().load(museumImg).into(obraProfileImg)
     }

@@ -57,7 +57,7 @@ class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     fun bind(item: Sala) {
         salaNombre.text = item.nom_sala
 
-        val ligaImg = "https://qulturaqro.live/uploads/" + item.img_sala
+        val ligaImg = "https://qulturaqro.live/uploads/museos/" + item.img_sala
         Picasso.get().load(ligaImg).into(salasImg);
     }
 }

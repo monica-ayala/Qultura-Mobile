@@ -14,6 +14,7 @@ class SesionViewModel: ViewModel() {
     var sesionIniciada: MutableLiveData<Boolean> = MutableLiveData(null)
     var statusConexion: MutableLiveData<Boolean> = MutableLiveData(null)
 
+    //Sign up
     fun guardarUsuario(nombre: String, correo: String, contrasenia: String) {
         viewModelScope.launch {
             try {

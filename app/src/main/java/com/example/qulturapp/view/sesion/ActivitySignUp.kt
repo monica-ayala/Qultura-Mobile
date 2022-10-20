@@ -50,6 +50,7 @@ class ActivitySignUp: AppCompatActivity() {
         }
     }
 
+    //Validación de la información ingresada
     private fun validaInfo(): Boolean {
         val completo = when {
             usuario.text.toString() == "" -> false

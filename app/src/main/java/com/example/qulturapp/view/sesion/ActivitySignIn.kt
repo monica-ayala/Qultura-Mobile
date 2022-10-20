@@ -53,6 +53,7 @@ class ActivitySignIn: AppCompatActivity() {
         }
     }
 
+    //Validación de la información ingresada
     private fun validaInfo(): Boolean {
         val completo = when {
             !esCorreo(correo.text.toString()) -> false

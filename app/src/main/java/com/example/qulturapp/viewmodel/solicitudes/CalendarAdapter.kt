@@ -18,7 +18,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.qulturapp.model.horarios.Horario
 import java.time.LocalDate
 
-class CalendarAdapter(private val daysOfMonth:List<String>, private val con : Context, private val HorarioViewModel: HorarioViewModel, private val counter : Int, private val date : LocalDate): RecyclerView.Adapter<ViewHolderCalendario>() {
+class CalendarAdapter(private val daysOfMonth:List<String>, private val con : Context, private val HorarioViewModel: HorarioViewModel, private val counter : Int, private val date : LocalDate, private val month : String): RecyclerView.Adapter<ViewHolderCalendario>() {
 
     var current_holder: ViewHolderCalendario? = null
 
@@ -31,6 +31,7 @@ class CalendarAdapter(private val daysOfMonth:List<String>, private val con : Co
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onBindViewHolder(holder:ViewHolderCalendario, position:Int) {
         holder.button_dayofMonth.text = daysOfMonth[position]
+        holder.button_dayofMonth.contentDescription = daysOfMonth[position] + " de " +  month
         if(holder.button_dayofMonth.text != " "){
 
             if(counter != 0 || (holder.button_dayofMonth.text.toString()).toInt() >= date.dayOfMonth){
@@ -67,3 +68,4 @@ class CalendarAdapter(private val daysOfMonth:List<String>, private val con : Co
 class ViewHolderCalendario (itemView: View): RecyclerView.ViewHolder(itemView){
     var button_dayofMonth = itemView.findViewById(R.id.boton_cellday) as Button
 }
+

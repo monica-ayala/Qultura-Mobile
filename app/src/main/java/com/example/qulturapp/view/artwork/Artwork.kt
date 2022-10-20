@@ -151,7 +151,7 @@ class Artwork : AppCompatActivity() {
             // Define el comportamiento del audio una vez que este termina de reproducirse
             handler.postDelayed(runnable, 10)
             mediaPlayer!!.setOnCompletionListener {
-                //mediaPlayer!!.pause()
+                mediaPlayer!!.pause()
                 playIB.setImageResource(R.drawable.ic_baseline_play_circle_outline_24)
 
 

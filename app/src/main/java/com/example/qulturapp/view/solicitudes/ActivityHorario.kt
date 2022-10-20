@@ -53,7 +53,7 @@ class ActivityHorario: AppCompatActivity(){
         monthYearText.text = (monthYearFromDate(selectedDate))
         HorarioViewModel.monthYear_selected = monthYearText.text as String
         val daysInMonth = daysInMonthArray(selectedDate)
-        val calendarAdapter = CalendarAdapter(daysInMonth.toList(), this, HorarioViewModel, calendarcounter,selectedDate)
+        val calendarAdapter = CalendarAdapter(daysInMonth.toList(), this, HorarioViewModel, calendarcounter,selectedDate, monthYearText.text as String)
         val layoutManager_calendar = GridLayoutManager(this, 7)
         rvCalendar.layoutManager = layoutManager_calendar
         rvCalendar.adapter = calendarAdapter
@@ -68,11 +68,11 @@ class ActivityHorario: AppCompatActivity(){
         val dayOfWeek = firstOfMonth.dayOfWeek.value
 
         for(i in 1..42){
-           if(i <= dayOfWeek || i > daysInMonth + dayOfWeek){
-               daysInMonthArray.add(" ")
-           }else{
-               daysInMonthArray.add((i - dayOfWeek).toString())
-           }
+            if(i <= dayOfWeek || i > daysInMonth + dayOfWeek){
+                daysInMonthArray.add(" ")
+            }else{
+                daysInMonthArray.add((i - dayOfWeek).toString())
+            }
         }
         return daysInMonthArray
 

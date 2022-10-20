@@ -21,7 +21,7 @@ class GalleryViewModel: ViewModel() {
             val galleryList = caller.getGallery(idMuseo)
             Log.d("Salas ---> ",galleryList!!.gallery.toString())
             val listaSalas = mutableListOf<GalleryResults>()
-            for(sala in galleryList.gallery)
+            for(sala in galleryList!!.gallery)
             {
                 val content =  GalleryResults(sala.nom_sala, sala.img_sala, sala.id_sala)
                 listaSalas.add(content)

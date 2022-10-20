@@ -4,7 +4,6 @@ import android.app.AlertDialog
 import android.content.Context
 import android.content.DialogInterface
 import android.graphics.Color
-import android.util.Log
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
@@ -17,8 +16,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.qulturapp.R
 import com.example.qulturapp.model.solicitudes.SolicitudLista
 import com.squareup.picasso.Picasso
-import java.text.SimpleDateFormat
-import java.util.*
 
 class SolicitudesListAdapter (private val data:List<SolicitudLista>, private val context: Context): RecyclerView.Adapter<ViewHolder>() {
     private val dataML = data.toMutableList()

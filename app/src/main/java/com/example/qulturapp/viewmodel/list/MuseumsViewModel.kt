@@ -21,9 +21,9 @@ class MuseumsViewModel: ViewModel() {
         viewModelScope.launch {
 
             val museumList = caller.searchMuseumList()
-            Log.d("Museos",museumList!!.museo.toString())
+            //Log.d("Museos",museumList!!.museo.toString())
             val listaMuseos = mutableListOf<MuseumResults>()
-            for(museo in museumList.museo)
+            for(museo in museumList!!.museo)
             {
                 val content =  MuseumResults(museo?.nom_museo, museo?.imgP_museo, museo.id_museo, museo?.desc_museo, museo?.ubicacion_museo)
 

@@ -2,6 +2,7 @@ package com.example.qulturapp.view.lounge
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -40,7 +41,9 @@ class Lounge : AppCompatActivity() {
         val nomSala = intent.getStringExtra("nom")
         val imgMuseo = intent.getStringExtra("url")
         val descSala = intent.getStringExtra("desc")
-        val idSala = intent.getIntExtra("id", 2)
+        val idSala = intent.getIntExtra("id", 0)
+
+        Log.d("Id_Sala:", idSala.toString())
 
         artworkViewModel.getObra(idSala)
 

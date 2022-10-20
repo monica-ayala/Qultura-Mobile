@@ -23,7 +23,7 @@ class GuiaActivity : AppCompatActivity() {
             val guiaIcon = findViewById<ImageView>(R.id.iv_guia_icon)
             val guiaImage = findViewById<ImageView>(R.id.iv_guia_image)
             var linearLayout = findViewById<LinearLayout>(R.id.ly_guia)
-            //val youTubePlayerView = findViewById<YouTubePlayerView>(R.id.youtube)
+
             val youTubePlayerView = YouTubePlayerView(this)
             lifecycle.addObserver(youTubePlayerView)
 
@@ -51,10 +51,6 @@ class GuiaActivity : AppCompatActivity() {
                 }
             })
             linearLayout.addView(youTubePlayerView)
-
-
-
         }
-
     }
 }

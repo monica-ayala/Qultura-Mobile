@@ -48,18 +48,20 @@ class ActivityInteractivoMAQRO: AppCompatActivity() {
         // Boton baños
         val btnRestroom : Button = findViewById(R.id.btnRestroom)
 
+        // Mostrar primer piso
         btnPB.setOnClickListener {
             floorChecker = 0
             mapMuseum.setImageResource(R.drawable.maqro_pb_vacio)
         }
 
+        // Mostrar segundo piso
         btnPA.setOnClickListener {
-
             btnPB.backgroundTintList
             floorChecker = 1
             mapMuseum.setImageResource(R.drawable.maqro_pa_vacio)
         }
 
+        // Mostrar rampas
         btnRamp.setOnClickListener {
             if(floorChecker == 0) {
                 Toast.makeText(applicationContext,"No hay rampas en el primer piso",
@@ -75,9 +77,8 @@ class ActivityInteractivoMAQRO: AppCompatActivity() {
             }
         }
 
+        // Mostrar elevadores
         btnElevator.setOnClickListener {
-
-
             if(floorChecker == 0) {
                 mapMuseum.setImageResource(R.drawable.maqro_pb_elevador)
             } else {
@@ -85,6 +86,7 @@ class ActivityInteractivoMAQRO: AppCompatActivity() {
             }
         }
 
+        // Mostrar escaleras
         btnStairs.setOnClickListener {
             if(floorChecker == 0) {
                 mapMuseum.setImageResource(R.drawable.maqro_pb_escaleras)
@@ -93,8 +95,8 @@ class ActivityInteractivoMAQRO: AppCompatActivity() {
             }
         }
 
+        // Mostrar recepcion
         btnReception.setOnClickListener {
-
             if(floorChecker == 0) {
                 mapMuseum.setImageResource(R.drawable.maqro_pb_recepcion)
             } else {
@@ -105,8 +107,8 @@ class ActivityInteractivoMAQRO: AppCompatActivity() {
             }
         }
 
+        // Mostrar oficinas
         btnOffice.setOnClickListener {
-
             if(floorChecker == 0) {
                 btnOffice.isEnabled= false
                 Toast.makeText(applicationContext,"Las oficinas se encuentran en el segundo piso",
@@ -119,8 +121,8 @@ class ActivityInteractivoMAQRO: AppCompatActivity() {
             btnOffice.isEnabled = true
         }
 
+        // Mostrar baños
         btnRestroom.setOnClickListener {
-
             if(floorChecker == 0) {
                 mapMuseum.setImageResource(R.drawable.maqro_pb_sanitarios)
             } else {

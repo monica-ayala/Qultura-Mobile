@@ -82,7 +82,7 @@ class ViewHolder (view: View): RecyclerView.ViewHolder(view) {
         horario.text = item.fecha
         asistentes.text = "Personas: " + item.asistentes.toString()
 
-        val ligaImg = "http://3.14.37.4:8080/uploads/" + item.imagen_museo
+        val ligaImg = "https://qulturaqro.live/uploads/" + item.imagen_museo
         Picasso.get().load(ligaImg).into(imagenMuseo);
 
         var pos = true

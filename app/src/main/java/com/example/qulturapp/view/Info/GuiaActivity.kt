@@ -35,7 +35,7 @@ class GuiaActivity : AppCompatActivity() {
             val video : String? = intent.getStringExtra("video")
             val _imagen : String? = intent.getStringExtra("imagen")
 
-            val linkImage = "https://qulturaqro.live/uploads/" + _imagen
+            val linkImage = "https://qulturaqro.live/uploads/guias/" + _imagen
             Picasso.get().load(linkImage).into(guiaImage)
 
             guiaTitle.text = nombre

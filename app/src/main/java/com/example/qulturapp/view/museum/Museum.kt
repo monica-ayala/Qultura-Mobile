@@ -38,7 +38,7 @@ class Museum:AppCompatActivity() {
         val museumDesc = findViewById<TextView>(R.id.tv_musDesc)
         museumDesc.text = descMuseo
         val museumProfileImg = findViewById<ImageView>(R.id.profile_image)
-        val museumImg = "https://qulturaqro.live/uploads/" + imgMuseo
+        val museumImg = "https://qulturaqro.live/uploads/museos/" + imgMuseo
         Picasso.get().load(museumImg).into(museumProfileImg)
         val museumBgImg = findViewById<ImageView>(R.id.iv_BgImg)
         Picasso.get().load(museumImg).into(museumBgImg)

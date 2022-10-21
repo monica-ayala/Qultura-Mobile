@@ -29,7 +29,8 @@
         android:fontFamily="sans-serif-black"
         android:text="Salas"
         android:textColor="@color/header_text_color"
-        android:textSize="25sp" />
+        android:textSize="25sp"
+        android:contentDescription="Lista de las salas que hay en el museo"/>
 
     <View
         android:layout_width="200dp"

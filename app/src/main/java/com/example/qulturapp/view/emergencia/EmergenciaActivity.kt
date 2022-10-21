@@ -39,19 +39,17 @@ class EmergenciaActivity : AppCompatActivity() {
 
         binding.dropdownMenu.addTextChangedListener(object : TextWatcher {
 
+            // Basado en el texto del dropDownMenu el numero de telefono cambia
             override fun afterTextChanged(s: Editable) {
                 if (binding.dropdownMenu.getText().toString()=="Museo de Arte de Querétaro"){
-                    // based on the value in the dropDownMenu the phoneNumber necessarily needs to change
                     phoneNumber = "4422122357"
 
                 }
                 else if (binding.dropdownMenu.getText().toString()=="Secretaría de Cultura"){
-                    // based on the value in the dropDownMenu the phoneNumber necessarily needs to change
                     phoneNumber = "4422519850"
 
                 }
                 else if (binding.dropdownMenu.getText().toString()=="Galería Libertad"){
-                    // based on the value in the dropDownMenu the phoneNumber necessarily needs to change
                     phoneNumber = "4422142358"
                 }
             }
@@ -63,7 +61,8 @@ class EmergenciaActivity : AppCompatActivity() {
                                        before: Int, count: Int) {}
         })
 
-        //ClickListener of call button
+        //ClickListener del boton de llamada el cual debe ser presionado
+        //2 veces para hacer la llamada
         binding.panicBtn.setOnClickListener{
              i++
             val handler = Handler()
@@ -90,6 +89,8 @@ class EmergenciaActivity : AppCompatActivity() {
 
     }
 
+     //  Intent ACTION_CALL Acción de la actividad permite realizar una
+     //  llamada a alguien especificado por los datos
     @SuppressLint("MissingPermission")
     private fun initiateCall(){
         val callIntent = Intent(Intent.ACTION_CALL)
@@ -97,6 +98,8 @@ class EmergenciaActivity : AppCompatActivity() {
         startActivity(callIntent)
     }
 
+    // Revisa que el codigo recibido sea igual al
+    // Codigo correspondiente con el permiso para llamar
     override fun onRequestPermissionsResult(
         requestCode: Int,
         permissions: Array<out String>,
@@ -106,6 +109,7 @@ class EmergenciaActivity : AppCompatActivity() {
         if (requestCode == REQUEST_PHONE_CALL)initiateCall()
     }
 
+    // Objetos utilizados para las pruebas automatizadas
     companion object{
         fun buildToastMessageTwice(): String{
             return "Has presionado el boton 2 veces"

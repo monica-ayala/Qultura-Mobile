@@ -19,7 +19,6 @@ import com.squareup.picasso.Picasso
 
 class GalleryListAdapter(private val data: List<Sala>, private val context: Context) : RecyclerView.Adapter<ViewHolder>(){
     private val dataGalleryML = data.toMutableList()
-    private val galleryViewModel = GalleryViewModel()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
@@ -42,6 +41,7 @@ class GalleryListAdapter(private val data: List<Sala>, private val context: Cont
 
             context.startActivity(intent)
         }
+        holder.salasImg.contentDescription = item.nom_sala
     }
 
     override fun getItemCount(): Int = dataGalleryML.size
@@ -57,7 +57,7 @@ class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     fun bind(item: Sala) {
         salaNombre.text = item.nom_sala
 
-        val ligaImg = "https://qulturaqro.live/uploads/" + item.img_sala
+        val ligaImg = "https://qulturaqro.live/uploads/museos/" + item.img_sala
         Picasso.get().load(ligaImg).into(salasImg);
     }
 }

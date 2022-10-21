@@ -4,6 +4,7 @@ import android.media.AudioManager
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.os.Handler
+import android.util.Log
 import android.widget.*
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -12,6 +13,7 @@ import com.example.qulturapp.model.artwork.ArtworkResults
 import com.example.qulturapp.viewmodel.artworks.ArtworkListAdapter
 import com.example.qulturapp.viewmodel.artworks.ArtworkViewModel
 import com.squareup.picasso.Picasso
+import timber.log.Timber
 
 /**
  * En esta actividad se desarrolla la vista de Obras.
@@ -29,8 +31,9 @@ class Artwork : AppCompatActivity() {
     private val viewmodel: ArtworkViewModel by viewModels()
 
     lateinit var playIB: ImageButton
-    lateinit var mediaPlayer: MediaPlayer
+    var mediaPlayer: MediaPlayer? = null
     lateinit var seekbar: SeekBar
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -56,9 +59,12 @@ class Artwork : AppCompatActivity() {
         val imgMuseo = intent.getStringExtra("url")
         val obraProfileImg = findViewById<ImageView>(R.id.roundedImageView)
         val obraBgImg = findViewById<ImageView>(R.id.ivObraBG)
-        val museumImg = "https://qulturaqro.live/uploads/" + imgMuseo
+        val museumImg = "https://qulturaqro.live/uploads/museos/" + imgMuseo
         Picasso.get().load(museumImg).into(obraBgImg)
         Picasso.get().load(museumImg).into(obraProfileImg)
+
+        val audioMuseo = intent.getStringExtra("audio")
+
 
         playIB = findViewById(R.id.idIBPlay)
 
@@ -67,82 +73,94 @@ class Artwork : AppCompatActivity() {
 
         mediaPlayer = MediaPlayer()
 
-        // Se define la ruta en la que se encuentra el audio, todos estos se guardan en la instancia.
-        var audioUrl = "https://qulturaqro.live/uploads/museos/1666117245750-audioMuseo.mp3"
+        if (audioMuseo != null) {
+            Timber.tag("AUDIO").d(audioMuseo)
 
-        mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC)
+            // Se define la ruta en la que se encuentra el audio, todos estos se guardan en la instancia.
 
-        mediaPlayer.setDataSource(audioUrl)
+            var audioUrl = "https://qulturaqro.live/uploads/museos/" + audioMuseo
 
-        mediaPlayer.prepare()
+            mediaPlayer!!.setAudioStreamType(AudioManager.STREAM_MUSIC)
 
-        // Define el límite que la barra tendrá como progreso
-        seekbar.max = mediaPlayer.duration
+            mediaPlayer!!.setDataSource(audioUrl)
 
-        /**
-         * Define el comportamiento que el botón de reproducción del audio tiene.
-         *
-         * Dentro del "listener" se tiene una función if que detendrá o reanudará el audio
-         * dependiendo de si este está o no en reproducción. De igual manera, cambia la imagen
-         * del "ImageButton" dependiendo de su estado.
-         *
-         * Despliega en pantalla una notificación que indica el estado del audio.
-         */
+            mediaPlayer!!.prepare();
 
-        playIB.setOnClickListener {
+            Log.d("AUDIO URL", audioUrl)
 
-            if (mediaPlayer.isPlaying) {
+            // Define el límite que la barra tendrá como progreso
 
-                playIB.setImageResource(R.drawable.ic_baseline_play_circle_outline_24)
-                mediaPlayer.pause()
-                Toast.makeText(applicationContext, "Audio se pausa", Toast.LENGTH_SHORT)
-                    .show()
+            seekbar.max = mediaPlayer!!.duration
+
+            /**
+             * Define el comportamiento que el botón de reproducción del audio tiene.
+             *
+             * Dentro del "listener" se tiene una función if que detendrá o reanudará el audio
+             * dependiendo de si este está o no en reproducción. De igual manera, cambia la imagen
+             * del "ImageButton" dependiendo de su estado.
+             *
+             * Despliega en pantalla una notificación que indica el estado del audio.
+             */
+
+            playIB.setOnClickListener {
+
+                if (mediaPlayer!!.isPlaying) {
+
+                    playIB.setImageResource(R.drawable.ic_baseline_play_circle_outline_24)
+                    mediaPlayer!!.pause()
+                    Toast.makeText(applicationContext, "Audio se pausa", Toast.LENGTH_SHORT)
+                        .show()
 
 
-            } else {
+                } else {
 
-                mediaPlayer.start()
-                playIB.setImageResource(R.drawable.ic_baseline_pause_circle_outline_24)
+                    mediaPlayer!!.start()
+                    playIB.setImageResource(R.drawable.ic_baseline_pause_circle_outline_24)
 
-                Toast.makeText(applicationContext, "Audio inicia", Toast.LENGTH_SHORT)
-                    .show()
+                    Toast.makeText(applicationContext, "Audio inicia", Toast.LENGTH_SHORT)
+                        .show()
 
-            }
-        }
-
-        /**
-         * La función se encarga de modificar el comportamiento que la "SeekBar" tendrá.
-         * Si el usuario modifica su posición, el audio cambiará a reflejar la posición del
-         * mismo.
-         */
-        seekbar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
-            override fun onProgressChanged(p0: SeekBar?, p1: Int, p2: Boolean) {
-                if (p2) {
-                    mediaPlayer.seekTo(p1)
                 }
             }
 
-            override fun onStartTrackingTouch(p0: SeekBar?) {
+            /**
+             * La función se encarga de modificar el comportamiento que la "SeekBar" tendrá.
+             * Si el usuario modifica su posición, el audio cambiará a reflejar la posición del
+             * mismo.
+             */
+            seekbar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+                override fun onProgressChanged(p0: SeekBar?, p1: Int, p2: Boolean) {
+                    if (p2) {
+                        mediaPlayer!!.seekTo(p1)
+                    }
+                }
+
+                override fun onStartTrackingTouch(p0: SeekBar?) {
+                }
+
+                override fun onStopTrackingTouch(p0: SeekBar?) {
+                }
+
+            })
+
+            runnable = Runnable {
+                seekbar.progress = mediaPlayer!!.currentPosition
+                handler.postDelayed(runnable, 10)
             }
 
-            override fun onStopTrackingTouch(p0: SeekBar?) {
-            }
-
-        })
-
-        runnable = Runnable {
-            seekbar.progress = mediaPlayer.currentPosition
+            // Define el comportamiento del audio una vez que este termina de reproducirse
             handler.postDelayed(runnable, 10)
+            mediaPlayer!!.setOnCompletionListener {
+                mediaPlayer!!.pause()
+                playIB.setImageResource(R.drawable.ic_baseline_play_circle_outline_24)
+
+
+            }
         }
 
-        // Define el comportamiento del audio una vez que este termina de reproducirse
-        handler.postDelayed(runnable, 10)
-        mediaPlayer.setOnCompletionListener {
-            mediaPlayer.pause()
-            playIB.setImageResource(R.drawable.ic_baseline_play_circle_outline_24)
 
 
-        }
+
 
     }
 
@@ -162,5 +180,6 @@ class Artwork : AppCompatActivity() {
              mediaPlayer.release()
          }
      }*/
+
 
 }

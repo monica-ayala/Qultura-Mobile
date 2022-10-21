@@ -150,7 +150,7 @@ class ApiCallerService {
 
     suspend fun getObra(id_sala: Int): ArtworkListResults?{
 
-        val call = getRetrofit().create(ApiService::class.java).getObra("/obra/$id_sala/getObra")
+        val call = getRetrofit().create(ApiService::class.java).getObra("/obra/$id_sala/getObras")
         val artworkList = call.body()
         return artworkList
     }

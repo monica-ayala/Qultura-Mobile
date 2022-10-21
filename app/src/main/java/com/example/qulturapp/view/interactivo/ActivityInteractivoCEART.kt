@@ -35,16 +35,19 @@ class ActivityInteractivoCEART: AppCompatActivity() {
         // Boton baños
         val btnRestroom : Button = findViewById(R.id.btnRestroom)
 
+        // Mostrar primer piso
         btnPB.setOnClickListener {
             floorChecker = 0
             mapMuseum.setImageResource(R.drawable.ceart_pb_vacio)
         }
 
+        // Mostrar segundo piso
         btnPA.setOnClickListener {
             floorChecker = 1
             mapMuseum.setImageResource(R.drawable.ceart_pa_vacio)
         }
 
+        // Mostrar rampas
         btnRamp.setOnClickListener {
             if(floorChecker == 0) {
                 mapMuseum.setImageResource(R.drawable.ceart_pb_rampas)
@@ -53,6 +56,7 @@ class ActivityInteractivoCEART: AppCompatActivity() {
             }
         }
 
+        // Mostrar elevadores
         btnElevator.setOnClickListener {
             if(floorChecker == 0) {
                 mapMuseum.setImageResource(R.drawable.ceart_pb_elevador)
@@ -61,6 +65,7 @@ class ActivityInteractivoCEART: AppCompatActivity() {
             }
         }
 
+        // Mostrar escaleras
         btnStairs.setOnClickListener {
             if(floorChecker == 0) {
                 mapMuseum.setImageResource(R.drawable.ceart_pb_escaleras)
@@ -69,6 +74,7 @@ class ActivityInteractivoCEART: AppCompatActivity() {
             }
         }
 
+        // Mostrar recepcion
         btnReception.setOnClickListener {
             if(floorChecker == 0) {
                 mapMuseum.setImageResource(R.drawable.ceart_pb_recepcion)
@@ -80,6 +86,7 @@ class ActivityInteractivoCEART: AppCompatActivity() {
             }
         }
 
+        // Mostrar oficinas
         btnOffice.setOnClickListener {
             if(floorChecker == 0) {
                 Toast.makeText(applicationContext,"Las oficinas se encuentran en el segundo piso",
@@ -91,6 +98,7 @@ class ActivityInteractivoCEART: AppCompatActivity() {
             }
         }
 
+        // Mostrar baños
         btnRestroom.setOnClickListener {
             if(floorChecker == 0) {
                 mapMuseum.setImageResource(R.drawable.ceart_pb_sanitarios)

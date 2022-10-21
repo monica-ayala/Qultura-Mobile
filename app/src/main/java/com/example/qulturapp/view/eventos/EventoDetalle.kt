@@ -20,7 +20,7 @@ class EventoDetalle : AppCompatActivity(){
         nombreEvento = findViewById(R.id.titulo_detalle)
         fechaEvento = findViewById(R.id.fecha_detalle)
 
-        val ligaImg =  "http://3.14.37.4:8080/uploads/" + intent.getStringExtra("img_evento")
+        val ligaImg =  "http://3.14.37.4:8080/uploads/eventos/" + intent.getStringExtra("img_evento")
         Picasso
             .get()
             .load(ligaImg)

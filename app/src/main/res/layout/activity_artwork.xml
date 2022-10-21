@@ -73,6 +73,9 @@
                     android:layout_weight=".3"
                     android:fontFamily="sans-serif-black"
                     android:text=""
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="12sp"
+                    android:autoSizeMaxTextSize="100sp"
                     android:textColor="@color/white"
                     android:textSize="35sp" />
 
